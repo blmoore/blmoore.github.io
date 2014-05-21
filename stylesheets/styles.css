@@ -390,7 +390,7 @@ fieldset {
 
 /*
  * 1. Corrects color not being inherited in IE6/7/8/9
- * 2. Corrects text not wrapping in FF3 
+ * 2. Corrects text not wrapping in FF3
  * 3. Corrects alignment displayed oddly in IE6/7
  */
 legend {
@@ -560,9 +560,9 @@ h1, h2, h3 {
 }
 
 h1 {
-  color: #c8c8c8;
-  margin: 0 0 10px;
-  font-size: 28px;
+  color: #cdcdcd;
+  margin: 0 0 15px;
+  font-size: 32px;
   font-family: 'Pacifico';
 }
 
@@ -701,53 +701,40 @@ dt {
   z-index: 100;
   left: 0;
   top: 0px;
-  height: 60px;
+  height: 10px;
   width: 100%;
-  position: fixed;
-  background: url(../images/nav-bg.gif) #353535;
-  border-bottom: 4px solid #434343;
-  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  -o-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  position: static;
+  background: none;
 }
+
 #header nav {
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 0 10px;
-  background: blue;
-  margin: 6px auto;
+  max-width: 750px;
+  margin: auto;
+  left: 0;
+  text-align: right;
+  padding: 10 0px;
+  /*background: blue;*/
 }
 #header nav li {
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   list-style: none;
   display: inline;
-  color: white;
-  line-height: 50px;
+  color: #222222;
+  line-height: 40px;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
   font-size: 14px;
 }
 #header nav li a {
-  color: white;
-  border: 1px solid #5d910b;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #93bd20), color-stop(100%, #659e10));
-  background: -webkit-linear-gradient(#93bd20, #659e10);
-  background: -moz-linear-gradient(#93bd20, #659e10);
-  background: -o-linear-gradient(#93bd20, #659e10);
-  background: -ms-linear-gradient(#93bd20, #659e10);
-  background: linear-gradient(#93bd20, #659e10);
+  color: #222222;
+  /*border: 1px solid none;*/
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
   -ms-border-radius: 2px;
   -khtml-border-radius: 2px;
   border-radius: 2px;
-  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
-  -o-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
-  background-color: #93bd20;
+  background-color: none;
   padding: 10px 12px;
   margin-top: 6px;
   line-height: 14px;
@@ -756,14 +743,7 @@ dt {
   text-align: center;
 }
 #header nav li a:hover {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #749619), color-stop(100%, #527f0e));
-  background: -webkit-linear-gradient(#749619, #527f0e);
-  background: -moz-linear-gradient(#749619, #527f0e);
-  background: -o-linear-gradient(#749619, #527f0e);
-  background: -ms-linear-gradient(#749619, #527f0e);
-  background: linear-gradient(#749619, #527f0e);
-  background-color: #659e10;
-  border: 1px solid #527f0e;
+  background-color: #e6e6e6;
   -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
   -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
   -o-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
@@ -778,7 +758,7 @@ dt {
   margin-left: 6px;
 }
 #header nav li.title {
-  float: right;
+  float: left;
   margin-right: 10px;
   font-size: 11px;
 }
@@ -857,8 +837,8 @@ section #title .credits.right {
 */
 .rChart {
       display: block;
-      margin-left: auto; 
+      margin-left: auto;
       margin-right: auto;
       width: 700px;
       height: 700px;
-}  
+}
