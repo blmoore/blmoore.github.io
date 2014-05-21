@@ -536,16 +536,16 @@ body {
   font-weight: normal;
   background: #f0e7d5;
   background-attachment: fixed !important;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7f7f5), color-stop(100%, #ededed));
-  background: -webkit-linear-gradient(#f7f7f5, #ededed);
-  background: -moz-linear-gradient(#f7f7f5, #ededed);
-  background: -o-linear-gradient(#f7f7f5, #ededed);
-  background: -ms-linear-gradient(#f7f7f5, #ededed);
-  background: linear-gradient(#f7f7f5, #ededed);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fdfdfd), color-stop(100%, #ededed));
+  background: -webkit-linear-gradient(#fdfdfd, #ededed);
+  background: -moz-linear-gradient(#fdfdfd, #ededed);
+  background: -o-linear-gradient(#fdfdfd, #ededed);
+  background: -ms-linear-gradient(#fdfdfd, #ededed);
+  background: linear-gradient(#fdfdfd, #ededed);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #e8e8e8;
+  color: #c8c8c8;
   margin: 0 0 10px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -856,6 +856,6 @@ section #title .credits.right {
       display: block;
       margin-left: auto; 
       margin-right: auto;
-      width: 800px;
-      height: 800px;
+      width: 700px;
+      height: 700px;
 }  
