@@ -544,7 +544,7 @@ body {
   background: linear-gradient(#fdfdfd, #ededed);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   color: #c8c8c8;
   margin: 0 0 10px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -560,7 +560,10 @@ h1, h2, h3 {
 }
 
 h1 {
+  color: #c8c8c8;
+  margin: 0 0 10px;
   font-size: 28px;
+  font-family: 'Pacifico';
 }
 
 h2 {
@@ -793,7 +796,7 @@ section #title {
   padding: 0 0 5px 0;
 }
 section #title h1 {
-  font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Pacifico', 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 40px;
   text-align: center;
