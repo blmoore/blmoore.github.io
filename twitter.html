@@ -1102,15 +1102,15 @@
           .height(opts.height)
           .margin({top: 30, right: 20, bottom: 50, left: 125})
           .stacked(true)
-          .xAxis.tickFormat(d3.format(',f'))
          
        d3.select("#" + opts.id)
         .append('svg')
         .datum(data)
         .transition().duration(500)
         .call(chart);
- 
+        
        nv.utils.windowResize(chart.update);
+       chart.xAxis.tickFormat(d3.format(',f'));
        return chart;
       });
     };
