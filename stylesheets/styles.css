@@ -842,3 +842,9 @@ section #title .credits.right {
       width: 700px;
       height: 700px;
 }
+
+.social {
+    clear: all;
+    float: right;
+    padding: 20px 2px 10px 10px;
+}
