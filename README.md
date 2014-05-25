@@ -1,6 +1,4 @@
 blmoore.github.io
 =================
 
-gh pages
-
-rebuild
+[blm.io](http://blm.io)
