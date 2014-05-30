@@ -1,51 +1,129 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>benjaminlmoore</title>
-    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>benjaminlmoore</title>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="javascripts/respond.js"></script>
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 8]>
+  <link rel="stylesheet" href="stylesheets/ie.css">
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  </head>
-  <body>
-    <div id="header">
+</head>
+<body>
+  <div id="header">
     <nav>
       <ul>
-<li><a href="http://blm.io">front</a></li>
-<li><a href="http://blm.io/projects">projects</a></li>
-<li><a href="http://blm.io/contact">contact</a></li>
+        <li><a href="http://blm.io">front</a></li>
+        <li><a href="http://blm.io/projects">projects</a></li>
+        <li><a href="http://benjaminlmoore.wordpress.com" target="_blank">blog</a></li>
+        <li><a href="http://blm.io/contact">contact</a></li>
         <!-- <li class="title">@benjaminlmoore</li> -->
       </ul>
     </nav>
   </div>
   <!--
-      <div id="header">
-      </div>
-  -->
-    <div class="wrapper">
+  <div id="header">
+</div>
+-->
+<div class="wrapper">
 
-      <section>
-        <div id="title">
-          <h1>blm.io</h1>
-          <p>
-          <a href="http://twitter.com/benjaminlmoore">@benjaminlmoore</a>
-        </p>
-        </div>
-      </section>
-
+  <section>
+    <div id="title">
+      <h1>blm.io</h1>
+      <p>
+        <a href="http://twitter.com/benjaminlmoore">@benjaminlmoore</a>
+      </p>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 
-  </body>
+    <div id="intro">
+      <p style="text-align: center;">
+        This is a home for various "data science"-type projects,
+        where I try to analyse some interesting public datasets,
+        build pretty and informative graphics and share the R code.
+      </div>
+      <hr />
+      <div>
+        <div style="float:right; width:30%">
+        <figure>
+          <img src="../../Desktop/esb.jpg" width="80%" style="display:block; margin-right: auto; margin-left: auto;"/>
+          <figcaption>
+            Me in NYC, late 2013.
+          </figcaption>
+        </figure>
+      </div>
+        <h3>About</h3>
+        <p>
+          I'm Ben Moore, a computational biology / bioinformatics PhD student
+          at the <a href="http://www.ed.ac.uk/home" target="_blank">University of Edinburgh</a>, UK.
+          I picked up the <a href="http://www.r-project.org/" target="_blank">R</a> programming language
+          during my MSc at <a href="http://www3.imperial.ac.uk/" target="_blank">Imperial College London</a>
+          and use it constantly in my day-job, along with some <a href="https://www.python.org/" target="_blank">Python</a>.
+        </p>
+        <h3>Tools</h3>
+        <p>
+          Within R, I make extensive use of the "<a href="http://had.co.nz/" target="_blank">Hadley</a>-verse" of packages, especially
+          <a href="http://ggplot2.org/" target="_blank">ggplot2</a> and
+          <a href="http://blog.rstudio.org/2014/01/17/introducing-dplyr/" target="_blank">dplyr</a>.
+          Increasingly I'm also using packages from the <a href="http://ramnathv.github.io/" target="_blank">Ramnath</a>-verse,
+          including <a href="http://benjaminlmoore.wordpress.com/2014/02/24/slidify-presentations-in-r-markdown/" target="_blank">Slidify</a>,
+          for generating HTML5 presentations from RMarkdown, and
+          <a href="http://rcharts.io/" target="_blank">rCharts</a> to build
+          interactive JS graphics. The
+          <a href="http://ropensci.org/" target="_blank">rOpenSci</a> project
+          has greased the wheels of several handy APIs, amongst other things.
+          My R IDE of choice is
+          <a href="http://www.rstudio.com/" target="_blank">RStudio</a>.
+        </p>
+        <p>
+          Due to the fact I've benefited so much from these free and open-source tools, I think
+          it's only fair to make any and all analysis code public.
+          Mine's on <a href="https://github.com/blmoore/" target="_blank">github</a> — if you make
+          something cool based on anything there I'd be interested in hearing about it!
+        </p>
+        <h3>How can I learn R?</h3>
+        <p>
+          Personally, I've not taken any MOOC course or even read
+          <a href="http://www.amazon.co.uk/gp/product/0470973927/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=0470973927&linkCode=as2&tag=blmio-21">The R Book</a>,
+          I think the best way to learn is by doing. Find an interesting dataset and start
+          hacking away; Google, StackOverflow, Github discussions are your friends. The R help
+          system is only a<code style="color:green;">?</code>away.
+        </p>
+        <p>
+          A book I did enjoy and one that embodies this approach is <a href="http://www.amazon.co.uk/gp/product/1449303714/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=1449303714&linkCode=as2&tag=blmio-21">Machine Learning for Hackers</a>
+          whose worked examples are done entirely in R. I've also heard great things about the
+          <a href="http://www.amazon.co.uk/gp/product/0387981403/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0387981403&linkCode=as2&tag=blmio-21">ggplot2 book</a>
+          but if you just want to get going with the package, <a href="http://docs.ggplot2.org/current/" target="_blank">the docs</a> will be more up-to-date.
+        </p>
+        <h3>Other stuff</h3>
+        <p>
+          My other interests include motorbikes, guitars, reading and games. My academic
+          publications are listed on <a href="http://scholar.google.com/citations?user=YMxsGpsAAAAJ" target="_blank">Google scholar</a>,
+          though it's not much of a list yet.
+          I'm a <a href="https://en.wikipedia.org/wiki/User:Ben_Moore" target="_blank">Wikipedian</a>,
+          and semi-active in places like
+          <a href="https://news.ycombinator.com/user?id=jebus989" target="_blank">HackerNews</a> and
+          <a href="http://www.reddit.com/user/blmoore" target="_blank">Reddit</a>, but
+          <a href="http://twitter.com/benjaminlmoore" target="_blank">twitter</a> or <a href="mailto:root@blm.io">email</a>
+          are the best ways to get in touch.
+
+        </p>
+        <img src="../../Desktop/bike.jpg" width="100%" />
+        <p>
+        </p>
+      </div>
+      <hr />
+    </section>
+
+  </div>
+  <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
 </html>

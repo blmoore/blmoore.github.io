@@ -360,7 +360,7 @@ svg:not(:root) {
 }
 
 /* =============================================================================
-   Figures
+   figs
    ========================================================================== */
 /*
  * Addresses margin not present in IE6/7/8/9, S5, O11
@@ -810,6 +810,9 @@ section #proj {
 }
 
 section #intro {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 16px;
   color: #aaaaaa;
 }
@@ -858,4 +861,9 @@ section #intro {
     clear: all;
     float: right;
     padding: 20px 2px 10px 10px;
+}
+
+figcaption {
+  text-align: center;
+  font-size: smaller;
 }
