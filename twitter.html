@@ -1,71 +1,81 @@
 <!doctype HTML>
 <meta charset = 'utf-8'>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Celebrity twitter followers by gender</title>
-    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <link rel='stylesheet' href='http://nvd3.org/assets/css/nv.d3.css'>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Celebrity twitter followers by gender</title>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="javascripts/respond.js"></script>
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 8]>
+  <link rel="stylesheet" href="stylesheets/ie.css">
+  <![endif]-->
+  <link rel='stylesheet' href='http://nvd3.org/assets/css/nv.d3.css'>
 
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
-    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
-    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
-    <script src='http://nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+  <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+  <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+  <script src='http://nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
 
-    <style>
-    .rChart {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 600px;
-      height: 1100px;
-    }
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <style>
+  .rChart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 1100px;
+  }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- begin analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  </head>
-  <body>
-    <div id="header">
+  ga('create', 'UA-51522691-1', 'blm.io');
+  ga('send', 'pageview')
+  </script>
+  <!-- end analytics -->
+</head>
+<body>
+  <div id="header">
     <nav>
       <ul>
-<li><a href="http://blm.io">front</a></li>
-<li><a href="http://blm.io/projects">projects</a></li>
-<li><a href="http://blm.io/contact">contact</a></li>
+        <li><a href="http://blm.io">front</a></li>
+        <li><a href="http://blm.io/projects">projects</a></li>
+        <li><a href="http://blm.io/contact">contact</a></li>
         <!-- <li class="title">@benjaminlmoore</li> -->
       </ul>
     </nav>
   </div>
   <!--
-      <div id="header">
-      </div>
-  -->
-    <div class="wrapper">
+  <div id="header">
+</div>
+-->
+<div class="wrapper">
 
-      <section>
-        <div id="title">
-          <h1>Celebrity twitter followers by gender</h1>
-          <p>
-          <a href="http://twitter.com/benjaminlmoore">@benjaminlmoore</a>
-        </p>
-        </div>
+  <section>
+    <div id="title">
+      <h1>Celebrity twitter followers by gender</h1>
+      <p>
+        <a href="http://twitter.com/benjaminlmoore">@benjaminlmoore</a>
+      </p>
+    </div>
     <div class="wrapper">
       <p>
         Here I looked at the top 100 most followed twitter accounts (according to <a href="http://twittercounter.com/pages/100" target="_blank">Twitter Counter</a>
         as of May 2014), and calculated the gender splits of their followers. I've plotted them first in order of
         number of followers, then by percent female followers.
-        </p>
-        <p>
+      </p>
+      <p>
         Twitter doesn't ask whether you're male or female, so what I'm doing here in brief is using
         first names to probablistically assign genders, while excluding those accounts that
         don't appear to be attached to a common name or otherwise couldn't be assigned a gender.
@@ -75,1022 +85,1022 @@
     <div id='chartb517d225171' class='rChart nvd3'></div>
 
     <script type='text/javascript'>
- $(document).ready(function(){
+    $(document).ready(function(){
       drawchartb517d225171()
     });
     function drawchartb517d225171(){
       var opts = {
- "dom": "chartb517d225171",
-"width":    600,
-"height":   1100,
-"x": "user",
-"y": "perc",
-"group": "mf",
-"color": "mf",
-"type": "multiBarHorizontalChart",
-"id": "chartb517d225171"
-},
- data = [
- {
- "user": "katyperry",
-"mf": "Female",
-"perc": 62.21033868093
-},
-{
- "user": "katyperry",
-"mf": "Male",
-"perc": 37.78966131907
-},
-{
- "user": "justinbieber",
-"mf": "Female",
-"perc": 59.31899641577
-},
-{
- "user": "justinbieber",
-"mf": "Male",
-"perc": 40.68100358423
-},
-{
- "user": "BarackObama",
-"mf": "Female",
-"perc": 40.74074074074
-},
-{
- "user": "BarackObama",
-"mf": "Male",
-"perc": 59.25925925926
-},
-{
- "user": "YouTube",
-"mf": "Female",
-"perc":   42.194092827
-},
-{
- "user": "YouTube",
-"mf": "Male",
-"perc":   57.805907173
-},
-{
- "user": "ladygaga",
-"mf": "Female",
-"perc": 59.07335907336
-},
-{
- "user": "ladygaga",
-"mf": "Male",
-"perc": 40.92664092664
-},
-{
- "user": "taylorswift13",
-"mf": "Female",
-"perc": 63.68613138686
-},
-{
- "user": "taylorswift13",
-"mf": "Male",
-"perc": 36.31386861314
-},
-{
- "user": "britneyspears",
-"mf": "Female",
-"perc":  53.4749034749
-},
-{
- "user": "britneyspears",
-"mf": "Male",
-"perc":  46.5250965251
-},
-{
- "user": "rihanna",
-"mf": "Female",
-"perc": 65.90106007067
-},
-{
- "user": "rihanna",
-"mf": "Male",
-"perc": 34.09893992933
-},
-{
- "user": "instagram",
-"mf": "Female",
-"perc": 54.22993492408
-},
-{
- "user": "instagram",
-"mf": "Male",
-"perc": 45.77006507592
-},
-{
- "user": "jtimberlake",
-"mf": "Female",
-"perc": 65.07936507937
-},
-{
- "user": "jtimberlake",
-"mf": "Male",
-"perc": 34.92063492063
-},
-{
- "user": "twitter",
-"mf": "Female",
-"perc": 39.56692913386
-},
-{
- "user": "twitter",
-"mf": "Male",
-"perc": 60.43307086614
-},
-{
- "user": "TheEllenShow",
-"mf": "Female",
-"perc":        70.3125
-},
-{
- "user": "TheEllenShow",
-"mf": "Male",
-"perc":        29.6875
-},
-{
- "user": "JLo",
-"mf": "Female",
-"perc": 58.08080808081
-},
-{
- "user": "JLo",
-"mf": "Male",
-"perc": 41.91919191919
-},
-{
- "user": "Cristiano",
-"mf": "Female",
-"perc": 30.75539568345
-},
-{
- "user": "Cristiano",
-"mf": "Male",
-"perc": 69.24460431655
-},
-{
- "user": "shakira",
-"mf": "Female",
-"perc": 53.98981324278
-},
-{
- "user": "shakira",
-"mf": "Male",
-"perc": 46.01018675722
-},
-{
- "user": "Oprah",
-"mf": "Female",
-"perc": 63.48623853211
-},
-{
- "user": "Oprah",
-"mf": "Male",
-"perc": 36.51376146789
-},
-{
- "user": "Pink",
-"mf": "Female",
-"perc": 64.38356164384
-},
-{
- "user": "Pink",
-"mf": "Male",
-"perc": 35.61643835616
-},
-{
- "user": "ddlovato",
-"mf": "Female",
-"perc": 71.97898423818
-},
-{
- "user": "ddlovato",
-"mf": "Male",
-"perc": 28.02101576182
-},
-{
- "user": "KimKardashian",
-"mf": "Female",
-"perc": 70.01647446458
-},
-{
- "user": "KimKardashian",
-"mf": "Male",
-"perc": 29.98352553542
-},
-{
- "user": "Harry_Styles",
-"mf": "Female",
-"perc": 77.39726027397
-},
-{
- "user": "Harry_Styles",
-"mf": "Male",
-"perc": 22.60273972603
-},
-{
- "user": "selenagomez",
-"mf": "Female",
-"perc": 68.10035842294
-},
-{
- "user": "selenagomez",
-"mf": "Male",
-"perc": 31.89964157706
-},
-{
- "user": "OfficialAdele",
-"mf": "Female",
-"perc": 66.89536878216
-},
-{
- "user": "OfficialAdele",
-"mf": "Male",
-"perc": 33.10463121784
-},
-{
- "user": "onedirection",
-"mf": "Female",
-"perc": 78.65748709122
-},
-{
- "user": "onedirection",
-"mf": "Male",
-"perc": 21.34251290878
-},
-{
- "user": "aliciakeys",
-"mf": "Female",
-"perc": 62.72401433692
-},
-{
- "user": "aliciakeys",
-"mf": "Male",
-"perc": 37.27598566308
-},
-{
- "user": "KAKA",
-"mf": "Female",
-"perc": 27.32142857143
-},
-{
- "user": "KAKA",
-"mf": "Male",
-"perc": 72.67857142857
-},
-{
- "user": "NiallOfficial",
-"mf": "Female",
-"perc": 79.80295566502
-},
-{
- "user": "NiallOfficial",
-"mf": "Male",
-"perc": 20.19704433498
-},
-{
- "user": "BrunoMars",
-"mf": "Female",
-"perc": 63.88888888889
-},
-{
- "user": "BrunoMars",
-"mf": "Male",
-"perc": 36.11111111111
-},
-{
- "user": "MileyCyrus",
-"mf": "Female",
-"perc": 70.37701974865
-},
-{
- "user": "MileyCyrus",
-"mf": "Male",
-"perc": 29.62298025135
-},
-{
- "user": "Eminem",
-"mf": "Female",
-"perc": 46.85816876122
-},
-{
- "user": "Eminem",
-"mf": "Male",
-"perc": 53.14183123878
-},
-{
- "user": "NICKIMINAJ",
-"mf": "Female",
-"perc": 63.63636363636
-},
-{
- "user": "NICKIMINAJ",
-"mf": "Male",
-"perc": 36.36363636364
-},
-{
- "user": "Real_Liam_Payne",
-"mf": "Female",
-"perc": 78.16291161179
-},
-{
- "user": "Real_Liam_Payne",
-"mf": "Male",
-"perc": 21.83708838821
-},
-{
- "user": "cnnbrk",
-"mf": "Female",
-"perc": 41.45383104126
-},
-{
- "user": "cnnbrk",
-"mf": "Male",
-"perc": 58.54616895874
-},
-{
- "user": "pitbull",
-"mf": "Female",
-"perc": 51.90311418685
-},
-{
- "user": "pitbull",
-"mf": "Male",
-"perc": 48.09688581315
-},
-{
- "user": "LilTunechi",
-"mf": "Female",
-"perc": 49.82935153584
-},
-{
- "user": "LilTunechi",
-"mf": "Male",
-"perc": 50.17064846416
-},
-{
- "user": "Louis_Tomlinson",
-"mf": "Female",
-"perc":          76.25
-},
-{
- "user": "Louis_Tomlinson",
-"mf": "Male",
-"perc":          23.75
-},
-{
- "user": "aplusk",
-"mf": "Female",
-"perc":       60.46875
-},
-{
- "user": "aplusk",
-"mf": "Male",
-"perc":       39.53125
-},
-{
- "user": "BillGates",
-"mf": "Female",
-"perc": 32.70676691729
-},
-{
- "user": "BillGates",
-"mf": "Male",
-"perc": 67.29323308271
-},
-{
- "user": "AvrilLavigne",
-"mf": "Female",
-"perc": 64.77876106195
-},
-{
- "user": "AvrilLavigne",
-"mf": "Male",
-"perc": 35.22123893805
-},
-{
- "user": "ArianaGrande",
-"mf": "Female",
-"perc": 61.95286195286
-},
-{
- "user": "ArianaGrande",
-"mf": "Male",
-"perc": 38.04713804714
-},
-{
- "user": "Drake",
-"mf": "Female",
-"perc": 56.59163987138
-},
-{
- "user": "Drake",
-"mf": "Male",
-"perc": 43.40836012862
-},
-{
- "user": "MariahCarey",
-"mf": "Female",
-"perc": 61.90476190476
-},
-{
- "user": "MariahCarey",
-"mf": "Male",
-"perc": 38.09523809524
-},
-{
- "user": "davidguetta",
-"mf": "Female",
-"perc": 55.06445672192
-},
-{
- "user": "davidguetta",
-"mf": "Male",
-"perc": 44.93554327808
-},
-{
- "user": "wizkhalifa",
-"mf": "Female",
-"perc": 44.98141263941
-},
-{
- "user": "wizkhalifa",
-"mf": "Male",
-"perc": 55.01858736059
-},
-{
- "user": "twitter_es",
-"mf": "Female",
-"perc": 46.19124797407
-},
-{
- "user": "twitter_es",
-"mf": "Male",
-"perc": 53.80875202593
-},
-{
- "user": "facebook",
-"mf": "Female",
-"perc": 46.04810996564
-},
-{
- "user": "facebook",
-"mf": "Male",
-"perc": 53.95189003436
-},
-{
- "user": "chrisbrown",
-"mf": "Female",
-"perc": 58.20895522388
-},
-{
- "user": "chrisbrown",
-"mf": "Male",
-"perc": 41.79104477612
-},
-{
- "user": "Beyonce",
-"mf": "Female",
-"perc":  74.3288590604
-},
-{
- "user": "Beyonce",
-"mf": "Male",
-"perc":  25.6711409396
-},
-{
- "user": "EmWatson",
-"mf": "Female",
-"perc":             60
-},
-{
- "user": "EmWatson",
-"mf": "Male",
-"perc":             40
-},
-{
- "user": "KingJames",
-"mf": "Female",
-"perc":  37.5366568915
-},
-{
- "user": "KingJames",
-"mf": "Male",
-"perc":  62.4633431085
-},
-{
- "user": "CNN",
-"mf": "Female",
-"perc": 43.07692307692
-},
-{
- "user": "CNN",
-"mf": "Male",
-"perc": 56.92307692308
-},
-{
- "user": "ParisHilton",
-"mf": "Female",
-"perc": 57.14285714286
-},
-{
- "user": "ParisHilton",
-"mf": "Male",
-"perc": 42.85714285714
-},
-{
- "user": "jimmyfallon",
-"mf": "Female",
-"perc":  54.9795361528
-},
-{
- "user": "jimmyfallon",
-"mf": "Male",
-"perc":  45.0204638472
-},
-{
- "user": "RyanSeacrest",
-"mf": "Female",
-"perc":  69.8175787728
-},
-{
- "user": "RyanSeacrest",
-"mf": "Male",
-"perc":  30.1824212272
-},
-{
- "user": "zaynmalik",
-"mf": "Female",
-"perc": 78.73134328358
-},
-{
- "user": "zaynmalik",
-"mf": "Male",
-"perc": 21.26865671642
-},
-{
- "user": "JimCarrey",
-"mf": "Female",
-"perc": 46.64586583463
-},
-{
- "user": "JimCarrey",
-"mf": "Male",
-"perc": 53.35413416537
-},
-{
- "user": "coldplay",
-"mf": "Female",
-"perc":       58.59375
-},
-{
- "user": "coldplay",
-"mf": "Male",
-"perc":       41.40625
-},
-{
- "user": "xtina",
-"mf": "Female",
-"perc": 58.95765472313
-},
-{
- "user": "xtina",
-"mf": "Male",
-"perc": 41.04234527687
-},
-{
- "user": "iamwill",
-"mf": "Female",
-"perc": 60.81300813008
-},
-{
- "user": "iamwill",
-"mf": "Male",
-"perc": 39.18699186992
-},
-{
- "user": "nytimes",
-"mf": "Female",
-"perc": 46.33204633205
-},
-{
- "user": "nytimes",
-"mf": "Male",
-"perc": 53.66795366795
-},
-{
- "user": "ashleytisdale",
-"mf": "Female",
-"perc": 62.72577996716
-},
-{
- "user": "ashleytisdale",
-"mf": "Male",
-"perc": 37.27422003284
-},
-{
- "user": "kourtneykardash",
-"mf": "Female",
-"perc": 65.03267973856
-},
-{
- "user": "kourtneykardash",
-"mf": "Male",
-"perc": 34.96732026144
-},
-{
- "user": "FCBarcelona",
-"mf": "Female",
-"perc": 18.64716636197
-},
-{
- "user": "FCBarcelona",
-"mf": "Male",
-"perc": 81.35283363803
-},
-{
- "user": "UberSoc",
-"mf": "Female",
-"perc": 51.13636363636
-},
-{
- "user": "UberSoc",
-"mf": "Male",
-"perc": 48.86363636364
-},
-{
- "user": "SnoopDogg",
-"mf": "Female",
-"perc": 39.56043956044
-},
-{
- "user": "SnoopDogg",
-"mf": "Male",
-"perc": 60.43956043956
-},
-{
- "user": "tyrabanks",
-"mf": "Female",
-"perc": 71.84466019417
-},
-{
- "user": "tyrabanks",
-"mf": "Male",
-"perc": 28.15533980583
-},
-{
- "user": "AlejandroSanz",
-"mf": "Female",
-"perc":  60.1683029453
-},
-{
- "user": "AlejandroSanz",
-"mf": "Male",
-"perc":  39.8316970547
-},
-{
- "user": "realmadrid",
-"mf": "Female",
-"perc": 27.90697674419
-},
-{
- "user": "realmadrid",
-"mf": "Male",
-"perc": 72.09302325581
-},
-{
- "user": "charliesheen",
-"mf": "Female",
-"perc": 48.09523809524
-},
-{
- "user": "charliesheen",
-"mf": "Male",
-"perc": 51.90476190476
-},
-{
- "user": "MTV",
-"mf": "Female",
-"perc": 60.85409252669
-},
-{
- "user": "MTV",
-"mf": "Male",
-"perc": 39.14590747331
-},
-{
- "user": "ConanOBrien",
-"mf": "Female",
-"perc": 45.59585492228
-},
-{
- "user": "ConanOBrien",
-"mf": "Male",
-"perc": 54.40414507772
-},
-{
- "user": "KevinHart4real",
-"mf": "Female",
-"perc": 43.98148148148
-},
-{
- "user": "KevinHart4real",
-"mf": "Male",
-"perc": 56.01851851852
-},
-{
- "user": "agnezmo",
-"mf": "Female",
-"perc":  61.7816091954
-},
-{
- "user": "agnezmo",
-"mf": "Male",
-"perc":  38.2183908046
-},
-{
- "user": "neymarjr",
-"mf": "Female",
-"perc": 28.59504132231
-},
-{
- "user": "neymarjr",
-"mf": "Male",
-"perc": 71.40495867769
-},
-{
- "user": "kanyewest",
-"mf": "Female",
-"perc": 66.66666666667
-},
-{
- "user": "kanyewest",
-"mf": "Male",
-"perc": 33.33333333333
-},
-{
- "user": "ricky_martin",
-"mf": "Female",
-"perc": 65.61151079137
-},
-{
- "user": "ricky_martin",
-"mf": "Male",
-"perc": 34.38848920863
-},
-{
- "user": "NBA",
-"mf": "Female",
-"perc": 28.33876221498
-},
-{
- "user": "NBA",
-"mf": "Male",
-"perc": 71.66123778502
-},
-{
- "user": "LeoDiCaprio",
-"mf": "Female",
-"perc": 53.33333333333
-},
-{
- "user": "LeoDiCaprio",
-"mf": "Male",
-"perc": 46.66666666667
-},
-{
- "user": "carlyraejepsen",
-"mf": "Female",
-"perc": 74.95495495495
-},
-{
- "user": "carlyraejepsen",
-"mf": "Male",
-"perc": 25.04504504505
-},
-{
- "user": "khloekardashian",
-"mf": "Female",
-"perc": 71.79487179487
-},
-{
- "user": "khloekardashian",
-"mf": "Male",
-"perc": 28.20512820513
-},
-{
- "user": "vineapp",
-"mf": "Female",
-"perc": 50.36496350365
-},
-{
- "user": "vineapp",
-"mf": "Male",
-"perc": 49.63503649635
-},
-{
- "user": "ivetesangalo",
-"mf": "Female",
-"perc": 58.58585858586
-},
-{
- "user": "ivetesangalo",
-"mf": "Male",
-"perc": 41.41414141414
-},
-{
- "user": "SimonCowell",
-"mf": "Female",
-"perc": 69.81132075472
-},
-{
- "user": "SimonCowell",
-"mf": "Male",
-"perc": 30.18867924528
-},
-{
- "user": "BBCBreaking",
-"mf": "Female",
-"perc": 41.43126177024
-},
-{
- "user": "BBCBreaking",
-"mf": "Male",
-"perc": 58.56873822976
-},
-{
- "user": "iamdiddy",
-"mf": "Female",
-"perc": 50.52264808362
-},
-{
- "user": "iamdiddy",
-"mf": "Male",
-"perc": 49.47735191638
-},
-{
- "user": "kelly_clarkson",
-"mf": "Female",
-"perc": 64.14473684211
-},
-{
- "user": "kelly_clarkson",
-"mf": "Male",
-"perc": 35.85526315789
-},
-{
- "user": "espn",
-"mf": "Female",
-"perc": 18.25396825397
-},
-{
- "user": "espn",
-"mf": "Male",
-"perc": 81.74603174603
-},
-{
- "user": "Usher",
-"mf": "Female",
-"perc":  65.8407079646
-},
-{
- "user": "Usher",
-"mf": "Male",
-"perc":  34.1592920354
-},
-{
- "user": "edsheeran",
-"mf": "Female",
-"perc": 74.38825448613
-},
-{
- "user": "edsheeran",
-"mf": "Male",
-"perc": 25.61174551387
-},
-{
- "user": "danieltosh",
-"mf": "Female",
-"perc":  40.2075226978
-},
-{
- "user": "danieltosh",
-"mf": "Male",
-"perc":  59.7924773022
-},
-{
- "user": "Ludacris",
-"mf": "Female",
-"perc":   46.735395189
-},
-{
- "user": "Ludacris",
-"mf": "Male",
-"perc":   53.264604811
-},
-{
- "user": "paulocoelho",
-"mf": "Female",
-"perc": 54.11392405063
-},
-{
- "user": "paulocoelho",
-"mf": "Male",
-"perc": 45.88607594937
-},
-{
- "user": "juanes",
-"mf": "Female",
-"perc": 59.57446808511
-},
-{
- "user": "juanes",
-"mf": "Male",
-"perc": 40.42553191489
-},
-{
- "user": "10Ronaldinho",
-"mf": "Female",
-"perc":           19.5
-},
-{
- "user": "10Ronaldinho",
-"mf": "Male",
-"perc":           80.5
-},
-{
- "user": "DalaiLama",
-"mf": "Female",
-"perc": 42.56756756757
-},
-{
- "user": "DalaiLama",
-"mf": "Male",
-"perc": 57.43243243243
-},
-{
- "user": "SrBachchan",
-"mf": "Female",
-"perc": 21.71628721541
-},
-{
- "user": "SrBachchan",
-"mf": "Male",
-"perc": 78.28371278459
-},
-{
- "user": "MohamadAlarefe",
-"mf": "Female",
-"perc": 36.88524590164
-},
-{
- "user": "MohamadAlarefe",
-"mf": "Male",
-"perc": 63.11475409836
-},
-{
- "user": "ActuallyNPH",
-"mf": "Female",
-"perc":  54.8031496063
-},
-{
- "user": "ActuallyNPH",
-"mf": "Male",
-"perc":  45.1968503937
-},
-{
- "user": "ClaudiaLeitte",
-"mf": "Female",
-"perc": 62.71450858034
-},
-{
- "user": "ClaudiaLeitte",
-"mf": "Male",
-"perc": 37.28549141966
-},
-{
- "user": "WayneRooney",
-"mf": "Female",
-"perc": 18.11965811966
-},
-{
- "user": "WayneRooney",
-"mf": "Male",
-"perc": 81.88034188034
-}
-]
+        "dom": "chartb517d225171",
+        "width":    600,
+        "height":   1100,
+        "x": "user",
+        "y": "perc",
+        "group": "mf",
+        "color": "mf",
+        "type": "multiBarHorizontalChart",
+        "id": "chartb517d225171"
+      },
+      data = [
+      {
+        "user": "katyperry",
+        "mf": "Female",
+        "perc": 62.21033868093
+      },
+      {
+        "user": "katyperry",
+        "mf": "Male",
+        "perc": 37.78966131907
+      },
+      {
+        "user": "justinbieber",
+        "mf": "Female",
+        "perc": 59.31899641577
+      },
+      {
+        "user": "justinbieber",
+        "mf": "Male",
+        "perc": 40.68100358423
+      },
+      {
+        "user": "BarackObama",
+        "mf": "Female",
+        "perc": 40.74074074074
+      },
+      {
+        "user": "BarackObama",
+        "mf": "Male",
+        "perc": 59.25925925926
+      },
+      {
+        "user": "YouTube",
+        "mf": "Female",
+        "perc":   42.194092827
+      },
+      {
+        "user": "YouTube",
+        "mf": "Male",
+        "perc":   57.805907173
+      },
+      {
+        "user": "ladygaga",
+        "mf": "Female",
+        "perc": 59.07335907336
+      },
+      {
+        "user": "ladygaga",
+        "mf": "Male",
+        "perc": 40.92664092664
+      },
+      {
+        "user": "taylorswift13",
+        "mf": "Female",
+        "perc": 63.68613138686
+      },
+      {
+        "user": "taylorswift13",
+        "mf": "Male",
+        "perc": 36.31386861314
+      },
+      {
+        "user": "britneyspears",
+        "mf": "Female",
+        "perc":  53.4749034749
+      },
+      {
+        "user": "britneyspears",
+        "mf": "Male",
+        "perc":  46.5250965251
+      },
+      {
+        "user": "rihanna",
+        "mf": "Female",
+        "perc": 65.90106007067
+      },
+      {
+        "user": "rihanna",
+        "mf": "Male",
+        "perc": 34.09893992933
+      },
+      {
+        "user": "instagram",
+        "mf": "Female",
+        "perc": 54.22993492408
+      },
+      {
+        "user": "instagram",
+        "mf": "Male",
+        "perc": 45.77006507592
+      },
+      {
+        "user": "jtimberlake",
+        "mf": "Female",
+        "perc": 65.07936507937
+      },
+      {
+        "user": "jtimberlake",
+        "mf": "Male",
+        "perc": 34.92063492063
+      },
+      {
+        "user": "twitter",
+        "mf": "Female",
+        "perc": 39.56692913386
+      },
+      {
+        "user": "twitter",
+        "mf": "Male",
+        "perc": 60.43307086614
+      },
+      {
+        "user": "TheEllenShow",
+        "mf": "Female",
+        "perc":        70.3125
+      },
+      {
+        "user": "TheEllenShow",
+        "mf": "Male",
+        "perc":        29.6875
+      },
+      {
+        "user": "JLo",
+        "mf": "Female",
+        "perc": 58.08080808081
+      },
+      {
+        "user": "JLo",
+        "mf": "Male",
+        "perc": 41.91919191919
+      },
+      {
+        "user": "Cristiano",
+        "mf": "Female",
+        "perc": 30.75539568345
+      },
+      {
+        "user": "Cristiano",
+        "mf": "Male",
+        "perc": 69.24460431655
+      },
+      {
+        "user": "shakira",
+        "mf": "Female",
+        "perc": 53.98981324278
+      },
+      {
+        "user": "shakira",
+        "mf": "Male",
+        "perc": 46.01018675722
+      },
+      {
+        "user": "Oprah",
+        "mf": "Female",
+        "perc": 63.48623853211
+      },
+      {
+        "user": "Oprah",
+        "mf": "Male",
+        "perc": 36.51376146789
+      },
+      {
+        "user": "Pink",
+        "mf": "Female",
+        "perc": 64.38356164384
+      },
+      {
+        "user": "Pink",
+        "mf": "Male",
+        "perc": 35.61643835616
+      },
+      {
+        "user": "ddlovato",
+        "mf": "Female",
+        "perc": 71.97898423818
+      },
+      {
+        "user": "ddlovato",
+        "mf": "Male",
+        "perc": 28.02101576182
+      },
+      {
+        "user": "KimKardashian",
+        "mf": "Female",
+        "perc": 70.01647446458
+      },
+      {
+        "user": "KimKardashian",
+        "mf": "Male",
+        "perc": 29.98352553542
+      },
+      {
+        "user": "Harry_Styles",
+        "mf": "Female",
+        "perc": 77.39726027397
+      },
+      {
+        "user": "Harry_Styles",
+        "mf": "Male",
+        "perc": 22.60273972603
+      },
+      {
+        "user": "selenagomez",
+        "mf": "Female",
+        "perc": 68.10035842294
+      },
+      {
+        "user": "selenagomez",
+        "mf": "Male",
+        "perc": 31.89964157706
+      },
+      {
+        "user": "OfficialAdele",
+        "mf": "Female",
+        "perc": 66.89536878216
+      },
+      {
+        "user": "OfficialAdele",
+        "mf": "Male",
+        "perc": 33.10463121784
+      },
+      {
+        "user": "onedirection",
+        "mf": "Female",
+        "perc": 78.65748709122
+      },
+      {
+        "user": "onedirection",
+        "mf": "Male",
+        "perc": 21.34251290878
+      },
+      {
+        "user": "aliciakeys",
+        "mf": "Female",
+        "perc": 62.72401433692
+      },
+      {
+        "user": "aliciakeys",
+        "mf": "Male",
+        "perc": 37.27598566308
+      },
+      {
+        "user": "KAKA",
+        "mf": "Female",
+        "perc": 27.32142857143
+      },
+      {
+        "user": "KAKA",
+        "mf": "Male",
+        "perc": 72.67857142857
+      },
+      {
+        "user": "NiallOfficial",
+        "mf": "Female",
+        "perc": 79.80295566502
+      },
+      {
+        "user": "NiallOfficial",
+        "mf": "Male",
+        "perc": 20.19704433498
+      },
+      {
+        "user": "BrunoMars",
+        "mf": "Female",
+        "perc": 63.88888888889
+      },
+      {
+        "user": "BrunoMars",
+        "mf": "Male",
+        "perc": 36.11111111111
+      },
+      {
+        "user": "MileyCyrus",
+        "mf": "Female",
+        "perc": 70.37701974865
+      },
+      {
+        "user": "MileyCyrus",
+        "mf": "Male",
+        "perc": 29.62298025135
+      },
+      {
+        "user": "Eminem",
+        "mf": "Female",
+        "perc": 46.85816876122
+      },
+      {
+        "user": "Eminem",
+        "mf": "Male",
+        "perc": 53.14183123878
+      },
+      {
+        "user": "NICKIMINAJ",
+        "mf": "Female",
+        "perc": 63.63636363636
+      },
+      {
+        "user": "NICKIMINAJ",
+        "mf": "Male",
+        "perc": 36.36363636364
+      },
+      {
+        "user": "Real_Liam_Payne",
+        "mf": "Female",
+        "perc": 78.16291161179
+      },
+      {
+        "user": "Real_Liam_Payne",
+        "mf": "Male",
+        "perc": 21.83708838821
+      },
+      {
+        "user": "cnnbrk",
+        "mf": "Female",
+        "perc": 41.45383104126
+      },
+      {
+        "user": "cnnbrk",
+        "mf": "Male",
+        "perc": 58.54616895874
+      },
+      {
+        "user": "pitbull",
+        "mf": "Female",
+        "perc": 51.90311418685
+      },
+      {
+        "user": "pitbull",
+        "mf": "Male",
+        "perc": 48.09688581315
+      },
+      {
+        "user": "LilTunechi",
+        "mf": "Female",
+        "perc": 49.82935153584
+      },
+      {
+        "user": "LilTunechi",
+        "mf": "Male",
+        "perc": 50.17064846416
+      },
+      {
+        "user": "Louis_Tomlinson",
+        "mf": "Female",
+        "perc":          76.25
+      },
+      {
+        "user": "Louis_Tomlinson",
+        "mf": "Male",
+        "perc":          23.75
+      },
+      {
+        "user": "aplusk",
+        "mf": "Female",
+        "perc":       60.46875
+      },
+      {
+        "user": "aplusk",
+        "mf": "Male",
+        "perc":       39.53125
+      },
+      {
+        "user": "BillGates",
+        "mf": "Female",
+        "perc": 32.70676691729
+      },
+      {
+        "user": "BillGates",
+        "mf": "Male",
+        "perc": 67.29323308271
+      },
+      {
+        "user": "AvrilLavigne",
+        "mf": "Female",
+        "perc": 64.77876106195
+      },
+      {
+        "user": "AvrilLavigne",
+        "mf": "Male",
+        "perc": 35.22123893805
+      },
+      {
+        "user": "ArianaGrande",
+        "mf": "Female",
+        "perc": 61.95286195286
+      },
+      {
+        "user": "ArianaGrande",
+        "mf": "Male",
+        "perc": 38.04713804714
+      },
+      {
+        "user": "Drake",
+        "mf": "Female",
+        "perc": 56.59163987138
+      },
+      {
+        "user": "Drake",
+        "mf": "Male",
+        "perc": 43.40836012862
+      },
+      {
+        "user": "MariahCarey",
+        "mf": "Female",
+        "perc": 61.90476190476
+      },
+      {
+        "user": "MariahCarey",
+        "mf": "Male",
+        "perc": 38.09523809524
+      },
+      {
+        "user": "davidguetta",
+        "mf": "Female",
+        "perc": 55.06445672192
+      },
+      {
+        "user": "davidguetta",
+        "mf": "Male",
+        "perc": 44.93554327808
+      },
+      {
+        "user": "wizkhalifa",
+        "mf": "Female",
+        "perc": 44.98141263941
+      },
+      {
+        "user": "wizkhalifa",
+        "mf": "Male",
+        "perc": 55.01858736059
+      },
+      {
+        "user": "twitter_es",
+        "mf": "Female",
+        "perc": 46.19124797407
+      },
+      {
+        "user": "twitter_es",
+        "mf": "Male",
+        "perc": 53.80875202593
+      },
+      {
+        "user": "facebook",
+        "mf": "Female",
+        "perc": 46.04810996564
+      },
+      {
+        "user": "facebook",
+        "mf": "Male",
+        "perc": 53.95189003436
+      },
+      {
+        "user": "chrisbrown",
+        "mf": "Female",
+        "perc": 58.20895522388
+      },
+      {
+        "user": "chrisbrown",
+        "mf": "Male",
+        "perc": 41.79104477612
+      },
+      {
+        "user": "Beyonce",
+        "mf": "Female",
+        "perc":  74.3288590604
+      },
+      {
+        "user": "Beyonce",
+        "mf": "Male",
+        "perc":  25.6711409396
+      },
+      {
+        "user": "EmWatson",
+        "mf": "Female",
+        "perc":             60
+      },
+      {
+        "user": "EmWatson",
+        "mf": "Male",
+        "perc":             40
+      },
+      {
+        "user": "KingJames",
+        "mf": "Female",
+        "perc":  37.5366568915
+      },
+      {
+        "user": "KingJames",
+        "mf": "Male",
+        "perc":  62.4633431085
+      },
+      {
+        "user": "CNN",
+        "mf": "Female",
+        "perc": 43.07692307692
+      },
+      {
+        "user": "CNN",
+        "mf": "Male",
+        "perc": 56.92307692308
+      },
+      {
+        "user": "ParisHilton",
+        "mf": "Female",
+        "perc": 57.14285714286
+      },
+      {
+        "user": "ParisHilton",
+        "mf": "Male",
+        "perc": 42.85714285714
+      },
+      {
+        "user": "jimmyfallon",
+        "mf": "Female",
+        "perc":  54.9795361528
+      },
+      {
+        "user": "jimmyfallon",
+        "mf": "Male",
+        "perc":  45.0204638472
+      },
+      {
+        "user": "RyanSeacrest",
+        "mf": "Female",
+        "perc":  69.8175787728
+      },
+      {
+        "user": "RyanSeacrest",
+        "mf": "Male",
+        "perc":  30.1824212272
+      },
+      {
+        "user": "zaynmalik",
+        "mf": "Female",
+        "perc": 78.73134328358
+      },
+      {
+        "user": "zaynmalik",
+        "mf": "Male",
+        "perc": 21.26865671642
+      },
+      {
+        "user": "JimCarrey",
+        "mf": "Female",
+        "perc": 46.64586583463
+      },
+      {
+        "user": "JimCarrey",
+        "mf": "Male",
+        "perc": 53.35413416537
+      },
+      {
+        "user": "coldplay",
+        "mf": "Female",
+        "perc":       58.59375
+      },
+      {
+        "user": "coldplay",
+        "mf": "Male",
+        "perc":       41.40625
+      },
+      {
+        "user": "xtina",
+        "mf": "Female",
+        "perc": 58.95765472313
+      },
+      {
+        "user": "xtina",
+        "mf": "Male",
+        "perc": 41.04234527687
+      },
+      {
+        "user": "iamwill",
+        "mf": "Female",
+        "perc": 60.81300813008
+      },
+      {
+        "user": "iamwill",
+        "mf": "Male",
+        "perc": 39.18699186992
+      },
+      {
+        "user": "nytimes",
+        "mf": "Female",
+        "perc": 46.33204633205
+      },
+      {
+        "user": "nytimes",
+        "mf": "Male",
+        "perc": 53.66795366795
+      },
+      {
+        "user": "ashleytisdale",
+        "mf": "Female",
+        "perc": 62.72577996716
+      },
+      {
+        "user": "ashleytisdale",
+        "mf": "Male",
+        "perc": 37.27422003284
+      },
+      {
+        "user": "kourtneykardash",
+        "mf": "Female",
+        "perc": 65.03267973856
+      },
+      {
+        "user": "kourtneykardash",
+        "mf": "Male",
+        "perc": 34.96732026144
+      },
+      {
+        "user": "FCBarcelona",
+        "mf": "Female",
+        "perc": 18.64716636197
+      },
+      {
+        "user": "FCBarcelona",
+        "mf": "Male",
+        "perc": 81.35283363803
+      },
+      {
+        "user": "UberSoc",
+        "mf": "Female",
+        "perc": 51.13636363636
+      },
+      {
+        "user": "UberSoc",
+        "mf": "Male",
+        "perc": 48.86363636364
+      },
+      {
+        "user": "SnoopDogg",
+        "mf": "Female",
+        "perc": 39.56043956044
+      },
+      {
+        "user": "SnoopDogg",
+        "mf": "Male",
+        "perc": 60.43956043956
+      },
+      {
+        "user": "tyrabanks",
+        "mf": "Female",
+        "perc": 71.84466019417
+      },
+      {
+        "user": "tyrabanks",
+        "mf": "Male",
+        "perc": 28.15533980583
+      },
+      {
+        "user": "AlejandroSanz",
+        "mf": "Female",
+        "perc":  60.1683029453
+      },
+      {
+        "user": "AlejandroSanz",
+        "mf": "Male",
+        "perc":  39.8316970547
+      },
+      {
+        "user": "realmadrid",
+        "mf": "Female",
+        "perc": 27.90697674419
+      },
+      {
+        "user": "realmadrid",
+        "mf": "Male",
+        "perc": 72.09302325581
+      },
+      {
+        "user": "charliesheen",
+        "mf": "Female",
+        "perc": 48.09523809524
+      },
+      {
+        "user": "charliesheen",
+        "mf": "Male",
+        "perc": 51.90476190476
+      },
+      {
+        "user": "MTV",
+        "mf": "Female",
+        "perc": 60.85409252669
+      },
+      {
+        "user": "MTV",
+        "mf": "Male",
+        "perc": 39.14590747331
+      },
+      {
+        "user": "ConanOBrien",
+        "mf": "Female",
+        "perc": 45.59585492228
+      },
+      {
+        "user": "ConanOBrien",
+        "mf": "Male",
+        "perc": 54.40414507772
+      },
+      {
+        "user": "KevinHart4real",
+        "mf": "Female",
+        "perc": 43.98148148148
+      },
+      {
+        "user": "KevinHart4real",
+        "mf": "Male",
+        "perc": 56.01851851852
+      },
+      {
+        "user": "agnezmo",
+        "mf": "Female",
+        "perc":  61.7816091954
+      },
+      {
+        "user": "agnezmo",
+        "mf": "Male",
+        "perc":  38.2183908046
+      },
+      {
+        "user": "neymarjr",
+        "mf": "Female",
+        "perc": 28.59504132231
+      },
+      {
+        "user": "neymarjr",
+        "mf": "Male",
+        "perc": 71.40495867769
+      },
+      {
+        "user": "kanyewest",
+        "mf": "Female",
+        "perc": 66.66666666667
+      },
+      {
+        "user": "kanyewest",
+        "mf": "Male",
+        "perc": 33.33333333333
+      },
+      {
+        "user": "ricky_martin",
+        "mf": "Female",
+        "perc": 65.61151079137
+      },
+      {
+        "user": "ricky_martin",
+        "mf": "Male",
+        "perc": 34.38848920863
+      },
+      {
+        "user": "NBA",
+        "mf": "Female",
+        "perc": 28.33876221498
+      },
+      {
+        "user": "NBA",
+        "mf": "Male",
+        "perc": 71.66123778502
+      },
+      {
+        "user": "LeoDiCaprio",
+        "mf": "Female",
+        "perc": 53.33333333333
+      },
+      {
+        "user": "LeoDiCaprio",
+        "mf": "Male",
+        "perc": 46.66666666667
+      },
+      {
+        "user": "carlyraejepsen",
+        "mf": "Female",
+        "perc": 74.95495495495
+      },
+      {
+        "user": "carlyraejepsen",
+        "mf": "Male",
+        "perc": 25.04504504505
+      },
+      {
+        "user": "khloekardashian",
+        "mf": "Female",
+        "perc": 71.79487179487
+      },
+      {
+        "user": "khloekardashian",
+        "mf": "Male",
+        "perc": 28.20512820513
+      },
+      {
+        "user": "vineapp",
+        "mf": "Female",
+        "perc": 50.36496350365
+      },
+      {
+        "user": "vineapp",
+        "mf": "Male",
+        "perc": 49.63503649635
+      },
+      {
+        "user": "ivetesangalo",
+        "mf": "Female",
+        "perc": 58.58585858586
+      },
+      {
+        "user": "ivetesangalo",
+        "mf": "Male",
+        "perc": 41.41414141414
+      },
+      {
+        "user": "SimonCowell",
+        "mf": "Female",
+        "perc": 69.81132075472
+      },
+      {
+        "user": "SimonCowell",
+        "mf": "Male",
+        "perc": 30.18867924528
+      },
+      {
+        "user": "BBCBreaking",
+        "mf": "Female",
+        "perc": 41.43126177024
+      },
+      {
+        "user": "BBCBreaking",
+        "mf": "Male",
+        "perc": 58.56873822976
+      },
+      {
+        "user": "iamdiddy",
+        "mf": "Female",
+        "perc": 50.52264808362
+      },
+      {
+        "user": "iamdiddy",
+        "mf": "Male",
+        "perc": 49.47735191638
+      },
+      {
+        "user": "kelly_clarkson",
+        "mf": "Female",
+        "perc": 64.14473684211
+      },
+      {
+        "user": "kelly_clarkson",
+        "mf": "Male",
+        "perc": 35.85526315789
+      },
+      {
+        "user": "espn",
+        "mf": "Female",
+        "perc": 18.25396825397
+      },
+      {
+        "user": "espn",
+        "mf": "Male",
+        "perc": 81.74603174603
+      },
+      {
+        "user": "Usher",
+        "mf": "Female",
+        "perc":  65.8407079646
+      },
+      {
+        "user": "Usher",
+        "mf": "Male",
+        "perc":  34.1592920354
+      },
+      {
+        "user": "edsheeran",
+        "mf": "Female",
+        "perc": 74.38825448613
+      },
+      {
+        "user": "edsheeran",
+        "mf": "Male",
+        "perc": 25.61174551387
+      },
+      {
+        "user": "danieltosh",
+        "mf": "Female",
+        "perc":  40.2075226978
+      },
+      {
+        "user": "danieltosh",
+        "mf": "Male",
+        "perc":  59.7924773022
+      },
+      {
+        "user": "Ludacris",
+        "mf": "Female",
+        "perc":   46.735395189
+      },
+      {
+        "user": "Ludacris",
+        "mf": "Male",
+        "perc":   53.264604811
+      },
+      {
+        "user": "paulocoelho",
+        "mf": "Female",
+        "perc": 54.11392405063
+      },
+      {
+        "user": "paulocoelho",
+        "mf": "Male",
+        "perc": 45.88607594937
+      },
+      {
+        "user": "juanes",
+        "mf": "Female",
+        "perc": 59.57446808511
+      },
+      {
+        "user": "juanes",
+        "mf": "Male",
+        "perc": 40.42553191489
+      },
+      {
+        "user": "10Ronaldinho",
+        "mf": "Female",
+        "perc":           19.5
+      },
+      {
+        "user": "10Ronaldinho",
+        "mf": "Male",
+        "perc":           80.5
+      },
+      {
+        "user": "DalaiLama",
+        "mf": "Female",
+        "perc": 42.56756756757
+      },
+      {
+        "user": "DalaiLama",
+        "mf": "Male",
+        "perc": 57.43243243243
+      },
+      {
+        "user": "SrBachchan",
+        "mf": "Female",
+        "perc": 21.71628721541
+      },
+      {
+        "user": "SrBachchan",
+        "mf": "Male",
+        "perc": 78.28371278459
+      },
+      {
+        "user": "MohamadAlarefe",
+        "mf": "Female",
+        "perc": 36.88524590164
+      },
+      {
+        "user": "MohamadAlarefe",
+        "mf": "Male",
+        "perc": 63.11475409836
+      },
+      {
+        "user": "ActuallyNPH",
+        "mf": "Female",
+        "perc":  54.8031496063
+      },
+      {
+        "user": "ActuallyNPH",
+        "mf": "Male",
+        "perc":  45.1968503937
+      },
+      {
+        "user": "ClaudiaLeitte",
+        "mf": "Female",
+        "perc": 62.71450858034
+      },
+      {
+        "user": "ClaudiaLeitte",
+        "mf": "Male",
+        "perc": 37.28549141966
+      },
+      {
+        "user": "WayneRooney",
+        "mf": "Female",
+        "perc": 18.11965811966
+      },
+      {
+        "user": "WayneRooney",
+        "mf": "Male",
+        "perc": 81.88034188034
+      }
+      ]
 
       if(!(opts.type==="pieChart" || opts.type==="sparklinePlus")) {
         var data = d3.nest()
-          .key(function(d){
-            //return opts.group === undefined ? 'main' : d[opts.group]
-            //instead of main would think a better default is opts.x
-            return opts.group === undefined ? opts.y : d[opts.group];
-          })
-          .entries(data);
+        .key(function(d){
+          //return opts.group === undefined ? 'main' : d[opts.group]
+          //instead of main would think a better default is opts.x
+          return opts.group === undefined ? opts.y : d[opts.group];
+        })
+        .entries(data);
       }
 
       if (opts.disabled != undefined){
@@ -1101,1049 +1111,1049 @@
 
       nv.addGraph(function() {
         var chart = nv.models[opts.type]()
-          .x(function(d) { return d[opts.x] })
-          .y(function(d) { return d[opts.y] })
-          .width(opts.width)
-          .height(opts.height)
-          .margin({top: 30, right: 20, bottom: 50, left: 100})
-          .stacked(true)
-          .color(['#ff748c', '#748cff'])
+        .x(function(d) { return d[opts.x] })
+        .y(function(d) { return d[opts.y] })
+        .width(opts.width)
+        .height(opts.height)
+        .margin({top: 30, right: 20, bottom: 50, left: 100})
+        .stacked(true)
+        .color(['#ff748c', '#748cff'])
 
-      chart.yAxis.tickFormat(d3.format(',f'))
+        chart.yAxis.tickFormat(d3.format(',f'))
 
-       d3.select("#" + opts.id)
+        d3.select("#" + opts.id)
         .append('svg')
         .datum(data)
         .transition().duration(500)
         .call(chart);
 
-       nv.utils.windowResize(chart.update);
-       return chart;
+        nv.utils.windowResize(chart.update);
+        return chart;
       });
     };
-</script>
+    </script>
 
-<div><p>Here's the same chart but sorted by the proportion of female followers.</p></div>
+    <div><p>Here's the same chart but sorted by the proportion of female followers.</p></div>
 
-<div id='chartb51283d1cdc' class='rChart nvd3'></div>
+    <div id='chartb51283d1cdc' class='rChart nvd3'></div>
 
     <script type='text/javascript'>
- $(document).ready(function(){
+    $(document).ready(function(){
       drawchartb51283d1cdc()
     });
     function drawchartb51283d1cdc(){
       var opts = {
- "dom": "chartb51283d1cdc",
-"width":    600,
-"height":   1100,
-"x": "user",
-"y": "perc",
-"group": "mf",
-"color": "mf",
-"type": "multiBarHorizontalChart",
-"id": "chartb51283d1cdc"
-},
-        data = [
- {
- "user": "NiallOfficial",
-"mf": "Female",
-"perc": 79.80295566502
-},
-{
- "user": "NiallOfficial",
-"mf": "Male",
-"perc": 20.19704433498
-},
-{
- "user": "zaynmalik",
-"mf": "Female",
-"perc": 78.73134328358
-},
-{
- "user": "zaynmalik",
-"mf": "Male",
-"perc": 21.26865671642
-},
-{
- "user": "onedirection",
-"mf": "Female",
-"perc": 78.65748709122
-},
-{
- "user": "onedirection",
-"mf": "Male",
-"perc": 21.34251290878
-},
-{
- "user": "Real_Liam_Payne",
-"mf": "Female",
-"perc": 78.16291161179
-},
-{
- "user": "Real_Liam_Payne",
-"mf": "Male",
-"perc": 21.83708838821
-},
-{
- "user": "Harry_Styles",
-"mf": "Female",
-"perc": 77.39726027397
-},
-{
- "user": "Harry_Styles",
-"mf": "Male",
-"perc": 22.60273972603
-},
-{
- "user": "Louis_Tomlinson",
-"mf": "Female",
-"perc":          76.25
-},
-{
- "user": "Louis_Tomlinson",
-"mf": "Male",
-"perc":          23.75
-},
-{
- "user": "carlyraejepsen",
-"mf": "Female",
-"perc": 74.95495495495
-},
-{
- "user": "carlyraejepsen",
-"mf": "Male",
-"perc": 25.04504504505
-},
-{
- "user": "edsheeran",
-"mf": "Female",
-"perc": 74.38825448613
-},
-{
- "user": "edsheeran",
-"mf": "Male",
-"perc": 25.61174551387
-},
-{
- "user": "Beyonce",
-"mf": "Female",
-"perc":  74.3288590604
-},
-{
- "user": "Beyonce",
-"mf": "Male",
-"perc":  25.6711409396
-},
-{
- "user": "ddlovato",
-"mf": "Female",
-"perc": 71.97898423818
-},
-{
- "user": "ddlovato",
-"mf": "Male",
-"perc": 28.02101576182
-},
-{
- "user": "tyrabanks",
-"mf": "Female",
-"perc": 71.84466019417
-},
-{
- "user": "tyrabanks",
-"mf": "Male",
-"perc": 28.15533980583
-},
-{
- "user": "khloekardashian",
-"mf": "Female",
-"perc": 71.79487179487
-},
-{
- "user": "khloekardashian",
-"mf": "Male",
-"perc": 28.20512820513
-},
-{
- "user": "MileyCyrus",
-"mf": "Female",
-"perc": 70.37701974865
-},
-{
- "user": "MileyCyrus",
-"mf": "Male",
-"perc": 29.62298025135
-},
-{
- "user": "TheEllenShow",
-"mf": "Female",
-"perc":        70.3125
-},
-{
- "user": "TheEllenShow",
-"mf": "Male",
-"perc":        29.6875
-},
-{
- "user": "KimKardashian",
-"mf": "Female",
-"perc": 70.01647446458
-},
-{
- "user": "KimKardashian",
-"mf": "Male",
-"perc": 29.98352553542
-},
-{
- "user": "RyanSeacrest",
-"mf": "Female",
-"perc":  69.8175787728
-},
-{
- "user": "RyanSeacrest",
-"mf": "Male",
-"perc":  30.1824212272
-},
-{
- "user": "SimonCowell",
-"mf": "Female",
-"perc": 69.81132075472
-},
-{
- "user": "SimonCowell",
-"mf": "Male",
-"perc": 30.18867924528
-},
-{
- "user": "selenagomez",
-"mf": "Female",
-"perc": 68.10035842294
-},
-{
- "user": "selenagomez",
-"mf": "Male",
-"perc": 31.89964157706
-},
-{
- "user": "OfficialAdele",
-"mf": "Female",
-"perc": 66.89536878216
-},
-{
- "user": "OfficialAdele",
-"mf": "Male",
-"perc": 33.10463121784
-},
-{
- "user": "kanyewest",
-"mf": "Female",
-"perc": 66.66666666667
-},
-{
- "user": "kanyewest",
-"mf": "Male",
-"perc": 33.33333333333
-},
-{
- "user": "rihanna",
-"mf": "Female",
-"perc": 65.90106007067
-},
-{
- "user": "rihanna",
-"mf": "Male",
-"perc": 34.09893992933
-},
-{
- "user": "Usher",
-"mf": "Female",
-"perc":  65.8407079646
-},
-{
- "user": "Usher",
-"mf": "Male",
-"perc":  34.1592920354
-},
-{
- "user": "ricky_martin",
-"mf": "Female",
-"perc": 65.61151079137
-},
-{
- "user": "ricky_martin",
-"mf": "Male",
-"perc": 34.38848920863
-},
-{
- "user": "jtimberlake",
-"mf": "Female",
-"perc": 65.07936507937
-},
-{
- "user": "jtimberlake",
-"mf": "Male",
-"perc": 34.92063492063
-},
-{
- "user": "kourtneykardash",
-"mf": "Female",
-"perc": 65.03267973856
-},
-{
- "user": "kourtneykardash",
-"mf": "Male",
-"perc": 34.96732026144
-},
-{
- "user": "AvrilLavigne",
-"mf": "Female",
-"perc": 64.77876106195
-},
-{
- "user": "AvrilLavigne",
-"mf": "Male",
-"perc": 35.22123893805
-},
-{
- "user": "Pink",
-"mf": "Female",
-"perc": 64.38356164384
-},
-{
- "user": "Pink",
-"mf": "Male",
-"perc": 35.61643835616
-},
-{
- "user": "kelly_clarkson",
-"mf": "Female",
-"perc": 64.14473684211
-},
-{
- "user": "kelly_clarkson",
-"mf": "Male",
-"perc": 35.85526315789
-},
-{
- "user": "BrunoMars",
-"mf": "Female",
-"perc": 63.88888888889
-},
-{
- "user": "BrunoMars",
-"mf": "Male",
-"perc": 36.11111111111
-},
-{
- "user": "taylorswift13",
-"mf": "Female",
-"perc": 63.68613138686
-},
-{
- "user": "taylorswift13",
-"mf": "Male",
-"perc": 36.31386861314
-},
-{
- "user": "NICKIMINAJ",
-"mf": "Female",
-"perc": 63.63636363636
-},
-{
- "user": "NICKIMINAJ",
-"mf": "Male",
-"perc": 36.36363636364
-},
-{
- "user": "Oprah",
-"mf": "Female",
-"perc": 63.48623853211
-},
-{
- "user": "Oprah",
-"mf": "Male",
-"perc": 36.51376146789
-},
-{
- "user": "ashleytisdale",
-"mf": "Female",
-"perc": 62.72577996716
-},
-{
- "user": "ashleytisdale",
-"mf": "Male",
-"perc": 37.27422003284
-},
-{
- "user": "aliciakeys",
-"mf": "Female",
-"perc": 62.72401433692
-},
-{
- "user": "aliciakeys",
-"mf": "Male",
-"perc": 37.27598566308
-},
-{
- "user": "ClaudiaLeitte",
-"mf": "Female",
-"perc": 62.71450858034
-},
-{
- "user": "ClaudiaLeitte",
-"mf": "Male",
-"perc": 37.28549141966
-},
-{
- "user": "katyperry",
-"mf": "Female",
-"perc": 62.21033868093
-},
-{
- "user": "katyperry",
-"mf": "Male",
-"perc": 37.78966131907
-},
-{
- "user": "ArianaGrande",
-"mf": "Female",
-"perc": 61.95286195286
-},
-{
- "user": "ArianaGrande",
-"mf": "Male",
-"perc": 38.04713804714
-},
-{
- "user": "MariahCarey",
-"mf": "Female",
-"perc": 61.90476190476
-},
-{
- "user": "MariahCarey",
-"mf": "Male",
-"perc": 38.09523809524
-},
-{
- "user": "agnezmo",
-"mf": "Female",
-"perc":  61.7816091954
-},
-{
- "user": "agnezmo",
-"mf": "Male",
-"perc":  38.2183908046
-},
-{
- "user": "MTV",
-"mf": "Female",
-"perc": 60.85409252669
-},
-{
- "user": "MTV",
-"mf": "Male",
-"perc": 39.14590747331
-},
-{
- "user": "iamwill",
-"mf": "Female",
-"perc": 60.81300813008
-},
-{
- "user": "iamwill",
-"mf": "Male",
-"perc": 39.18699186992
-},
-{
- "user": "aplusk",
-"mf": "Female",
-"perc":       60.46875
-},
-{
- "user": "aplusk",
-"mf": "Male",
-"perc":       39.53125
-},
-{
- "user": "AlejandroSanz",
-"mf": "Female",
-"perc":  60.1683029453
-},
-{
- "user": "AlejandroSanz",
-"mf": "Male",
-"perc":  39.8316970547
-},
-{
- "user": "EmWatson",
-"mf": "Female",
-"perc":             60
-},
-{
- "user": "EmWatson",
-"mf": "Male",
-"perc":             40
-},
-{
- "user": "juanes",
-"mf": "Female",
-"perc": 59.57446808511
-},
-{
- "user": "juanes",
-"mf": "Male",
-"perc": 40.42553191489
-},
-{
- "user": "justinbieber",
-"mf": "Female",
-"perc": 59.31899641577
-},
-{
- "user": "justinbieber",
-"mf": "Male",
-"perc": 40.68100358423
-},
-{
- "user": "ladygaga",
-"mf": "Female",
-"perc": 59.07335907336
-},
-{
- "user": "ladygaga",
-"mf": "Male",
-"perc": 40.92664092664
-},
-{
- "user": "xtina",
-"mf": "Female",
-"perc": 58.95765472313
-},
-{
- "user": "xtina",
-"mf": "Male",
-"perc": 41.04234527687
-},
-{
- "user": "coldplay",
-"mf": "Female",
-"perc":       58.59375
-},
-{
- "user": "coldplay",
-"mf": "Male",
-"perc":       41.40625
-},
-{
- "user": "ivetesangalo",
-"mf": "Female",
-"perc": 58.58585858586
-},
-{
- "user": "ivetesangalo",
-"mf": "Male",
-"perc": 41.41414141414
-},
-{
- "user": "chrisbrown",
-"mf": "Female",
-"perc": 58.20895522388
-},
-{
- "user": "chrisbrown",
-"mf": "Male",
-"perc": 41.79104477612
-},
-{
- "user": "JLo",
-"mf": "Female",
-"perc": 58.08080808081
-},
-{
- "user": "JLo",
-"mf": "Male",
-"perc": 41.91919191919
-},
-{
- "user": "ParisHilton",
-"mf": "Female",
-"perc": 57.14285714286
-},
-{
- "user": "ParisHilton",
-"mf": "Male",
-"perc": 42.85714285714
-},
-{
- "user": "Drake",
-"mf": "Female",
-"perc": 56.59163987138
-},
-{
- "user": "Drake",
-"mf": "Male",
-"perc": 43.40836012862
-},
-{
- "user": "davidguetta",
-"mf": "Female",
-"perc": 55.06445672192
-},
-{
- "user": "davidguetta",
-"mf": "Male",
-"perc": 44.93554327808
-},
-{
- "user": "jimmyfallon",
-"mf": "Female",
-"perc":  54.9795361528
-},
-{
- "user": "jimmyfallon",
-"mf": "Male",
-"perc":  45.0204638472
-},
-{
- "user": "ActuallyNPH",
-"mf": "Female",
-"perc":  54.8031496063
-},
-{
- "user": "ActuallyNPH",
-"mf": "Male",
-"perc":  45.1968503937
-},
-{
- "user": "instagram",
-"mf": "Female",
-"perc": 54.22993492408
-},
-{
- "user": "instagram",
-"mf": "Male",
-"perc": 45.77006507592
-},
-{
- "user": "paulocoelho",
-"mf": "Female",
-"perc": 54.11392405063
-},
-{
- "user": "paulocoelho",
-"mf": "Male",
-"perc": 45.88607594937
-},
-{
- "user": "shakira",
-"mf": "Female",
-"perc": 53.98981324278
-},
-{
- "user": "shakira",
-"mf": "Male",
-"perc": 46.01018675722
-},
-{
- "user": "britneyspears",
-"mf": "Female",
-"perc":  53.4749034749
-},
-{
- "user": "britneyspears",
-"mf": "Male",
-"perc":  46.5250965251
-},
-{
- "user": "LeoDiCaprio",
-"mf": "Female",
-"perc": 53.33333333333
-},
-{
- "user": "LeoDiCaprio",
-"mf": "Male",
-"perc": 46.66666666667
-},
-{
- "user": "pitbull",
-"mf": "Female",
-"perc": 51.90311418685
-},
-{
- "user": "pitbull",
-"mf": "Male",
-"perc": 48.09688581315
-},
-{
- "user": "UberSoc",
-"mf": "Female",
-"perc": 51.13636363636
-},
-{
- "user": "UberSoc",
-"mf": "Male",
-"perc": 48.86363636364
-},
-{
- "user": "iamdiddy",
-"mf": "Female",
-"perc": 50.52264808362
-},
-{
- "user": "iamdiddy",
-"mf": "Male",
-"perc": 49.47735191638
-},
-{
- "user": "vineapp",
-"mf": "Female",
-"perc": 50.36496350365
-},
-{
- "user": "vineapp",
-"mf": "Male",
-"perc": 49.63503649635
-},
-{
- "user": "LilTunechi",
-"mf": "Female",
-"perc": 49.82935153584
-},
-{
- "user": "LilTunechi",
-"mf": "Male",
-"perc": 50.17064846416
-},
-{
- "user": "charliesheen",
-"mf": "Female",
-"perc": 48.09523809524
-},
-{
- "user": "charliesheen",
-"mf": "Male",
-"perc": 51.90476190476
-},
-{
- "user": "Eminem",
-"mf": "Female",
-"perc": 46.85816876122
-},
-{
- "user": "Eminem",
-"mf": "Male",
-"perc": 53.14183123878
-},
-{
- "user": "Ludacris",
-"mf": "Female",
-"perc":   46.735395189
-},
-{
- "user": "Ludacris",
-"mf": "Male",
-"perc":   53.264604811
-},
-{
- "user": "JimCarrey",
-"mf": "Female",
-"perc": 46.64586583463
-},
-{
- "user": "JimCarrey",
-"mf": "Male",
-"perc": 53.35413416537
-},
-{
- "user": "nytimes",
-"mf": "Female",
-"perc": 46.33204633205
-},
-{
- "user": "nytimes",
-"mf": "Male",
-"perc": 53.66795366795
-},
-{
- "user": "twitter_es",
-"mf": "Female",
-"perc": 46.19124797407
-},
-{
- "user": "twitter_es",
-"mf": "Male",
-"perc": 53.80875202593
-},
-{
- "user": "facebook",
-"mf": "Female",
-"perc": 46.04810996564
-},
-{
- "user": "facebook",
-"mf": "Male",
-"perc": 53.95189003436
-},
-{
- "user": "ConanOBrien",
-"mf": "Female",
-"perc": 45.59585492228
-},
-{
- "user": "ConanOBrien",
-"mf": "Male",
-"perc": 54.40414507772
-},
-{
- "user": "wizkhalifa",
-"mf": "Female",
-"perc": 44.98141263941
-},
-{
- "user": "wizkhalifa",
-"mf": "Male",
-"perc": 55.01858736059
-},
-{
- "user": "KevinHart4real",
-"mf": "Female",
-"perc": 43.98148148148
-},
-{
- "user": "KevinHart4real",
-"mf": "Male",
-"perc": 56.01851851852
-},
-{
- "user": "CNN",
-"mf": "Female",
-"perc": 43.07692307692
-},
-{
- "user": "CNN",
-"mf": "Male",
-"perc": 56.92307692308
-},
-{
- "user": "DalaiLama",
-"mf": "Female",
-"perc": 42.56756756757
-},
-{
- "user": "DalaiLama",
-"mf": "Male",
-"perc": 57.43243243243
-},
-{
- "user": "YouTube",
-"mf": "Female",
-"perc":   42.194092827
-},
-{
- "user": "YouTube",
-"mf": "Male",
-"perc":   57.805907173
-},
-{
- "user": "cnnbrk",
-"mf": "Female",
-"perc": 41.45383104126
-},
-{
- "user": "cnnbrk",
-"mf": "Male",
-"perc": 58.54616895874
-},
-{
- "user": "BBCBreaking",
-"mf": "Female",
-"perc": 41.43126177024
-},
-{
- "user": "BBCBreaking",
-"mf": "Male",
-"perc": 58.56873822976
-},
-{
- "user": "BarackObama",
-"mf": "Female",
-"perc": 40.74074074074
-},
-{
- "user": "BarackObama",
-"mf": "Male",
-"perc": 59.25925925926
-},
-{
- "user": "danieltosh",
-"mf": "Female",
-"perc":  40.2075226978
-},
-{
- "user": "danieltosh",
-"mf": "Male",
-"perc":  59.7924773022
-},
-{
- "user": "twitter",
-"mf": "Female",
-"perc": 39.56692913386
-},
-{
- "user": "twitter",
-"mf": "Male",
-"perc": 60.43307086614
-},
-{
- "user": "SnoopDogg",
-"mf": "Female",
-"perc": 39.56043956044
-},
-{
- "user": "SnoopDogg",
-"mf": "Male",
-"perc": 60.43956043956
-},
-{
- "user": "KingJames",
-"mf": "Female",
-"perc":  37.5366568915
-},
-{
- "user": "KingJames",
-"mf": "Male",
-"perc":  62.4633431085
-},
-{
- "user": "MohamadAlarefe",
-"mf": "Female",
-"perc": 36.88524590164
-},
-{
- "user": "MohamadAlarefe",
-"mf": "Male",
-"perc": 63.11475409836
-},
-{
- "user": "BillGates",
-"mf": "Female",
-"perc": 32.70676691729
-},
-{
- "user": "BillGates",
-"mf": "Male",
-"perc": 67.29323308271
-},
-{
- "user": "Cristiano",
-"mf": "Female",
-"perc": 30.75539568345
-},
-{
- "user": "Cristiano",
-"mf": "Male",
-"perc": 69.24460431655
-},
-{
- "user": "neymarjr",
-"mf": "Female",
-"perc": 28.59504132231
-},
-{
- "user": "neymarjr",
-"mf": "Male",
-"perc": 71.40495867769
-},
-{
- "user": "NBA",
-"mf": "Female",
-"perc": 28.33876221498
-},
-{
- "user": "NBA",
-"mf": "Male",
-"perc": 71.66123778502
-},
-{
- "user": "realmadrid",
-"mf": "Female",
-"perc": 27.90697674419
-},
-{
- "user": "realmadrid",
-"mf": "Male",
-"perc": 72.09302325581
-},
-{
- "user": "KAKA",
-"mf": "Female",
-"perc": 27.32142857143
-},
-{
- "user": "KAKA",
-"mf": "Male",
-"perc": 72.67857142857
-},
-{
- "user": "SrBachchan",
-"mf": "Female",
-"perc": 21.71628721541
-},
-{
- "user": "SrBachchan",
-"mf": "Male",
-"perc": 78.28371278459
-},
-{
- "user": "10Ronaldinho",
-"mf": "Female",
-"perc":           19.5
-},
-{
- "user": "10Ronaldinho",
-"mf": "Male",
-"perc":           80.5
-},
-{
- "user": "FCBarcelona",
-"mf": "Female",
-"perc": 18.64716636197
-},
-{
- "user": "FCBarcelona",
-"mf": "Male",
-"perc": 81.35283363803
-},
-{
- "user": "espn",
-"mf": "Female",
-"perc": 18.25396825397
-},
-{
- "user": "espn",
-"mf": "Male",
-"perc": 81.74603174603
-},
-{
- "user": "WayneRooney",
-"mf": "Female",
-"perc": 18.11965811966
-},
-{
- "user": "WayneRooney",
-"mf": "Male",
-"perc": 81.88034188034
-}
-]
+        "dom": "chartb51283d1cdc",
+        "width":    600,
+        "height":   1100,
+        "x": "user",
+        "y": "perc",
+        "group": "mf",
+        "color": "mf",
+        "type": "multiBarHorizontalChart",
+        "id": "chartb51283d1cdc"
+      },
+      data = [
+      {
+        "user": "NiallOfficial",
+        "mf": "Female",
+        "perc": 79.80295566502
+      },
+      {
+        "user": "NiallOfficial",
+        "mf": "Male",
+        "perc": 20.19704433498
+      },
+      {
+        "user": "zaynmalik",
+        "mf": "Female",
+        "perc": 78.73134328358
+      },
+      {
+        "user": "zaynmalik",
+        "mf": "Male",
+        "perc": 21.26865671642
+      },
+      {
+        "user": "onedirection",
+        "mf": "Female",
+        "perc": 78.65748709122
+      },
+      {
+        "user": "onedirection",
+        "mf": "Male",
+        "perc": 21.34251290878
+      },
+      {
+        "user": "Real_Liam_Payne",
+        "mf": "Female",
+        "perc": 78.16291161179
+      },
+      {
+        "user": "Real_Liam_Payne",
+        "mf": "Male",
+        "perc": 21.83708838821
+      },
+      {
+        "user": "Harry_Styles",
+        "mf": "Female",
+        "perc": 77.39726027397
+      },
+      {
+        "user": "Harry_Styles",
+        "mf": "Male",
+        "perc": 22.60273972603
+      },
+      {
+        "user": "Louis_Tomlinson",
+        "mf": "Female",
+        "perc":          76.25
+      },
+      {
+        "user": "Louis_Tomlinson",
+        "mf": "Male",
+        "perc":          23.75
+      },
+      {
+        "user": "carlyraejepsen",
+        "mf": "Female",
+        "perc": 74.95495495495
+      },
+      {
+        "user": "carlyraejepsen",
+        "mf": "Male",
+        "perc": 25.04504504505
+      },
+      {
+        "user": "edsheeran",
+        "mf": "Female",
+        "perc": 74.38825448613
+      },
+      {
+        "user": "edsheeran",
+        "mf": "Male",
+        "perc": 25.61174551387
+      },
+      {
+        "user": "Beyonce",
+        "mf": "Female",
+        "perc":  74.3288590604
+      },
+      {
+        "user": "Beyonce",
+        "mf": "Male",
+        "perc":  25.6711409396
+      },
+      {
+        "user": "ddlovato",
+        "mf": "Female",
+        "perc": 71.97898423818
+      },
+      {
+        "user": "ddlovato",
+        "mf": "Male",
+        "perc": 28.02101576182
+      },
+      {
+        "user": "tyrabanks",
+        "mf": "Female",
+        "perc": 71.84466019417
+      },
+      {
+        "user": "tyrabanks",
+        "mf": "Male",
+        "perc": 28.15533980583
+      },
+      {
+        "user": "khloekardashian",
+        "mf": "Female",
+        "perc": 71.79487179487
+      },
+      {
+        "user": "khloekardashian",
+        "mf": "Male",
+        "perc": 28.20512820513
+      },
+      {
+        "user": "MileyCyrus",
+        "mf": "Female",
+        "perc": 70.37701974865
+      },
+      {
+        "user": "MileyCyrus",
+        "mf": "Male",
+        "perc": 29.62298025135
+      },
+      {
+        "user": "TheEllenShow",
+        "mf": "Female",
+        "perc":        70.3125
+      },
+      {
+        "user": "TheEllenShow",
+        "mf": "Male",
+        "perc":        29.6875
+      },
+      {
+        "user": "KimKardashian",
+        "mf": "Female",
+        "perc": 70.01647446458
+      },
+      {
+        "user": "KimKardashian",
+        "mf": "Male",
+        "perc": 29.98352553542
+      },
+      {
+        "user": "RyanSeacrest",
+        "mf": "Female",
+        "perc":  69.8175787728
+      },
+      {
+        "user": "RyanSeacrest",
+        "mf": "Male",
+        "perc":  30.1824212272
+      },
+      {
+        "user": "SimonCowell",
+        "mf": "Female",
+        "perc": 69.81132075472
+      },
+      {
+        "user": "SimonCowell",
+        "mf": "Male",
+        "perc": 30.18867924528
+      },
+      {
+        "user": "selenagomez",
+        "mf": "Female",
+        "perc": 68.10035842294
+      },
+      {
+        "user": "selenagomez",
+        "mf": "Male",
+        "perc": 31.89964157706
+      },
+      {
+        "user": "OfficialAdele",
+        "mf": "Female",
+        "perc": 66.89536878216
+      },
+      {
+        "user": "OfficialAdele",
+        "mf": "Male",
+        "perc": 33.10463121784
+      },
+      {
+        "user": "kanyewest",
+        "mf": "Female",
+        "perc": 66.66666666667
+      },
+      {
+        "user": "kanyewest",
+        "mf": "Male",
+        "perc": 33.33333333333
+      },
+      {
+        "user": "rihanna",
+        "mf": "Female",
+        "perc": 65.90106007067
+      },
+      {
+        "user": "rihanna",
+        "mf": "Male",
+        "perc": 34.09893992933
+      },
+      {
+        "user": "Usher",
+        "mf": "Female",
+        "perc":  65.8407079646
+      },
+      {
+        "user": "Usher",
+        "mf": "Male",
+        "perc":  34.1592920354
+      },
+      {
+        "user": "ricky_martin",
+        "mf": "Female",
+        "perc": 65.61151079137
+      },
+      {
+        "user": "ricky_martin",
+        "mf": "Male",
+        "perc": 34.38848920863
+      },
+      {
+        "user": "jtimberlake",
+        "mf": "Female",
+        "perc": 65.07936507937
+      },
+      {
+        "user": "jtimberlake",
+        "mf": "Male",
+        "perc": 34.92063492063
+      },
+      {
+        "user": "kourtneykardash",
+        "mf": "Female",
+        "perc": 65.03267973856
+      },
+      {
+        "user": "kourtneykardash",
+        "mf": "Male",
+        "perc": 34.96732026144
+      },
+      {
+        "user": "AvrilLavigne",
+        "mf": "Female",
+        "perc": 64.77876106195
+      },
+      {
+        "user": "AvrilLavigne",
+        "mf": "Male",
+        "perc": 35.22123893805
+      },
+      {
+        "user": "Pink",
+        "mf": "Female",
+        "perc": 64.38356164384
+      },
+      {
+        "user": "Pink",
+        "mf": "Male",
+        "perc": 35.61643835616
+      },
+      {
+        "user": "kelly_clarkson",
+        "mf": "Female",
+        "perc": 64.14473684211
+      },
+      {
+        "user": "kelly_clarkson",
+        "mf": "Male",
+        "perc": 35.85526315789
+      },
+      {
+        "user": "BrunoMars",
+        "mf": "Female",
+        "perc": 63.88888888889
+      },
+      {
+        "user": "BrunoMars",
+        "mf": "Male",
+        "perc": 36.11111111111
+      },
+      {
+        "user": "taylorswift13",
+        "mf": "Female",
+        "perc": 63.68613138686
+      },
+      {
+        "user": "taylorswift13",
+        "mf": "Male",
+        "perc": 36.31386861314
+      },
+      {
+        "user": "NICKIMINAJ",
+        "mf": "Female",
+        "perc": 63.63636363636
+      },
+      {
+        "user": "NICKIMINAJ",
+        "mf": "Male",
+        "perc": 36.36363636364
+      },
+      {
+        "user": "Oprah",
+        "mf": "Female",
+        "perc": 63.48623853211
+      },
+      {
+        "user": "Oprah",
+        "mf": "Male",
+        "perc": 36.51376146789
+      },
+      {
+        "user": "ashleytisdale",
+        "mf": "Female",
+        "perc": 62.72577996716
+      },
+      {
+        "user": "ashleytisdale",
+        "mf": "Male",
+        "perc": 37.27422003284
+      },
+      {
+        "user": "aliciakeys",
+        "mf": "Female",
+        "perc": 62.72401433692
+      },
+      {
+        "user": "aliciakeys",
+        "mf": "Male",
+        "perc": 37.27598566308
+      },
+      {
+        "user": "ClaudiaLeitte",
+        "mf": "Female",
+        "perc": 62.71450858034
+      },
+      {
+        "user": "ClaudiaLeitte",
+        "mf": "Male",
+        "perc": 37.28549141966
+      },
+      {
+        "user": "katyperry",
+        "mf": "Female",
+        "perc": 62.21033868093
+      },
+      {
+        "user": "katyperry",
+        "mf": "Male",
+        "perc": 37.78966131907
+      },
+      {
+        "user": "ArianaGrande",
+        "mf": "Female",
+        "perc": 61.95286195286
+      },
+      {
+        "user": "ArianaGrande",
+        "mf": "Male",
+        "perc": 38.04713804714
+      },
+      {
+        "user": "MariahCarey",
+        "mf": "Female",
+        "perc": 61.90476190476
+      },
+      {
+        "user": "MariahCarey",
+        "mf": "Male",
+        "perc": 38.09523809524
+      },
+      {
+        "user": "agnezmo",
+        "mf": "Female",
+        "perc":  61.7816091954
+      },
+      {
+        "user": "agnezmo",
+        "mf": "Male",
+        "perc":  38.2183908046
+      },
+      {
+        "user": "MTV",
+        "mf": "Female",
+        "perc": 60.85409252669
+      },
+      {
+        "user": "MTV",
+        "mf": "Male",
+        "perc": 39.14590747331
+      },
+      {
+        "user": "iamwill",
+        "mf": "Female",
+        "perc": 60.81300813008
+      },
+      {
+        "user": "iamwill",
+        "mf": "Male",
+        "perc": 39.18699186992
+      },
+      {
+        "user": "aplusk",
+        "mf": "Female",
+        "perc":       60.46875
+      },
+      {
+        "user": "aplusk",
+        "mf": "Male",
+        "perc":       39.53125
+      },
+      {
+        "user": "AlejandroSanz",
+        "mf": "Female",
+        "perc":  60.1683029453
+      },
+      {
+        "user": "AlejandroSanz",
+        "mf": "Male",
+        "perc":  39.8316970547
+      },
+      {
+        "user": "EmWatson",
+        "mf": "Female",
+        "perc":             60
+      },
+      {
+        "user": "EmWatson",
+        "mf": "Male",
+        "perc":             40
+      },
+      {
+        "user": "juanes",
+        "mf": "Female",
+        "perc": 59.57446808511
+      },
+      {
+        "user": "juanes",
+        "mf": "Male",
+        "perc": 40.42553191489
+      },
+      {
+        "user": "justinbieber",
+        "mf": "Female",
+        "perc": 59.31899641577
+      },
+      {
+        "user": "justinbieber",
+        "mf": "Male",
+        "perc": 40.68100358423
+      },
+      {
+        "user": "ladygaga",
+        "mf": "Female",
+        "perc": 59.07335907336
+      },
+      {
+        "user": "ladygaga",
+        "mf": "Male",
+        "perc": 40.92664092664
+      },
+      {
+        "user": "xtina",
+        "mf": "Female",
+        "perc": 58.95765472313
+      },
+      {
+        "user": "xtina",
+        "mf": "Male",
+        "perc": 41.04234527687
+      },
+      {
+        "user": "coldplay",
+        "mf": "Female",
+        "perc":       58.59375
+      },
+      {
+        "user": "coldplay",
+        "mf": "Male",
+        "perc":       41.40625
+      },
+      {
+        "user": "ivetesangalo",
+        "mf": "Female",
+        "perc": 58.58585858586
+      },
+      {
+        "user": "ivetesangalo",
+        "mf": "Male",
+        "perc": 41.41414141414
+      },
+      {
+        "user": "chrisbrown",
+        "mf": "Female",
+        "perc": 58.20895522388
+      },
+      {
+        "user": "chrisbrown",
+        "mf": "Male",
+        "perc": 41.79104477612
+      },
+      {
+        "user": "JLo",
+        "mf": "Female",
+        "perc": 58.08080808081
+      },
+      {
+        "user": "JLo",
+        "mf": "Male",
+        "perc": 41.91919191919
+      },
+      {
+        "user": "ParisHilton",
+        "mf": "Female",
+        "perc": 57.14285714286
+      },
+      {
+        "user": "ParisHilton",
+        "mf": "Male",
+        "perc": 42.85714285714
+      },
+      {
+        "user": "Drake",
+        "mf": "Female",
+        "perc": 56.59163987138
+      },
+      {
+        "user": "Drake",
+        "mf": "Male",
+        "perc": 43.40836012862
+      },
+      {
+        "user": "davidguetta",
+        "mf": "Female",
+        "perc": 55.06445672192
+      },
+      {
+        "user": "davidguetta",
+        "mf": "Male",
+        "perc": 44.93554327808
+      },
+      {
+        "user": "jimmyfallon",
+        "mf": "Female",
+        "perc":  54.9795361528
+      },
+      {
+        "user": "jimmyfallon",
+        "mf": "Male",
+        "perc":  45.0204638472
+      },
+      {
+        "user": "ActuallyNPH",
+        "mf": "Female",
+        "perc":  54.8031496063
+      },
+      {
+        "user": "ActuallyNPH",
+        "mf": "Male",
+        "perc":  45.1968503937
+      },
+      {
+        "user": "instagram",
+        "mf": "Female",
+        "perc": 54.22993492408
+      },
+      {
+        "user": "instagram",
+        "mf": "Male",
+        "perc": 45.77006507592
+      },
+      {
+        "user": "paulocoelho",
+        "mf": "Female",
+        "perc": 54.11392405063
+      },
+      {
+        "user": "paulocoelho",
+        "mf": "Male",
+        "perc": 45.88607594937
+      },
+      {
+        "user": "shakira",
+        "mf": "Female",
+        "perc": 53.98981324278
+      },
+      {
+        "user": "shakira",
+        "mf": "Male",
+        "perc": 46.01018675722
+      },
+      {
+        "user": "britneyspears",
+        "mf": "Female",
+        "perc":  53.4749034749
+      },
+      {
+        "user": "britneyspears",
+        "mf": "Male",
+        "perc":  46.5250965251
+      },
+      {
+        "user": "LeoDiCaprio",
+        "mf": "Female",
+        "perc": 53.33333333333
+      },
+      {
+        "user": "LeoDiCaprio",
+        "mf": "Male",
+        "perc": 46.66666666667
+      },
+      {
+        "user": "pitbull",
+        "mf": "Female",
+        "perc": 51.90311418685
+      },
+      {
+        "user": "pitbull",
+        "mf": "Male",
+        "perc": 48.09688581315
+      },
+      {
+        "user": "UberSoc",
+        "mf": "Female",
+        "perc": 51.13636363636
+      },
+      {
+        "user": "UberSoc",
+        "mf": "Male",
+        "perc": 48.86363636364
+      },
+      {
+        "user": "iamdiddy",
+        "mf": "Female",
+        "perc": 50.52264808362
+      },
+      {
+        "user": "iamdiddy",
+        "mf": "Male",
+        "perc": 49.47735191638
+      },
+      {
+        "user": "vineapp",
+        "mf": "Female",
+        "perc": 50.36496350365
+      },
+      {
+        "user": "vineapp",
+        "mf": "Male",
+        "perc": 49.63503649635
+      },
+      {
+        "user": "LilTunechi",
+        "mf": "Female",
+        "perc": 49.82935153584
+      },
+      {
+        "user": "LilTunechi",
+        "mf": "Male",
+        "perc": 50.17064846416
+      },
+      {
+        "user": "charliesheen",
+        "mf": "Female",
+        "perc": 48.09523809524
+      },
+      {
+        "user": "charliesheen",
+        "mf": "Male",
+        "perc": 51.90476190476
+      },
+      {
+        "user": "Eminem",
+        "mf": "Female",
+        "perc": 46.85816876122
+      },
+      {
+        "user": "Eminem",
+        "mf": "Male",
+        "perc": 53.14183123878
+      },
+      {
+        "user": "Ludacris",
+        "mf": "Female",
+        "perc":   46.735395189
+      },
+      {
+        "user": "Ludacris",
+        "mf": "Male",
+        "perc":   53.264604811
+      },
+      {
+        "user": "JimCarrey",
+        "mf": "Female",
+        "perc": 46.64586583463
+      },
+      {
+        "user": "JimCarrey",
+        "mf": "Male",
+        "perc": 53.35413416537
+      },
+      {
+        "user": "nytimes",
+        "mf": "Female",
+        "perc": 46.33204633205
+      },
+      {
+        "user": "nytimes",
+        "mf": "Male",
+        "perc": 53.66795366795
+      },
+      {
+        "user": "twitter_es",
+        "mf": "Female",
+        "perc": 46.19124797407
+      },
+      {
+        "user": "twitter_es",
+        "mf": "Male",
+        "perc": 53.80875202593
+      },
+      {
+        "user": "facebook",
+        "mf": "Female",
+        "perc": 46.04810996564
+      },
+      {
+        "user": "facebook",
+        "mf": "Male",
+        "perc": 53.95189003436
+      },
+      {
+        "user": "ConanOBrien",
+        "mf": "Female",
+        "perc": 45.59585492228
+      },
+      {
+        "user": "ConanOBrien",
+        "mf": "Male",
+        "perc": 54.40414507772
+      },
+      {
+        "user": "wizkhalifa",
+        "mf": "Female",
+        "perc": 44.98141263941
+      },
+      {
+        "user": "wizkhalifa",
+        "mf": "Male",
+        "perc": 55.01858736059
+      },
+      {
+        "user": "KevinHart4real",
+        "mf": "Female",
+        "perc": 43.98148148148
+      },
+      {
+        "user": "KevinHart4real",
+        "mf": "Male",
+        "perc": 56.01851851852
+      },
+      {
+        "user": "CNN",
+        "mf": "Female",
+        "perc": 43.07692307692
+      },
+      {
+        "user": "CNN",
+        "mf": "Male",
+        "perc": 56.92307692308
+      },
+      {
+        "user": "DalaiLama",
+        "mf": "Female",
+        "perc": 42.56756756757
+      },
+      {
+        "user": "DalaiLama",
+        "mf": "Male",
+        "perc": 57.43243243243
+      },
+      {
+        "user": "YouTube",
+        "mf": "Female",
+        "perc":   42.194092827
+      },
+      {
+        "user": "YouTube",
+        "mf": "Male",
+        "perc":   57.805907173
+      },
+      {
+        "user": "cnnbrk",
+        "mf": "Female",
+        "perc": 41.45383104126
+      },
+      {
+        "user": "cnnbrk",
+        "mf": "Male",
+        "perc": 58.54616895874
+      },
+      {
+        "user": "BBCBreaking",
+        "mf": "Female",
+        "perc": 41.43126177024
+      },
+      {
+        "user": "BBCBreaking",
+        "mf": "Male",
+        "perc": 58.56873822976
+      },
+      {
+        "user": "BarackObama",
+        "mf": "Female",
+        "perc": 40.74074074074
+      },
+      {
+        "user": "BarackObama",
+        "mf": "Male",
+        "perc": 59.25925925926
+      },
+      {
+        "user": "danieltosh",
+        "mf": "Female",
+        "perc":  40.2075226978
+      },
+      {
+        "user": "danieltosh",
+        "mf": "Male",
+        "perc":  59.7924773022
+      },
+      {
+        "user": "twitter",
+        "mf": "Female",
+        "perc": 39.56692913386
+      },
+      {
+        "user": "twitter",
+        "mf": "Male",
+        "perc": 60.43307086614
+      },
+      {
+        "user": "SnoopDogg",
+        "mf": "Female",
+        "perc": 39.56043956044
+      },
+      {
+        "user": "SnoopDogg",
+        "mf": "Male",
+        "perc": 60.43956043956
+      },
+      {
+        "user": "KingJames",
+        "mf": "Female",
+        "perc":  37.5366568915
+      },
+      {
+        "user": "KingJames",
+        "mf": "Male",
+        "perc":  62.4633431085
+      },
+      {
+        "user": "MohamadAlarefe",
+        "mf": "Female",
+        "perc": 36.88524590164
+      },
+      {
+        "user": "MohamadAlarefe",
+        "mf": "Male",
+        "perc": 63.11475409836
+      },
+      {
+        "user": "BillGates",
+        "mf": "Female",
+        "perc": 32.70676691729
+      },
+      {
+        "user": "BillGates",
+        "mf": "Male",
+        "perc": 67.29323308271
+      },
+      {
+        "user": "Cristiano",
+        "mf": "Female",
+        "perc": 30.75539568345
+      },
+      {
+        "user": "Cristiano",
+        "mf": "Male",
+        "perc": 69.24460431655
+      },
+      {
+        "user": "neymarjr",
+        "mf": "Female",
+        "perc": 28.59504132231
+      },
+      {
+        "user": "neymarjr",
+        "mf": "Male",
+        "perc": 71.40495867769
+      },
+      {
+        "user": "NBA",
+        "mf": "Female",
+        "perc": 28.33876221498
+      },
+      {
+        "user": "NBA",
+        "mf": "Male",
+        "perc": 71.66123778502
+      },
+      {
+        "user": "realmadrid",
+        "mf": "Female",
+        "perc": 27.90697674419
+      },
+      {
+        "user": "realmadrid",
+        "mf": "Male",
+        "perc": 72.09302325581
+      },
+      {
+        "user": "KAKA",
+        "mf": "Female",
+        "perc": 27.32142857143
+      },
+      {
+        "user": "KAKA",
+        "mf": "Male",
+        "perc": 72.67857142857
+      },
+      {
+        "user": "SrBachchan",
+        "mf": "Female",
+        "perc": 21.71628721541
+      },
+      {
+        "user": "SrBachchan",
+        "mf": "Male",
+        "perc": 78.28371278459
+      },
+      {
+        "user": "10Ronaldinho",
+        "mf": "Female",
+        "perc":           19.5
+      },
+      {
+        "user": "10Ronaldinho",
+        "mf": "Male",
+        "perc":           80.5
+      },
+      {
+        "user": "FCBarcelona",
+        "mf": "Female",
+        "perc": 18.64716636197
+      },
+      {
+        "user": "FCBarcelona",
+        "mf": "Male",
+        "perc": 81.35283363803
+      },
+      {
+        "user": "espn",
+        "mf": "Female",
+        "perc": 18.25396825397
+      },
+      {
+        "user": "espn",
+        "mf": "Male",
+        "perc": 81.74603174603
+      },
+      {
+        "user": "WayneRooney",
+        "mf": "Female",
+        "perc": 18.11965811966
+      },
+      {
+        "user": "WayneRooney",
+        "mf": "Male",
+        "perc": 81.88034188034
+      }
+      ]
 
       if(!(opts.type==="pieChart" || opts.type==="sparklinePlus")) {
         var data = d3.nest()
-          .key(function(d){
-            //return opts.group === undefined ? 'main' : d[opts.group]
-            //instead of main would think a better default is opts.x
-            return opts.group === undefined ? opts.y : d[opts.group];
-          })
-          .entries(data);
+        .key(function(d){
+          //return opts.group === undefined ? 'main' : d[opts.group]
+          //instead of main would think a better default is opts.x
+          return opts.group === undefined ? opts.y : d[opts.group];
+        })
+        .entries(data);
       }
 
       if (opts.disabled != undefined){
@@ -2154,37 +2164,37 @@
 
       nv.addGraph(function() {
         var chart = nv.models[opts.type]()
-          .x(function(d) { return d[opts.x] })
-          .y(function(d) { return d[opts.y] })
-          .width(opts.width)
-          .height(opts.height)
-          .margin({top: 30, right: 20, bottom: 50, left: 100})
-          .color(['#ff748c', '#748cff'])
+        .x(function(d) { return d[opts.x] })
+        .y(function(d) { return d[opts.y] })
+        .width(opts.width)
+        .height(opts.height)
+        .margin({top: 30, right: 20, bottom: 50, left: 100})
+        .color(['#ff748c', '#748cff'])
 
-      chart.yAxis.tickFormat(d3.format(',f'))
+        chart.yAxis.tickFormat(d3.format(',f'))
 
-       d3.select("#" + opts.id)
+        d3.select("#" + opts.id)
         .append('svg')
         .datum(data)
         .transition().duration(500)
         .call(chart);
 
-       nv.utils.windowResize(chart.update);
-       return chart;
+        nv.utils.windowResize(chart.update);
+        return chart;
       });
     };
-</script>
-<div><p>
-  Plot built using <a href="http://nvd3.org/" target="_blank">NVD3</a> library via the R package <a href="http://rcharts.io" target="_blank">rCharts</a>.
-  Gender inference made use of the rOpenSci <a href="https://github.com/ropensci/gender">gender</a> package. Full code to reproduce (and improve upon!) this
-  analysis is available <a href="https://github.com/blmoore/blogR/blob/master/R/twitter_followersGender.R" target="_blank">on Github</a>.
-</p>
-      <div class="social">
+    </script>
+    <div><p>
+      Plot built using <a href="http://nvd3.org/" target="_blank">NVD3</a> library via the R package <a href="http://rcharts.io" target="_blank">rCharts</a>.
+      Gender inference made use of the rOpenSci <a href="https://github.com/ropensci/gender">gender</a> package. Full code to reproduce (and improve upon!) this
+      analysis is available <a href="https://github.com/blmoore/blogR/blob/master/R/twitter_followersGender.R" target="_blank">on Github</a>.
+    </p>
+    <div class="social">
       <a href="https://twitter.com/share" class="twitter-share-button" data-via="benjaminlmoore">Tweet</a>
     </div>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </div>
-</div>
-  </section>
-  </body>
-</html>
+    </div>
+    </section>
+    </body>
+    </html>
