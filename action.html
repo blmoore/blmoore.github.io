@@ -50,18 +50,76 @@
 
   <section>
     <div id="title">
-      <h1>Hollywood action heroes</h1>
+      <h1>Hollywood action heroes: Scene 1</h1>
       <p>
         <a href="http://twitter.com/benjaminlmoore">@benjaminlmoore</a>
       </p>
     </div>
     <div class="wrapper">
+      <div style="float:right;width: 20%">
+        <img src="images/arnie10.jpg" width=80% style="border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;"/>
+        <figcaption>
+          <p style="font-size:smaller">Arnie 2010 (<a href="https://commons.wikimedia.org/wiki/File:SchwarzeneggerJan2010.jpg" target="_blank">source</a>)</p>
+        </figcaption>
+      </div>
+      <p>
+        I recently read Arnie's <a href="http://www.amazon.co.uk/gp/product/1849839735/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1849839735&linkCode=as2&tag=blmio-21">autobiography</a>
+        (great fun) and in it he writes about the various roles he's
+        had, discussing those movies that flopped or were surprise box office successes,
+         but it's hard to build up an overall picture of his career from these fragments.
+         Similarly the raw filmography lists at <a href="http://www.imdb.com/name/nm0000216/?ref_=nv_sr_1" target="_blank">IMDb</a>
+         and <a href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger#Filmography" target="_blank">Wikipedia</a>
+         are pretty uninspiring.
+      </p>
+      <p>
+        That gave me the idea of charting his movie career over time, attempting to
+        show a lot of information at once about how well the film did at box office
+        relative to its budget, and at what points these successes and failures
+        happened over the last few decades. After some
+        <a href="http://imdbpy.sourceforge.net/" target="_blank">python-powered</a>
+        scraping of IMDb data, this is what I came up with:
+      </p>
+      <a href="svg/arnie.svg"><img src="svg/arnie.svg" width=100% /></a>
+      <p>
+        It's interesting to see the trajectory from back-to-back hits in low
+        budget action films (Terminator, Predator, Commando) to a peak of a $200 million
+        budget for Terminator 3 (considerably more in 2014 dollars, after adjusting for
+        inflation). Of course you can then see his stretch as Governor of California
+        from 2003-11, punctuated only by a memorable cameo in The Expendables <sup>(and an
+        excluded minor role in The Kid & I)</sup>.
+      </p>
+      <p>
+        The eagle-eyed will notice some films are missing, there's no
+        <a href="http://www.imdb.com/title/tt0065832/" target="_blank">Hercules in New York</a>
+        and others of his earliest films. This is down to IMDb's budget and gross listings
+        being woefully incomplete, but thankfully most of his famous lead roles are shown.
+      </p>
+      <p>
+        These next obvious step was to look at other actors that fill a similar
+        niche; how does Sly Stallone compare? What about the more recent action
+        stars?
+      </p>
+      <!-- Scene 2
+      <h3>Budget</h3>
+      <p>First, by budget. It's <a href="http://www.imdb.com/help/show_leaf?infosource" target="_blank">unclear</a>
+        where IMDb gets this data from, so should be taken with a pinch of salt to some extent.</p>
       <div id='actionBudget' class='rChart dimple'></div>
       <script src="javascripts/action_budget.js"></script>
 
+    <h3>Gross</h3>
+    <p>Here's the same graph but by gross. These numbers from IMDb are even <em>more</em>
+      suspect and vary according to different sources. Additionally, to convert the gross
+      to 2014 dollars I used a measure of inflation since the year the film was released in &mdash; to
+      calculate this more accurately you need a breakdown of the gross over time. Unlike lists at
+      <a href="http://www.boxofficemojo.com/" target="_blank">Box OFfice Mojo</a>, these charts do
+      sometimes contain cameo roles (e.g. Bruce and Arnie get Expendables I credits), and sometimes
+      exclude starring roles where there was no budget and gross data available (and parseable) on
+      IMDb.
+    </p>
       <div id='actionGross' class='rChart dimple'></div>
       <script src="javascripts/action_gross.js"></script>
     </div>
+  -->
   </section>
 </div>
 </body>
