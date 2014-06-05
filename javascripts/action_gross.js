@@ -2530,7 +2530,7 @@ var data2 = [
 }
 ];
 
-d3.json("json/action.json", function(error, json) {
+d3.json("javascripts/json/action.json", function(error, json) {
   if (error) return console.warn(error);
   data = json;
 
