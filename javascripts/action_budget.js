@@ -16,7 +16,7 @@ d3.json("javascripts/json/action.json", function(error, json) {
 
   //y axis
   var commasFormatter = d3.format(",.0f");
-  var y = myChart.addMeasureAxis("y", "adjusted budget");
+  var y = myChart.addMeasureAxis("y", "Adjusted budget");
 
   y.tickFormat = ",.f";
   y.title = "Budget (2014 US dollars)";
