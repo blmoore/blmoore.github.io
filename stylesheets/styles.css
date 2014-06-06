@@ -931,3 +931,8 @@ figcaption {
   display: table;
   clear: both;
 }
+
+.other {
+  font-size:0.9em;
+  margin-bottom: 5em;
+}

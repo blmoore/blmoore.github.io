@@ -200,16 +200,32 @@
           <a href="images/clint.png" target="_blank">
             <img src="images/clint_bigthumb.png" width=100%>
           </a>
+        <p>
+          So we've learnt that Bruce Willis is in too many films to
+          graph clearly, and Jackie Chan is happy frenetically jumping from
+          big-money blockbusters and low-budget action flicks.
+        </p>
+        <p>
+          <div style="float:right;width: 50%">
+            <img src="images/roi.png" width=95% style="border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;" />
+            <figcaption>
+              <p style="font-size:smaller">Fancy a gamble? Pick Sly or Jackie as your lead.</p>
+            </figcaption>
+          </div>
+
+        I can use this data to look at the mean expected return on investment (ROI)
+        per leading man, by just taking the mean gross over budget. This shows that Jackie Chan,
+        albeit with a pretty huge amount of variance, has the highest expected ROI of the actors
+        listed here. At the other end of the scale is Jason Statham, but in fairness I haven't
+        normalised for the budgets of the films they're starring in &mdash; if you stick to
+        $100 million films it's pretty much impossible to then multiple that by ten at the box office!
+        </p>
 
         <h3>All-time totals per actor</h3>
         <p>
-          Since we've got all this budget and gross data together for these
-          (fairly arbitrary) actors, might as well compare their total budgets
-          and grosses over their careers to date.
-        </p>
-
-        <p>First, by budget. It's <a href="http://www.imdb.com/help/show_leaf?infosource" target="_blank">not entirely clear</a>
-          where IMDb gets this data from, so the absolute numbers should be taken with a pinch of salt.</p><br />
+          Another (possibly fairer) way to compare these guys, then, is by total budgets
+          and grosses over their careers. It's <a href="http://www.imdb.com/help/show_leaf?infosource" target="_blank">not entirely clear</a>
+          where IMDb gets these values from, so the absolute numbers should be taken with a pinch of salt.</p><br />
           <div id='actionBudget' class='rChart dimple'></div>
           <script src="javascripts/action_budget.js"></script>
 
@@ -227,18 +243,53 @@
           <script src="javascripts/action_gross.js"></script>
 
           <p>
-            From this data it looks (suprisingly) that Sly is better value-for-money
-            to the film industry than Arnie! Less surprising is that Jackie Chan punches
-            well above his weight, racking up huge box office stubs on smaller budgets.
+            Hopefully you found that kind-of interesting! I'm tidying up the code
+            but the python and R scripts to recreate the above analysis will soon
+            be <a href="https://github.com/blmoore/blogR" target="_blank">on github</a>,
+            and it should be pretty straightforward to extend this over any other actors
+            or actresses you might be interested in.
           </p>
         </div>
         <hr />
+        <div class="other">
+          <h3>Other projects you might like:</h3>
+          <div style="width:33%; float:left">
+            <a href="http://blm.io/movies">The most underrated and overrated movies</a>
+          </div>
+          <div style="width:33%; float:left">
+           <a href="http://blm.io/twitter">Celebrity twitter followers by gender</a>
+          </div>
+          <div style="width:33%; float:left">
+            See <a href="http://blm.io/projects">Projects</a> or
+            more on my <a href="http://benjaminlmoore.wordpress.com/" target="_blank">Wordpress blog</a>
+          </div>
+        </div>
+      <br clear="all" />
+        <hr />
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'blm.io'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        <!--
         <div>
           <p style="text-align:center;">
             <iframe src="http://ghbtns.com/github-btn.html?user=blmoore&repo=blogR&type=fork"
             allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
           </p>
         </div>
+      -->
       </section>
     </div>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
