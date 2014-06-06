@@ -544,7 +544,7 @@ body {
   background: linear-gradient(#fdfdfd, #ededed);
 }
 
-h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
   color: #c8c8c8;
   margin: 0 0 10px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -567,6 +567,9 @@ h1 {
 }
 
 h2 {
+  color: #cdcdcd;
+  margin: 30px 0 15px;
+  font-family:  'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
 }
 
@@ -835,14 +838,18 @@ section #intro {
 }
 @media print, screen and (max-width: 480px) {
   #header {
-    margin-top: -20px;
+    margin-top: -10px;
   }
 
   section {
     margin-top: 20px;
   }
 
-  nav {
+  /* nav {
+    display: none;
+  } */
+
+  div.social{
     display: none;
   }
 }
@@ -857,13 +864,70 @@ section #intro {
       height: 700px;
 }
 
-.social {
-    clear: all;
+div.social {
+  /*  clear: both;*/
     float: right;
-    padding: 20px 2px 10px 10px;
+    /*padding: 20px 2px 10px 10px; */
+}
+
+.toplink {
+  /*float: left;*/
+  padding: 10px 2px 20px 10px;
 }
 
 figcaption {
   text-align: center;
   font-size: smaller;
+}
+
+/* onHover overlays: http://notlaura.com/show-title-hovering-image/ */
+.gallery {
+    width: 100%;
+    margin: 2em 1em;
+}
+
+.gallery-item {
+    height: auto;
+    width: 48%;
+    float: left;
+    margin-bottom: 2em;
+    position: relative;
+    margin-right: 2%;
+}
+
+/*.gallery-item:first-child {
+  margin-right: 2.75%;
+}*/
+
+.gallery-item img {
+    width: 100%;
+}
+
+/* default hidden image overlay */
+.img-title {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: none;
+    background-color: #444;
+}
+
+
+/* Overlay text on hover */
+.img-title h5 {
+  position: absolute;
+  color: #ececec;
+  top: 33%;
+  width: 100%;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
 }
