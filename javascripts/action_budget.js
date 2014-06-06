@@ -8,7 +8,7 @@ d3.json("javascripts/json/action.json", function(error, json) {
 
   var myChart = new dimple.chart(svg, data);
   myChart.setBounds(180, 30, 480, 330);
-  myChart.setMargins(120, 10, 150, 100);
+  myChart.setMargins(120, 10, 150, 130);
 
   //x axis
   var x = myChart.addCategoryAxis("x", "actor");
