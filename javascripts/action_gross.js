@@ -5,7 +5,7 @@ d3.json("javascripts/json/action.json", function(error, json) {
   data = json;
 
   // width then height
-  var svg = dimple.newSvg("#actionGross", 550, 700);
+  var svg = dimple.newSvg("#actionGross", 520, 700);
 
   var myChart = new dimple.chart(svg, data);
 //margins : outside plot area, bounds inside

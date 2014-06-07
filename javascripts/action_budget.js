@@ -4,11 +4,13 @@ d3.json("javascripts/json/action.json", function(error, json) {
   if (error) return console.warn(error);
   data = json;
 
-  var svg = dimple.newSvg("#actionBudget", 700, 700);
+  // width then height
+  var svg = dimple.newSvg("#actionBudget", 520, 700);
 
   var myChart = new dimple.chart(svg, data);
-  myChart.setMargins(120, 10, 150, 200);
-
+  //margins : outside plot area, bounds inside
+  //  myChart.setMargins("20%", "5%", "5%", "20%");
+  myChart.setBounds("18%", "2%", "80%", "80%");
   //x axis
   var x = myChart.addCategoryAxis("x", "actor");
   x.title = null;
