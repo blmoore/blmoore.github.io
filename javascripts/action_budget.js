@@ -7,7 +7,6 @@ d3.json("javascripts/json/action.json", function(error, json) {
   var svg = dimple.newSvg("#actionBudget", 700, 700);
 
   var myChart = new dimple.chart(svg, data);
-  myChart.setBounds(180, 30, 480, 330);
   myChart.setMargins(120, 10, 150, 200);
 
   //x axis
