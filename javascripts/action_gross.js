@@ -10,7 +10,7 @@ d3.json("javascripts/json/action.json", function(error, json) {
   var myChart = new dimple.chart(svg, data);
 //margins : outside plot area, bounds inside
 //  myChart.setMargins("20%", "5%", "5%", "20%");
-  myChart.setBounds("10%", "2%", "80%", "80%");
+  myChart.setBounds("18%", "2%", "80%", "80%");
 
   //x axis
   var x = myChart.addCategoryAxis("x", "actor");
