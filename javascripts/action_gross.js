@@ -6,13 +6,15 @@ d3.json("javascripts/json/action.json", function(error, json) {
 
   if($(window).width() < 700){
     width = $(window).width()/1.3;
+    height = width * 1.2;
   } else {
-    width = 600;
+    width = 550;
+    height = 700;
   }
 
 
   // width then height
-  var svg = dimple.newSvg("#actionGross", 550, 700);
+  var svg = dimple.newSvg("#actionGross", width, height);
   console.log($("#wrapper").width());
 
   var myChart = new dimple.chart(svg, data);
