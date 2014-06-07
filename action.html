@@ -29,15 +29,6 @@
 
   });
   </script>
-  <style>
-  .rChart {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 700px;
-    height: 600px;
-  }
-  </style>
 
 </head>
 <body>
@@ -202,7 +193,7 @@
           </a>
         <p>
           So we've learnt that <a href="http://www.imdb.com/name/nm0000246" target="_blank">Bruce Willis</a>
-          is in way too many films to label clearly, and Jackie Chan doesn't seem to mind frenetically 
+          is in way too many films to label clearly, and Jackie Chan doesn't seem to mind frenetically
           jumping from big-money blockbusters and low-budget action flicks.
         </p>
         <p>
@@ -228,7 +219,7 @@
           Another (possibly fairer) way to compare these guys is by total budgets
           and grosses over their careers. It's <a href="http://www.imdb.com/help/show_leaf?infosource" target="_blank">not entirely clear</a>
           where IMDb gets these values from, so the absolute numbers should be taken with a pinch of salt.</p><br />
-          <div id='actionBudget' class='rChart dimple'></div>
+          <div id='actionBudget' class="rChart"></div>
           <script src="javascripts/action_budget.js"></script>
 
 
@@ -242,12 +233,16 @@
             with Arnie, there's unfortunately some missing or incomplete data on IMDb which has lead to some
             films being excluded.
           </p><br />
-          <div id='actionGross' class='rChart dimple'></div>
+          <div id='actionGross' class="rChart"></div>
           <script src="javascripts/action_gross.js"></script>
 
           <p>
             It turns out Sly has grossed more than Arnie on smaller budgets! We can also see
             Jackie Chan punches well above his weight in terms of absolute earnings, as well as ROI.</p>
+
+        <p>Finally here's budget plotted against gross for most of the individual films used in this analysis.</p>
+        <div id='actionBudgetVGross' class="rChart"></div>
+        <script src="javascripts/action_budgetVgross.js"></script>
 
           <p>I'm tidying up the code
             but the python and R scripts to recreate the above analysis will soon

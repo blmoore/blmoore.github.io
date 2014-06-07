@@ -857,11 +857,10 @@ section #intro {
 /* Additional, e.g. rCharts
 */
 .rChart {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 700px;
-      height: 700px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 div.social {
