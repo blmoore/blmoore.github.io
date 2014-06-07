@@ -4,8 +4,16 @@ d3.json("javascripts/json/action.json", function(error, json) {
   if (error) return console.warn(error);
   data = json;
 
+  if($(window).width() < 700){
+    width = $(window).width()/1.3;
+    height = width * 1.2;
+  } else {
+    width = 550;
+    height = 700;
+  }
+
   // width then height
-  var svg = dimple.newSvg("#actionBudget", 550, 700);
+  var svg = dimple.newSvg("#actionBudget", width, height);
 
   var myChart = new dimple.chart(svg, data);
   //margins : outside plot area, bounds inside
