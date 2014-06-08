@@ -817,7 +817,11 @@ section #title .credits.right {
 }
 
 section #proj {
-  margin: 8% 0% 8% 0%;
+  margin: 2.2em 0% 2.5em 0%;
+}
+
+section #projtop {
+  margin: 1.5em 0% 2em 0%;
 }
 
 section #intro {
