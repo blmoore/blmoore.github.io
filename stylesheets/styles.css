@@ -573,6 +573,14 @@ h2 {
   font-size: 24px;
 }
 
+.contact h2 {
+  color: #cdcdcd;
+  margin: 30px 0 15px;
+  font-family:  'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+/*  margin: none !important; */
+}
+
 h4, h5, h6 {
   color: #e8e8e8;
 }
@@ -934,4 +942,11 @@ figcaption {
 .other {
   font-size:0.9em;
   margin-bottom: 5em;
+}
+
+.contact div{
+  width: 100%;
+  margin: auto;
+/*  padding: 0em 0em 0em 1em !important;*/
+/*  padding: 0em;*/
 }
