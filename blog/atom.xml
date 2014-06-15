@@ -4,7 +4,7 @@
  <title>blm.io</title>
  <link href="http://blmoore.github.io/blogatom.xml" rel="self"/>
  <link href="http://blmoore.github.io/blog"/>
- <updated>2014-06-15T20:34:03+01:00</updated>
+ <updated>2014-06-15T21:22:37+01:00</updated>
  <id>http://blmoore.github.io</id>
  <author>
    <name>Ben Moore</name>
@@ -234,7 +234,7 @@ top.100 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getURL&lt;span cl
 top.100 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; unlist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;top.100&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# Get only those lines with an @&lt;/span&gt;
 top.100 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; top.100&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;sapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;top.100&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; grepl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# Grep out anchored usernames: &amp;lt;a ...&amp;amp;gt;@username&amp;lt;/a&amp;gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Grep out anchored usernames: &amp;lt;a ...&amp;amp;gt;&amp;lt;a href=&amp;#39;https://github.com/username&amp;#39; class=&amp;#39;user-mention&amp;#39;&amp;gt;@username&amp;lt;/a&amp;gt;&amp;lt;/a&amp;gt;;&lt;/span&gt;
 top.100 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;.*&amp;gt;@(.+)&amp;lt;.*&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;\\1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; top.100&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 head&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;top.100&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# [1] &amp;quot;katyperry&amp;quot;  &amp;quot;justinbieber&amp;quot;  &amp;quot;BarackObama&amp;quot;  ...&lt;/span&gt;
@@ -290,14 +290,14 @@ gender&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;
 
 &lt;p&gt;Using the fantastic &lt;a title=&quot;rcharts&quot; href=&quot;http://rcharts.io/&quot; target=&quot;_blank&quot;&gt;rCharts&lt;/a&gt; library, I&#39;ve put together some &lt;a title=&quot;interactive charts&quot; href=&quot;http://blm.io/twitter&quot; target=&quot;_blank&quot;&gt;interactive graphics&lt;/a&gt; that let you explore the above results further. These use the &lt;a title=&quot;NVD3&quot; href=&quot;http://nvd3.org/&quot; target=&quot;_blank&quot;&gt;NVD3 graphing library&lt;/a&gt;, as opposed to my &lt;a href=&quot;http://rcharts.io/viewer/?6c9ed5eed37fe3c03fa5&quot; target=&quot;_blank&quot;&gt;previous effort&lt;/a&gt; which used &lt;a href=&quot;http://dimplejs.org/&quot; target=&quot;_blank&quot;&gt;dimple.js&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;The first of these is ordered by number of followers, and the second by gender split. The eagle-eyed among you will see that one account from the top 100 is missing from all these charts due to the JSON error I discuss above, thankfully it&#39;s a boring one (sorry &lt;a href=&quot;https://twitter.com/TwitPic&quot; target=&quot;_blank&quot;&gt;@TwitPic&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The first of these is ordered by number of followers, and the second by gender split. The eagle-eyed among you will see that one account from the top 100 is missing from all these charts due to the JSON error I discuss above, thankfully it&#39;s a boring one (sorry &lt;a href=&quot;https://twitter.com/TwitPic&quot; target=&quot;_blank&quot;&gt;&lt;a href=&#39;https://github.com/TwitPic&#39; class=&#39;user-mention&#39;&gt;@TwitPic&lt;/a&gt;&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;Where would your account be on these graphs? Somehow I end up alongside Wayne Rooney in terms of gender diversity :s&lt;/p&gt;
 
 &lt;h3&gt;Caveats&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;A lot of the time genders can&#39;t be called from an account&#39;s first name. Maybe they haven&#39;t given a first name, maybe it&#39;s a business account or some pretty unicode symbols, maybe it&#39;s a spammy egg account. This means my realised sample size is &lt;&lt;1000, sometimes the majority of usernames had no gender (e.g. &lt;a href=&quot;https://twitter.com/UberSoc&quot; target=&quot;_blank&quot;&gt;@UberSoc&lt;/a&gt;, fake followers?).
+&lt;li&gt;A lot of the time genders can&#39;t be called from an account&#39;s first name. Maybe they haven&#39;t given a first name, maybe it&#39;s a business account or some pretty unicode symbols, maybe it&#39;s a spammy egg account. This means my realised sample size is &lt;&lt;1000, sometimes the majority of usernames had no gender (e.g. &lt;a href=&quot;https://twitter.com/UberSoc&quot; target=&quot;_blank&quot;&gt;&lt;a href=&#39;https://github.com/UberSoc&#39; class=&#39;user-mention&#39;&gt;@UberSoc&lt;/a&gt;&lt;/a&gt;, fake followers?).
 &lt;p&gt;&lt;a href=&quot;http://benjaminlmoore.files.wordpress.com/2014/05/with_missing.png&quot;&gt;&lt;img class=&quot;imgright&quot; src=&quot;/blog/img/with_missing.png&quot; alt=&quot;This (big) chart includes % for those that couldn&#39;t be assigned (NA)&quot; width=&quot;107&quot; height=&quot;150&quot; /&gt;&lt;/a&gt; This (big) chart includes % for those that couldn&#39;t be assigned (NA)&lt;/li&gt;
 &lt;li&gt;The SSA data is heavily biased towards Western (esp. US) and non-English names are likely to not be assigned a gender throughout. This is a shame, if you know of a more international gender DB please let me know.&lt;/li&gt;
 &lt;li&gt;I&#39;m sampling most recent followers, so maybe accounts like Justin Bieber have a much higher female ratio in earlier followers than those which have only just hit the follow button.&lt;/li&gt;

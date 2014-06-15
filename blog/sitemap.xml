@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+  <url>
+    <loc>http://blmoore.github.io/movies/2014/06/07/hollywood-action-heroes/</loc>
+    <lastmod>2014-06-07T00:00:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://blmoore.github.io/twitter/2014/05/25/celebrity-twitter-followers-by-gender/</loc>
+    <lastmod>2014-05-25T00:00:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://blmoore.github.io/movies/2014/05/05/what-are-the-most-overrated-films/</loc>
+    <lastmod>2014-05-05T00:00:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://blmoore.github.io/academia/2014/04/06/author-inflation-in-academic-literature/</loc>
+    <lastmod>2014-04-06T00:00:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://blmoore.github.io/politics/2014/03/18/guardian-data-blog-uk-elections/</loc>
+    <lastmod>2014-03-18T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://blmoore.github.io/r/2014/03/06/most-common-rng-seeds-r-github/</loc>
+    <lastmod>2014-03-06T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://blmoore.github.io/r/2014/02/24/slidify-presentations-in-r-markdown/</loc>
+    <lastmod>2014-02-24T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://blmoore.github.io/wikipedia/2014/02/03/meticulously-recreating-bitmap-plots-in-r/</loc>
+    <lastmod>2014-02-03T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://blmoore.github.io/wikipedia/2014/01/09/wikipedia-is-dead-long-live-the-pedia/</loc>
+    <lastmod>2014-01-09T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  <url>
+    <loc>http://blmoore.github.io/404.html</loc>
+    <lastmod>2014-06-15T21:22:37+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://blmoore.github.io/</loc>
+    <lastmod>2014-06-15T21:22:37+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+</urlset>

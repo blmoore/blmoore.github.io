@@ -109,7 +109,7 @@ top.100 <span class="o">&lt;-</span> getURL<span class="p">(</span><span class="
 top.100 <span class="o">&lt;-</span> unlist<span class="p">(</span>strsplit<span class="p">(</span>top.100<span class="p">,</span> <span class="s">&quot;\n&quot;</span><span class="p">))</span>
 <span class="c1"># Get only those lines with an @</span>
 top.100 <span class="o">&lt;-</span> top.100<span class="p">[</span>sapply<span class="p">(</span>top.100<span class="p">,</span> grepl<span class="p">,</span> pattern<span class="o">=</span><span class="s">&quot;@&quot;</span><span class="p">)]</span>
-<span class="c1"># Grep out anchored usernames: &lt;a ...&amp;gt;@username&lt;/a&gt;;</span>
+<span class="c1"># Grep out anchored usernames: &lt;a ...&amp;gt;&lt;a href=&#39;https://github.com/username&#39; class=&#39;user-mention&#39;&gt;@username&lt;/a&gt;&lt;/a&gt;;</span>
 top.100 <span class="o">&lt;-</span> gsub<span class="p">(</span><span class="s">&quot;.*&gt;@(.+)&lt;.*&quot;</span><span class="p">,</span> <span class="s">&quot;\\1&quot;</span><span class="p">,</span> top.100<span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">101</span><span class="p">]</span>
 head<span class="p">(</span>top.100<span class="p">)</span>
 <span class="c1"># [1] &quot;katyperry&quot;  &quot;justinbieber&quot;  &quot;BarackObama&quot;  ...</span>
@@ -165,14 +165,14 @@ gender<span class="p">(</span><span class="s">&quot;ben&quot;</span><span class=
 
 <p>Using the fantastic <a title="rcharts" href="http://rcharts.io/" target="_blank">rCharts</a> library, I've put together some <a title="interactive charts" href="http://blm.io/twitter" target="_blank">interactive graphics</a> that let you explore the above results further. These use the <a title="NVD3" href="http://nvd3.org/" target="_blank">NVD3 graphing library</a>, as opposed to my <a href="http://rcharts.io/viewer/?6c9ed5eed37fe3c03fa5" target="_blank">previous effort</a> which used <a href="http://dimplejs.org/" target="_blank">dimple.js</a>.</p>
 
-<p>The first of these is ordered by number of followers, and the second by gender split. The eagle-eyed among you will see that one account from the top 100 is missing from all these charts due to the JSON error I discuss above, thankfully it's a boring one (sorry <a href="https://twitter.com/TwitPic" target="_blank">@TwitPic</a>).</p>
+<p>The first of these is ordered by number of followers, and the second by gender split. The eagle-eyed among you will see that one account from the top 100 is missing from all these charts due to the JSON error I discuss above, thankfully it's a boring one (sorry <a href="https://twitter.com/TwitPic" target="_blank"><a href='https://github.com/TwitPic' class='user-mention'>@TwitPic</a></a>).</p>
 
 <p>Where would your account be on these graphs? Somehow I end up alongside Wayne Rooney in terms of gender diversity :s</p>
 
 <h3>Caveats</h3>
 
 <ul>
-<li>A lot of the time genders can't be called from an account's first name. Maybe they haven't given a first name, maybe it's a business account or some pretty unicode symbols, maybe it's a spammy egg account. This means my realised sample size is <<1000, sometimes the majority of usernames had no gender (e.g. <a href="https://twitter.com/UberSoc" target="_blank">@UberSoc</a>, fake followers?).
+<li>A lot of the time genders can't be called from an account's first name. Maybe they haven't given a first name, maybe it's a business account or some pretty unicode symbols, maybe it's a spammy egg account. This means my realised sample size is <<1000, sometimes the majority of usernames had no gender (e.g. <a href="https://twitter.com/UberSoc" target="_blank"><a href='https://github.com/UberSoc' class='user-mention'>@UberSoc</a></a>, fake followers?).
 <p><a href="http://benjaminlmoore.files.wordpress.com/2014/05/with_missing.png"><img class="imgright" src="/blog/img/with_missing.png" alt="This (big) chart includes % for those that couldn't be assigned (NA)" width="107" height="150" /></a> This (big) chart includes % for those that couldn't be assigned (NA)</li>
 <li>The SSA data is heavily biased towards Western (esp. US) and non-English names are likely to not be assigned a gender throughout. This is a shame, if you know of a more international gender DB please let me know.</li>
 <li>I'm sampling most recent followers, so maybe accounts like Justin Bieber have a much higher female ratio in earlier followers than those which have only just hit the follow button.</li>
