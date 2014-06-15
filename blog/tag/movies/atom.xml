@@ -1,0 +1,300 @@
+
+	<item>
+  <title>Hollywood action heroes</title>
+  <link>http://blm.io/blog/movies/2014/06/07/hollywood-action-heroes/</link>
+  <author>Benjamin L. Moore</author>
+  <pubDate>2014-06-07T00:00:00+01:00</pubDate>
+  <guid>http://blm.io/blog/movies/2014/06/07/hollywood-action-heroes/</guid>
+  <description><![CDATA[
+     <div style="float:right;width: 20%">
+<img src="/blog/img/arnie10.jpg" width=80% style="border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;"/>
+<figcaption>
+<p style="font-size:smaller">Arnie 2010 (<a href="https://commons.wikimedia.org/wiki/File:SchwarzeneggerJan2010.jpg" target="_blank">source</a>)</p>
+</figcaption>
+</div>
+
+<p>
+I recently read <a href="http://www.amazon.com/gp/product/1451662440/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1451662440&linkCode=as2&tag=blmio-20&linkId=H7MGQFNQ3X6N6UJK">Arnie's autobiography</a>
+(great fun) and in it he writes about the various roles he's
+had, discussing those movies that flopped or were surprise box office successes,
+but it's hard to build up an overall picture of his career from these fragments.
+Similarly the raw filmography lists at <a href="http://www.imdb.com/name/nm0000216/?ref_=nv_sr_1" target="_blank">IMDb</a>
+and <a href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger#Filmography" target="_blank">Wikipedia</a>
+are pretty uninspiring.
+</p>
+
+<p>
+That gave me the idea of charting his movie career over time, attempting to
+show a lot of information at once about how well the film did at box office
+relative to its budget, and at what points these successes and failures
+happened over the last few decades. After some
+<a href="http://imdbpy.sourceforge.net/" target="_blank">python-powered</a>
+scraping of IMDb data, this is what I came up with:
+</p>
+
+<p><a href="/blog/img/arnie.png"><img src="/blog/img/arnie_thumb.png" width=100% /></a>
+<p>
+It&#39;s interesting to see the trajectory from back-to-back hits in low
+budget action films (Terminator, Predator, Commando) to a peak of a $200 million
+budget for <a href="https://en.wikipedia.org/wiki/Terminator_3:_Rise_of_the_Machines" target="_blank">Terminator 3</a>
+(considerably more in 2014 dollars, after adjusting for
+inflation). Of course you can then see his stretch as Governor of California
+from 2003-11, punctuated only by a <a href="https://www.youtube.com/watch?v=hrMmiUSVRRI" target="_blank">memorable cameo</a>
+in The Expendables <sup>(and an excluded minor role in The Kid &amp; I)</sup>.
+</p>
+<p>
+The eagle-eyed will notice some films are missing, there&#39;s no
+<a href="http://www.imdb.com/title/tt0065832/" target="_blank">Hercules in New York</a>
+and others of his earliest films. This is down to IMDb&#39;s budget and gross listings
+being woefully incomplete, but thankfully most of his famous lead roles are shown.
+</p>
+<p>
+These next obvious step was to look at other actors that fill a similar
+niche; how does Sly Stallone compare? What about the more recent action
+stars?
+</p></p>
+
+<div class="gallery">
+
+<figure class="gallery-item">
+<a href="/blog/img/sly.png" target="_blank">
+<img src="/blog/img/sly_thumb.png">
+<figcaption class="img-title">
+<h5>Sylvester Stallone</h5>
+</figcaption>
+</a>
+</figure>
+
+<figure class="gallery-item">
+<a href="/blog/img/bruce.png" target="_blank">
+<img src="/blog/img/bruce_thumb.png">
+<figcaption class="img-title">
+<h5>Bruce Willis</h5>
+</figcaption>  </a>
+</figure>
+
+<br clear="all" />
+
+<figure class="gallery-item">
+<a href="/blog/img/li.png" target="_blank">
+<img src="/blog/img/li_thumb.png">
+<figcaption class="img-title">
+<h5>Jet Li</h5>
+</figcaption>
+</a>
+</figure>
+
+<figure class="gallery-item">
+<a href="/blog/img/chan.png" target="_blank">
+<img src="/blog/img/chan_thumb.png">
+<figcaption class="img-title">
+<h5>Jackie Chan</h5>
+</figcaption>
+</a>
+</figure>
+
+<br clear="all" />
+
+<figure class="gallery-item">
+<a href="/blog/img/statham.png" target="_blank">
+<img src="/blog/img/statham_thumb.png">
+<figcaption class="img-title">
+<h5>Jason Statham</h5>
+</figcaption>
+</a>
+</figure>
+
+<figure class="gallery-item">
+<a href="/blog/img/vin.png" target="_blank">
+<img src="/blog/img/vin_thumb.png">
+<figcaption class="img-title">
+<h5>Vin Diesel</h5>
+</figcaption>
+</a>
+</figure>
+
+<br clear="all" />
+
+<figure class="gallery-item">
+<a href="/blog/img/seagal.png" target="_blank">
+<img src="/blog/img/seagal_thumb.png">
+<figcaption class="img-title">
+<h5>Steven Seagal</h5>
+</figcaption>
+</a>
+</figure>
+
+
+<figure class="gallery-item">
+<a href="/blog/img/rock.png" target="_blank">
+<img src="/blog/img/rock_thumb.png">
+<figcaption class="img-title">
+<h5>Dwayne Johnson</h5>
+</figcaption>
+</a>
+</figure>
+
+</div>
+
+<p><a href="/blog/img/clint.png" target="_blank">
+<img src="/blog/img/clint_bigthumb.png" width=100%>
+</a>
+<p>
+So we&#39;ve learnt that <a href="http://www.imdb.com/name/nm0000246" target="_blank">Bruce Willis</a>
+is in way too many films to label clearly, and Jackie Chan doesn&#39;t seem to mind frenetically
+jumping from big-money blockbusters and low-budget action flicks.
+</p>
+<p>
+<div style="float:right;width: 50%">
+<img src="/blog/img/roi.png" width=95% style="border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;" />
+<figcaption>
+<p style="font-size:smaller">Fancy a gamble? Pick Sly or Jackie as your lead.</p>
+</figcaption>
+</div></p>
+
+<p>I can use this data to look at the mean expected return on investment (ROI)
+per leading man, by just taking the mean gross over budget. This shows that
+<a href="http://www.imdb.com/name/nm0000329/" target="_blank">Jackie Chan</a>,
+albeit with a pretty huge amount of variance, has the highest expected ROI of the actors
+listed here. At the other end of the scale is
+<a href="http://www.imdb.com/name/nm0005458/" target="_blank">Jason Statham</a>, but in fairness I haven&#39;t
+normalised for the budgets of the films they&#39;re starring in &mdash; if you stick to
+$100 million films it&#39;s pretty much impossible to then multiple that by ten at the box office!
+</p></p>
+
+<h3>All-time totals per actor</h3>
+
+<p>
+Another (possibly fairer) way to compare these guys is by total budgets
+and grosses over their careers. It's <a href="http://www.imdb.com/help/show_leaf?infosource" target="_blank">not entirely clear</a>
+where IMDb gets these values from, so the absolute numbers should be taken with a pinch of salt.</p><br />
+<div id='actionBudget' class="rChart"></div>
+<script src="/blog/js/action_budget.js"></script>
+
+<p>Here's the same graph but by box office takings. These numbers from IMDb are even <em>more</em>
+suspect and vary according to different sources. Additionally, to convert the gross
+to 2014 dollars I used a <a href="https://en.wikipedia.org/wiki/Consumer_price_index" target="_blank">measure of inflation</a>
+from the year the film was released in &mdash; to
+calculate this more accurately you need a breakdown of the gross over time. Unlike lists at
+<a href="http://www.boxofficemojo.com/" target="_blank">Box Office Mojo</a>, these charts do
+sometimes contain cameo roles (e.g. Bruce and Arnie get Expendables I credits), and as I mentioned
+with Arnie, there's unfortunately some missing or incomplete data on IMDb which has lead to some
+films being excluded.
+</p><br />
+<div id='actionGross' class="rChart"></div>
+<script src="/blog/js/action_gross.js"></script>
+
+<p>
+It turns out Sly has grossed more than Arnie on smaller budgets! We can also see
+Jackie Chan punches well above his weight in terms of absolute earnings, as well as ROI.</p>
+
+<p>Finally here's budget plotted against gross for most of the individual films used in this analysis.</p>
+
+<div id='actionBudgetVGross' class="rChart"></div>
+
+<script src="/blog/js/action_budgetVgross.js"></script>
+
+<p>The python and R scripts to recreate all the above analysis are
+<a href="https://github.com/blmoore/blogR" target="_blank">on github</a>,
+and it should be pretty straightforward to extend this over any other actors
+or actresses you might be interested in (like, say, Jean-Claude Van Damme whom
+  I completely forgot about).
+  </p>
+
+  ]]></description>
+</item>
+
+
+	<item>
+  <title>What are the most overrated films?</title>
+  <link>http://blm.io/blog/movies/2014/05/05/what-are-the-most-overrated-films/</link>
+  <author>Benjamin L. Moore</author>
+  <pubDate>2014-05-05T00:00:00+01:00</pubDate>
+  <guid>http://blm.io/blog/movies/2014/05/05/what-are-the-most-overrated-films/</guid>
+  <description><![CDATA[
+     <p style="text-align:left;">"Overrated" and "underrated" are slippery terms to try to quantify. An interesting way of looking at this, I thought, would be to compare the reviews of film critics with those of Joe Public, reasoning that a film which is roundly-lauded by the Hollywood press but proved disappointing for the real audience would be "overrated" and <em>vice versa</em>.</p>
+
+<p>To get some data for this I turned to the most prominent review aggregator: <a title="Rotten Tomatoes" href="http://www.rottentomatoes.com/" target="_blank">Rotten Tomatoes</a>. All this analysis was done in the R programming language, and full code to reproduce it will be attached at the end.</p>
+
+<h2>Rotten Tomatoes API</h2>
+
+<p><a title="Rotten Tomatoes API" href="http://developer.rottentomatoes.com/docs/read/JSON" target="_blank">This API</a> is nicely documented, easy to access and permissive with rate limits, as well as being <em>cripplingly</em> restrictive in what data is presents. Want a list of all films in the database? Nope. Most reviewed? Top rated? Highest box-office takings? Nope.</p>
+
+<p>The related forum is full of what seem like simple requests that should be available through the API but aren't: <a title="Top 100 lists requests" href="http://developer.rottentomatoes.com/forum/read/157176" target="_blank">top 100 lists?</a> Search using <a title="multiple IDs" href="http://developer.rottentomatoes.com/forum/read/112962" target="_blank">mulitple IDs at once</a>? Get <a title="audience reviews" href="http://developer.rottentomatoes.com/forum/read/112070" target="_blank">audience reviews</a>? All are unanswered or not currently implemented.</p>
+
+<p>So the starting point (a big list of films) is actually kinda hard to get at. The Rube Golbergian method I eventually used was this:</p>
+
+<ol>
+<li>Get the "Top Rentals" list of movie details (max: 50)</li>
+<li>Search each one for "Similar films" (max: 5)</li>
+<li>Get the unique film IDs from step 2 and iterate</li>
+</ol>
+
+<p>(<strong>N.B.</strong> This wasn't my idea but one from a post in the API forums, unfortunately didn't save the link.)</p>
+
+<p><img class="imgright" src="/blog/img/rottentomatohits.png" alt="Films returned" width="300" height="300" /></p>
+
+<p>In theory this grows your set of films at a reasonable pace, but in reality the number of unique films being returned was significantly lower (<em>shown right</em>). I guess this was due to pulling in "<a title="Walled garden wikipedia" href="https://en.wikipedia.org/wiki/Wikipedia:Walled_garden" target="_blank">walled gardens</a>" to my dataset, e.g. if a Harry Potter film was hit, each further round would pull in the 5 other films as most similar.</p>
+
+<h2>Results</h2>
+
+<p>Here's an overview of the critic and audience scores I collected through the Rotten Tomatoes API, with some outliers labelled.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/05/rt_plot.png"><img class="imgfull" src="/blog/img/rt_plot.png" alt="Most over- and underrated films" width="500" height="533" /></a></p>
+
+<p>On the whole it should be noted that critics and audience agree most of the time, as shown by the Pearson correlation coefficient between the two scores (0.71 across &gt;1200 films).</p>
+
+<p><a href="http://blm.io/movies"><img class="imgright" src="/blog/img/screen-shot-2014-05-08-at-02-11-47.png" alt="" width="187" height="176" /></a></p>
+
+<h3>Update:</h3>
+
+<p>I've put together an interactive version of the same plot <a href="http://blm.io/movies" target="_blank">here</a> using the <a title="rCharts" href="https://github.com/ramnathv/rCharts" target="_blank">rCharts</a> R package. It'll show film title and review scores when you hover over a point so you know what you're looking at. Also I've more than doubled the size of the film dataset by repeating the above method for a couple more iterations — <a title="rCharts" href="http://blm.io/movies" target="_blank">take a look</a>!</p>
+
+<h2>Most underrated films</h2>
+
+<p>Using our earlier definition it's easy to build a table of those films where the audience ending up really liking a film that was panned by critics.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/05/under_table.png"><img class="imgfull" src="/blog/img/under_table.png" alt="Scores are shown out of 100 for both aggregated critics and members of Rotten Tomatoes." width="500" height="366" /></a></p>
+
+<p>Somewhat surprisingly, the top of the table is <a title="Facing the Giants" href="http://www.rottentomatoes.com/m/facing_the_giants/" target="_blank">Facing the Giants (2006)</a>, an evangelical Christian film. I guess non-Christians might have stayed away, and presumably it struck a chord within its target demographic — but after watching <a title="Facing the Giants" href="https://www.youtube.com/watch?v=4xneiV7Ru6Q" target="_blank">the trailer</a>, I'd probably agree with the critics on this one.</p>
+
+<p>This showed that some weighting of the difference might be needed, at the very least weighting by number of reviews, but the Rotten Tomatoes API doesn't provide that data.</p>
+
+<p>In addition the Rotten Tomatoes <a href="http://www.rottentomatoes.com/m/facing_the_giants/" target="_blank">page</a> for the film, shows a "want to see" percentage, rather than an audience score. This came up a few times and I've seen no explanation for it, presumably "want to see" rating is for unreleased films, but the API returns a separate (and undisclosed?) audience score for these films also.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/05/rt_films.png"><img class="imgfull" src="/blog/img/rt_films.png" alt="Above shows a &quot;want to see&quot; rating, different to the &quot;liked it&quot; rating returned by the API and shown below" width="500" height="355" /></a></p>
+
+<p>Above shows a &quot;want to see&quot; rating, different to the &quot;liked it&quot; rating returned by the API and shown below. Note: these screenshots from RottenTomatoes.com are not CC licensed and is shown here under a claim of Fair Use, reproduced for comment/criticism.</p>
+
+<p>Looking over the rest of the table, it seems the public is more fond of gross-out or slapstick comedies (such as <a href="http://www.rottentomatoes.com/m/diary_of_a_mad_black_woman/" target="_blank">Diary of a Mad Black Woman (2005)</a>, <a href="http://www.rottentomatoes.com/m/grandmas_boy/" target="_blank">Grandma's boy (2006)</a>) than the critics. Again, not films I'd jump to defend as underrated. Bad Boys II however...</p>
+
+<h2>Most overrated films</h2>
+
+<p>Here we're looking at those films which the critics loved, but paying audiences were then less enthused.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/05/over_table.png"><img class="imgfull" src="/blog/img/over_table.png" alt="As before, scores are out of 100 and they're ranked by difference between audience and critic scores." width="500" height="400" /></a></p>
+
+<p>Strangely the top 15 (by difference) contains both the original 2001 <a title="Spy Kids" href="http://www.rottentomatoes.com/m/spy_kids/" target="_blank">Spy Kids</a> and the sequel <a title="Spy Kids 2" href="http://www.rottentomatoes.com/m/spy_kids_2_island_of_lost_dreams/" target="_blank">Spy Kids 2</a>: The Island of Lost Dreams (2002). What did critics see in these films that the public didn't? A possibility is bias in the audience reviews collected, the target audience is young children for these films and they probably are underrepresented amongst Rotten Tomatoes reviewers. Maybe there's even an enrichment for disgruntled parent chaperones.</p>
+
+<p>Thankfully, though, in this table there's the type of film we might more associate with being "overrated" by critics. <a title="Momma's Man" href="http://www.rottentomatoes.com/m/10009419-mommas_man/" target="_blank">Momma's Man</a> (2008) is an indie drama debuted at the 26th Torino Film Festival. <a title="Essential Killing" href="http://www.rottentomatoes.com/m/essential_killing/" target="_blank">Essential Killing</a> is a 2010 drama and political thriller from Polish director and screenwriter <span style="color:#333333;">Jerzy Skolimowski. </span></p>
+
+<p>There's also a smattering of Rom-Coms (<a title="Friends with Money" href="http://www.rottentomatoes.com/m/friends_with_money/" target="_blank">Friends with Money</a> (2006), <a title="Splash" href="http://www.rottentomatoes.com/m/1019641-splash/" target="_blank">Splash</a> (1984)) — if the API returned genre information it would be interesting to look for overall trends but, alas. Additional interesting variables to consider might be budget, the lead, reviews of producer's previous films... There's a lot of scope for interesting analysis here but it's currently just not possible with the Rotten Tomatoes API.</p>
+
+<h3> Caveats / Extensions</h3>
+
+<p>The full code will be posted below, so if you want to do a better job with this analysis, please do so and send me a link! :)</p>
+
+<ul>
+<li>Difference is too simple a metric. A better measure might be weighted by (e.g.) critic ranking. A film critics give 95% but audiences 75% might be more interesting than the same points difference between a 60/40 rated film.</li>
+<li>There's something akin to a "founder effect" of my initial chosen films that makes it had to diversify the dataset, especially to films from previous decades and classics.</li>
+<li>The Rotten Tomatoes API provides an IMDB id for cross-referencing, maybe that's a path to getting more data and building a better film list.</li>
+</ul>
+
+<hr />
+
+<p style="text-align:right; font-size: .85rem;">Full code to reproduce analysis is available in <a href="https://gist.github.com/blmoore/dc3bfa9a3ad0857ac796" target="_blank">gist</a> form. <br />
+This post was originally published on my <a href="http://benjaminlmoore.wordpress.com/2014/05/05/what-are-the-most-overrated-films/" target="_blank">Wordpress blog</a>.</p>
+
+  ]]></description>
+</item>
+

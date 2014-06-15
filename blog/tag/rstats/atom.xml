@@ -1,0 +1,711 @@
+
+	<item>
+  <title>Hollywood action heroes</title>
+  <link>http://blm.io/blog/movies/2014/06/07/hollywood-action-heroes/</link>
+  <author>Benjamin L. Moore</author>
+  <pubDate>2014-06-07T00:00:00+01:00</pubDate>
+  <guid>http://blm.io/blog/movies/2014/06/07/hollywood-action-heroes/</guid>
+  <description><![CDATA[
+     <div style="float:right;width: 20%">
+<img src="/blog/img/arnie10.jpg" width=80% style="border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;"/>
+<figcaption>
+<p style="font-size:smaller">Arnie 2010 (<a href="https://commons.wikimedia.org/wiki/File:SchwarzeneggerJan2010.jpg" target="_blank">source</a>)</p>
+</figcaption>
+</div>
+
+<p>
+I recently read <a href="http://www.amazon.com/gp/product/1451662440/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1451662440&linkCode=as2&tag=blmio-20&linkId=H7MGQFNQ3X6N6UJK">Arnie's autobiography</a>
+(great fun) and in it he writes about the various roles he's
+had, discussing those movies that flopped or were surprise box office successes,
+but it's hard to build up an overall picture of his career from these fragments.
+Similarly the raw filmography lists at <a href="http://www.imdb.com/name/nm0000216/?ref_=nv_sr_1" target="_blank">IMDb</a>
+and <a href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger#Filmography" target="_blank">Wikipedia</a>
+are pretty uninspiring.
+</p>
+
+<p>
+That gave me the idea of charting his movie career over time, attempting to
+show a lot of information at once about how well the film did at box office
+relative to its budget, and at what points these successes and failures
+happened over the last few decades. After some
+<a href="http://imdbpy.sourceforge.net/" target="_blank">python-powered</a>
+scraping of IMDb data, this is what I came up with:
+</p>
+
+<p><a href="/blog/img/arnie.png"><img src="/blog/img/arnie_thumb.png" width=100% /></a>
+<p>
+It&#39;s interesting to see the trajectory from back-to-back hits in low
+budget action films (Terminator, Predator, Commando) to a peak of a $200 million
+budget for <a href="https://en.wikipedia.org/wiki/Terminator_3:_Rise_of_the_Machines" target="_blank">Terminator 3</a>
+(considerably more in 2014 dollars, after adjusting for
+inflation). Of course you can then see his stretch as Governor of California
+from 2003-11, punctuated only by a <a href="https://www.youtube.com/watch?v=hrMmiUSVRRI" target="_blank">memorable cameo</a>
+in The Expendables <sup>(and an excluded minor role in The Kid &amp; I)</sup>.
+</p>
+<p>
+The eagle-eyed will notice some films are missing, there&#39;s no
+<a href="http://www.imdb.com/title/tt0065832/" target="_blank">Hercules in New York</a>
+and others of his earliest films. This is down to IMDb&#39;s budget and gross listings
+being woefully incomplete, but thankfully most of his famous lead roles are shown.
+</p>
+<p>
+These next obvious step was to look at other actors that fill a similar
+niche; how does Sly Stallone compare? What about the more recent action
+stars?
+</p></p>
+
+<div class="gallery">
+
+<figure class="gallery-item">
+<a href="/blog/img/sly.png" target="_blank">
+<img src="/blog/img/sly_thumb.png">
+<figcaption class="img-title">
+<h5>Sylvester Stallone</h5>
+</figcaption>
+</a>
+</figure>
+
+<figure class="gallery-item">
+<a href="/blog/img/bruce.png" target="_blank">
+<img src="/blog/img/bruce_thumb.png">
+<figcaption class="img-title">
+<h5>Bruce Willis</h5>
+</figcaption>  </a>
+</figure>
+
+<br clear="all" />
+
+<figure class="gallery-item">
+<a href="/blog/img/li.png" target="_blank">
+<img src="/blog/img/li_thumb.png">
+<figcaption class="img-title">
+<h5>Jet Li</h5>
+</figcaption>
+</a>
+</figure>
+
+<figure class="gallery-item">
+<a href="/blog/img/chan.png" target="_blank">
+<img src="/blog/img/chan_thumb.png">
+<figcaption class="img-title">
+<h5>Jackie Chan</h5>
+</figcaption>
+</a>
+</figure>
+
+<br clear="all" />
+
+<figure class="gallery-item">
+<a href="/blog/img/statham.png" target="_blank">
+<img src="/blog/img/statham_thumb.png">
+<figcaption class="img-title">
+<h5>Jason Statham</h5>
+</figcaption>
+</a>
+</figure>
+
+<figure class="gallery-item">
+<a href="/blog/img/vin.png" target="_blank">
+<img src="/blog/img/vin_thumb.png">
+<figcaption class="img-title">
+<h5>Vin Diesel</h5>
+</figcaption>
+</a>
+</figure>
+
+<br clear="all" />
+
+<figure class="gallery-item">
+<a href="/blog/img/seagal.png" target="_blank">
+<img src="/blog/img/seagal_thumb.png">
+<figcaption class="img-title">
+<h5>Steven Seagal</h5>
+</figcaption>
+</a>
+</figure>
+
+
+<figure class="gallery-item">
+<a href="/blog/img/rock.png" target="_blank">
+<img src="/blog/img/rock_thumb.png">
+<figcaption class="img-title">
+<h5>Dwayne Johnson</h5>
+</figcaption>
+</a>
+</figure>
+
+</div>
+
+<p><a href="/blog/img/clint.png" target="_blank">
+<img src="/blog/img/clint_bigthumb.png" width=100%>
+</a>
+<p>
+So we&#39;ve learnt that <a href="http://www.imdb.com/name/nm0000246" target="_blank">Bruce Willis</a>
+is in way too many films to label clearly, and Jackie Chan doesn&#39;t seem to mind frenetically
+jumping from big-money blockbusters and low-budget action flicks.
+</p>
+<p>
+<div style="float:right;width: 50%">
+<img src="/blog/img/roi.png" width=95% style="border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;" />
+<figcaption>
+<p style="font-size:smaller">Fancy a gamble? Pick Sly or Jackie as your lead.</p>
+</figcaption>
+</div></p>
+
+<p>I can use this data to look at the mean expected return on investment (ROI)
+per leading man, by just taking the mean gross over budget. This shows that
+<a href="http://www.imdb.com/name/nm0000329/" target="_blank">Jackie Chan</a>,
+albeit with a pretty huge amount of variance, has the highest expected ROI of the actors
+listed here. At the other end of the scale is
+<a href="http://www.imdb.com/name/nm0005458/" target="_blank">Jason Statham</a>, but in fairness I haven&#39;t
+normalised for the budgets of the films they&#39;re starring in &mdash; if you stick to
+$100 million films it&#39;s pretty much impossible to then multiple that by ten at the box office!
+</p></p>
+
+<h3>All-time totals per actor</h3>
+
+<p>
+Another (possibly fairer) way to compare these guys is by total budgets
+and grosses over their careers. It's <a href="http://www.imdb.com/help/show_leaf?infosource" target="_blank">not entirely clear</a>
+where IMDb gets these values from, so the absolute numbers should be taken with a pinch of salt.</p><br />
+<div id='actionBudget' class="rChart"></div>
+<script src="/blog/js/action_budget.js"></script>
+
+<p>Here's the same graph but by box office takings. These numbers from IMDb are even <em>more</em>
+suspect and vary according to different sources. Additionally, to convert the gross
+to 2014 dollars I used a <a href="https://en.wikipedia.org/wiki/Consumer_price_index" target="_blank">measure of inflation</a>
+from the year the film was released in &mdash; to
+calculate this more accurately you need a breakdown of the gross over time. Unlike lists at
+<a href="http://www.boxofficemojo.com/" target="_blank">Box Office Mojo</a>, these charts do
+sometimes contain cameo roles (e.g. Bruce and Arnie get Expendables I credits), and as I mentioned
+with Arnie, there's unfortunately some missing or incomplete data on IMDb which has lead to some
+films being excluded.
+</p><br />
+<div id='actionGross' class="rChart"></div>
+<script src="/blog/js/action_gross.js"></script>
+
+<p>
+It turns out Sly has grossed more than Arnie on smaller budgets! We can also see
+Jackie Chan punches well above his weight in terms of absolute earnings, as well as ROI.</p>
+
+<p>Finally here's budget plotted against gross for most of the individual films used in this analysis.</p>
+
+<div id='actionBudgetVGross' class="rChart"></div>
+
+<script src="/blog/js/action_budgetVgross.js"></script>
+
+<p>The python and R scripts to recreate all the above analysis are
+<a href="https://github.com/blmoore/blogR" target="_blank">on github</a>,
+and it should be pretty straightforward to extend this over any other actors
+or actresses you might be interested in (like, say, Jean-Claude Van Damme whom
+  I completely forgot about).
+  </p>
+
+  ]]></description>
+</item>
+
+
+	<item>
+  <title>Celebrity twitter followers by gender</title>
+  <link>http://blm.io/blog/twitter/2014/05/25/celebrity-twitter-followers-by-gender/</link>
+  <author>Benjamin L. Moore</author>
+  <pubDate>2014-05-25T00:00:00+01:00</pubDate>
+  <guid>http://blm.io/blog/twitter/2014/05/25/celebrity-twitter-followers-by-gender/</guid>
+  <description><![CDATA[
+     <p>The most popular accounts on twitter have millions of followers, but what are their demographics like? Twitter doesn't collect or release this kind of information, and even things like name and location are only voluntarily added to people's profiles. Unlike Google+ and Facebook, twitter has no real name policy, <a href="https://gigaom.com/2011/09/16/why-twitter-doesnt-care-what-your-real-name-is/" target="_blank">they don't care</a> what you call yourself, because they can still divine out useful information from your account activity.</p>
+
+<p>For example, you can optionally set your location on your twitter profile. Should you choose not to, twitter can still just <a title="geolocation" href="https://en.wikipedia.org/wiki/Geolocation" target="_blank">geolocate</a> your IP. If you use an anonymiser or VPN, they could use the timing of your account activity to infer a timezone. This could then be refined to a city or town using the topics you tweet about and the locations of friends and services you mention most.</p>
+
+<p>I chose to look at one small aspect of demographics: gender, and used a cheap heuristic based on stated first name to estimate the male:female ratios in a sample of followers from these very popular accounts.</p>
+
+<h2>Top 100 twitter accounts by followers</h2>
+
+<p>A top 100 list is made available by <a title="Twitter Counter" href="http://twittercounter.com/pages/100" target="_blank">Twitter Counter</a>. It's not clear that they have made this list available through their API, but thanks to the markup, a quick hack is to scrape the usernames using <a title="RCurl" href="http://www.omegahat.org/RCurl/" target="_blank">RCurl</a> and some <a title="Regex" href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">regex</a>:</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r">require<span class="p">(</span><span class="s">&quot;RCurl&quot;</span><span class="p">)</span>
+top.100 <span class="o">&lt;-</span> getURL<span class="p">(</span><span class="s">&quot;http://twittercounter.com/pages/100&quot;</span><span class="p">)</span>
+<span class="c1"># split into lines</span>
+top.100 <span class="o">&lt;-</span> unlist<span class="p">(</span>strsplit<span class="p">(</span>top.100<span class="p">,</span> <span class="s">&quot;\n&quot;</span><span class="p">))</span>
+<span class="c1"># Get only those lines with an @</span>
+top.100 <span class="o">&lt;-</span> top.100<span class="p">[</span>sapply<span class="p">(</span>top.100<span class="p">,</span> grepl<span class="p">,</span> pattern<span class="o">=</span><span class="s">&quot;@&quot;</span><span class="p">)]</span>
+<span class="c1"># Grep out anchored usernames: &lt;a ...&amp;gt;&lt;a href=&#39;https://github.com/username&#39; class=&#39;user-mention&#39;&gt;@username&lt;/a&gt;&lt;/a&gt;;</span>
+top.100 <span class="o">&lt;-</span> gsub<span class="p">(</span><span class="s">&quot;.*&gt;@(.+)&lt;.*&quot;</span><span class="p">,</span> <span class="s">&quot;\\1&quot;</span><span class="p">,</span> top.100<span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">101</span><span class="p">]</span>
+head<span class="p">(</span>top.100<span class="p">)</span>
+<span class="c1"># [1] &quot;katyperry&quot;  &quot;justinbieber&quot;  &quot;BarackObama&quot;  ...</span>
+</code></pre></div>
+<h2>R package twitteR</h2>
+
+<p>Getting data from the <a title="twitter API" href="https://dev.twitter.com/" target="_blank">twitter API</a> is made simple by the twitteR package. I made use of <a title="twitteR" href="http://davetang.org/muse/2013/04/06/using-the-r_twitter-package/" target="_blank">Dave Tang's worked example</a> for the initial OAuth setup, once that's complete the twitteR package is really easy to use.</p>
+
+<p>The difficulty getting data from the API, as ever, is to do with <a title="rate limits" href="https://dev.twitter.com/docs/rate-limiting/1.1" target="_blank">rate limits</a>. Twitter allows 15 requests for follower information per 15 minute window. (Number of followers can be queried by a much more generous 180 requests per window.) This means that to get a sample of followers for each of the top 100 twitter accounts, it'll take <em>at a minimum</em> 1 hour 40 mins to stay on the right side of the rate limit. I ended up using 90 second sleep windows between requests to be safe, making a total query time of two and a half hours!</p>
+
+<p>Another issue is possibly to do with strange characters being returned and breaking the JSON import. This error crops up a lot and meant that I had to lower the sample size of followers to avoid including these problem accounts. After some highly unscientific tests, I settled on about 1000 followers per account which seemed a good trade-off between maximising sample size but minimising failure rate.</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Try to sample 3000 followers for a user:</span>
+username<span class="o">$</span>getFollowers<span class="p">(</span>n<span class="o">=</span><span class="m">3000</span><span class="p">)</span>
+<span class="c1"># Error in twFromJSON(out) :</span>
+<span class="c1">#  Error: Malformed response from server, was not JSON.</span>
+<span class="c1"># The most likely cause of this error is Twitter returning</span>
+<span class="c1"># a character which can&#39;t be properly parsed by R. Generally</span>
+<span class="c1"># the only remedy is to wait long enough for the offending</span>
+<span class="c1"># character to disappear from searches.</span>
+</code></pre></div>
+<h2>Gender inference</h2>
+
+<p>Here I used a relatively new R package, <a title="gender package" href="https://github.com/ropensci/gender" target="_blank">rOpenSci's gender</a> (kudos for resisting gendR and the like). This uses U.S. social security data to probabilistically link first names with genders, e.g.:</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r">devtools<span class="o">::</span>install_github<span class="p">(</span><span class="s">&quot;ropensci/gender&quot;</span><span class="p">)</span>
+require<span class="p">(</span><span class="s">&quot;gender&quot;</span><span class="p">)</span>
+gender<span class="p">(</span><span class="s">&quot;ben&quot;</span><span class="p">)</span>
+<span class="c1">#   name proportion_male proportion_female gender</span>
+<span class="c1"># 1  ben          0.9962            0.0038   male</span>
+</code></pre></div>
+<p>So chances are good that I'm male. But the package also returns proportional data based on the frequency of appearances in the SSA database. Naively these can be interpreted as the probability a given name is either male or female. So in terms of converting a list of 1000 first names to genders, there are a few options:</p>
+
+<ol>
+<li><strong>Threshold</strong>: if  &gt;.98 male or female, assign gender, else ignore.</li>
+<li><strong>Probabilistically</strong>: use random number generation to assign each case, if a name is .95 male and .05 female, on average assign that name to females 5% of the time.</li>
+<li><strong>Bayesian-ish</strong>: threshold for almost certain genders (e.g. .99+) and use this as a prior belief of gender ratios when assigning gender to the other followers for a given user. This would probably lower bias when working with heavily skewed accounts.</li>
+</ol>
+
+<p>I went with #2 here. Anecdotal evidence suggests it's reasonably accurate anyway, with twitter analytics (using bag of words, sentiment analysis and all sorts of clever tricks to unearth gender) estimating my account has 83% male followers (!), with probabilistic first name assignment estimating 79% (and that's with a smaller sample). Method #3 may correct this further but the implementation tripped me up.</p>
+
+<h2>Results</h2>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/05/twittergenderdist.png"><img class="imgfull" src="/blog/img/twittergenderdist.png" alt="Celebrity twitter followers by gender" width="500" height="833" /></a></p>
+
+<p>So boys prefer football (soccer) and girls prefer One Direction, who knew? Interestingly Barack Obama appears to have a more male following (59%), as does Bill Gates with 67%.</p>
+
+<p>At the other end of the spectrum, below One Direction, Simon Cowell is a hit with predominantly female twitter users (70%), as is Kanye West (67%) and Khloe Kardashian (72%).</p>
+
+<p>Another surprise is that Justin Bieber, famed as teen girl heartthrob, actually has a more broad gender appeal with 41 / 59 male-female split.</p>
+
+<h2>Interactive charts</h2>
+
+<p><a href="http://blm.io/twitter"><img class="imgright" src="/blog/img/screen-shot-2014-05-25-at-11-51-25.png" alt="Click for an interactive version." width="150" height="86" /></a></p>
+
+<p>Using the fantastic <a title="rcharts" href="http://rcharts.io/" target="_blank">rCharts</a> library, I've put together some <a title="interactive charts" href="http://blm.io/twitter" target="_blank">interactive graphics</a> that let you explore the above results further. These use the <a title="NVD3" href="http://nvd3.org/" target="_blank">NVD3 graphing library</a>, as opposed to my <a href="http://rcharts.io/viewer/?6c9ed5eed37fe3c03fa5" target="_blank">previous effort</a> which used <a href="http://dimplejs.org/" target="_blank">dimple.js</a>.</p>
+
+<p>The first of these is ordered by number of followers, and the second by gender split. The eagle-eyed among you will see that one account from the top 100 is missing from all these charts due to the JSON error I discuss above, thankfully it's a boring one (sorry <a href="https://twitter.com/TwitPic" target="_blank"><a href='https://github.com/TwitPic' class='user-mention'>@TwitPic</a></a>).</p>
+
+<p>Where would your account be on these graphs? Somehow I end up alongside Wayne Rooney in terms of gender diversity :s</p>
+
+<h3>Caveats</h3>
+
+<ul>
+<li>A lot of the time genders can't be called from an account's first name. Maybe they haven't given a first name, maybe it's a business account or some pretty unicode symbols, maybe it's a spammy egg account. This means my realised sample size is <<1000, sometimes the majority of usernames had no gender (e.g. <a href="https://twitter.com/UberSoc" target="_blank"><a href='https://github.com/UberSoc' class='user-mention'>@UberSoc</a></a>, fake followers?).
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/05/with_missing.png"><img class="imgright" src="/blog/img/with_missing.png" alt="This (big) chart includes % for those that couldn't be assigned (NA)" width="107" height="150" /></a> This (big) chart includes % for those that couldn't be assigned (NA)</li>
+<li>The SSA data is heavily biased towards Western (esp. US) and non-English names are likely to not be assigned a gender throughout. This is a shame, if you know of a more international gender DB please let me know.</li>
+<li>I'm sampling most recent followers, so maybe accounts like Justin Bieber have a much higher female ratio in earlier followers than those which have only just hit the follow button.</li>
+<li>The sample size of 1000 followers per account is smaller than I'd like, especially for accounts with 50 million followers.</li>
+</ul>
+
+<p>If you have other ideas of what to do with demographics data, or have noticed additional caveats of this study, please let me know in the comments!</p>
+
+<hr />
+
+<p style="text-align:right;">Full code to reproduce this analysis is <a title="Code to reproduce" href="https://github.com/blmoore/blogR/blob/master/R/twitter_followersGender.R" target="_blank">available on Github</a>.<br />
+This post was originally published on my
+<a href="http://benjaminlmoore.wordpress.com/2014/05/25/celebrity-twitter-followers-by-gender/" target="_blank">Wordpress blog</a>.</p>
+
+  ]]></description>
+</item>
+
+
+	<item>
+  <title>What are the most overrated films?</title>
+  <link>http://blm.io/blog/movies/2014/05/05/what-are-the-most-overrated-films/</link>
+  <author>Benjamin L. Moore</author>
+  <pubDate>2014-05-05T00:00:00+01:00</pubDate>
+  <guid>http://blm.io/blog/movies/2014/05/05/what-are-the-most-overrated-films/</guid>
+  <description><![CDATA[
+     <p style="text-align:left;">"Overrated" and "underrated" are slippery terms to try to quantify. An interesting way of looking at this, I thought, would be to compare the reviews of film critics with those of Joe Public, reasoning that a film which is roundly-lauded by the Hollywood press but proved disappointing for the real audience would be "overrated" and <em>vice versa</em>.</p>
+
+<p>To get some data for this I turned to the most prominent review aggregator: <a title="Rotten Tomatoes" href="http://www.rottentomatoes.com/" target="_blank">Rotten Tomatoes</a>. All this analysis was done in the R programming language, and full code to reproduce it will be attached at the end.</p>
+
+<h2>Rotten Tomatoes API</h2>
+
+<p><a title="Rotten Tomatoes API" href="http://developer.rottentomatoes.com/docs/read/JSON" target="_blank">This API</a> is nicely documented, easy to access and permissive with rate limits, as well as being <em>cripplingly</em> restrictive in what data is presents. Want a list of all films in the database? Nope. Most reviewed? Top rated? Highest box-office takings? Nope.</p>
+
+<p>The related forum is full of what seem like simple requests that should be available through the API but aren't: <a title="Top 100 lists requests" href="http://developer.rottentomatoes.com/forum/read/157176" target="_blank">top 100 lists?</a> Search using <a title="multiple IDs" href="http://developer.rottentomatoes.com/forum/read/112962" target="_blank">mulitple IDs at once</a>? Get <a title="audience reviews" href="http://developer.rottentomatoes.com/forum/read/112070" target="_blank">audience reviews</a>? All are unanswered or not currently implemented.</p>
+
+<p>So the starting point (a big list of films) is actually kinda hard to get at. The Rube Golbergian method I eventually used was this:</p>
+
+<ol>
+<li>Get the "Top Rentals" list of movie details (max: 50)</li>
+<li>Search each one for "Similar films" (max: 5)</li>
+<li>Get the unique film IDs from step 2 and iterate</li>
+</ol>
+
+<p>(<strong>N.B.</strong> This wasn't my idea but one from a post in the API forums, unfortunately didn't save the link.)</p>
+
+<p><img class="imgright" src="/blog/img/rottentomatohits.png" alt="Films returned" width="300" height="300" /></p>
+
+<p>In theory this grows your set of films at a reasonable pace, but in reality the number of unique films being returned was significantly lower (<em>shown right</em>). I guess this was due to pulling in "<a title="Walled garden wikipedia" href="https://en.wikipedia.org/wiki/Wikipedia:Walled_garden" target="_blank">walled gardens</a>" to my dataset, e.g. if a Harry Potter film was hit, each further round would pull in the 5 other films as most similar.</p>
+
+<h2>Results</h2>
+
+<p>Here's an overview of the critic and audience scores I collected through the Rotten Tomatoes API, with some outliers labelled.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/05/rt_plot.png"><img class="imgfull" src="/blog/img/rt_plot.png" alt="Most over- and underrated films" width="500" height="533" /></a></p>
+
+<p>On the whole it should be noted that critics and audience agree most of the time, as shown by the Pearson correlation coefficient between the two scores (0.71 across &gt;1200 films).</p>
+
+<p><a href="http://blm.io/movies"><img class="imgright" src="/blog/img/screen-shot-2014-05-08-at-02-11-47.png" alt="" width="187" height="176" /></a></p>
+
+<h3>Update:</h3>
+
+<p>I've put together an interactive version of the same plot <a href="http://blm.io/movies" target="_blank">here</a> using the <a title="rCharts" href="https://github.com/ramnathv/rCharts" target="_blank">rCharts</a> R package. It'll show film title and review scores when you hover over a point so you know what you're looking at. Also I've more than doubled the size of the film dataset by repeating the above method for a couple more iterations — <a title="rCharts" href="http://blm.io/movies" target="_blank">take a look</a>!</p>
+
+<h2>Most underrated films</h2>
+
+<p>Using our earlier definition it's easy to build a table of those films where the audience ending up really liking a film that was panned by critics.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/05/under_table.png"><img class="imgfull" src="/blog/img/under_table.png" alt="Scores are shown out of 100 for both aggregated critics and members of Rotten Tomatoes." width="500" height="366" /></a></p>
+
+<p>Somewhat surprisingly, the top of the table is <a title="Facing the Giants" href="http://www.rottentomatoes.com/m/facing_the_giants/" target="_blank">Facing the Giants (2006)</a>, an evangelical Christian film. I guess non-Christians might have stayed away, and presumably it struck a chord within its target demographic — but after watching <a title="Facing the Giants" href="https://www.youtube.com/watch?v=4xneiV7Ru6Q" target="_blank">the trailer</a>, I'd probably agree with the critics on this one.</p>
+
+<p>This showed that some weighting of the difference might be needed, at the very least weighting by number of reviews, but the Rotten Tomatoes API doesn't provide that data.</p>
+
+<p>In addition the Rotten Tomatoes <a href="http://www.rottentomatoes.com/m/facing_the_giants/" target="_blank">page</a> for the film, shows a "want to see" percentage, rather than an audience score. This came up a few times and I've seen no explanation for it, presumably "want to see" rating is for unreleased films, but the API returns a separate (and undisclosed?) audience score for these films also.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/05/rt_films.png"><img class="imgfull" src="/blog/img/rt_films.png" alt="Above shows a &quot;want to see&quot; rating, different to the &quot;liked it&quot; rating returned by the API and shown below" width="500" height="355" /></a></p>
+
+<p>Above shows a &quot;want to see&quot; rating, different to the &quot;liked it&quot; rating returned by the API and shown below. Note: these screenshots from RottenTomatoes.com are not CC licensed and is shown here under a claim of Fair Use, reproduced for comment/criticism.</p>
+
+<p>Looking over the rest of the table, it seems the public is more fond of gross-out or slapstick comedies (such as <a href="http://www.rottentomatoes.com/m/diary_of_a_mad_black_woman/" target="_blank">Diary of a Mad Black Woman (2005)</a>, <a href="http://www.rottentomatoes.com/m/grandmas_boy/" target="_blank">Grandma's boy (2006)</a>) than the critics. Again, not films I'd jump to defend as underrated. Bad Boys II however...</p>
+
+<h2>Most overrated films</h2>
+
+<p>Here we're looking at those films which the critics loved, but paying audiences were then less enthused.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/05/over_table.png"><img class="imgfull" src="/blog/img/over_table.png" alt="As before, scores are out of 100 and they're ranked by difference between audience and critic scores." width="500" height="400" /></a></p>
+
+<p>Strangely the top 15 (by difference) contains both the original 2001 <a title="Spy Kids" href="http://www.rottentomatoes.com/m/spy_kids/" target="_blank">Spy Kids</a> and the sequel <a title="Spy Kids 2" href="http://www.rottentomatoes.com/m/spy_kids_2_island_of_lost_dreams/" target="_blank">Spy Kids 2</a>: The Island of Lost Dreams (2002). What did critics see in these films that the public didn't? A possibility is bias in the audience reviews collected, the target audience is young children for these films and they probably are underrepresented amongst Rotten Tomatoes reviewers. Maybe there's even an enrichment for disgruntled parent chaperones.</p>
+
+<p>Thankfully, though, in this table there's the type of film we might more associate with being "overrated" by critics. <a title="Momma's Man" href="http://www.rottentomatoes.com/m/10009419-mommas_man/" target="_blank">Momma's Man</a> (2008) is an indie drama debuted at the 26th Torino Film Festival. <a title="Essential Killing" href="http://www.rottentomatoes.com/m/essential_killing/" target="_blank">Essential Killing</a> is a 2010 drama and political thriller from Polish director and screenwriter <span style="color:#333333;">Jerzy Skolimowski. </span></p>
+
+<p>There's also a smattering of Rom-Coms (<a title="Friends with Money" href="http://www.rottentomatoes.com/m/friends_with_money/" target="_blank">Friends with Money</a> (2006), <a title="Splash" href="http://www.rottentomatoes.com/m/1019641-splash/" target="_blank">Splash</a> (1984)) — if the API returned genre information it would be interesting to look for overall trends but, alas. Additional interesting variables to consider might be budget, the lead, reviews of producer's previous films... There's a lot of scope for interesting analysis here but it's currently just not possible with the Rotten Tomatoes API.</p>
+
+<h3> Caveats / Extensions</h3>
+
+<p>The full code will be posted below, so if you want to do a better job with this analysis, please do so and send me a link! :)</p>
+
+<ul>
+<li>Difference is too simple a metric. A better measure might be weighted by (e.g.) critic ranking. A film critics give 95% but audiences 75% might be more interesting than the same points difference between a 60/40 rated film.</li>
+<li>There's something akin to a "founder effect" of my initial chosen films that makes it had to diversify the dataset, especially to films from previous decades and classics.</li>
+<li>The Rotten Tomatoes API provides an IMDB id for cross-referencing, maybe that's a path to getting more data and building a better film list.</li>
+</ul>
+
+<hr />
+
+<p style="text-align:right; font-size: .85rem;">Full code to reproduce analysis is available in <a href="https://gist.github.com/blmoore/dc3bfa9a3ad0857ac796" target="_blank">gist</a> form. <br />
+This post was originally published on my <a href="http://benjaminlmoore.wordpress.com/2014/05/05/what-are-the-most-overrated-films/" target="_blank">Wordpress blog</a>.</p>
+
+  ]]></description>
+</item>
+
+
+	<item>
+  <title>Author inflation in academic literature</title>
+  <link>http://blm.io/blog/academia/2014/04/06/author-inflation-in-academic-literature/</link>
+  <author>Benjamin L. Moore</author>
+  <pubDate>2014-04-06T00:00:00+01:00</pubDate>
+  <guid>http://blm.io/blog/academia/2014/04/06/author-inflation-in-academic-literature/</guid>
+  <description><![CDATA[
+     <p>There seems to be a general consensus that author lists in academic articles are growing. Wikipedia <a href="https://en.wikipedia.org/wiki/Academic_authorship#Growing_number_of_authors_per_paper" target="_blank">says so</a>, and I've also come across a <a href="http://onlinelibrary.wiley.com/doi/10.1002/asi.21438/abstract" target="_blank">published letter</a> and short <a href="http://www.nature.com/nature/history/full/nature06243.html" target="_blank">Nature article</a> which accept this is the case and discuss ways of mitigating the issue. Recently there was an interesting discussion on <a href="http://academia.stackexchange.com/questions/16759/is-there-an-inflation-in-the-number-of-authors-per-paper" target="_blank">academia.stackexchange</a> on the subject but again without much quantification. Luckily given the array of literature database APIs and language bindings available, it should be pretty easy to investigate with some statistical analysis in R.</p>
+
+<h2>rplos</h2>
+
+<p><a title="ropensci" href="http://ropensci.org/" target="_blank">ROpenSci</a> offers nice R language bindings for the PLOS (I'm more used to PLoS but I'll go with it) API, called <a title="rplos" href="https://github.com/ropensci/rplos" target="_blank">rplos</a>. There's no particular reason to limit the search to PLOS journals but rplos seems significantly more straightforward to work with than pubmed API packages I've used in the past like <a title="RISmed" href="http://cran.r-project.org/web/packages/RISmed/index.html" target="_blank">RISmed</a>.</p>
+
+<p>Additionally the PLOS group contains two journals of particular interest to me:</p>
+
+<ul>
+<li><a title="plos comp biol" href="http://www.ploscompbiol.org/" target="_blank">PLOS Computational Biology</a> — a respectable specialist journal in my field; have bioinformatics articles been particularly susceptible to author inflation?</li>
+<li><a title="PLOS ONE" href="http://www.plosone.org/" target="_blank">PLOS ONE</a> — the original mega-journal. I wonder if the huge number of articles published here show different trends in authorship over time.</li>
+</ul>
+
+<p>The only strange part of the search was at the PLOS API end. To search by the <code>publication_year</code> field you need to supply both a beginning and end date range, in the form:</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r">publication_date<span class="o">:</span><span class="p">[</span><span class="m">2001-01-01</span>T00<span class="o">:</span><span class="m">00</span><span class="o">:</span><span class="m">00</span>Z TO <span class="m">2013-12-31</span>T23<span class="o">:</span><span class="m">59</span><span class="o">:</span><span class="m">59</span>Z<span class="p">]</span>
+</code></pre></div>
+<p>A tad verbose, right? I can't imagine wanting to search for things published at a particular time of day. A full PLOS API query using the rplos package looks something like this:</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r">searchplos<span class="p">(</span>
+  <span class="c1"># Query: publication date in 2012</span>
+  q  <span class="o">=</span> <span class="s">&#39;publication_date:[2012-01-01T00:00:00Z TO 2012-12-31T23:59:59Z]&#39;</span><span class="p">,</span>
+  <span class="c1"># Fields to return: id (doi) and author list</span>
+  fl <span class="o">=</span> <span class="s">&quot;id,author&quot;</span><span class="p">,</span>
+  <span class="c1"># Filter: only actual articles in journal PLOS ONE</span>
+  fq <span class="o">=</span> list<span class="p">(</span><span class="s">&quot;doc_type:full&quot;</span><span class="p">,</span>
+            <span class="s">&quot;cross_published_journal_key:PLoSONE&quot;</span><span class="p">),</span>
+  <span class="c1"># 500 results (max 1000 per query)</span>
+  start<span class="o">=</span><span class="m">0</span><span class="p">,</span> limit<span class="o">=</span><span class="m">500</span><span class="p">,</span> sleep<span class="o">=</span><span class="m">6</span><span class="p">)</span>
+</code></pre></div>
+<p>A downside of using the PLOS API is that the set of journals are quite recent, PLOS ONE started in 2006 and PLOS Biology was only a few years before in 2003, so it'll only give us a limited window into any long-term trends.</p>
+
+<h2>Distribution of author counts</h2>
+
+<p>Before looking at inflation we can compare the distribution of author counts per paper between the journals:</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/04/beans_overall.png"><img class="imgfull" src="/blog/img/beans_overall.png" alt="Distribution of author counts" width="500" height="500" /></a>
+<a href="http://benjaminlmoore.files.wordpress.com/2014/04/journal_ecdf.png"><img class="imgright" src="/blog/img/journal_ecdf.png" alt="ECDF per journal" width="300" height="300" /></a></p>
+
+<p>Possibly more usefully — but less pretty — the same data be plotted as empirical cumulative distribution functions (ECDF). From these we can see that PLOS Biology had the highest proportion of single-author papers in my sample (n = ~22,500 articles overall) followed by PLOS Medicine, with PLOS Genetics showing more high-author papers at the long-tail of the distribution, including the paper with the most authors in the sample (<a title="couch" href="http://www.plosgenetics.org/article/info%3Adoi%2F10.1371%2Fjournal.pgen.1003212" target="_blank">Couch et al., 2013</a> with 270 authors).</p>
+
+<h2>Author inflation</h2>
+<p>So, in these 6 different journals published by PLOS, how has the mean number of authors per paper varied across the past 7 years?</p>
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/04/alltrends.png"><img class="imgfull" src="/blog/img/alltrends.png" alt="PLOS author inflation" width="500" height="500" /></a></p>
+<p>Above I've shown yearly means plus their 95% confidence intervals, as estimated by a non-parametric bootstrap method implemented in <a title="ggplot2" href="http://ggplot2.org/" target="_blank">ggplot2</a>. Generally from this graph it does look like there's a slight upward trend on average, though arguably the mean is not the best summary statistic to use for this data, which I've shown is not normally distributed, and may better fit an extreme value distribution.</p>
+<p>The relationship between publication date and number of authors per paper become clearer if it's broken down by journal:</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/04/plot_lm.png"><img class="imgfull" src="/blog/img/plot_lm.png" alt="Author inflation regression" width="500" height="352" /></a></p>
+
+<p>Here linear regression reveals a significant positive coefficient for year against mean author count per paper, as high as .52 extra authors per year on average, down to just .06 a year for PLOS ONE. Surprisingly the mega-journal which published around 80,000 papers over this time period seems least susceptible to author inflation.</p>
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/04/authinflation_bars.png"><img class="imgleft" src="/blog/img/authinflation_bars.png" alt="Author inflation per journal" width="214" height="300" /></a>The explained variance in mean number of authors per paper (per year) ranges from .28 (PLOS ONE) up to an impressive .87 for PLOS Medicine, with PLOS Computational Biology not far behind on .83. However, PLOS Computational Biology had the second lowest regression coefficient, and the lowest average number of authors of the six journals — maybe us introverted computer types should be collaborating more widely!</p>
+
+<h2>Journal effects</h2>
+<p>It's interesting to speculate on what drives the observed differences in author inflation between journals. A possible covariate is the roundly-condemned "Impact Factor" journal-level metric — are "high impact" journals seeing more author creep than lesser publications?</p>
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/04/corr_authif.png"><img class="imgfull" src="/blog/img/corr_authif.png" alt="Correlation of author inflation and impact factor" width="300" height="300" /></a></p>
+<p>If estimate of author inflation is plotted against respective journals' recent impact factors, there does indeed appear to be a positive correlation. However, this comparison only has 6 data points so there's not enough evidence to reject the null hypothesis that there is no relationship between these two variables (p = 0.18).</p>
+
+<h2>Conclusion</h2>
+<h4>Is author inflation occurring?</h4>
+<p><strong>Yes</strong>, it certainly appears to be on average.</p>
+<h4>Is it a problem?</h4>
+<p>I don't know, but I'd lean towards probably not.</p>
+<p>The average trends could be reflecting the proliferation of "<a title="big science" href="https://en.wikipedia.org/wiki/Big_Science" target="_blank">Big Science</a>" with huge collaborative consortiums like <a title="ENCODE" href="http://encodeproject.org/ENCODE/" target="_blank">ENCODE</a> and <a title="FANTOM" href="http://fantom.gsc.riken.jp/" target="_blank">FANTOM</a> (though the main papers of those examples were targeted to <em>Nature</em>) and doesn't necessarily support a conclusion that Publish or Perish culture is forcing lots of token authorships and backhanders between scientists.</p>
+<p>Maybe instead (as the <a href="http://academia.stackexchange.com/questions/16759/is-there-an-inflation-in-the-number-of-authors-per-paper" target="_blank">original discussion</a> hypothesised), people that traditionally may not have been credited with authorship (bioinformaticians doing end-point analysis and lab technicians) are now getting recognised for their input more often, or conceivably advances in cloud computing, distributed data storage and video conferencing has better enabled larger collaborations between scientists across the globe!</p>
+<p>Either way, evidence for author inflation is not evidence of a problem <em>per se</em> :)</p>
+
+<h3>Caveats</h3>
+<ul>
+<li>Means used for regression — while we get a surprisingly high R<sup>2</sup> for regression the mean number of authors per paper per year, the predictive power for individual papers unsurprisingly vanishes (R<sup>2</sup> plummets to between .02 and 4.6 × 10<sup>-4</sup> per journal — significant non-zero coefficients remain). Author inflation wouldn't be expected to exhibit consistent and pervasive effects in all papers, for example reviews, letters and opinion pieces presumably have consistently lower author counts than research articles and not all science can work in a collaborative, multi-author framework.</li>
+<li>Search limits — rplos returns a maximum of 1000 results at a time (but they can be returned sequentially using the <code>start</code> and <code>limit</code> parameters). They seem to be drawn in reverse order of time so the results here probably aren't fully representative of the year in some cases. This has also meant my sample is unevenly split between journals: PLoSBiology: 2487; PLoSCompBiol: 3403; PLoSGenetics: 4013; PLoSMedicine: 2094; PLoSONE: 7176; PLoSPathogens:3647; <strong>Total:</strong> 22,460.</li>
+<li>Resolution — this could be done in a more fine-grained way, say with monthly bins. As mentioned above, for high-volume journals like PLOS ONE, the sample is likely coming from the end of the years from ~2010 onwards.</li>
+</ul>
+<hr />
+<p style="text-align:right;">The full code to reproduce this analysis is <a href="https://gist.github.com/blmoore/9998523" target="_blank">here</a>.<br />
+This post was originally published on my
+<a href="http://benjaminlmoore.wordpress.com/2014/04/06/author-inflation-in-academic-literature/" target="_blank">Wordpress blog</a>.
+</p>
+
+  ]]></description>
+</item>
+
+
+	<item>
+  <title>Guardian data blog — UK general election analysis in R</title>
+  <link>http://blm.io/blog/politics/2014/03/18/guardian-data-blog-uk-elections/</link>
+  <author>Benjamin L. Moore</author>
+  <pubDate>2014-03-18T00:00:00+00:00</pubDate>
+  <guid>http://blm.io/blog/politics/2014/03/18/guardian-data-blog-uk-elections/</guid>
+  <description><![CDATA[
+     <p>The Guardian newspaper has for a few years been running a <a title="guardian data blog" href="http://www.theguardian.com/data" target="_blank">data blog</a> and has built up a massive repository of (often) well-curated datasets on a huge number of topics. They even have an <a title="list of data sets made available by the guardian" href="http://www.theguardian.com/news/datablog/interactive/2013/jan/14/all-our-datasets-index" target="_blank">indexed list</a> of all data sets they've put together or reused in their articles.</p>
+
+<p>It's a great repository of interesting data for exploratory analysis, and there's a low barrier to entry in terms of getting the data into a useful form. Here's an example using UK election polling data collected over the last thirty years.</p>
+
+<h2>ICM polling data</h2>
+
+<p>The Guardian and <a title="ICM research" href="http://www.icmresearch.com/" target="_blank">ICM research</a> have conducted monthly polls on voting intentions since 1984, usually with a sample size of between 1,000 and 1,500 people. It's not made obvious how these polls are conducted (cold-calling?) but for what it's worth ICM is a member of the <a title="British Polling Council Wikipedia page" href="http://www.britishpollingcouncil.org/" target="_blank">British Polling Council</a>, and so hopefully tries to monitor and correct for things like the "<a title="shy tory factor" href="https://en.wikipedia.org/wiki/Shy_Tory_Factor" target="_blank">Shy Tory Factor</a>"—the observation that Conservative voters supposedly have (or had prior to '92)  a greater tendency to conceal their voting intentions than Labour supporters.</p>
+
+<h2>Preprocessing</h2>
+
+<p>The data is made available from The Guardian as a <code>.csv</code> file via Google spreadsheets <a title="data" href="https://docs.google.com/spreadsheet/ccc?key=0AonYZs4MzlZbcGhOdG0zTG1EWkVPOEY3OXRmOEIwZmc#gid=0" target="_blank">here</a> and requires minimal cleanup, cut the source information from the end of the file and you can open it up in R.</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r">sop <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&quot;StateOfTheParties.csv&quot;</span><span class="p">,</span> stringsAsFactors<span class="o">=</span><span class="k-Variable">F</span><span class="p">)</span>
+<span class="c1">## Data cleanup</span>
+sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">&lt;-</span> apply<span class="p">(</span>sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">],</span> <span class="m">2</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> as.numeric<span class="p">(</span>gsub<span class="p">(</span><span class="s">&quot;%&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> x<span class="p">)))</span>
+sop<span class="p">[,</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> as.Date<span class="p">(</span>sop<span class="p">[,</span><span class="m">1</span><span class="p">],</span> format<span class="o">=</span><span class="s">&quot;%d-%m-%Y&quot;</span><span class="p">)</span>
+colnames<span class="p">(</span>sop<span class="p">)[</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">&quot;Date&quot;</span>
+<span class="c1"># correct for some rounding errors leading to 101/99 %</span>
+sop<span class="o">$</span>rsum <span class="o">&lt;-</span> apply<span class="p">(</span>sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">],</span> <span class="m">1</span><span class="p">,</span> sum<span class="p">)</span>
+table<span class="p">(</span>sop<span class="o">$</span>rsum<span class="p">)</span>
+sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">&lt;-</span> sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">/</span> sop<span class="o">$</span>rsum
+</code></pre></div>
+<p>Then after <code>melt</code>ing the data.frame down (full code at the end of the post), you can get a quick overview with <code>ggplot2</code>.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/03/area_plot.png"><img class="imgfull" alt="UK general election overview 1984-2014" src="/blog/img/area_plot.png" width="503" height="344"/></a></p>
+
+<h2>Election breakdown</h2>
+
+<p>The area plot is a nice overview but not that useful quantitatively. Given that the dataset includes general election results as well as opinion polling, it's straightforward to split the above plot by this important factor. I also found it useful to convert absolute dates to be relative to the election they precede. R has an object class, <code>difftime</code>, which makes this easy to accomplish and calling <code>as.numeric()</code> on a difftime object converts it to raw number of days (handily accounting for things like leap years).</p>
+
+<p>These processing steps lead to a clearer graph with more obvious stories, such as the gradual and monotonic decline of support for Labour during the Blair years. </p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/03/splitbyelection_2.png"><img src="/blog/img/splitbyelection_2.png" alt="UK general election data split by election period" width="500" height="382" class="imgfull" /></a></p>
+
+<p><strong>NB</strong> Facet headers show the election year and result of the election with which the (preceding) points are plotted relative to.</p>
+
+<h2>Next election's result</h2>
+
+<p>I originally wanted to look at this data to get a feel for how things are looking before next year's (2015) general election, maybe even running some predictive models (obviously I'm no <a href="http://fivethirtyeight.com/" title="fivethirtyeight" target="_blank">fivethirtyeight.com</a>). </p>
+
+<p>However, graphing the trends of public support for the two main UK parties hints it's unlikely to be a fruitful endeavour at this point, and with the above graphs showing an ominous increasing support for "other" parties (not accidentally coloured <a href="https://www.ukip.org/" title="ukip" target="_blank">purple</a>), it looks like with about 400 days to go the 2015 general election is still all to play for.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/03/lab_con.png"><img src="/blog/img/lab_con.png" alt="lab_con" width="500" height="607" class="imgfull" /></a></p>
+
+<hr />
+
+<p style="text-align:right; font-size:.85rem;">Reproduce and improve this analysis with help from
+<a href="https://gist.github.com/blmoore/9631779" target="_blank">this gist</a>.<br \>
+This post was originally published on my
+<a href="http://benjaminlmoore.wordpress.com/2014/03/18/guardian-data-blog-uk-elections/" target="_blank">Wordpress blog</a>.</p>
+
+  ]]></description>
+</item>
+
+
+	<item>
+  <title>Slidify: Modern, simple presentations written in R Markdown</title>
+  <link>http://blm.io/blog/r/2014/02/24/slidify-presentations-in-r-markdown/</link>
+  <author>Benjamin L. Moore</author>
+  <pubDate>2014-02-24T00:00:00+00:00</pubDate>
+  <guid>http://blm.io/blog/r/2014/02/24/slidify-presentations-in-r-markdown/</guid>
+  <description><![CDATA[
+     <p>As a LaTeX fan I'm used to using Beamer for presentations, but the built-in <a href="http://www.hartwork.org/beamer-theme-matrix/" target="_blank">themes</a> are definitely starting to show their age --- and writing a custom <code>.sty</code> file looks like a nightmare --- so for a while I've been looking at trying out an HTML5 framework.</p>
+
+<p><a href="http://lab.hakim.se/reveal-js/" target="_blank"><img class="imgright" alt="Reveal.js is a great looking HTML presentation framework from Hakim El Hattab." src="/blog/img/screen-shot-2014-02-24-at-19-55-11.png" width="150" height="102" /></a></p>
+
+<p>The first nice option I noticed was <a href="http://lab.hakim.se/reveal-js/" target="_blank">reveal.js</a> which seems to find a solid balance between looking sleek and modern, but not generating a prezi-like rollercoaster of a talk. Another project I came across, <a href="http://bartaz.github.io/impress.js/" target="_blank">impress.js</a>, probably leans towards the latter, and needs a decent array of web-dev skills to really customise.</p>
+
+<p>These are both nice solutions but require decent web development skills to take advantage of, else offer limited web UI front-ends. An ideal solution for me would be simple to write and look great from the outset, needing only minor CSS, Javascript and HTML tweaks to build a good-looking and functional slide deck.</p>
+
+<h2>Slidify</h2>
+
+<p>Enter <a href="http://slidify.org/" target="_blank">slidify</a> written by Ramnath Vaidyanathan (<a href="https://github.com/ramnathv" target="_blank">github</a>), a wrapper of several libraries which allows you to go from simple R Markdown to slick HTML presentations. The <a href="http://slidify.org/samples/intro/" target="_blank">introductory presentation</a> gives a nice overview of what's possible and how simple these slide decks can be to write.</p>
+
+<p>As the author modestly points out, slidify really is a go-between to other R packages:</p>
+
+<ul>
+<li><code>knitr</code> (<a href="http://yihui.name/knitr/" target="_blank">link</a>) — (a replacement for Sweave) think IPython notebook for R and other languages</li>
+<li><code>whisker</code> (<a href="https://github.com/edwindj/whisker" target="_blank">link</a>) — for making use of <a href="http://mustache.github.io/mustache.5.html" target="_blank">mustache</a> (geddit?) "logic-less templating", which reminds me a lot of MediaWiki markup templates with extended functionality</li>
+<li>R Markdown — the markdown extension introduced by the <a href="http://www.rstudio.com/" target="_blank">RStudio</a> team</li>
+</ul>
+
+<p>Together with slidify these packages make writing and customising presentations a breeze, so install the library from github (using Hadley Wickham's <code>devtools</code>) per the instructions <a href="http://slidify.org/start.html" target="_blank">here</a>. It also comes with some great default themes, like Google's io2012 (my favourite) and <a href="http://imakewebthings.com/deck.js/" target="_blank">deck.js</a>. The video below shows how to get started authoring presentations much better than I could:</p>
+
+<div style="margin-left:auto; margin-right: auto; width:480px;">
+<iframe width="480" height="360" src="//www.youtube.com/embed/I95GOmLc7TA" frameborder="0" allowfullscreen></iframe></div>
+
+<h2>Features</h2>
+
+<p>There's a tonne of cool things slidify can do that I haven't even explored yet, but that look great. Of course, through knitr you can embed R code, including analysis and plot generation, in your presentation, bringing together reproducible analysis and neat presentation of your results. Even cooler, it plays nice with <a href="http://rcharts.io/" target="_blank">rCharts</a> — from the same author — allowing interactive charts to be embedded in presentations; oh and Shiny applications can be added too, according to <a href="http://slidify.github.io/dcmeetup/demos/interactive/" target="_blank">this</a>.</p>
+
+<p>Slidify enables straightforward github publishing (just <code>author()</code>) and RStudio allows quick upload to <a href="http://rpubs.com/" target="_blank">RPubs</a>, both make it trivial to have an online and archived copy of your presentation.</p>
+
+<h3>Convert to PDF</h3>
+
+<p>A PDF is a nice security blanket to have if you're worried about unforeseeable display issues on presentation day — it's a format designed to be environment independent after all. With the io2012 theme, this can be done natively from chrome using the print dialogue, <em>however </em>I<em> </em>consistently found that for my presentation at least, the active slide you are viewing and and sometimes an adjacent slide is glitched in the PDF output.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/02/screen-shot-2014-02-24-at-22-37-58.png"><img class="imgright" alt="Chrome print PDF reproducibly bugs out on the active slide each time." src="/blog/img/screen-shot-2014-02-24-at-22-37-58.png" width="240" height="118" /></a>
+</p></p>
+
+<p>The hacky fix for this was to go to the final slide of the talk, print all but the last slide to PDF, then go back to an earlier slide and only print to file that remaining last slide. Then <a href="http://support.apple.com/kb/ht4075" target="_blank">stitch these files together</a> in Preview (assuming OS X), or <code>Imagemagick</code> or whatever.</p>
+
+<p>Other than this active-slide glitch the PDF conversion worked surprisingly well and the output is passable as a decent presentation, albeit without the finesse of the subtle default transitions.</p>
+
+<h4>Update:</h4>
+
+<p>On twitter Ramnath <a href="https://twitter.com/ramnath_vaidya/status/438466893931094016" target="_blank">points out</a> that this is a recent problem with the Chrome browser, and Safari or Firefox should be able to export to PDF without issue. A quick check with Safari confirms that's the case for my presentation.</p>
+
+<h2>Issues</h2>
+
+<p>There were a couple of things that either can't be done (without digging deep into the js) or at least things I couldn't figure out after some (non-extensive) googling.</p>
+
+<h3>Image features</h3>
+
+<p>First, making things appear sequentially (like PowerPoint bullet points) is achieved simply with:</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="o">---</span>
+<span class="c1">## Slide title</span>
+<span class="o">&gt;</span> <span class="o">*</span> First bullet point to appear
+<span class="o">&gt;</span> <span class="o">*</span> Second...
+</code></pre></div>
+<p>But for an image to then appear in the same way seems to require a continuation of the <code>ul</code>, i.e. your image needs a bullet point (?). Maybe I'm wrong on this but when included without the bullet point, the image seems to then precede the other bulleted content.</p>
+
+<p>Another issue was resizing and centering images. I made use of the code from <a href="http://stackoverflow.com/a/18640582/1274516" target="_blank">this answer</a> on SO to add the quick and dirty CSS / jQuery to auto-centre / reduce oversized images for the slideshow. For me it would be nice for this to be default behaviour, but I suppose for a web developer this is trivial everyday stuff:</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="o">&lt;!--</span> Limit image width and height <span class="o">--&gt;</span>
+<span class="o">&lt;</span>style type<span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="o">&gt;</span>
+img <span class="p">{</span>
+  max<span class="o">-</span>height<span class="o">:</span> <span class="m">560</span>px<span class="p">;</span>
+  max<span class="o">-</span>width<span class="o">:</span> <span class="m">964</span>px<span class="p">;</span>
+<span class="p">}</span>
+<span class="o">&lt;/</span>style<span class="o">&gt;&lt;/</span>p<span class="o">&gt;</span>
+<span class="o">&lt;</span>p<span class="o">&gt;&lt;!--</span> Center image on slide <span class="o">--&gt;</span>
+<span class="o">&lt;</span>script type<span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> src<span class="o">=</span><span class="s">&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js&quot;</span><span class="o">&gt;&lt;/</span>script<span class="o">&gt;</span>
+<span class="o">&lt;</span>script type<span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+<span class="o">$</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="o">$</span><span class="p">(</span><span class="s">&quot;p:has(img)&quot;</span><span class="p">)</span>.addClass<span class="p">(</span><span class="s">&#39;centered&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="o">&lt;/</span>script<span class="o">&gt;</span>
+</code></pre></div>
+<h3>RStudio integration</h3>
+
+<p>This caused some confusion for me, but RStudio actually has its own presentation framework and uses slightly different markdown syntax to create it. On reviewing the two, it doesn't seem as developed as Slidify yet, and the defaults aren't as polished as the io2012 deck. The confusing part is, somewhere between the packages <code>slidify</code> and <code>slidifyLibraries</code> a function overloads RStudio's <code>Knit HTML</code> button, faking seamless integration.</p>
+
+<p>The result is that the IDE is a great place to write the presentation, but I can't help thinking, as was mentioned <a href="https://twitter.com/kohske/status/436355371498618880" target="_blank">on twitter recently</a>, that the slidify framework would make a nice alternative or replacement for RStudio's current offering.</p>
+
+<h3>Customising the title slide</h3>
+
+<p>One of the problems I had was editing the theme's title slide. Most of the presentation is amenable to CSS hacking but the title slide is stubbornly hardcoded. (Well, it's not of course but the file is buried in the library install.)</p>
+
+<p>The way I got at this file was by changing the presentation mode (within the YAML frontmatter) to <code>selfcontained</code>, and run slidify, copying the libraries folder to the same directory as your <code>.Rmd</code> file. Then, for the io2012 deck, the title slide template is at (<a href="http://stackoverflow.com/questions/15251751/adding-an-image-to-title-slide-using-slidify" target="_blank">thanks</a> Ramnath):</p>
+
+<p><code>libraries/frameworks/io2012/partials/titleslide.html</code></p>
+
+<h2>Conclusion</h2>
+
+<p>I found slidify to be a great package and I ended up with, what I consider to be, the cleanest and nicest-looking presentation I've made to date. Also I've learnt a bit of web-programming along the way! I expect I'll be switching from beamer to slidify for future talks too.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/02/screen-shot-2014-02-24-at-22-20-531.png"><img class="imgfull" alt="The final(ish) presentation in all its glory. Link may not work for long." src="/blog/img/screen-shot-2014-02-24-at-22-20-531.png" width="500" height="318" /></a></p>
+
+  ]]></description>
+</item>
+
+
+	<item>
+  <title>Meticulously recreating bitmap plots in R</title>
+  <link>http://blm.io/blog/wikipedia/2014/02/03/meticulously-recreating-bitmap-plots-in-r/</link>
+  <author>Benjamin L. Moore</author>
+  <pubDate>2014-02-03T00:00:00+00:00</pubDate>
+  <guid>http://blm.io/blog/wikipedia/2014/02/03/meticulously-recreating-bitmap-plots-in-r/</guid>
+  <description><![CDATA[
+     <p>There's a hard-fought drive on Wikimedia commons to convert those images that should be in vector format (i.e. graphs, diagrams) from their current bitmap form. At the time of writing, the relevant category has over <a href="https://commons.wikimedia.org/wiki/Category:Images_that_should_use_vector_graphics" target="_blank">7000</a> images in the category "Images that should use vector graphics".</p>
+
+<p>The usual way people move between the two is by tracing over the raster, and great tools like <a href="http://www.inkscape.org/en/" target="_blank">Inkscape</a> (free open-source software) can help a lot with this. But in the case of graphs I thought it'd be fun to try and rebuild a carbon copy from scratch in R.</p>
+
+<h2>The original</h2>
+
+<p>The file that first caught my eye was this nice graph of US employment stats, currently used on the highly-trafficked <a href="https://en.wikipedia.org/wiki/Barack_Obama" target="_blank">Obama article</a>. I'm not sure what drew this originally, it doesn't look like Excel because of the broken axis and annotations, but maybe it is. It's currently a png at about 700 × 500 so should be an easy target for improvement.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/02/original.png"><img class="imgfull" alt="This is the original bitmap plot I wanted to recreate." src="/blog/img/original.png" width="500" height="343" /></a> This is the original bitmap plot I wanted to recreate.
+<em>(Courtesy of <a href="https://commons.wikimedia.org/wiki/File:US_EmpStatsBLS_Jan09-Feb13.png" target="_blank">Wikimedia Commons</a>)</em></p>
+
+<h2>Figure 2.0</h2>
+
+<p>The two raw data files are available <a href="http://data.bls.gov/timeseries/LNS14000000" target="_blank">here</a> and <a href="http://data.bls.gov/timeseries/CES0000000001?output_view=net_1mth" target="_blank">here</a> as Excel spreadsheets. They have some weird unnecessary formatting so the various xls parsers for R won't work; save the tables from Excel as csv. I won't talk through the code as it wasn't too taxing (or clean) but it'll be at the end of the post. Here's what I came up with:</p>
+
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/2/25/US_Employment_Statistics.svg"><img class="imgfull" alt="I realise the irony in having to upload a bitmap version for wordpress, but click for the SVG." src="/blog/img/recre_v5.png" width="500" height="349" /></a></p>
+
+<p>I expanded my plot to include the 2013 data, so it inescapably has slightly different proportions to the original. And I was working on a single monitor at the time so I didn't have a constant comparison. I can see now a few things are still off, the fonts are different sized for one and I ditched the broken axis, but overall I think it's a decent similarity!</p>
+
+<h2>ggplot2 version</h2>
+
+<p>Two y-axes on the same graph is bad, bad, bad and unsurprisingly forbidden with ggplot2 but I did come across <a href="http://rwiki.sciviews.org/doku.php?id=tips:graphics-ggplot2:aligntwoplots" target="_blank">this</a> method of dummy-facetting and then plotting separate layers per facet. An obvious problem is now the y-axis are representing different things and you only have one label. A hacky fix is to write your ylabs into the facet header (I'm 100% confident Hadley Wickham and Leland Wilkinson would not be impressed with this). Another alternative would be to use map a colour aesthetic to your y-axis values and label it in the legend (again, pretty far from recommended practice).</p>
+
+<p>This is what I ended up with, I still think it's a reasonable alternative to the above, and the loess fitted model nicely shows the unemployment rate trend without the seasonality effects:</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/02/ggplot_bitmap.png"><img class="imgfull" alt="ggplot_bitmap" src="/blog/img/ggplot_bitmap.png" width="500" height="432" /></a></p>
+
+<h2>Article version</h2>
+
+<p>While mimicking the original exactly was fun (for me at least), I tried to improve upon it for the actual final figure for use on Wikipedia. For instance, it now uses unambiguous month abbreviations, and I swapped the legend for colour-coded text labels. It still has some of the original's charm though. Looks like after a bit of a rough patch, your employment statistics are starting to look pretty good Mr. President.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/02/new_v2.png"><img class="imgfull" alt="new_v2" src="/blog/img/new_v2.png" width="500" height="332" /></a></p>
+
+<p>Next up, the other <em>much</em> less attractive figures on that page ([<a href="https://en.wikipedia.org/wiki/File:U.S._Total_Deficits_vs._National_Debt_Increases_2001-2010.png" target="_blank">1</a>], [<a href="https://en.wikipedia.org/wiki/File:PPACA_Premium_Chart.jpg" target="_blank">2</a>]).</p>
+
+<hr />
+
+<p style="text-align:right; font-size: .85rem;">Code available in a <a href="https://gist.github.com/blmoore/8794075" target="_blank">gist</a>.<br />
+Originally published on my
+<a href="http://benjaminlmoore.wordpress.com/2014/02/03/meticulously-recreating-bitmap-plots-in-r/" target="_blank">Wordpress blog</a>.</p>
+
+  ]]></description>
+</item>
+

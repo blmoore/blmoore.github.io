@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600" rel="stylesheet" type="text/css">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+       &middot; blm.io
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/blog/public/css/poole.css">
+  <link rel="stylesheet" href="/blog/public/css/syntax.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/blog/public/apple-touch.png">
+  <link rel="shortcut icon" href="/blog/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/atom.xml">
+
+  <!-- add this -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5398cddd3691288f"></script>
+
+  <!-- Custom JS, charting libs and jquery -->
+  <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+  <script>
+  $(document).ready( function() {
+
+    $('.gallery-item').hover( function() {
+      $(this).find('.img-title').fadeIn(300);
+    }, function() {
+      $(this).find('.img-title').fadeOut(100);
+    });
+
+  });
+  </script>
+
+
+  <!-- begin analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51522691-1', 'blm.io');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview')
+  </script>
+  <!-- end analytics -->
+</head>
+
+
+<body>
+<div id="header">
+  <nav>
+    <ul>
+      <li><a href="http://blm.io">front</a></li>
+      <li><a href="http://blm.io/projects">projects</a></li>
+      <li><a href="http://benjaminlmoore.wordpress.com" target="_blank">blog</a></li>
+      <li><a href="http://blm.io/contact">contact</a></li>
+    </ul>
+  </nav>
+</div>  
+
+<div class="container content">
+  <!--
+
+  <div class="masthead">
+  <h3 class="masthead-title">
+  <a href="/blog" title="Home">blm.io</a>
+  <small></small>
+</h3>
+</div>
+-->
+
+
+
+<div>
+	<h2>Tag: 'ggplot2'</h2>
+</div>
+
+
+
+	<div class="row">
+	<div class="col-lg-12"><h3 class="entry-title">
+		<a href="/movies/2014/06/07/hollywood-action-heroes/" class="logotext">Hollywood action heroes</a></h3></div>
+</div>
+<div class="row">
+	<div style="padding-bottom: 1.5rem;">
+		<div class="post-date">June 07, 2014</div>
+	</div>
+	<div>
+		<p><div style="float:right;width: 20%">
+<img src="/blog/img/arnie10.jpg" width=80% style="border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;"/>
+<figcaption>
+<p style="font-size:smaller">Arnie 2010 (<a href="https://commons.wikimedia.org/wiki/File:SchwarzeneggerJan2010.jpg" target="_blank">source</a>)</p>
+</figcaption>
+</div>
+
+<p>
+I recently read <a href="http://www.amazon.com/gp/product/1451662440/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1451662440&linkCode=as2&tag=blmio-20&linkId=H7MGQFNQ3X6N6UJK">Arnie's autobiography</a>
+(great fun) and in it he writes about the various roles he's
+had, discussing those movies that flopped or were surprise box office successes,
+but it's hard to build up an overall picture of his career from these fragments.
+Similarly the raw filmography lists at <a href="http://www.imdb.com/name/nm0000216/?ref_=nv_sr_1" target="_blank">IMDb</a>
+and <a href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger#Filmography" target="_blank">Wikipedia</a>
+are pretty uninspiring.
+</p>
+
+<p>
+That gave me the idea of charting his movie career over time, attempting to
+show a lot of information at once about how well the film did at box office
+relative to its budget, and at what points these successes and failures
+happened over the last few decades. After some
+<a href="http://imdbpy.sourceforge.net/" target="_blank">python-powered</a>
+scraping of IMDb data, this is what I came up with:
+</p>
+</p>
+	</div>
+	<div style="float:right; padding-bottom: .8rem;">
+		<a href="/movies/2014/06/07/hollywood-action-heroes/" class="fullpost">[full post]</a>
+	</div>
+</div>
+<br clear="all" />
+<hr class="list_separator" />
+
+
+	<div class="row">
+	<div class="col-lg-12"><h3 class="entry-title">
+		<a href="/twitter/2014/05/25/celebrity-twitter-followers-by-gender/" class="logotext">Celebrity twitter followers by gender</a></h3></div>
+</div>
+<div class="row">
+	<div style="padding-bottom: 1.5rem;">
+		<div class="post-date">May 25, 2014</div>
+	</div>
+	<div>
+		<p><p>The most popular accounts on twitter have millions of followers, but what are their demographics like? Twitter doesn't collect or release this kind of information, and even things like name and location are only voluntarily added to people's profiles. Unlike Google+ and Facebook, twitter has no real name policy, <a href="https://gigaom.com/2011/09/16/why-twitter-doesnt-care-what-your-real-name-is/" target="_blank">they don't care</a> what you call yourself, because they can still divine out useful information from your account activity.</p>
+
+<p>For example, you can optionally set your location on your twitter profile. Should you choose not to, twitter can still just <a title="geolocation" href="https://en.wikipedia.org/wiki/Geolocation" target="_blank">geolocate</a> your IP. If you use an anonymiser or VPN, they could use the timing of your account activity to infer a timezone. This could then be refined to a city or town using the topics you tweet about and the locations of friends and services you mention most.</p>
+</p>
+	</div>
+	<div style="float:right; padding-bottom: .8rem;">
+		<a href="/twitter/2014/05/25/celebrity-twitter-followers-by-gender/" class="fullpost">[full post]</a>
+	</div>
+</div>
+<br clear="all" />
+<hr class="list_separator" />
+
+
+	<div class="row">
+	<div class="col-lg-12"><h3 class="entry-title">
+		<a href="/movies/2014/05/05/what-are-the-most-overrated-films/" class="logotext">What are the most overrated films?</a></h3></div>
+</div>
+<div class="row">
+	<div style="padding-bottom: 1.5rem;">
+		<div class="post-date">May 05, 2014</div>
+	</div>
+	<div>
+		<p><p style="text-align:left;">"Overrated" and "underrated" are slippery terms to try to quantify. An interesting way of looking at this, I thought, would be to compare the reviews of film critics with those of Joe Public, reasoning that a film which is roundly-lauded by the Hollywood press but proved disappointing for the real audience would be "overrated" and <em>vice versa</em>.</p>
+
+<p>To get some data for this I turned to the most prominent review aggregator: <a title="Rotten Tomatoes" href="http://www.rottentomatoes.com/" target="_blank">Rotten Tomatoes</a>. All this analysis was done in the R programming language, and full code to reproduce it will be attached at the end.</p>
+</p>
+	</div>
+	<div style="float:right; padding-bottom: .8rem;">
+		<a href="/movies/2014/05/05/what-are-the-most-overrated-films/" class="fullpost">[full post]</a>
+	</div>
+</div>
+<br clear="all" />
+<hr class="list_separator" />
+
+
+	<div class="row">
+	<div class="col-lg-12"><h3 class="entry-title">
+		<a href="/academia/2014/04/06/author-inflation-in-academic-literature/" class="logotext">Author inflation in academic literature</a></h3></div>
+</div>
+<div class="row">
+	<div style="padding-bottom: 1.5rem;">
+		<div class="post-date">April 06, 2014</div>
+	</div>
+	<div>
+		<p><p>There seems to be a general consensus that author lists in academic articles are growing. Wikipedia <a href="https://en.wikipedia.org/wiki/Academic_authorship#Growing_number_of_authors_per_paper" target="_blank">says so</a>, and I've also come across a <a href="http://onlinelibrary.wiley.com/doi/10.1002/asi.21438/abstract" target="_blank">published letter</a> and short <a href="http://www.nature.com/nature/history/full/nature06243.html" target="_blank">Nature article</a> which accept this is the case and discuss ways of mitigating the issue. Recently there was an interesting discussion on <a href="http://academia.stackexchange.com/questions/16759/is-there-an-inflation-in-the-number-of-authors-per-paper" target="_blank">academia.stackexchange</a> on the subject but again without much quantification. Luckily given the array of literature database APIs and language bindings available, it should be pretty easy to investigate with some statistical analysis in R.</p>
+</p>
+	</div>
+	<div style="float:right; padding-bottom: .8rem;">
+		<a href="/academia/2014/04/06/author-inflation-in-academic-literature/" class="fullpost">[full post]</a>
+	</div>
+</div>
+<br clear="all" />
+<hr class="list_separator" />
+
+
+	<div class="row">
+	<div class="col-lg-12"><h3 class="entry-title">
+		<a href="/politics/2014/03/18/guardian-data-blog-uk-elections/" class="logotext">Guardian data blog — UK general election analysis in R</a></h3></div>
+</div>
+<div class="row">
+	<div style="padding-bottom: 1.5rem;">
+		<div class="post-date">March 18, 2014</div>
+	</div>
+	<div>
+		<p><p>The Guardian newspaper has for a few years been running a <a title="guardian data blog" href="http://www.theguardian.com/data" target="_blank">data blog</a> and has built up a massive repository of (often) well-curated datasets on a huge number of topics. They even have an <a title="list of data sets made available by the guardian" href="http://www.theguardian.com/news/datablog/interactive/2013/jan/14/all-our-datasets-index" target="_blank">indexed list</a> of all data sets they've put together or reused in their articles.</p>
+
+<p>It's a great repository of interesting data for exploratory analysis, and there's a low barrier to entry in terms of getting the data into a useful form. Here's an example using UK election polling data collected over the last thirty years.</p>
+</p>
+	</div>
+	<div style="float:right; padding-bottom: .8rem;">
+		<a href="/politics/2014/03/18/guardian-data-blog-uk-elections/" class="fullpost">[full post]</a>
+	</div>
+</div>
+<br clear="all" />
+<hr class="list_separator" />
+
+
+	<div class="row">
+	<div class="col-lg-12"><h3 class="entry-title">
+		<a href="/wikipedia/2014/02/03/meticulously-recreating-bitmap-plots-in-r/" class="logotext">Meticulously recreating bitmap plots in R</a></h3></div>
+</div>
+<div class="row">
+	<div style="padding-bottom: 1.5rem;">
+		<div class="post-date">February 03, 2014</div>
+	</div>
+	<div>
+		<p><p>There's a hard-fought drive on Wikimedia commons to convert those images that should be in vector format (i.e. graphs, diagrams) from their current bitmap form. At the time of writing, the relevant category has over <a href="https://commons.wikimedia.org/wiki/Category:Images_that_should_use_vector_graphics" target="_blank">7000</a> images in the category "Images that should use vector graphics".</p>
+
+<p>The usual way people move between the two is by tracing over the raster, and great tools like <a href="http://www.inkscape.org/en/" target="_blank">Inkscape</a> (free open-source software) can help a lot with this. But in the case of graphs I thought it'd be fun to try and rebuild a carbon copy from scratch in R.</p>
+</p>
+	</div>
+	<div style="float:right; padding-bottom: .8rem;">
+		<a href="/wikipedia/2014/02/03/meticulously-recreating-bitmap-plots-in-r/" class="fullpost">[full post]</a>
+	</div>
+</div>
+<br clear="all" />
+<hr class="list_separator" />
+
+
+
+
+	
+
+<div class="pagination">
+	
+		<span class="pagination-item older">Older</span>
+	
+	
+		<span class="pagination-item newer">Newer</span>
+	
+</div>
+
+
+
+<div class="footer">
+  <p>
+    <!--
+    <a href="https://creativecommons.org/licenses/by/4.0/"
+    target="_blank">CC-BY 4.0</a> 2014.
+  -->
+  </p>
+  </div>
+  </div>
+
+  </body>
+  </html>

@@ -637,7 +637,14 @@ figure {
 /*  border: 1px solid #DB961F; */
 }
 
-.logotext a {
+.logotext {
+  color: #DB961F;
   text-shadow: 1px 1px #fff,
               1px 2px #ccc;
+}
+
+.fullpost {
+  padding: .1rem 1rem;
+  text-shadow: 1px 1px #fff,
+               1px 2px #ccc;
 }
