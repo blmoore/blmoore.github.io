@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600" rel="stylesheet" type="text/css">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Wikipedia is dead, long live the 'pedia &middot; blm.io
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/blog/public/css/poole.css">
+  <link rel="stylesheet" href="/blog/public/css/syntax.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/blog/public/apple-touch.png">
+  <link rel="shortcut icon" href="/blog/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/atom.xml">
+
+  <!-- add this -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5398cddd3691288f"></script>
+
+  <!-- Custom JS, charting libs and jquery -->
+  <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+  <script>
+  $(document).ready( function() {
+
+    $('.gallery-item').hover( function() {
+      $(this).find('.img-title').fadeIn(300);
+    }, function() {
+      $(this).find('.img-title').fadeOut(100);
+    });
+
+  });
+  </script>
+
+
+  <!-- begin analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51522691-1', 'blm.io');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview')
+  </script>
+  <!-- end analytics -->
+</head>
+
+
+<body>
+<div id="header">
+  <nav>
+    <ul>
+      <li><a href="http://blm.io">front</a></li>
+      <li><a href="http://blm.io/projects">projects</a></li>
+      <li><a href="http://benjaminlmoore.wordpress.com" target="_blank">blog</a></li>
+      <li><a href="http://blm.io/contact">contact</a></li>
+    </ul>
+  </nav>
+</div>  
+
+<div class="container content">
+  <!--
+
+  <div class="masthead">
+  <h3 class="masthead-title">
+  <a href="/blog" title="Home">blm.io</a>
+  <small></small>
+</h3>
+</div>
+-->
+
+
+<div class="post">
+  <h1 class="post-title">Wikipedia is dead, long live the 'pedia</h1>
+  <div style="min-height:2.4rem;">
+  <span class="post-date">09 Jan 2014</span>
+  <div class="addthis_sharing_toolbox"></div>
+  </div>
+  <p>I was a bit surprised when looking at the Wikipedia pageviews for 2013 (nicely presented <a href="http://reportcard.wmflabs.org/" target="_blank">here</a>). After 5 years of consistent and reasonably stable growth, over 2013 monthly pageviews actually dropped, and to the tune of 2 *billion* views  (10%) from their peak early in the year.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/01/pviews.png"><img class="imgfull" alt="pviews" src="/blog/img/pviews.png" width="500" height="352" /></a></p>
+
+<p>This was surprising to me. The problem Wikipedia has attracting new editors has been <a href="http://www.technologyreview.com/featuredstory/520446/the-decline-of-wikipedia/" target="_blank">well-publicised</a>, but it&#39;s never had trouble with PageRank or increasing its reach to casual viewers.</p></p>
+
+<p>Well, it turns out one area seeing consistent and healthy growth is, as you would guess, mobile views, which are showing gains of about 150k pageviews a month on English Wikipedia. This makes up for almost half a billion of those lost over 2013 in the graph above, but still leaves some explaining to do.</p>
+
+<p><a href="http://benjaminlmoore.files.wordpress.com/2014/01/mobile1.png"><img class="imgright" alt="mobile" src="/blog/img/mobile1.png" width="500" height="352" /></a></p>
+
+<p>Interestingly, another useful metric of web traffic, unique visitors per month, continues to <a href="http://reportcard.wmflabs.org/" target="_blank">grow considerably</a>. Maybe this reflects how mobile visitors use the site differently, just looking something up (e.g. to settle an argument) and closing their browser as opposed to a few hours going from topic to topic and ending up admiring a <a href="https://en.wikipedia.org/wiki/List_of_Eiffel_Tower_replicas" target="_blank">list of Eiffel tower replicates</a>.</p>
+
+<p><img class="imgright" alt="mvvu" src="/blog/img/mvvu.png" width="360" height="254" /></p>
+
+<p>A quick graph of mean monthly pageviews per visitor gives this theory some support, but the data seems pretty noisy and has varied a lot over the past few years.</p>
+
+<p>Another possibility is that this data is telling us what we already know: the unique visitors with the highest total page views must be the article writers and the <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiGnome" target="_blank">Wikignomes</a> that built the place — and they've been in precipitous decline for nearly <a href="https://en.wikipedia.org/wiki/File:Wikipedia_editor_numbers.svg" target="_blank">6 years now</a>. I'm speculating of course, but maybe that's starting to show through on the page views site-wide, emphasising how much work a small group of people have been putting in, and the dent they're leaving in Wikipedia as they leave.</p>
+
+<hr />
+
+<p style="text-align: right; font-size: .85rem;">Full R code to reproduce the graphs shown in this post is in a <a href="https://gist.github.com/blmoore/8343067" target="_blank">gist</a>. <br />
+This post was originally published on my
+<a href="http://benjaminlmoore.wordpress.com/2014/01/09/wikipedia-is-dead-long-live-the-pedia/" target="_blank">Wordpress blog</a>.</p>
+
+<p></p>
+
+</div>
+
+
+<div class="related">
+  <div class="twitter">
+  <a href="https://twitter.com/benjaminlmoore" class="twitter-follow-button"
+  data-show-count="false">Follow @benjaminlmoore</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+    <li>
+      <h4>
+        <a href="/blog/politics/2014/03/18/guardian-data-blog-uk-elections/">
+          Guardian data blog — UK general election analysis in R
+          <small>18 Mar 2014</small>
+        </a>
+      </h4>
+    </li>
+    
+    <li>
+      <h4>
+        <a href="/blog/academia/2014/04/06/author-inflation-in-academic-literature/">
+          Author inflation in academic literature
+          <small>06 Apr 2014</small>
+        </a>
+      </h4>
+    </li>
+    
+    <li>
+      <h4>
+        <a href="/blog/wikipedia/2014/02/03/meticulously-recreating-bitmap-plots-in-r/">
+          Meticulously recreating bitmap plots in R
+          <small>03 Feb 2014</small>
+        </a>
+      </h4>
+    </li>
+    
+  </ul>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'blmioblog'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+<div class="footer">
+  <p>
+    <!--
+    <a href="https://creativecommons.org/licenses/by/4.0/"
+    target="_blank">CC-BY 4.0</a> 2014.
+  -->
+  </p>
+  </div>
+  </div>
+
+  </body>
+  </html>

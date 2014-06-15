@@ -954,3 +954,10 @@ figcaption {
 /*  padding: 0em 0em 0em 1em !important;*/
 /*  padding: 0em;*/
 }
+
+.logo {
+  display: block;
+  width: 2.5em;
+  margin-left:auto;
+  margin-right: auto;
+}
