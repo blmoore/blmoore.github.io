@@ -1,33 +1,33 @@
 /* Based on Poole:
- * https://github.com/poole/poole.
- */
+* https://github.com/poole/poole.
+*/
 
 
 /*
- * Contents
- *
- * Body resets
- * Custom type
- * Messages
- * Container
- * Masthead
- * Posts and pages
- * Pagination
- * Reverse layout
- * Themes
- */
+* Contents
+*
+* Body resets
+* Custom type
+* Messages
+* Container
+* Masthead
+* Posts and pages
+* Pagination
+* Reverse layout
+* Themes
+*/
 
 
 /*
- * Body resets
- *
- * Update the foundational and global aspects of the page.
- */
+* Body resets
+*
+* Update the foundational and global aspects of the page.
+*/
 
 * {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -75,7 +75,7 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-/*  text-decoration: underline;*/
+  /*  text-decoration: underline;*/
   outline: 0;
 }
 
@@ -137,11 +137,12 @@ dd {
 
 /* Misc */
 hr {
-  position: relative;
-  margin: 1.5rem 0;
   border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff;
+  outline: none;
+  height: 2px;
+  margin: 0 0 20px;
+  color: #cccccc;
+  background-color: #cccccc;
 }
 
 abbr {
@@ -261,10 +262,10 @@ tbody tr:nth-child(odd) th {
 
 
 /*
- * Custom type
- *
- * Extend paragraphs with `.lead` for larger introductory text.
- */
+* Custom type
+*
+* Extend paragraphs with `.lead` for larger introductory text.
+*/
 
 .lead {
   font-size: 1.25rem;
@@ -273,11 +274,11 @@ tbody tr:nth-child(odd) th {
 
 
 /*
- * Messages
- *
- * Show alert messages to users. You may add it to single elements like a `<p>`,
- * or to a parent if there are multiple elements to show.
- */
+* Messages
+*
+* Show alert messages to users. You may add it to single elements like a `<p>`,
+* or to a parent if there are multiple elements to show.
+*/
 
 .message {
   margin-bottom: 1rem;
@@ -288,10 +289,10 @@ tbody tr:nth-child(odd) th {
 
 
 /*
- * Container
- *
- * Center the page content.
- */
+* Container
+*
+* Center the page content.
+*/
 
 .container {
   max-width: 42rem;
@@ -303,10 +304,10 @@ tbody tr:nth-child(odd) th {
 
 
 /*
- * Masthead
- *
- * Super small header above the content for site name and short description.
- */
+* Masthead
+*
+* Super small header above the content for site name and short description.
+*/
 
 .masthead {
   padding-top:    1rem;
@@ -330,11 +331,11 @@ tbody tr:nth-child(odd) th {
 
 
 /*
- * Posts and pages
- *
- * Each post is wrapped in `.post` and is used on default and post layouts. Each
- * page is wrapped in `.page` and is only used on the page layout.
- */
+* Posts and pages
+*
+* Each post is wrapped in `.post` and is used on default and post layouts. Each
+* page is wrapped in `.page` and is only used on the page layout.
+*/
 
 .page,
 .post {
@@ -347,19 +348,6 @@ tbody tr:nth-child(odd) th {
 .post-title a {
   color: #bcbcbc;
 }
-
-/*.page-title,
-.post-title,
-.post-title a:hover {
-  text-decoration: underline;
-}
-
-.page-title,
-.post-title,
-.post-title a:focus {
-  text-decoration: underline;
-}*/
-
 
 .post-title a:hover{
   color:#666666 !important;
@@ -383,7 +371,7 @@ tbody tr:nth-child(odd) th {
 .related {
   padding-top: .5rem;
   padding-bottom: 2rem;
-  border-top: 1px solid #eee;
+  border-top: 2px solid #ccc;
 }
 .related-posts {
   padding-left: 0;
@@ -406,11 +394,11 @@ tbody tr:nth-child(odd) th {
 
 
 /*
- * Pagination
- *
- * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
- * there are no more previous or next posts to show.
- */
+* Pagination
+*
+* Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
+* there are no more previous or next posts to show.
+*/
 
 .pagination {
   overflow: hidden; /* clearfix */
@@ -524,9 +512,9 @@ div .addthis_sharing_toolbox{
 
 
 /*
- * Prevents sub and sup affecting line-height in all browsers
- * gist.github.com/413930
- */
+* Prevents sub and sup affecting line-height in all browsers
+* gist.github.com/413930
+*/
 sub,
 sup {
   font-size: 75%;
@@ -556,33 +544,33 @@ sub {
 
 /* onHover overlays: http://notlaura.com/show-title-hovering-image/ */
 .gallery {
-    width: 100%;
-    margin: 0;
+  width: 100%;
+  margin: 0;
 }
 
 .gallery-item {
-    height: auto;
-    width: 46%;
-    float: left;
-    position: relative;
-    margin: .5rem .5rem;
+  height: auto;
+  width: 46%;
+  float: left;
+  position: relative;
+  margin: .5rem .5rem;
 }
 
 .gallery-item img {
-    width: 100%;
+  width: 100%;
 }
 
 
 /* default hidden image overlay */
 .img-title {
-    position: absolute;
-    top: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    display: none;
-    background-color: #444;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: none;
+  background-color: #444;
 }
 
 
@@ -618,7 +606,7 @@ figure {
   margin-left: auto;
   margin-right: auto;
   border: 2px solid #bbbbbb;
-/*  border: 1px solid #DB961F; */
+  /*  border: 1px solid #DB961F; */
 }
 
 .imgright {
@@ -626,7 +614,7 @@ figure {
   float: right;
   margin: 1em;
   border: 2px solid #bbbbbb;
-/*  border: 1px solid #DB961F; */
+  /*  border: 1px solid #DB961F; */
 }
 
 .imgleft {
@@ -634,17 +622,46 @@ figure {
   float: left;
   margin: 1em;
   border: 2px solid #bbbbbb;
-/*  border: 1px solid #DB961F; */
+  /*  border: 1px solid #DB961F; */
 }
 
 .logotext {
   color: #DB961F;
   text-shadow: 1px 1px #fff,
-              1px 2px #ccc;
+  1px 2px #ccc;
 }
 
 .fullpost {
   padding: .1rem 1rem;
   text-shadow: 1px 1px #fff,
+  1px 2px #ccc;
+}
+
+.tagbutton a{
+  color: #DB961F;
+  padding: .15rem .7rem;
+  font-size: .9rem;
+  border: 1px solid #DB961F;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+
+}
+
+.tagbutton a:hover,
+.tagbutton a:active {
+  color: #DB961F;
+  padding: .15rem .7rem;
+  font-size: .9rem;
+  border: 1px solid #DB961F;
+  border-radius: 4px;
+  text-shadow: 1px 1px #fff,
                1px 2px #ccc;
+  background-color: #fff;
+}
+
+.tags {
+/*  text-align: right; */
+  line-height: 2rem;
+  display:inline;
+  margin-bottom: 1rem;
 }
