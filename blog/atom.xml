@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>blm.io</title>
- <link href="http://blmoore.github.io/blogatom.xml" rel="self"/>
- <link href="http://blmoore.github.io/blog"/>
- <updated>2014-06-19T20:42:22+01:00</updated>
- <id>http://blmoore.github.io</id>
+ <link href="http://blm.io/blog/atom.xml" rel="self"/>
+ <link href="http://blm.io/blog/"/>
+ <updated>2014-06-19T22:32:11+01:00</updated>
+ <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
    <email>root@blm.io</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Hollywood action heroes</title>
-   <link href="http://blmoore.github.io/blog/action-heroes"/>
+   <link href="http://blm.io/blog/action-heroes"/>
    <updated>2014-06-07T00:00:00+01:00</updated>
-   <id>http://blmoore.github.io/hollywood-action-heroes</id>
+   <id>http://blm.io/blog/hollywood-action-heroes</id>
    <content type="html">&lt;div style=&quot;float:right;width: 20%&quot;&gt;
 &lt;img src=&quot;/blog/img/arnie10.jpg&quot; width=80% style=&quot;border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;&quot;/&gt;
 &lt;figcaption&gt;
@@ -216,9 +216,9 @@ or actresses you might be interested in (like, say, Jean-Claude Van Damme whom
  
  <entry>
    <title>Celebrity twitter followers by gender</title>
-   <link href="http://blmoore.github.io/blog/twitter-genders"/>
+   <link href="http://blm.io/blog/twitter-genders"/>
    <updated>2014-05-25T00:00:00+01:00</updated>
-   <id>http://blmoore.github.io/celebrity-twitter-followers-by-gender</id>
+   <id>http://blm.io/blog/celebrity-twitter-followers-by-gender</id>
    <content type="html">&lt;p&gt;The most popular accounts on twitter have millions of followers, but what are their demographics like? Twitter doesn&#39;t collect or release this kind of information, and even things like name and location are only voluntarily added to people&#39;s profiles. Unlike Google+ and Facebook, twitter has no real name policy, &lt;a href=&quot;https://gigaom.com/2011/09/16/why-twitter-doesnt-care-what-your-real-name-is/&quot; target=&quot;_blank&quot;&gt;they don&#39;t care&lt;/a&gt; what you call yourself, because they can still divine out useful information from your account activity.&lt;/p&gt;
 
 &lt;p&gt;For example, you can optionally set your location on your twitter profile. Should you choose not to, twitter can still just &lt;a title=&quot;geolocation&quot; href=&quot;https://en.wikipedia.org/wiki/Geolocation&quot; target=&quot;_blank&quot;&gt;geolocate&lt;/a&gt; your IP. If you use an anonymiser or VPN, they could use the timing of your account activity to infer a timezone. This could then be refined to a city or town using the topics you tweet about and the locations of friends and services you mention most.&lt;/p&gt;
@@ -316,9 +316,9 @@ This post was originally published on my
  
  <entry>
    <title>What are the most overrated films?</title>
-   <link href="http://blmoore.github.io/blog/overrated-underrated-films"/>
+   <link href="http://blm.io/blog/overrated-underrated-films"/>
    <updated>2014-05-05T00:00:00+01:00</updated>
-   <id>http://blmoore.github.io/what-are-the-most-overrated-films</id>
+   <id>http://blm.io/blog/what-are-the-most-overrated-films</id>
    <content type="html">&lt;p style=&quot;text-align:left;&quot;&gt;&quot;Overrated&quot; and &quot;underrated&quot; are slippery terms to try to quantify. An interesting way of looking at this, I thought, would be to compare the reviews of film critics with those of Joe Public, reasoning that a film which is roundly-lauded by the Hollywood press but proved disappointing for the real audience would be &quot;overrated&quot; and &lt;em&gt;vice versa&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;To get some data for this I turned to the most prominent review aggregator: &lt;a title=&quot;Rotten Tomatoes&quot; href=&quot;http://www.rottentomatoes.com/&quot; target=&quot;_blank&quot;&gt;Rotten Tomatoes&lt;/a&gt;. All this analysis was done in the R programming language, and full code to reproduce it will be attached at the end.&lt;/p&gt;
@@ -406,9 +406,9 @@ This post was originally published on my &lt;a href=&quot;http://benjaminlmoore.
  
  <entry>
    <title>Author inflation in academic literature</title>
-   <link href="http://blmoore.github.io/blog/author-inflation"/>
+   <link href="http://blm.io/blog/author-inflation"/>
    <updated>2014-04-06T00:00:00+01:00</updated>
-   <id>http://blmoore.github.io/author-inflation-in-academic-literature</id>
+   <id>http://blm.io/blog/author-inflation-in-academic-literature</id>
    <content type="html">&lt;p&gt;There seems to be a general consensus that author lists in academic articles are growing. Wikipedia &lt;a href=&quot;https://en.wikipedia.org/wiki/Academic_authorship#Growing_number_of_authors_per_paper&quot; target=&quot;_blank&quot;&gt;says so&lt;/a&gt;, and I&#39;ve also come across a &lt;a href=&quot;http://onlinelibrary.wiley.com/doi/10.1002/asi.21438/abstract&quot; target=&quot;_blank&quot;&gt;published letter&lt;/a&gt; and short &lt;a href=&quot;http://www.nature.com/nature/history/full/nature06243.html&quot; target=&quot;_blank&quot;&gt;Nature article&lt;/a&gt; which accept this is the case and discuss ways of mitigating the issue. Recently there was an interesting discussion on &lt;a href=&quot;http://academia.stackexchange.com/questions/16759/is-there-an-inflation-in-the-number-of-authors-per-paper&quot; target=&quot;_blank&quot;&gt;academia.stackexchange&lt;/a&gt; on the subject but again without much quantification. Luckily given the array of literature database APIs and language bindings available, it should be pretty easy to investigate with some statistical analysis in R.&lt;/p&gt;
 
 &lt;h2&gt;rplos&lt;/h2&gt;
@@ -489,9 +489,9 @@ This post was originally published on my
  
  <entry>
    <title>Guardian data blog — UK general election analysis in R</title>
-   <link href="http://blmoore.github.io/blog/uk-elections"/>
+   <link href="http://blm.io/blog/uk-elections"/>
    <updated>2014-03-18T00:00:00+00:00</updated>
-   <id>http://blmoore.github.io/guardian-data-blog-uk-elections</id>
+   <id>http://blm.io/blog/guardian-data-blog-uk-elections</id>
    <content type="html">&lt;p&gt;The Guardian newspaper has for a few years been running a &lt;a title=&quot;guardian data blog&quot; href=&quot;http://www.theguardian.com/data&quot; target=&quot;_blank&quot;&gt;data blog&lt;/a&gt; and has built up a massive repository of (often) well-curated datasets on a huge number of topics. They even have an &lt;a title=&quot;list of data sets made available by the guardian&quot; href=&quot;http://www.theguardian.com/news/datablog/interactive/2013/jan/14/all-our-datasets-index&quot; target=&quot;_blank&quot;&gt;indexed list&lt;/a&gt; of all data sets they&#39;ve put together or reused in their articles.&lt;/p&gt;
 
 &lt;p&gt;It&#39;s a great repository of interesting data for exploratory analysis, and there&#39;s a low barrier to entry in terms of getting the data into a useful form. Here&#39;s an example using UK election polling data collected over the last thirty years.&lt;/p&gt;
@@ -546,9 +546,9 @@ This post was originally published on my
  
  <entry>
    <title>What are the most common RNG seeds used in R scripts on Github?</title>
-   <link href="http://blmoore.github.io/blog/prng-seeds"/>
+   <link href="http://blm.io/blog/prng-seeds"/>
    <updated>2014-03-06T00:00:00+00:00</updated>
-   <id>http://blmoore.github.io/most-common-rng-seeds-r-github</id>
+   <id>http://blm.io/blog/most-common-rng-seeds-r-github</id>
    <content type="html">&lt;p&gt;In the R programming language, the random number generator (RNG) is seeded each session using the current time and process ID. Via the magic of the popular &lt;a href=&quot;https://en.wikipedia.org/wiki/Mersenne_twister&quot; target=&quot;_blank&quot;&gt;Mersenne Twister PRNG&lt;/a&gt;, the values stored in &lt;code&gt;.Random.seed&lt;/code&gt; are used sequentially each time &quot;randomness&quot; is invoked in a function. This means, of course, that the same function run in different R sessions can produce varying results, and in the case of modelling a system sensitive to initial conditions the observed differences could be huge. &lt;/p&gt;
 
 &lt;p&gt;For this reason it&#39;s common to manually set the PRNG seed (using &lt;code&gt;set.seed()&lt;/code&gt; in R), thereby creating the same &lt;code&gt;.Random.seed&lt;/code&gt; vector which can be drawn from in your analysis to produce reproducible results. The actual value passed to this function is irrelevant for practical purposes &amp;mdash; for whatever reason I generally user the same number across projects (42) &amp;mdash; so this made me wonder: what values do the major R developers tend to pick?&lt;/p&gt;
@@ -622,9 +622,9 @@ This post was originally published on my
  
  <entry>
    <title>Slidify: Modern, simple presentations written in R Markdown</title>
-   <link href="http://blmoore.github.io/blog/slidify"/>
+   <link href="http://blm.io/blog/slidify"/>
    <updated>2014-02-24T00:00:00+00:00</updated>
-   <id>http://blmoore.github.io/slidify-presentations-in-r-markdown</id>
+   <id>http://blm.io/blog/slidify-presentations-in-r-markdown</id>
    <content type="html">&lt;p&gt;As a LaTeX fan I&#39;m used to using Beamer for presentations, but the built-in &lt;a href=&quot;http://www.hartwork.org/beamer-theme-matrix/&quot; target=&quot;_blank&quot;&gt;themes&lt;/a&gt; are definitely starting to show their age --- and writing a custom &lt;code&gt;.sty&lt;/code&gt; file looks like a nightmare --- so for a while I&#39;ve been looking at trying out an HTML5 framework.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://lab.hakim.se/reveal-js/&quot; target=&quot;_blank&quot;&gt;&lt;img class=&quot;imgright&quot; alt=&quot;Reveal.js is a great looking HTML presentation framework from Hakim El Hattab.&quot; src=&quot;/blog/img/screen-shot-2014-02-24-at-19-55-11.png&quot; width=&quot;150&quot; height=&quot;102&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -725,9 +725,9 @@ img &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
  
  <entry>
    <title>Meticulously recreating bitmap plots in R</title>
-   <link href="http://blmoore.github.io/blog/bitmap-plot-to-vector"/>
+   <link href="http://blm.io/blog/bitmap-plot-to-vector"/>
    <updated>2014-02-03T00:00:00+00:00</updated>
-   <id>http://blmoore.github.io/meticulously-recreating-bitmap-plots-in-r</id>
+   <id>http://blm.io/blog/meticulously-recreating-bitmap-plots-in-r</id>
    <content type="html">&lt;p&gt;There&#39;s a hard-fought drive on Wikimedia commons to convert those images that should be in vector format (i.e. graphs, diagrams) from their current bitmap form. At the time of writing, the relevant category has over &lt;a href=&quot;https://commons.wikimedia.org/wiki/Category:Images_that_should_use_vector_graphics&quot; target=&quot;_blank&quot;&gt;7000&lt;/a&gt; images in the category &quot;Images that should use vector graphics&quot;.&lt;/p&gt;
 
 &lt;p&gt;The usual way people move between the two is by tracing over the raster, and great tools like &lt;a href=&quot;http://www.inkscape.org/en/&quot; target=&quot;_blank&quot;&gt;Inkscape&lt;/a&gt; (free open-source software) can help a lot with this. But in the case of graphs I thought it&#39;d be fun to try and rebuild a carbon copy from scratch in R.&lt;/p&gt;
@@ -773,9 +773,9 @@ Originally published on my
  
  <entry>
    <title>Wikipedia is dead, long live the 'pedia</title>
-   <link href="http://blmoore.github.io/blog/wikipedia-is-dead"/>
+   <link href="http://blm.io/blog/wikipedia-is-dead"/>
    <updated>2014-01-09T00:00:00+00:00</updated>
-   <id>http://blmoore.github.io/wikipedia-is-dead-long-live-the-pedia</id>
+   <id>http://blm.io/blog/wikipedia-is-dead-long-live-the-pedia</id>
    <content type="html">&lt;p&gt;I was a bit surprised when looking at the Wikipedia pageviews for 2013 (nicely presented &lt;a href=&quot;http://reportcard.wmflabs.org/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;). After 5 years of consistent and reasonably stable growth, over 2013 monthly pageviews actually dropped, and to the tune of 2 *billion* views  (10%) from their peak early in the year.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://benjaminlmoore.files.wordpress.com/2014/01/pviews.png&quot;&gt;&lt;img class=&quot;imgfull&quot; alt=&quot;pviews&quot; src=&quot;/blog/img/pviews.png&quot; width=&quot;500&quot; height=&quot;352&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
