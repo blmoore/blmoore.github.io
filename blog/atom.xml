@@ -4,7 +4,7 @@
  <title>blm.io</title>
  <link href="http://blmoore.github.io/blogatom.xml" rel="self"/>
  <link href="http://blmoore.github.io/blog"/>
- <updated>2014-06-17T22:55:14+01:00</updated>
+ <updated>2014-06-19T11:17:11+01:00</updated>
  <id>http://blmoore.github.io</id>
  <author>
    <name>Ben Moore</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Hollywood action heroes</title>
-   <link href="http://blmoore.github.io/blog/movies/2014/06/07/hollywood-action-heroes/"/>
+   <link href="http://blmoore.github.io/blog/action-heroes"/>
    <updated>2014-06-07T00:00:00+01:00</updated>
-   <id>http://blmoore.github.io/movies/2014/06/07/hollywood-action-heroes</id>
+   <id>http://blmoore.github.io/hollywood-action-heroes</id>
    <content type="html">&lt;div style=&quot;float:right;width: 20%&quot;&gt;
 &lt;img src=&quot;/blog/img/arnie10.jpg&quot; width=80% style=&quot;border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;&quot;/&gt;
 &lt;figcaption&gt;

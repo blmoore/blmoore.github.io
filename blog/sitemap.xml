@@ -3,7 +3,7 @@
   
   
   <url>
-    <loc>http://blmoore.github.io/movies/2014/06/07/hollywood-action-heroes/</loc>
+    <loc>http://blmoore.github.io/action-heroes</loc>
     <lastmod>2014-06-07T00:00:00+01:00</lastmod>
     <priority>0.8</priority>
   </url>
@@ -59,14 +59,14 @@
   
   <url>
     <loc>http://blmoore.github.io/404.html</loc>
-    <lastmod>2014-06-17T22:55:14+01:00</lastmod>
+    <lastmod>2014-06-19T11:17:11+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://blmoore.github.io/</loc>
-    <lastmod>2014-06-17T22:55:14+01:00</lastmod>
+    <lastmod>2014-06-19T11:17:11+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
