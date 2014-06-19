@@ -1,12 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 
-	<item>
-  <title>Guardian data blog — UK general election analysis in R</title>
-  <link>http://blm.io/blog/uk-elections</link>
-  <author>Benjamin L. Moore</author>
-  <pubDate>2014-03-18T00:00:00+00:00</pubDate>
-  <guid>http://blm.io/blog/uk-elections</guid>
-  <description><![CDATA[
-     <p>The Guardian newspaper has for a few years been running a <a title="guardian data blog" href="http://www.theguardian.com/data" target="_blank">data blog</a> and has built up a massive repository of (often) well-curated datasets on a huge number of topics. They even have an <a title="list of data sets made available by the guardian" href="http://www.theguardian.com/news/datablog/interactive/2013/jan/14/all-our-datasets-index" target="_blank">indexed list</a> of all data sets they've put together or reused in their articles.</p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>blm.io - Tag: guardian data</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Guardian data blog — UK general election analysis in R</title>
+        <link>http://blm.io/blog/uk-elections</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2014-03-18T00:00:00+00:00</pubDate>
+		<guid>http://blm.io/blog/uk-elections</guid>
+		<description><![CDATA[
+		   <p>The Guardian newspaper has for a few years been running a <a title="guardian data blog" href="http://www.theguardian.com/data" target="_blank">data blog</a> and has built up a massive repository of (often) well-curated datasets on a huge number of topics. They even have an <a title="list of data sets made available by the guardian" href="http://www.theguardian.com/news/datablog/interactive/2013/jan/14/all-our-datasets-index" target="_blank">indexed list</a> of all data sets they've put together or reused in their articles.</p>
 
 <p>It's a great repository of interesting data for exploratory analysis, and there's a low barrier to entry in terms of getting the data into a useful form. Here's an example using UK election polling data collected over the last thirty years.</p>
 
@@ -56,6 +69,8 @@ sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><spa
 This post was originally published on my
 <a href="http://benjaminlmoore.wordpress.com/2014/03/18/guardian-data-blog-uk-elections/" target="_blank">Wordpress blog</a>.</p>
 
-  ]]></description>
-</item>
-
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

@@ -1,12 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 
-	<item>
-  <title>What are the most common RNG seeds used in R scripts on Github?</title>
-  <link>http://blm.io/blog/prng-seeds</link>
-  <author>Benjamin L. Moore</author>
-  <pubDate>2014-03-06T00:00:00+00:00</pubDate>
-  <guid>http://blm.io/blog/prng-seeds</guid>
-  <description><![CDATA[
-     <p>In the R programming language, the random number generator (RNG) is seeded each session using the current time and process ID. Via the magic of the popular <a href="https://en.wikipedia.org/wiki/Mersenne_twister" target="_blank">Mersenne Twister PRNG</a>, the values stored in <code>.Random.seed</code> are used sequentially each time "randomness" is invoked in a function. This means, of course, that the same function run in different R sessions can produce varying results, and in the case of modelling a system sensitive to initial conditions the observed differences could be huge. </p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+    <title>blm.io - Category: r</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>What are the most common RNG seeds used in R scripts on Github?</title>
+        <link>http://blm.io/blog/prng-seeds</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2014-03-06T00:00:00+00:00</pubDate>
+		<guid>http://blm.io/blog/prng-seeds</guid>
+		<description><![CDATA[
+		   <p>In the R programming language, the random number generator (RNG) is seeded each session using the current time and process ID. Via the magic of the popular <a href="https://en.wikipedia.org/wiki/Mersenne_twister" target="_blank">Mersenne Twister PRNG</a>, the values stored in <code>.Random.seed</code> are used sequentially each time "randomness" is invoked in a function. This means, of course, that the same function run in different R sessions can produce varying results, and in the case of modelling a system sensitive to initial conditions the observed differences could be huge. </p>
 
 <p>For this reason it's common to manually set the PRNG seed (using <code>set.seed()</code> in R), thereby creating the same <code>.Random.seed</code> vector which can be drawn from in your analysis to produce reproducible results. The actual value passed to this function is irrelevant for practical purposes &mdash; for whatever reason I generally user the same number across projects (42) &mdash; so this made me wonder: what values do the major R developers tend to pick?</p>
 
@@ -75,18 +88,17 @@
 This post was originally published on my
 <a href="http://benjaminlmoore.wordpress.com/2014/03/06/most-common-rng-seeds-r-github/" target="_blank">Wordpress blog</a>.</p>
 
-  ]]></description>
-</item>
-
-
-	<item>
-  <title>Slidify: Modern, simple presentations written in R Markdown</title>
-  <link>http://blm.io/blog/slidify</link>
-  <author>Benjamin L. Moore</author>
-  <pubDate>2014-02-24T00:00:00+00:00</pubDate>
-  <guid>http://blm.io/blog/slidify</guid>
-  <description><![CDATA[
-     <p>As a LaTeX fan I'm used to using Beamer for presentations, but the built-in <a href="http://www.hartwork.org/beamer-theme-matrix/" target="_blank">themes</a> are definitely starting to show their age --- and writing a custom <code>.sty</code> file looks like a nightmare --- so for a while I've been looking at trying out an HTML5 framework.</p>
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Slidify: Modern, simple presentations written in R Markdown</title>
+        <link>http://blm.io/blog/slidify</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2014-02-24T00:00:00+00:00</pubDate>
+		<guid>http://blm.io/blog/slidify</guid>
+		<description><![CDATA[
+		   <p>As a LaTeX fan I'm used to using Beamer for presentations, but the built-in <a href="http://www.hartwork.org/beamer-theme-matrix/" target="_blank">themes</a> are definitely starting to show their age --- and writing a custom <code>.sty</code> file looks like a nightmare --- so for a while I've been looking at trying out an HTML5 framework.</p>
 
 <p><a href="http://lab.hakim.se/reveal-js/" target="_blank"><img class="imgright" alt="Reveal.js is a great looking HTML presentation framework from Hakim El Hattab." src="/blog/img/screen-shot-2014-02-24-at-19-55-11.png" width="150" height="102" /></a></p>
 
@@ -182,6 +194,8 @@ img <span class="p">{</span>
 
 <p><a href="http://benjaminlmoore.files.wordpress.com/2014/02/screen-shot-2014-02-24-at-22-20-531.png"><img class="imgfull" alt="The final(ish) presentation in all its glory. Link may not work for long." src="/blog/img/screen-shot-2014-02-24-at-22-20-531.png" width="500" height="318" /></a></p>
 
-  ]]></description>
-</item>
-
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

@@ -1,12 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 
-	<item>
-  <title>Meticulously recreating bitmap plots in R</title>
-  <link>http://blm.io/blog/bitmap-plot-to-vector</link>
-  <author>Benjamin L. Moore</author>
-  <pubDate>2014-02-03T00:00:00+00:00</pubDate>
-  <guid>http://blm.io/blog/bitmap-plot-to-vector</guid>
-  <description><![CDATA[
-     <p>There's a hard-fought drive on Wikimedia commons to convert those images that should be in vector format (i.e. graphs, diagrams) from their current bitmap form. At the time of writing, the relevant category has over <a href="https://commons.wikimedia.org/wiki/Category:Images_that_should_use_vector_graphics" target="_blank">7000</a> images in the category "Images that should use vector graphics".</p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+    <title>blm.io - Category: wikipedia</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Meticulously recreating bitmap plots in R</title>
+        <link>http://blm.io/blog/bitmap-plot-to-vector</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2014-02-03T00:00:00+00:00</pubDate>
+		<guid>http://blm.io/blog/bitmap-plot-to-vector</guid>
+		<description><![CDATA[
+		   <p>There's a hard-fought drive on Wikimedia commons to convert those images that should be in vector format (i.e. graphs, diagrams) from their current bitmap form. At the time of writing, the relevant category has over <a href="https://commons.wikimedia.org/wiki/Category:Images_that_should_use_vector_graphics" target="_blank">7000</a> images in the category "Images that should use vector graphics".</p>
 
 <p>The usual way people move between the two is by tracing over the raster, and great tools like <a href="http://www.inkscape.org/en/" target="_blank">Inkscape</a> (free open-source software) can help a lot with this. But in the case of graphs I thought it'd be fun to try and rebuild a carbon copy from scratch in R.</p>
 
@@ -47,18 +60,17 @@
 Originally published on my
 <a href="http://benjaminlmoore.wordpress.com/2014/02/03/meticulously-recreating-bitmap-plots-in-r/" target="_blank">Wordpress blog</a>.</p>
 
-  ]]></description>
-</item>
-
-
-	<item>
-  <title>Wikipedia is dead, long live the 'pedia</title>
-  <link>http://blm.io/blog/wikipedia-is-dead</link>
-  <author>Benjamin L. Moore</author>
-  <pubDate>2014-01-09T00:00:00+00:00</pubDate>
-  <guid>http://blm.io/blog/wikipedia-is-dead</guid>
-  <description><![CDATA[
-     <p>I was a bit surprised when looking at the Wikipedia pageviews for 2013 (nicely presented <a href="http://reportcard.wmflabs.org/" target="_blank">here</a>). After 5 years of consistent and reasonably stable growth, over 2013 monthly pageviews actually dropped, and to the tune of 2 *billion* views  (10%) from their peak early in the year.</p>
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Wikipedia is dead, long live the 'pedia</title>
+        <link>http://blm.io/blog/wikipedia-is-dead</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2014-01-09T00:00:00+00:00</pubDate>
+		<guid>http://blm.io/blog/wikipedia-is-dead</guid>
+		<description><![CDATA[
+		   <p>I was a bit surprised when looking at the Wikipedia pageviews for 2013 (nicely presented <a href="http://reportcard.wmflabs.org/" target="_blank">here</a>). After 5 years of consistent and reasonably stable growth, over 2013 monthly pageviews actually dropped, and to the tune of 2 *billion* views  (10%) from their peak early in the year.</p>
 
 <p><a href="http://benjaminlmoore.files.wordpress.com/2014/01/pviews.png"><img class="imgfull" alt="pviews" src="/blog/img/pviews.png" width="500" height="352" /></a></p>
 
@@ -84,6 +96,8 @@ This post was originally published on my
 
 <p></p>
 
-  ]]></description>
-</item>
-
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

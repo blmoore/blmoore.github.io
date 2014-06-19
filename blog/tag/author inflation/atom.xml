@@ -1,12 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 
-	<item>
-  <title>Author inflation in academic literature</title>
-  <link>http://blm.io/blog/author-inflation</link>
-  <author>Benjamin L. Moore</author>
-  <pubDate>2014-04-06T00:00:00+01:00</pubDate>
-  <guid>http://blm.io/blog/author-inflation</guid>
-  <description><![CDATA[
-     <p>There seems to be a general consensus that author lists in academic articles are growing. Wikipedia <a href="https://en.wikipedia.org/wiki/Academic_authorship#Growing_number_of_authors_per_paper" target="_blank">says so</a>, and I've also come across a <a href="http://onlinelibrary.wiley.com/doi/10.1002/asi.21438/abstract" target="_blank">published letter</a> and short <a href="http://www.nature.com/nature/history/full/nature06243.html" target="_blank">Nature article</a> which accept this is the case and discuss ways of mitigating the issue. Recently there was an interesting discussion on <a href="http://academia.stackexchange.com/questions/16759/is-there-an-inflation-in-the-number-of-authors-per-paper" target="_blank">academia.stackexchange</a> on the subject but again without much quantification. Luckily given the array of literature database APIs and language bindings available, it should be pretty easy to investigate with some statistical analysis in R.</p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>blm.io - Tag: author inflation</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Author inflation in academic literature</title>
+        <link>http://blm.io/blog/author-inflation</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2014-04-06T00:00:00+01:00</pubDate>
+		<guid>http://blm.io/blog/author-inflation</guid>
+		<description><![CDATA[
+		   <p>There seems to be a general consensus that author lists in academic articles are growing. Wikipedia <a href="https://en.wikipedia.org/wiki/Academic_authorship#Growing_number_of_authors_per_paper" target="_blank">says so</a>, and I've also come across a <a href="http://onlinelibrary.wiley.com/doi/10.1002/asi.21438/abstract" target="_blank">published letter</a> and short <a href="http://www.nature.com/nature/history/full/nature06243.html" target="_blank">Nature article</a> which accept this is the case and discuss ways of mitigating the issue. Recently there was an interesting discussion on <a href="http://academia.stackexchange.com/questions/16759/is-there-an-inflation-in-the-number-of-authors-per-paper" target="_blank">academia.stackexchange</a> on the subject but again without much quantification. Luckily given the array of literature database APIs and language bindings available, it should be pretty easy to investigate with some statistical analysis in R.</p>
 
 <h2>rplos</h2>
 
@@ -82,6 +95,8 @@ This post was originally published on my
 <a href="http://benjaminlmoore.wordpress.com/2014/04/06/author-inflation-in-academic-literature/" target="_blank">Wordpress blog</a>.
 </p>
 
-  ]]></description>
-</item>
-
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

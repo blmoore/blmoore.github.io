@@ -1,12 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 
-	<item>
-  <title>Hollywood action heroes</title>
-  <link>http://blm.io/blog/action-heroes</link>
-  <author>Benjamin L. Moore</author>
-  <pubDate>2014-06-07T00:00:00+01:00</pubDate>
-  <guid>http://blm.io/blog/action-heroes</guid>
-  <description><![CDATA[
-     <div style="float:right;width: 20%">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>blm.io - Tag: dimplejs</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Hollywood action heroes</title>
+        <link>http://blm.io/blog/action-heroes</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2014-06-07T00:00:00+01:00</pubDate>
+		<guid>http://blm.io/blog/action-heroes</guid>
+		<description><![CDATA[
+		   <div style="float:right;width: 20%">
 <img src="/blog/img/arnie10.jpg" width=80% style="border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;"/>
 <figcaption>
 <p style="font-size:smaller">Arnie 2010 (<a href="https://commons.wikimedia.org/wiki/File:SchwarzeneggerJan2010.jpg" target="_blank">source</a>)</p>
@@ -201,6 +214,8 @@ or actresses you might be interested in (like, say, Jean-Claude Van Damme whom
   I completely forgot about).
   </p>
 
-  ]]></description>
-</item>
-
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

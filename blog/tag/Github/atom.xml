@@ -1,12 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 
-	<item>
-  <title>What are the most common RNG seeds used in R scripts on Github?</title>
-  <link>http://blm.io/blog/prng-seeds</link>
-  <author>Benjamin L. Moore</author>
-  <pubDate>2014-03-06T00:00:00+00:00</pubDate>
-  <guid>http://blm.io/blog/prng-seeds</guid>
-  <description><![CDATA[
-     <p>In the R programming language, the random number generator (RNG) is seeded each session using the current time and process ID. Via the magic of the popular <a href="https://en.wikipedia.org/wiki/Mersenne_twister" target="_blank">Mersenne Twister PRNG</a>, the values stored in <code>.Random.seed</code> are used sequentially each time "randomness" is invoked in a function. This means, of course, that the same function run in different R sessions can produce varying results, and in the case of modelling a system sensitive to initial conditions the observed differences could be huge. </p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>blm.io - Tag: Github</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>What are the most common RNG seeds used in R scripts on Github?</title>
+        <link>http://blm.io/blog/prng-seeds</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2014-03-06T00:00:00+00:00</pubDate>
+		<guid>http://blm.io/blog/prng-seeds</guid>
+		<description><![CDATA[
+		   <p>In the R programming language, the random number generator (RNG) is seeded each session using the current time and process ID. Via the magic of the popular <a href="https://en.wikipedia.org/wiki/Mersenne_twister" target="_blank">Mersenne Twister PRNG</a>, the values stored in <code>.Random.seed</code> are used sequentially each time "randomness" is invoked in a function. This means, of course, that the same function run in different R sessions can produce varying results, and in the case of modelling a system sensitive to initial conditions the observed differences could be huge. </p>
 
 <p>For this reason it's common to manually set the PRNG seed (using <code>set.seed()</code> in R), thereby creating the same <code>.Random.seed</code> vector which can be drawn from in your analysis to produce reproducible results. The actual value passed to this function is irrelevant for practical purposes &mdash; for whatever reason I generally user the same number across projects (42) &mdash; so this made me wonder: what values do the major R developers tend to pick?</p>
 
@@ -75,6 +88,8 @@
 This post was originally published on my
 <a href="http://benjaminlmoore.wordpress.com/2014/03/06/most-common-rng-seeds-r-github/" target="_blank">Wordpress blog</a>.</p>
 
-  ]]></description>
-</item>
-
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

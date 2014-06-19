@@ -1,12 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 
-	<item>
-  <title>Wikipedia is dead, long live the 'pedia</title>
-  <link>http://blm.io/blog/wikipedia-is-dead</link>
-  <author>Benjamin L. Moore</author>
-  <pubDate>2014-01-09T00:00:00+00:00</pubDate>
-  <guid>http://blm.io/blog/wikipedia-is-dead</guid>
-  <description><![CDATA[
-     <p>I was a bit surprised when looking at the Wikipedia pageviews for 2013 (nicely presented <a href="http://reportcard.wmflabs.org/" target="_blank">here</a>). After 5 years of consistent and reasonably stable growth, over 2013 monthly pageviews actually dropped, and to the tune of 2 *billion* views  (10%) from their peak early in the year.</p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>blm.io - Tag: en.wiki</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Wikipedia is dead, long live the 'pedia</title>
+        <link>http://blm.io/blog/wikipedia-is-dead</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2014-01-09T00:00:00+00:00</pubDate>
+		<guid>http://blm.io/blog/wikipedia-is-dead</guid>
+		<description><![CDATA[
+		   <p>I was a bit surprised when looking at the Wikipedia pageviews for 2013 (nicely presented <a href="http://reportcard.wmflabs.org/" target="_blank">here</a>). After 5 years of consistent and reasonably stable growth, over 2013 monthly pageviews actually dropped, and to the tune of 2 *billion* views  (10%) from their peak early in the year.</p>
 
 <p><a href="http://benjaminlmoore.files.wordpress.com/2014/01/pviews.png"><img class="imgfull" alt="pviews" src="/blog/img/pviews.png" width="500" height="352" /></a></p>
 
@@ -32,6 +45,8 @@ This post was originally published on my
 
 <p></p>
 
-  ]]></description>
-</item>
-
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

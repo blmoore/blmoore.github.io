@@ -1,12 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 
-	<item>
-  <title>What are the most overrated films?</title>
-  <link>http://blm.io/blog/overrated-underrated-films</link>
-  <author>Benjamin L. Moore</author>
-  <pubDate>2014-05-05T00:00:00+01:00</pubDate>
-  <guid>http://blm.io/blog/overrated-underrated-films</guid>
-  <description><![CDATA[
-     <p style="text-align:left;">"Overrated" and "underrated" are slippery terms to try to quantify. An interesting way of looking at this, I thought, would be to compare the reviews of film critics with those of Joe Public, reasoning that a film which is roundly-lauded by the Hollywood press but proved disappointing for the real audience would be "overrated" and <em>vice versa</em>.</p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>blm.io - Tag: API</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>What are the most overrated films?</title>
+        <link>http://blm.io/blog/overrated-underrated-films</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2014-05-05T00:00:00+01:00</pubDate>
+		<guid>http://blm.io/blog/overrated-underrated-films</guid>
+		<description><![CDATA[
+		   <p style="text-align:left;">"Overrated" and "underrated" are slippery terms to try to quantify. An interesting way of looking at this, I thought, would be to compare the reviews of film critics with those of Joe Public, reasoning that a film which is roundly-lauded by the Hollywood press but proved disappointing for the real audience would be "overrated" and <em>vice versa</em>.</p>
 
 <p>To get some data for this I turned to the most prominent review aggregator: <a title="Rotten Tomatoes" href="http://www.rottentomatoes.com/" target="_blank">Rotten Tomatoes</a>. All this analysis was done in the R programming language, and full code to reproduce it will be attached at the end.</p>
 
@@ -89,6 +102,8 @@
 <p style="text-align:right; font-size: .85rem;">Full code to reproduce analysis is available in <a href="https://gist.github.com/blmoore/dc3bfa9a3ad0857ac796" target="_blank">gist</a> form. <br />
 This post was originally published on my <a href="http://benjaminlmoore.wordpress.com/2014/05/05/what-are-the-most-overrated-films/" target="_blank">Wordpress blog</a>.</p>
 
-  ]]></description>
-</item>
-
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

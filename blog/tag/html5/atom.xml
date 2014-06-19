@@ -1,12 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 
-	<item>
-  <title>Slidify: Modern, simple presentations written in R Markdown</title>
-  <link>http://blm.io/blog/slidify</link>
-  <author>Benjamin L. Moore</author>
-  <pubDate>2014-02-24T00:00:00+00:00</pubDate>
-  <guid>http://blm.io/blog/slidify</guid>
-  <description><![CDATA[
-     <p>As a LaTeX fan I'm used to using Beamer for presentations, but the built-in <a href="http://www.hartwork.org/beamer-theme-matrix/" target="_blank">themes</a> are definitely starting to show their age --- and writing a custom <code>.sty</code> file looks like a nightmare --- so for a while I've been looking at trying out an HTML5 framework.</p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>blm.io - Tag: html5</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Slidify: Modern, simple presentations written in R Markdown</title>
+        <link>http://blm.io/blog/slidify</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2014-02-24T00:00:00+00:00</pubDate>
+		<guid>http://blm.io/blog/slidify</guid>
+		<description><![CDATA[
+		   <p>As a LaTeX fan I'm used to using Beamer for presentations, but the built-in <a href="http://www.hartwork.org/beamer-theme-matrix/" target="_blank">themes</a> are definitely starting to show their age --- and writing a custom <code>.sty</code> file looks like a nightmare --- so for a while I've been looking at trying out an HTML5 framework.</p>
 
 <p><a href="http://lab.hakim.se/reveal-js/" target="_blank"><img class="imgright" alt="Reveal.js is a great looking HTML presentation framework from Hakim El Hattab." src="/blog/img/screen-shot-2014-02-24-at-19-55-11.png" width="150" height="102" /></a></p>
 
@@ -102,6 +115,8 @@ img <span class="p">{</span>
 
 <p><a href="http://benjaminlmoore.files.wordpress.com/2014/02/screen-shot-2014-02-24-at-22-20-531.png"><img class="imgfull" alt="The final(ish) presentation in all its glory. Link may not work for long." src="/blog/img/screen-shot-2014-02-24-at-22-20-531.png" width="500" height="318" /></a></p>
 
-  ]]></description>
-</item>
-
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>
