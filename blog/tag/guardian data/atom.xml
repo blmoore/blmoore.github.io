@@ -1,10 +1,10 @@
 
 	<item>
   <title>Guardian data blog — UK general election analysis in R</title>
-  <link>http://blm.io/blog/politics/2014/03/18/guardian-data-blog-uk-elections/</link>
+  <link>http://blm.io/blog/uk-elections</link>
   <author>Benjamin L. Moore</author>
   <pubDate>2014-03-18T00:00:00+00:00</pubDate>
-  <guid>http://blm.io/blog/politics/2014/03/18/guardian-data-blog-uk-elections/</guid>
+  <guid>http://blm.io/blog/uk-elections</guid>
   <description><![CDATA[
      <p>The Guardian newspaper has for a few years been running a <a title="guardian data blog" href="http://www.theguardian.com/data" target="_blank">data blog</a> and has built up a massive repository of (often) well-curated datasets on a huge number of topics. They even have an <a title="list of data sets made available by the guardian" href="http://www.theguardian.com/news/datablog/interactive/2013/jan/14/all-our-datasets-index" target="_blank">indexed list</a> of all data sets they've put together or reused in their articles.</p>
 

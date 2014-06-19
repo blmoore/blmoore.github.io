@@ -207,10 +207,10 @@ or actresses you might be interested in (like, say, Jean-Claude Van Damme whom
 
 	<item>
   <title>Celebrity twitter followers by gender</title>
-  <link>http://blm.io/blog/twitter/2014/05/25/celebrity-twitter-followers-by-gender/</link>
+  <link>http://blm.io/blog/twitter-genders</link>
   <author>Benjamin L. Moore</author>
   <pubDate>2014-05-25T00:00:00+01:00</pubDate>
-  <guid>http://blm.io/blog/twitter/2014/05/25/celebrity-twitter-followers-by-gender/</guid>
+  <guid>http://blm.io/blog/twitter-genders</guid>
   <description><![CDATA[
      <p>The most popular accounts on twitter have millions of followers, but what are their demographics like? Twitter doesn't collect or release this kind of information, and even things like name and location are only voluntarily added to people's profiles. Unlike Google+ and Facebook, twitter has no real name policy, <a href="https://gigaom.com/2011/09/16/why-twitter-doesnt-care-what-your-real-name-is/" target="_blank">they don't care</a> what you call yourself, because they can still divine out useful information from your account activity.</p>
 
@@ -311,10 +311,10 @@ This post was originally published on my
 
 	<item>
   <title>What are the most overrated films?</title>
-  <link>http://blm.io/blog/movies/2014/05/05/what-are-the-most-overrated-films/</link>
+  <link>http://blm.io/blog/overrated-underrated-films</link>
   <author>Benjamin L. Moore</author>
   <pubDate>2014-05-05T00:00:00+01:00</pubDate>
-  <guid>http://blm.io/blog/movies/2014/05/05/what-are-the-most-overrated-films/</guid>
+  <guid>http://blm.io/blog/overrated-underrated-films</guid>
   <description><![CDATA[
      <p style="text-align:left;">"Overrated" and "underrated" are slippery terms to try to quantify. An interesting way of looking at this, I thought, would be to compare the reviews of film critics with those of Joe Public, reasoning that a film which is roundly-lauded by the Hollywood press but proved disappointing for the real audience would be "overrated" and <em>vice versa</em>.</p>
 
@@ -405,10 +405,10 @@ This post was originally published on my <a href="http://benjaminlmoore.wordpres
 
 	<item>
   <title>Author inflation in academic literature</title>
-  <link>http://blm.io/blog/academia/2014/04/06/author-inflation-in-academic-literature/</link>
+  <link>http://blm.io/blog/author-inflation</link>
   <author>Benjamin L. Moore</author>
   <pubDate>2014-04-06T00:00:00+01:00</pubDate>
-  <guid>http://blm.io/blog/academia/2014/04/06/author-inflation-in-academic-literature/</guid>
+  <guid>http://blm.io/blog/author-inflation</guid>
   <description><![CDATA[
      <p>There seems to be a general consensus that author lists in academic articles are growing. Wikipedia <a href="https://en.wikipedia.org/wiki/Academic_authorship#Growing_number_of_authors_per_paper" target="_blank">says so</a>, and I've also come across a <a href="http://onlinelibrary.wiley.com/doi/10.1002/asi.21438/abstract" target="_blank">published letter</a> and short <a href="http://www.nature.com/nature/history/full/nature06243.html" target="_blank">Nature article</a> which accept this is the case and discuss ways of mitigating the issue. Recently there was an interesting discussion on <a href="http://academia.stackexchange.com/questions/16759/is-there-an-inflation-in-the-number-of-authors-per-paper" target="_blank">academia.stackexchange</a> on the subject but again without much quantification. Luckily given the array of literature database APIs and language bindings available, it should be pretty easy to investigate with some statistical analysis in R.</p>
 
@@ -492,10 +492,10 @@ This post was originally published on my
 
 	<item>
   <title>Guardian data blog — UK general election analysis in R</title>
-  <link>http://blm.io/blog/politics/2014/03/18/guardian-data-blog-uk-elections/</link>
+  <link>http://blm.io/blog/uk-elections</link>
   <author>Benjamin L. Moore</author>
   <pubDate>2014-03-18T00:00:00+00:00</pubDate>
-  <guid>http://blm.io/blog/politics/2014/03/18/guardian-data-blog-uk-elections/</guid>
+  <guid>http://blm.io/blog/uk-elections</guid>
   <description><![CDATA[
      <p>The Guardian newspaper has for a few years been running a <a title="guardian data blog" href="http://www.theguardian.com/data" target="_blank">data blog</a> and has built up a massive repository of (often) well-curated datasets on a huge number of topics. They even have an <a title="list of data sets made available by the guardian" href="http://www.theguardian.com/news/datablog/interactive/2013/jan/14/all-our-datasets-index" target="_blank">indexed list</a> of all data sets they've put together or reused in their articles.</p>
 
@@ -553,10 +553,10 @@ This post was originally published on my
 
 	<item>
   <title>Meticulously recreating bitmap plots in R</title>
-  <link>http://blm.io/blog/wikipedia/2014/02/03/meticulously-recreating-bitmap-plots-in-r/</link>
+  <link>http://blm.io/blog/bitmap-plot-to-vector</link>
   <author>Benjamin L. Moore</author>
   <pubDate>2014-02-03T00:00:00+00:00</pubDate>
-  <guid>http://blm.io/blog/wikipedia/2014/02/03/meticulously-recreating-bitmap-plots-in-r/</guid>
+  <guid>http://blm.io/blog/bitmap-plot-to-vector</guid>
   <description><![CDATA[
      <p>There's a hard-fought drive on Wikimedia commons to convert those images that should be in vector format (i.e. graphs, diagrams) from their current bitmap form. At the time of writing, the relevant category has over <a href="https://commons.wikimedia.org/wiki/Category:Images_that_should_use_vector_graphics" target="_blank">7000</a> images in the category "Images that should use vector graphics".</p>
 

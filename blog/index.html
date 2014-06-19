@@ -69,9 +69,9 @@
 <div id="header">
   <nav>
     <ul>
-      <li><a href="http://blm.io">front</a></li>
+      <li><a href="http://blm.io/blog/">blog</a></li>
+      <li><a href="http://blm.io">about</a></li>
       <li><a href="http://blm.io/projects">projects</a></li>
-      <li><a href="http://benjaminlmoore.wordpress.com" target="_blank">blog</a></li>
       <li><a href="http://blm.io/contact">contact</a></li>
     </ul>
   </nav>
@@ -128,7 +128,7 @@ scraping of IMDb data, this is what I came up with:
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/blog/twitter/2014/05/25/celebrity-twitter-followers-by-gender/">
+      <a href="/blog/twitter-genders">
         Celebrity twitter followers by gender
       </a>
     </h1>
@@ -140,7 +140,7 @@ scraping of IMDb data, this is what I came up with:
 <p>For example, you can optionally set your location on your twitter profile. Should you choose not to, twitter can still just <a title="geolocation" href="https://en.wikipedia.org/wiki/Geolocation" target="_blank">geolocate</a> your IP. If you use an anonymiser or VPN, they could use the timing of your account activity to infer a timezone. This could then be refined to a city or town using the topics you tweet about and the locations of friends and services you mention most.</p>
 
     <p style="text-align:right;">
-      <a href="/blog/twitter/2014/05/25/celebrity-twitter-followers-by-gender/"
+      <a href="/blog/twitter-genders"
       style="
       padding: .1rem 1rem;
       text-shadow: 1px 1px #fff,
@@ -151,7 +151,7 @@ scraping of IMDb data, this is what I came up with:
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/blog/movies/2014/05/05/what-are-the-most-overrated-films/">
+      <a href="/blog/overrated-underrated-films">
         What are the most overrated films?
       </a>
     </h1>
@@ -163,7 +163,7 @@ scraping of IMDb data, this is what I came up with:
 <p>To get some data for this I turned to the most prominent review aggregator: <a title="Rotten Tomatoes" href="http://www.rottentomatoes.com/" target="_blank">Rotten Tomatoes</a>. All this analysis was done in the R programming language, and full code to reproduce it will be attached at the end.</p>
 
     <p style="text-align:right;">
-      <a href="/blog/movies/2014/05/05/what-are-the-most-overrated-films/"
+      <a href="/blog/overrated-underrated-films"
       style="
       padding: .1rem 1rem;
       text-shadow: 1px 1px #fff,
@@ -174,7 +174,7 @@ scraping of IMDb data, this is what I came up with:
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/blog/academia/2014/04/06/author-inflation-in-academic-literature/">
+      <a href="/blog/author-inflation">
         Author inflation in academic literature
       </a>
     </h1>
@@ -184,7 +184,7 @@ scraping of IMDb data, this is what I came up with:
     <p>There seems to be a general consensus that author lists in academic articles are growing. Wikipedia <a href="https://en.wikipedia.org/wiki/Academic_authorship#Growing_number_of_authors_per_paper" target="_blank">says so</a>, and I've also come across a <a href="http://onlinelibrary.wiley.com/doi/10.1002/asi.21438/abstract" target="_blank">published letter</a> and short <a href="http://www.nature.com/nature/history/full/nature06243.html" target="_blank">Nature article</a> which accept this is the case and discuss ways of mitigating the issue. Recently there was an interesting discussion on <a href="http://academia.stackexchange.com/questions/16759/is-there-an-inflation-in-the-number-of-authors-per-paper" target="_blank">academia.stackexchange</a> on the subject but again without much quantification. Luckily given the array of literature database APIs and language bindings available, it should be pretty easy to investigate with some statistical analysis in R.</p>
 
     <p style="text-align:right;">
-      <a href="/blog/academia/2014/04/06/author-inflation-in-academic-literature/"
+      <a href="/blog/author-inflation"
       style="
       padding: .1rem 1rem;
       text-shadow: 1px 1px #fff,
@@ -195,7 +195,7 @@ scraping of IMDb data, this is what I came up with:
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/blog/politics/2014/03/18/guardian-data-blog-uk-elections/">
+      <a href="/blog/uk-elections">
         Guardian data blog — UK general election analysis in R
       </a>
     </h1>
@@ -207,7 +207,7 @@ scraping of IMDb data, this is what I came up with:
 <p>It's a great repository of interesting data for exploratory analysis, and there's a low barrier to entry in terms of getting the data into a useful form. Here's an example using UK election polling data collected over the last thirty years.</p>
 
     <p style="text-align:right;">
-      <a href="/blog/politics/2014/03/18/guardian-data-blog-uk-elections/"
+      <a href="/blog/uk-elections"
       style="
       padding: .1rem 1rem;
       text-shadow: 1px 1px #fff,
@@ -218,7 +218,7 @@ scraping of IMDb data, this is what I came up with:
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/blog/r/2014/03/06/most-common-rng-seeds-r-github/">
+      <a href="/blog/prng-seeds">
         What are the most common RNG seeds used in R scripts on Github?
       </a>
     </h1>
@@ -228,7 +228,7 @@ scraping of IMDb data, this is what I came up with:
     <p>In the R programming language, the random number generator (RNG) is seeded each session using the current time and process ID. Via the magic of the popular <a href="https://en.wikipedia.org/wiki/Mersenne_twister" target="_blank">Mersenne Twister PRNG</a>, the values stored in <code>.Random.seed</code> are used sequentially each time "randomness" is invoked in a function. This means, of course, that the same function run in different R sessions can produce varying results, and in the case of modelling a system sensitive to initial conditions the observed differences could be huge. </p>
 
     <p style="text-align:right;">
-      <a href="/blog/r/2014/03/06/most-common-rng-seeds-r-github/"
+      <a href="/blog/prng-seeds"
       style="
       padding: .1rem 1rem;
       text-shadow: 1px 1px #fff,
@@ -239,7 +239,7 @@ scraping of IMDb data, this is what I came up with:
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/blog/r/2014/02/24/slidify-presentations-in-r-markdown/">
+      <a href="/blog/slidify">
         Slidify: Modern, simple presentations written in R Markdown
       </a>
     </h1>
@@ -249,7 +249,7 @@ scraping of IMDb data, this is what I came up with:
     <p>As a LaTeX fan I'm used to using Beamer for presentations, but the built-in <a href="http://www.hartwork.org/beamer-theme-matrix/" target="_blank">themes</a> are definitely starting to show their age --- and writing a custom <code>.sty</code> file looks like a nightmare --- so for a while I've been looking at trying out an HTML5 framework.</p>
 
     <p style="text-align:right;">
-      <a href="/blog/r/2014/02/24/slidify-presentations-in-r-markdown/"
+      <a href="/blog/slidify"
       style="
       padding: .1rem 1rem;
       text-shadow: 1px 1px #fff,
