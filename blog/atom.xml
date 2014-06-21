@@ -4,13 +4,56 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2014-06-19T22:35:52+01:00</updated>
+ <updated>2014-06-21T16:34:19+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
    <email>root@blm.io</email>
  </author>
 
+ 
+ <entry>
+   <title>Transformation of wordpress into jekyll</title>
+   <link href="http://blm.io/blog/meta/2014/06/21/blog-migration/"/>
+   <updated>2014-06-21T00:00:00+01:00</updated>
+   <id>http://blm.io/blog/meta/2014/06/21/blog-migration</id>
+   <content type="html">&lt;p&gt;I think &lt;a href=&quot;http://wordpress.org/&quot;&gt;Wordpress&lt;/a&gt; is a great &lt;a href=&quot;https://en.wikipedia.org/wiki/Content_management_system&quot;&gt;CMS&lt;/a&gt; and I&amp;#39;m reluctant to leave it behind. While
+it doesn&amp;#39;t have much hacker kudos, in my opinion (and undoubtedly many others)
+Wordpress is a very usable and near-complete blogging
+platform which doesn&amp;#39;t leave much justification for reinventing the wheel. It also seems to have reached
+a kind of critical mass where it&amp;#39;s own &amp;quot;like&amp;quot; and &amp;quot;follow&amp;quot; features are
+useful tools, with the latter a decent way of building an audience that
+don&amp;#39;t use RSS readers and aren&amp;#39;t interested in the extra cruft that comes with twitter. In fact, my Wordpress blog currently has
+more followers than my twitter account, and I suspect a higher &lt;a href=&quot;https://en.wikipedia.org/wiki/Click-through_rate&quot;&gt;CTR&lt;/a&gt; per
+post. So with that in mind, why am I making the switch?&lt;/p&gt;
+
+&lt;p&gt;In short, it&amp;#39;s due to two factors:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;The &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github pages&lt;/a&gt; system offering free hosting
+with custom domains, all built on top of a normal git repo.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;a href=&quot;http://rcharts.io&quot;&gt;rCharts&lt;/a&gt; R package which, to me as a non-web guy,
+has acted as a great intro to various &lt;a href=&quot;http://d3js.org/&quot;&gt;D3.js&lt;/a&gt;-based plotting
+libraries, and piqued my interest in building custom interactive graphics.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;My blog setup was getting increasingly messy, usually with a full write-up
+on &lt;a href=&quot;https://wordpress.com/&quot;&gt;hosted wordpress&lt;/a&gt; &amp;mdash; to take advantage of the existing audience there &amp;mdash; with accompanying interactive plots hosted here. The problem with this is that the javascript plots were usually the most interesting part of the post, but were buried in external links due to wordpress limitations. Plus this split would divide social shares and search traffic (not that I&amp;#39;m attempting any SEO or real monetisation but it&amp;#39;s nice if people occasionally read my stuff).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/img/jekyll.png&quot; class=&quot;imgright&quot; width=&quot;200px&quot; height=&quot;110px&quot; /&gt;
+After researching my options, I&amp;#39;m now using &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; (aided by &lt;a href=&quot;https://github.com/poole/poole&quot;&gt;poole&lt;/a&gt; during setup). With Github pages hosting, Github will run Jekyll on their servers, building your site when you push commits, but they do so with the &lt;code&gt;--safe&lt;/code&gt; flag, disabling any plugins not found in the main Jekyll repository. For this reason I now have a &lt;a href=&quot;https://github.com/blmoore/blog-staging&quot;&gt;staging repo&lt;/a&gt; where I&amp;#39;ll (via a simple bash script) build the site locally with whatever custom plug-ins, then copy it to my Github &lt;a href=&quot;https://github.com/blmoore/blmoore.github.io&quot;&gt;userpage repository&lt;/a&gt; and publish.&lt;/p&gt;
+
+&lt;p&gt;Other than this issue it&amp;#39;s been reasonably straightforward to make the switch, though I was surprised how much legwork was involved in things like organising &lt;a href=&quot;http://realjenius.com/2012/12/01/jekyll-category-tag-paging-feeds/&quot;&gt;tag-specific paginated indexes&lt;/a&gt; for navigation and custom RSS/Atom feeds. For me, this kind of stuff should come out of the box even in a barebones, for-customisation framework like Jekyll. Thankfully there&amp;#39;s bloggers around who&amp;#39;ve already figured out this stuff, as well as some of the under-documented features (like &lt;a href=&quot;http://joshualande.com/short-urls-jekyll/&quot;&gt;permalinks&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;More recently I&amp;#39;ve been told that the R package &lt;a href=&quot;http://blm.io/blog/slidify&quot;&gt;slidify&lt;/a&gt; is capable of Jekyll-like functionality, and this will soon be spun-off into its own package:&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/benjaminlmoore&quot;&gt;&lt;a href=&#39;https://github.com/benjaminlmoore&#39; class=&#39;user-mention&#39;&gt;@benjaminlmoore&lt;/a&gt;&lt;/a&gt; Slidify is also capable of generating static blogs. It will become a separate package &lt;a href=&quot;http://t.co/ED09PAhGyW&quot;&gt;http://t.co/ED09PAhGyW&lt;/a&gt; &lt;a href=&quot;https://twitter.com/rmflight&quot;&gt;&lt;a href=&#39;https://github.com/rmflight&#39; class=&#39;user-mention&#39;&gt;@rmflight&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ramnath Vaidyanathan (@ramnath_vaidya) &lt;a href=&quot;https://twitter.com/ramnath_vaidya/statuses/479422134968524801&quot;&gt;June 19, 2014&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Most of my posts will involve some R analysis so this could end up a better solution for me, as a non-Rubyist. Maybe I&amp;#39;ll be having another big change in a few months time...&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Hollywood action heroes</title>
