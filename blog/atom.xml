@@ -4,7 +4,7 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2014-06-21T17:09:59+01:00</updated>
+ <updated>2014-06-21T17:27:26+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Transformation of wordpress into jekyll</title>
-   <link href="http://blm.io/blog/meta/2014/06/21/blog-migration/"/>
+   <link href="http://blm.io/blog/wordpress-to-jekyll"/>
    <updated>2014-06-21T00:00:00+01:00</updated>
-   <id>http://blm.io/blog/meta/2014/06/21/blog-migration</id>
+   <id>http://blm.io/blog/blog-migration</id>
    <content type="html">&lt;p&gt;I think &lt;a href=&quot;http://wordpress.org/&quot;&gt;Wordpress&lt;/a&gt; is a great &lt;a href=&quot;https://en.wikipedia.org/wiki/Content_management_system&quot;&gt;CMS&lt;/a&gt; and I&amp;#39;m reluctant to leave it behind. While
 it doesn&amp;#39;t have much hacker kudos, in my opinion (and undoubtedly many others)
 Wordpress is a very usable and near-complete blogging

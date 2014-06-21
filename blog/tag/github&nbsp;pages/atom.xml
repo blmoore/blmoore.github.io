@@ -14,10 +14,10 @@
     
 	  <item>
         <title>Transformation of wordpress into jekyll</title>
-        <link>http://blm.io/blog/meta/2014/06/21/blog-migration/</link>
+        <link>http://blm.io/blog/wordpress-to-jekyll</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-06-21T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/meta/2014/06/21/blog-migration/</guid>
+		<guid>http://blm.io/blog/wordpress-to-jekyll</guid>
 		<description><![CDATA[
 		   <p>I think <a href="http://wordpress.org/">Wordpress</a> is a great <a href="https://en.wikipedia.org/wiki/Content_management_system">CMS</a> and I&#39;m reluctant to leave it behind. While
 it doesn&#39;t have much hacker kudos, in my opinion (and undoubtedly many others)
