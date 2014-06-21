@@ -454,7 +454,10 @@ div .footer{
 
 div .addthis_sharing_toolbox{
   margin-top: -.5rem;
-  margin-left:75%;
+  width:50%;
+  text-align: right;
+  margin-left:auto;
+  margin-right:0;
 }
 
 .post-date-paginate {
