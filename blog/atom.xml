@@ -4,7 +4,7 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2014-07-01T22:13:28+01:00</updated>
+ <updated>2014-07-01T22:20:11+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
@@ -63,13 +63,13 @@ brands and the cheapies that have been tested by SHARP.&lt;/p&gt;
 &lt;h2&gt;Helmet types&lt;/h2&gt;
 
 &lt;p&gt;Helmets in the dataset are spit into two categories: full-face and &amp;quot;system&amp;quot;. As
-far as I can tell these refer to full-face helmets and what I would call &amp;quot;flip-front&amp;quot; helmets.
+far as I can tell the latter refer to what I would call &amp;quot;flip-front&amp;quot; helmets.
 These have a hinged jaw section which you can raise either to use as an open-face helmet or
 more commonly so as to pay for your petrol without scaring the cashier.&lt;/p&gt;
 
 &lt;p&gt;&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/motorcycle_helmetkey.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;I&amp;#39;m not aware this has been conclusively proven but the general consensus among bikers
+&lt;p&gt;I&amp;#39;m not aware this has been conclusively proven but the general feeling among bikers
 seems to be that a flip-front helmet offers less protection than a more rigid full-face.
 Does the SHARP data agree?&lt;/p&gt;
 
@@ -77,7 +77,7 @@ Does the SHARP data agree?&lt;/p&gt;
 &lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/motorcyle_helmet_type_thumb.png&quot; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;There does seem to be a greater proportion of top-rated full-face helmets, and the most
+&lt;p&gt;There is a greater proportion of top-rated full-face helmets, and the most
 common rating for flip-front lids is 3 stars, compared to 4 for full-face. However
 full-face helmets dominate the dataset (86% of helmets tested by SHARP), and most brands
 will only produce a couple of flip models, save the specialists like
@@ -93,12 +93,12 @@ more protective, and if so to what degree?&lt;/p&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Overall yes, there&amp;#39;s a non-zero linear regression coefficient that suggests each additional
-£ spent on a helmet returns 2 &amp;times; 10&lt;sup&gt;-4&lt;/sup&gt; Sharp rating points. Additional points
-worth noting are that this trend explains a measly 6% of the variance in helmet prices and,
+£ spent on a helmet returns 2 &amp;times; 10&lt;sup&gt;-4&lt;/sup&gt; SHARP rating points. It&amp;#39;s
+worth noting are that this trend explains a measly 6% of the variance in helmet ratings and,
 more interestingly, the y-intercept is a fairly decent 3.1 rating, suggesting there are some
 cheap but highly rated helmets in the dataset.&lt;/p&gt;
 
-&lt;p&gt;If you&amp;#39;ll forgive the busy plot, we can break this relationship trend down by manufacturer.&lt;/p&gt;
+&lt;p&gt;We can break this relationship trend down by manufacturer:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/blog/img/motorcycle_helmet_brandtrends.png&quot; target=&quot;_blank&quot;&gt;
 &lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/motorcycle_helmet_brandtrends_thumb.png&quot; /&gt;
@@ -106,19 +106,20 @@ cheap but highly rated helmets in the dataset.&lt;/p&gt;
 
 &lt;p&gt;There are some striking differences here. Entry brands like &lt;a href=&quot;http://www.nitro-helmets.com/&quot;&gt;Nitro&lt;/a&gt;
 seem good examples of where a higher outlay is likely to result in significantly better
-crash protection. The Arai premium brand, however, has little relationship between
-price and protection, with a lot of their range scoring the same 3 out of 5 rating.&lt;/p&gt;
+crash protection. The &lt;a href=&quot;http://www.whyarai.co.uk/&quot;&gt;Arai&lt;/a&gt; premium brand, however, has little relationship between
+price and protection, with most of their range scoring the same 3 out of 5 rating.&lt;/p&gt;
 
 &lt;p&gt;You&amp;#39;ll notice the points in these graphs have been jittered to prevent them all stacking
-at the discrete ratings numbers. Statisticians reading may criticise the use of linear
-regression here too, as the rating system is really an ordinal variable and so would be
+at the integer ratings, and give the illusion of a (preferable) continuous rating.
+At this point any statisticians reading may criticise the use of linear
+regression here (on unjittered values, of course), as the rating system is really an ordinal variable and so would be
 better suited to something like an &lt;a href=&quot;https://en.wikipedia.org/wiki/Ordered_logit&quot;&gt;ordered logit model&lt;/a&gt;.
 With these caveats in mind I won&amp;#39;t overinterpret the above linear models.&lt;/p&gt;
 
 &lt;h2&gt;Best and worsts&lt;/h2&gt;
 
 &lt;p&gt;So to finish, two important questions: what are the best/worst value for money helmets,
-and which brands overall output the most protective and raesonably priced lids?&lt;/p&gt;
+and which brands overall output the most protective and reasonably priced lids?&lt;/p&gt;
 
 &lt;h3&gt;Best helmets&lt;/h3&gt;
 

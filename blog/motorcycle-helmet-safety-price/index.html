@@ -137,13 +137,13 @@ brands and the cheapies that have been tested by SHARP.</p>
 <h2>Helmet types</h2>
 
 <p>Helmets in the dataset are spit into two categories: full-face and &quot;system&quot;. As
-far as I can tell these refer to full-face helmets and what I would call &quot;flip-front&quot; helmets.
+far as I can tell the latter refer to what I would call &quot;flip-front&quot; helmets.
 These have a hinged jaw section which you can raise either to use as an open-face helmet or
 more commonly so as to pay for your petrol without scaring the cashier.</p>
 
 <p><img class="imgfull" src="/blog/img/motorcycle_helmetkey.png" /></p>
 
-<p>I&#39;m not aware this has been conclusively proven but the general consensus among bikers
+<p>I&#39;m not aware this has been conclusively proven but the general feeling among bikers
 seems to be that a flip-front helmet offers less protection than a more rigid full-face.
 Does the SHARP data agree?</p>
 
@@ -151,7 +151,7 @@ Does the SHARP data agree?</p>
 <img class="imgfull" src="/blog/img/motorcyle_helmet_type_thumb.png" />
 </a></p>
 
-<p>There does seem to be a greater proportion of top-rated full-face helmets, and the most
+<p>There is a greater proportion of top-rated full-face helmets, and the most
 common rating for flip-front lids is 3 stars, compared to 4 for full-face. However
 full-face helmets dominate the dataset (86% of helmets tested by SHARP), and most brands
 will only produce a couple of flip models, save the specialists like
@@ -167,12 +167,12 @@ more protective, and if so to what degree?</p>
 </a></p>
 
 <p>Overall yes, there&#39;s a non-zero linear regression coefficient that suggests each additional
-£ spent on a helmet returns 2 &times; 10<sup>-4</sup> Sharp rating points. Additional points
-worth noting are that this trend explains a measly 6% of the variance in helmet prices and,
+£ spent on a helmet returns 2 &times; 10<sup>-4</sup> SHARP rating points. It&#39;s
+worth noting are that this trend explains a measly 6% of the variance in helmet ratings and,
 more interestingly, the y-intercept is a fairly decent 3.1 rating, suggesting there are some
 cheap but highly rated helmets in the dataset.</p>
 
-<p>If you&#39;ll forgive the busy plot, we can break this relationship trend down by manufacturer.</p>
+<p>We can break this relationship trend down by manufacturer:</p>
 
 <p><a href="/blog/img/motorcycle_helmet_brandtrends.png" target="_blank">
 <img class="imgfull" src="/blog/img/motorcycle_helmet_brandtrends_thumb.png" />
@@ -180,19 +180,20 @@ cheap but highly rated helmets in the dataset.</p>
 
 <p>There are some striking differences here. Entry brands like <a href="http://www.nitro-helmets.com/">Nitro</a>
 seem good examples of where a higher outlay is likely to result in significantly better
-crash protection. The Arai premium brand, however, has little relationship between
-price and protection, with a lot of their range scoring the same 3 out of 5 rating.</p>
+crash protection. The <a href="http://www.whyarai.co.uk/">Arai</a> premium brand, however, has little relationship between
+price and protection, with most of their range scoring the same 3 out of 5 rating.</p>
 
 <p>You&#39;ll notice the points in these graphs have been jittered to prevent them all stacking
-at the discrete ratings numbers. Statisticians reading may criticise the use of linear
-regression here too, as the rating system is really an ordinal variable and so would be
+at the integer ratings, and give the illusion of a (preferable) continuous rating.
+At this point any statisticians reading may criticise the use of linear
+regression here (on unjittered values, of course), as the rating system is really an ordinal variable and so would be
 better suited to something like an <a href="https://en.wikipedia.org/wiki/Ordered_logit">ordered logit model</a>.
 With these caveats in mind I won&#39;t overinterpret the above linear models.</p>
 
 <h2>Best and worsts</h2>
 
 <p>So to finish, two important questions: what are the best/worst value for money helmets,
-and which brands overall output the most protective and raesonably priced lids?</p>
+and which brands overall output the most protective and reasonably priced lids?</p>
 
 <h3>Best helmets</h3>
 
