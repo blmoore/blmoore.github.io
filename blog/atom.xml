@@ -4,13 +4,192 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2014-06-21T17:27:26+01:00</updated>
+ <updated>2014-07-01T22:13:28+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
    <email>root@blm.io</email>
  </author>
 
+ 
+ <entry>
+   <title>Are more expensive motorcycle helmets safer?</title>
+   <link href="http://blm.io/blog/motorcycle-helmet-safety-price"/>
+   <updated>2014-07-01T00:00:00+01:00</updated>
+   <id>http://blm.io/blog/motorbike_helmets</id>
+   <content type="html">&lt;p&gt;Apparently an 80s commerical for the helmet manufacturer &lt;a href=&quot;http://www.bellhelmets.com/&quot;&gt;Bell&lt;/a&gt; bore the slogan:
+&lt;em&gt;&amp;quot;If you&amp;#39;ve got a $10 head, wear a $10 helmet&amp;quot;&lt;/em&gt;. Nowadays it&amp;#39;s a deeply-ingrained
+and widely accepted idea among bikers that it&amp;#39;s worth
+spending a lot of money on a helmet. A top-of-the-line Arai can sell for
+almost four figures, particularly if you want a nice
+&lt;a href=&quot;http://www.revzilla.com/motorcycle/arai-corsair-v-joey-dunlop-2014-le-helmet&quot;&gt;race rep&lt;/a&gt;
+ design, but what are you getting for your money and, in particular, is it
+ any safer than a helmet you pickup for a tenth of that price.&lt;/p&gt;
+
+&lt;p&gt;There are various minimum safety standards for bike helmets. The US has
+&lt;a href=&quot;http://www.smf.org/docs/articles/dot&quot;&gt;Snell and DOT&lt;/a&gt;, whereas the UK
+requires the snappily named
+&lt;a href=&quot;http://shop.bsigroup.com/ProductDetail/?pid=000000000030140499&quot;&gt;BS 6658:1985 specification&lt;/a&gt;
+or the European standard, ECE22.05, &lt;a href=&quot;http://www.whitedogbikes.com/whitedogblog/motorbike-helmet-road-legal-uk/&quot;&gt;apparently equivalent&lt;/a&gt;
+to the US DOT. But these are &lt;em&gt;minimum standards&lt;/em&gt; that manufacturers must design towards,
+as such they don&amp;#39;t help differentiating between ratified helmets.&lt;/p&gt;
+
+&lt;h2&gt;SHARP ratings&lt;/h2&gt;
+
+&lt;p&gt;&lt;img class=&quot;imgright&quot; src=&quot;/blog/img/sharp_logo.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the UK, an impartial government safety scheme has been set up with it&amp;#39;s own forced acronym
+(the Safety Helmet Assessment and Rating Programme, &lt;a href=&quot;http://sharp.direct.gov.uk/&quot;&gt;SHARP&lt;/a&gt;)
+to try to scientifically assess how protective helmets are in &lt;a href=&quot;http://sharp.direct.gov.uk/node/33&quot;&gt;simulated crash-like tests&lt;/a&gt;,
+designed using real-world data. Take a look at this &lt;a href=&quot;http://sharp.direct.gov.uk/content/animation&quot;&gt;neat animation&lt;/a&gt;
+for more information.&lt;/p&gt;
+
+&lt;p&gt;They condense the data from 32 tests over seven replicates into a simple 5-star rating,
+with 5 star helmets &lt;a href=&quot;http://sharp.direct.gov.uk/content/ratings&quot;&gt;said to provide&lt;/a&gt;
+&amp;quot;good levels of protection right around the helmet&amp;quot;. As of April 2014, their database
+contains a total of 328 helmet models, a decent set of results for some further analysis.&lt;/p&gt;
+
+&lt;h2&gt;Price ranges per brand&lt;/h2&gt;
+
+&lt;p&gt;A good starting point is to look at the spread of helmet prices, identifying the premium
+brands and the cheapies that have been tested by SHARP.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/blog/img/motorcycle_helmet_brands_pricerange.png&quot; target=&quot;_blank&quot;&gt;
+&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/motorcycle_helmet_brands_pricerange_thumb.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We can see why Bell might be keen to push the idea that we all need expensive helmets!&lt;/p&gt;
+
+&lt;h2&gt;Helmet types&lt;/h2&gt;
+
+&lt;p&gt;Helmets in the dataset are spit into two categories: full-face and &amp;quot;system&amp;quot;. As
+far as I can tell these refer to full-face helmets and what I would call &amp;quot;flip-front&amp;quot; helmets.
+These have a hinged jaw section which you can raise either to use as an open-face helmet or
+more commonly so as to pay for your petrol without scaring the cashier.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/motorcycle_helmetkey.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m not aware this has been conclusively proven but the general consensus among bikers
+seems to be that a flip-front helmet offers less protection than a more rigid full-face.
+Does the SHARP data agree?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/blog/img/motorcyle_helmet_type.png&quot; target=&quot;_blank&quot;&gt;
+&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/motorcyle_helmet_type_thumb.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There does seem to be a greater proportion of top-rated full-face helmets, and the most
+common rating for flip-front lids is 3 stars, compared to 4 for full-face. However
+full-face helmets dominate the dataset (86% of helmets tested by SHARP), and most brands
+will only produce a couple of flip models, save the specialists like
+&lt;a href=&quot;http://www.schuberth.com/en/businesssegments/motorcycle.html&quot;&gt;Schuberth&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Cost vs. Protection&lt;/h2&gt;
+
+&lt;p&gt;The main question to be answered with this dataset is: are more expensive helmets
+more protective, and if so to what degree?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/blog/img/motorcycle_helmet_overalltrend.png&quot; target=&quot;_blank&quot;&gt;
+&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/motorcycle_helmet_overalltrend_thumb.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Overall yes, there&amp;#39;s a non-zero linear regression coefficient that suggests each additional
+£ spent on a helmet returns 2 &amp;times; 10&lt;sup&gt;-4&lt;/sup&gt; Sharp rating points. Additional points
+worth noting are that this trend explains a measly 6% of the variance in helmet prices and,
+more interestingly, the y-intercept is a fairly decent 3.1 rating, suggesting there are some
+cheap but highly rated helmets in the dataset.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;#39;ll forgive the busy plot, we can break this relationship trend down by manufacturer.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/blog/img/motorcycle_helmet_brandtrends.png&quot; target=&quot;_blank&quot;&gt;
+&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/motorcycle_helmet_brandtrends_thumb.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There are some striking differences here. Entry brands like &lt;a href=&quot;http://www.nitro-helmets.com/&quot;&gt;Nitro&lt;/a&gt;
+seem good examples of where a higher outlay is likely to result in significantly better
+crash protection. The Arai premium brand, however, has little relationship between
+price and protection, with a lot of their range scoring the same 3 out of 5 rating.&lt;/p&gt;
+
+&lt;p&gt;You&amp;#39;ll notice the points in these graphs have been jittered to prevent them all stacking
+at the discrete ratings numbers. Statisticians reading may criticise the use of linear
+regression here too, as the rating system is really an ordinal variable and so would be
+better suited to something like an &lt;a href=&quot;https://en.wikipedia.org/wiki/Ordered_logit&quot;&gt;ordered logit model&lt;/a&gt;.
+With these caveats in mind I won&amp;#39;t overinterpret the above linear models.&lt;/p&gt;
+
+&lt;h2&gt;Best and worsts&lt;/h2&gt;
+
+&lt;p&gt;So to finish, two important questions: what are the best/worst value for money helmets,
+and which brands overall output the most protective and raesonably priced lids?&lt;/p&gt;
+
+&lt;h3&gt;Best helmets&lt;/h3&gt;
+
+&lt;!-- html table generated in R 3.1.0 by xtable 1.7-3 package --&gt;
+
+&lt;!-- Tue Jul  1 21:52:15 2014 --&gt;
+
+&lt;TABLE border=1&gt;
+&lt;TR&gt; &lt;TH&gt;  &lt;/TH&gt; &lt;TH&gt; Make &lt;/TH&gt; &lt;TH&gt; Model &lt;/TH&gt; &lt;TH&gt; Type &lt;/TH&gt; &lt;TH&gt; Price (GBP) &lt;/TH&gt; &lt;TH&gt; Rating &lt;/TH&gt;  &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 1 &lt;/TD&gt; &lt;TD&gt; Duchinni &lt;/TD&gt; &lt;TD&gt; D832 &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 59.99 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   5 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 2 &lt;/TD&gt; &lt;TD&gt; MT &lt;/TD&gt; &lt;TD&gt; Revenge &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 64.99 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   5 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 3 &lt;/TD&gt; &lt;TD&gt; Lazer &lt;/TD&gt; &lt;TD&gt; LZ6 &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 70.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   5 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 4 &lt;/TD&gt; &lt;TD&gt; Nitro &lt;/TD&gt; &lt;TD&gt; Aikido &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 70.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   5 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 5 &lt;/TD&gt; &lt;TD&gt; Caberg &lt;/TD&gt; &lt;TD&gt; Trip &lt;/TD&gt; &lt;TD&gt; System &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 90.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   5 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 6 &lt;/TD&gt; &lt;TD&gt; Caberg &lt;/TD&gt; &lt;TD&gt; V2 407 &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 90.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   5 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 7 &lt;/TD&gt; &lt;TD&gt; Marushin &lt;/TD&gt; &lt;TD&gt; 777 Samura &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 99.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   5 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 8 &lt;/TD&gt; &lt;TD&gt; Marushin &lt;/TD&gt; &lt;TD&gt; 777 Tiger &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 99.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   5 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 9 &lt;/TD&gt; &lt;TD&gt; Caberg &lt;/TD&gt; &lt;TD&gt; V2R &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 110.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   5 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 10 &lt;/TD&gt; &lt;TD&gt; Nitro &lt;/TD&gt; &lt;TD&gt; N1700VF &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 119.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   5 &lt;/TD&gt; &lt;/TR&gt;
+   &lt;/TABLE&gt;
+
+&lt;h3&gt;Worst helmets&lt;/h3&gt;
+
+&lt;!-- html table generated in R 3.1.0 by xtable 1.7-3 package --&gt;
+
+&lt;!-- Tue Jul  1 21:54:57 2014 --&gt;
+
+&lt;TABLE border=1&gt;
+&lt;TR&gt; &lt;TH&gt;  &lt;/TH&gt; &lt;TH&gt; Make &lt;/TH&gt; &lt;TH&gt; Model &lt;/TH&gt; &lt;TH&gt; Type &lt;/TH&gt; &lt;TH&gt; Price (GBP) &lt;/TH&gt; &lt;TH&gt; Rating &lt;/TH&gt;  &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 1 &lt;/TD&gt; &lt;TD&gt; Schuberth &lt;/TD&gt; &lt;TD&gt; S1 Pro &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 450.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   2 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 2 &lt;/TD&gt; &lt;TD&gt; Schuberth &lt;/TD&gt; &lt;TD&gt; R1 &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 320.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   2 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 3 &lt;/TD&gt; &lt;TD&gt; NZI &lt;/TD&gt; &lt;TD&gt; Fibrup &lt;/TD&gt; &lt;TD&gt; System &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 256.80 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   2 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 4 &lt;/TD&gt; &lt;TD&gt; Arai &lt;/TD&gt; &lt;TD&gt; Condor &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 240.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   2 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 5 &lt;/TD&gt; &lt;TD&gt; Dainese &lt;/TD&gt; &lt;TD&gt; Airstream &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 190.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   1 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 6 &lt;/TD&gt; &lt;TD&gt; Vemar &lt;/TD&gt; &lt;TD&gt; VSREV &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 190.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   2 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 7 &lt;/TD&gt; &lt;TD&gt; KBC &lt;/TD&gt; &lt;TD&gt; VR2R &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 180.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   2 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 8 &lt;/TD&gt; &lt;TD&gt; KBC &lt;/TD&gt; &lt;TD&gt; VR4R &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 179.99 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   2 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 9 &lt;/TD&gt; &lt;TD&gt; Harley Davidson &lt;/TD&gt; &lt;TD&gt; Laguna II &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 165.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   1 &lt;/TD&gt; &lt;/TR&gt;
+  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 10 &lt;/TD&gt; &lt;TD&gt; CMS &lt;/TD&gt; &lt;TD&gt; GP5F &lt;/TD&gt; &lt;TD&gt; Full face &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 159.00 &lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt;   1 &lt;/TD&gt; &lt;/TR&gt;
+   &lt;/TABLE&gt;
+
+&lt;h3&gt;Brand summaries&lt;/h3&gt;
+
+&lt;p&gt;Here I&amp;#39;m plotting the mean SHARP rating across each brand&amp;#39;s tested helmets, against
+their median helmet price which were then ranked 1 to 22, with 22 being the most
+expensive brand on average.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/blog/img/motorcycle_helmet_brandsummary.png&quot; target=&quot;_blank&quot;&gt;
+&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/motorcycle_helmet_brandsummary_thumb.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Grey rectangles indicate both the cheapest third of brands,
+and the safest third. Much to my surprise, the only brand falling in the intersection
+of these two is Marushin, which is a new brand to me but have been
+&lt;a href=&quot;http://www.visordown.com/product-features/five-safest-motorcycle-helmets-for-under-150/18341-6.html&quot;&gt;noted previously&lt;/a&gt;
+for their highly-rated helmets.&lt;/p&gt;
+
+&lt;p&gt;I should quickly point out that protection isn&amp;#39;t the only reason people splash out on
+premium helmets; they can be lighter, more comfortable, quieter and look better &amp;mdash;
+plus with that Shoei symbol above your visor no-one will take you for a
+&amp;quot;&lt;a href=&quot;http://www.urbandictionary.com/define.php?term=Squid&quot;&gt;squid&lt;/a&gt;&amp;quot;. However the old
+Bell advertising slogan seems a bit hollow now, as the crafty consumer can protect their
+priceless head with a 5-star rated helmet for as little as 60 GBP (100 USD).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p style=&quot;text-align:right; font-size: .85rem;&quot;&gt;Full code to reproduce these
+plots and analysis will be available on
+&lt;a href=&quot;https://github.com/blmoore/blogR&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Transformation of wordpress into jekyll</title>

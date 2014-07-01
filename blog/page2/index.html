@@ -5,6 +5,8 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
+  
+
   <!-- Google fonts -->
   <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600" rel="stylesheet" type="text/css">
@@ -83,6 +85,27 @@
 <div class="container content">
 
 <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/blog/prng-seeds">
+        What are the most common RNG seeds used in R scripts on Github?
+      </a>
+    </h1>
+
+    <span class="post-date-paginate">06 Mar 2014</span>
+
+    <p>In the R programming language, the random number generator (RNG) is seeded each session using the current time and process ID. Via the magic of the popular <a href="https://en.wikipedia.org/wiki/Mersenne_twister" target="_blank">Mersenne Twister PRNG</a>, the values stored in <code>.Random.seed</code> are used sequentially each time "randomness" is invoked in a function. This means, of course, that the same function run in different R sessions can produce varying results, and in the case of modelling a system sensitive to initial conditions the observed differences could be huge. </p>
+
+    <p style="text-align:right;">
+      <a href="/blog/prng-seeds"
+      style="
+      padding: .1rem 1rem;
+      text-shadow: 1px 1px #fff,
+      1px 2px #ccc;">[full post]</a>
+    </p>
+
+  </div>
   
   <div class="post">
     <h1 class="post-title">

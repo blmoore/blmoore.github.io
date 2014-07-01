@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://blmoore.github.io/motorcycle-helmet-safety-price</loc>
+    <lastmod>2014-07-01T00:00:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://blmoore.github.io/wordpress-to-jekyll</loc>
     <lastmod>2014-06-21T00:00:00+01:00</lastmod>
     <priority>0.8</priority>
@@ -65,14 +71,14 @@
   
   <url>
     <loc>http://blmoore.github.io/404.html</loc>
-    <lastmod>2014-06-21T17:27:26+01:00</lastmod>
+    <lastmod>2014-07-01T22:13:28+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://blmoore.github.io/</loc>
-    <lastmod>2014-06-21T17:27:26+01:00</lastmod>
+    <lastmod>2014-07-01T22:13:28+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
