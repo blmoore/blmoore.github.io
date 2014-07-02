@@ -96,7 +96,7 @@ more protective, and if so to what degree?</p>
 
 <p>Overall yes, there&#39;s a non-zero linear regression coefficient that suggests each additional
 £ spent on a helmet returns 2 &times; 10<sup>-4</sup> SHARP rating points. It&#39;s
-worth noting are that this trend explains a measly 6% of the variance in helmet ratings and,
+worth noting that this trend explains a measly 6% of the variance in helmet ratings and,
 more interestingly, the y-intercept is a fairly decent 3.1 rating, suggesting there are some
 cheap but highly rated helmets in the dataset.</p>
 

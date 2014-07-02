@@ -4,7 +4,7 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2014-07-01T22:44:17+01:00</updated>
+ <updated>2014-07-02T15:57:29+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
@@ -94,7 +94,7 @@ more protective, and if so to what degree?&lt;/p&gt;
 
 &lt;p&gt;Overall yes, there&amp;#39;s a non-zero linear regression coefficient that suggests each additional
 £ spent on a helmet returns 2 &amp;times; 10&lt;sup&gt;-4&lt;/sup&gt; SHARP rating points. It&amp;#39;s
-worth noting are that this trend explains a measly 6% of the variance in helmet ratings and,
+worth noting that this trend explains a measly 6% of the variance in helmet ratings and,
 more interestingly, the y-intercept is a fairly decent 3.1 rating, suggesting there are some
 cheap but highly rated helmets in the dataset.&lt;/p&gt;
 
