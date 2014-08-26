@@ -4,7 +4,7 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2014-08-26T22:35:32+01:00</updated>
+ <updated>2014-08-26T23:07:06+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
@@ -23,7 +23,7 @@
 
 &lt;h2&gt;The data&lt;/h2&gt;
 
-&lt;p&gt;Anthony Wells (&lt;a href=&quot;https://twitter.com/anthonyjwells&quot;&gt;&lt;a href=&#39;https://github.com/anthonyjwells&#39; class=&#39;user-mention&#39;&gt;@anthonyjwells&lt;/a&gt;&lt;/a&gt;) of YouGov has put together &lt;a href=&quot;http://ukpollingreport.co.uk/scottish-independence-referendum&quot;&gt;a table&lt;/a&gt; of survey results dating back to January 2012. Without too much hassle we can build a messy &lt;code&gt;data.frame&lt;/code&gt; from this in R via the &lt;code&gt;XML&lt;/code&gt; package:&lt;/p&gt;
+&lt;p&gt;Anthony Wells (@&lt;a href=&quot;https://twitter.com/anthonyjwells&quot;&gt;anthonyjwells&lt;/a&gt;) of YouGov has put together &lt;a href=&quot;http://ukpollingreport.co.uk/scottish-independence-referendum&quot;&gt;a table&lt;/a&gt; of survey results dating back to January 2012. Without too much hassle we can build a messy &lt;code&gt;data.frame&lt;/code&gt; from this in R via the &lt;code&gt;XML&lt;/code&gt; package:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;polls &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; readHTMLTable&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://ukpollingreport.co.uk/scottish-independence-referendum&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; skip.rows&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
 colnames&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;polls&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;pollster&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;yes&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;no&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
                      &lt;span class=&quot;s&quot;&gt;&amp;quot;non-voting&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;dontknow&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;yessplit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
