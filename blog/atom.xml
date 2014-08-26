@@ -4,7 +4,7 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2014-08-26T22:25:07+01:00</updated>
+ <updated>2014-08-26T22:30:42+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
@@ -19,7 +19,7 @@
    <id>http://blm.io/blog/scottish_independence</id>
    <content type="html">&lt;p&gt;Living in Edinburgh it&amp;#39;s been hard to avoid the build-up to Scotland&amp;#39;s referendum on independence. On September 18&lt;sup&gt;th&lt;/sup&gt; 2014, less than a month away as I write this, people living in Scotland will go to the polls to answer the question: Should Scotland be an independent country?&lt;/p&gt;
 
-&lt;p&gt;Over the last couple of years there&amp;#39;s been a good amount of media coverage and &amp;mdash; more interestingly, from my point of view &amp;mdash; repeat polls to gauge opinion by various newspapers and tv stations. This invites an obvious question: how has the mood in Scotland varied over time with respect to a yes/no vote? Can we detect any biases among those publishing polls.&lt;/p&gt;
+&lt;p&gt;Over the last couple of years there&amp;#39;s been a good amount of media coverage and &amp;mdash; more interestingly, from my point of view &amp;mdash; repeat polls to gauge opinion by various newspapers and tv stations. This invites an obvious question: how has the mood in Scotland varied over time with respect to a yes/no vote? And can we detect any biases among those publishing polls?&lt;/p&gt;
 
 &lt;h2&gt;The data&lt;/h2&gt;
 
@@ -37,7 +37,7 @@ polls
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Polls over time&lt;/h2&gt;
 
-&lt;p&gt;After a bit of data &lt;a href=&quot;http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html&quot;&gt;&amp;quot;janitor work&amp;quot;&lt;/a&gt;, we can visualise the poll trends over time. Given sampling error and other sources of noise (though I think these sample sizes tend to be decent), a loess model can pick out the long-term terms.&lt;/p&gt;
+&lt;p&gt;After a bit of data &lt;a href=&quot;http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html&quot;&gt;&amp;quot;janitor work&amp;quot;&lt;/a&gt;, we can visualise the poll trends over time. Given sampling error and other sources of noise (though I think these sample sizes tend to be decent), a loess model can pick out the long-term trends.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/blog/img/indyref_trends.png&quot; target=&quot;_blank&quot;&gt;
 &lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/indyref_trends_thumb.png&quot; /&gt;

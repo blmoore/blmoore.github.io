@@ -21,7 +21,7 @@
 		<description><![CDATA[
 		   <p>Living in Edinburgh it&#39;s been hard to avoid the build-up to Scotland&#39;s referendum on independence. On September 18<sup>th</sup> 2014, less than a month away as I write this, people living in Scotland will go to the polls to answer the question: Should Scotland be an independent country?</p>
 
-<p>Over the last couple of years there&#39;s been a good amount of media coverage and &mdash; more interestingly, from my point of view &mdash; repeat polls to gauge opinion by various newspapers and tv stations. This invites an obvious question: how has the mood in Scotland varied over time with respect to a yes/no vote? Can we detect any biases among those publishing polls.</p>
+<p>Over the last couple of years there&#39;s been a good amount of media coverage and &mdash; more interestingly, from my point of view &mdash; repeat polls to gauge opinion by various newspapers and tv stations. This invites an obvious question: how has the mood in Scotland varied over time with respect to a yes/no vote? And can we detect any biases among those publishing polls?</p>
 
 <h2>The data</h2>
 
@@ -39,7 +39,7 @@ polls
 </code></pre></div>
 <h2>Polls over time</h2>
 
-<p>After a bit of data <a href="http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html">&quot;janitor work&quot;</a>, we can visualise the poll trends over time. Given sampling error and other sources of noise (though I think these sample sizes tend to be decent), a loess model can pick out the long-term terms.</p>
+<p>After a bit of data <a href="http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html">&quot;janitor work&quot;</a>, we can visualise the poll trends over time. Given sampling error and other sources of noise (though I think these sample sizes tend to be decent), a loess model can pick out the long-term trends.</p>
 
 <p><a href="/blog/img/indyref_trends.png" target="_blank">
 <img class="imgfull" src="/blog/img/indyref_trends_thumb.png" />
