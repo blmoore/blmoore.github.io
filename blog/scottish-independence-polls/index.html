@@ -111,7 +111,7 @@ polls
 </code></pre></div>
 <h2>Polls over time</h2>
 
-<p>After a bit of data <a href="http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html">&quot;janitor work&quot;</a>, we can visualise the poll trends over time. Given sampling error and other sources of noise (though I think these sample sizes tend to be decent), a loess model can pick out the long-term trends.</p>
+<p>After a bit of data <a href="http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html">&quot;janitor work&quot;</a>, we can visualise the poll trends over time. Given sampling error and other sources of noise, a loess model can pick out the long-term trends.</p>
 
 <p><a href="/blog/img/indyref_trends.png" target="_blank">
 <img class="imgfull" src="/blog/img/indyref_trends_thumb.png" />
@@ -121,7 +121,7 @@ polls
 
 <p>If we accept the above models as a reasonable estimate of the expected poll response at a given time, we can analyse the residuals of actual poll results and look for systematic biases. In theory, with a respectable sample size (all have ~1000) and a reasonably well-stratified sampling method, we might expect polls results to be roughly normally distributed around the expected polls result &mdash; regardless of who comissioned or performed the poll.</p>
 
-<p>Here are the distributions per poll publisher or commisioner, note that these are only for those who commisioned more than 1 poll in this dataset, and only those that my regex has been able to pick out.</p>
+<p>Here are the distributions per poll publisher or commisioner, note that these are only for those who commisioned more than a single poll in this dataset, and only those that my regex has been able to pick out.</p>
 
 <p><a href="/blog/img/indyref_YesBiasNewspapers.png" target="_blank">
 <img class="imgfull" src="/blog/img/indyref_YesBiasNewspapers_thumb.png" />
@@ -156,7 +156,7 @@ Source<span class="o">:</span> local data frame <span class="p">[</span><span cl
 <img class="imgright" src="/blog/img/indyref_YesBiasPollsters_tiny.png" />
 </a></p>
 
-<p>Caveats here are that different polls have used different question sets, methods etc. so this isn&#39;t evidence for anything underhanded <em>per se</em>. We can look at the same thing per pollster, i.e. it seems reasonable to expect that while newspapers and the SNP might have reasons to publish polls in their favour, people conducting the polls should generally be more or less indifferently.</p>
+<p>Caveats here are that different polls have used different question sets, methods etc. so this isn&#39;t evidence for anything underhanded <em>per se</em>. We can look at the same thing per pollster, i.e. it seems reasonable to expect that while newspapers and the SNP might have reasons to publish polls in their favour, people conducting the polls should generally be more or less indifferent.</p>
 
 <p>The results again are hampered by a small number of datapoints per pollster, but  the pollster <a href="https://www.panelbase.net/index.aspx">Panelbase</a> emerges as one providing significantly yes-skewed poll results (p &lt; 6 &times; 10<sup>-6</sup>). Interestingly they may be the only pollster here to have a <a href="https://www.panelbase.net/rewards.aspx">rewards system</a> inplace. The only other significantly non-zero biased results come again from TNS BMRB, who published most of their own polls in the above graph.</p>
 

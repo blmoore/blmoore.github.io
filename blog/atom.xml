@@ -4,7 +4,7 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2014-08-26T22:30:42+01:00</updated>
+ <updated>2014-08-26T22:35:32+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
@@ -37,7 +37,7 @@ polls
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Polls over time&lt;/h2&gt;
 
-&lt;p&gt;After a bit of data &lt;a href=&quot;http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html&quot;&gt;&amp;quot;janitor work&amp;quot;&lt;/a&gt;, we can visualise the poll trends over time. Given sampling error and other sources of noise (though I think these sample sizes tend to be decent), a loess model can pick out the long-term trends.&lt;/p&gt;
+&lt;p&gt;After a bit of data &lt;a href=&quot;http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html&quot;&gt;&amp;quot;janitor work&amp;quot;&lt;/a&gt;, we can visualise the poll trends over time. Given sampling error and other sources of noise, a loess model can pick out the long-term trends.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/blog/img/indyref_trends.png&quot; target=&quot;_blank&quot;&gt;
 &lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/indyref_trends_thumb.png&quot; /&gt;
@@ -47,7 +47,7 @@ polls
 
 &lt;p&gt;If we accept the above models as a reasonable estimate of the expected poll response at a given time, we can analyse the residuals of actual poll results and look for systematic biases. In theory, with a respectable sample size (all have ~1000) and a reasonably well-stratified sampling method, we might expect polls results to be roughly normally distributed around the expected polls result &amp;mdash; regardless of who comissioned or performed the poll.&lt;/p&gt;
 
-&lt;p&gt;Here are the distributions per poll publisher or commisioner, note that these are only for those who commisioned more than 1 poll in this dataset, and only those that my regex has been able to pick out.&lt;/p&gt;
+&lt;p&gt;Here are the distributions per poll publisher or commisioner, note that these are only for those who commisioned more than a single poll in this dataset, and only those that my regex has been able to pick out.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/blog/img/indyref_YesBiasNewspapers.png&quot; target=&quot;_blank&quot;&gt;
 &lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/indyref_YesBiasNewspapers_thumb.png&quot; /&gt;
@@ -82,7 +82,7 @@ Source&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; local data frame &lt;span c
 &lt;img class=&quot;imgright&quot; src=&quot;/blog/img/indyref_YesBiasPollsters_tiny.png&quot; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Caveats here are that different polls have used different question sets, methods etc. so this isn&amp;#39;t evidence for anything underhanded &lt;em&gt;per se&lt;/em&gt;. We can look at the same thing per pollster, i.e. it seems reasonable to expect that while newspapers and the SNP might have reasons to publish polls in their favour, people conducting the polls should generally be more or less indifferently.&lt;/p&gt;
+&lt;p&gt;Caveats here are that different polls have used different question sets, methods etc. so this isn&amp;#39;t evidence for anything underhanded &lt;em&gt;per se&lt;/em&gt;. We can look at the same thing per pollster, i.e. it seems reasonable to expect that while newspapers and the SNP might have reasons to publish polls in their favour, people conducting the polls should generally be more or less indifferent.&lt;/p&gt;
 
 &lt;p&gt;The results again are hampered by a small number of datapoints per pollster, but  the pollster &lt;a href=&quot;https://www.panelbase.net/index.aspx&quot;&gt;Panelbase&lt;/a&gt; emerges as one providing significantly yes-skewed poll results (p &amp;lt; 6 &amp;times; 10&lt;sup&gt;-6&lt;/sup&gt;). Interestingly they may be the only pollster here to have a &lt;a href=&quot;https://www.panelbase.net/rewards.aspx&quot;&gt;rewards system&lt;/a&gt; inplace. The only other significantly non-zero biased results come again from TNS BMRB, who published most of their own polls in the above graph.&lt;/p&gt;
 
