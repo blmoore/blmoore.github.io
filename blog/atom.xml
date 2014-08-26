@@ -4,13 +4,108 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2014-08-25T23:24:33+01:00</updated>
+ <updated>2014-08-26T22:22:14+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
    <email>root@blm.io</email>
  </author>
 
+ 
+ <entry>
+   <title>Scottish independence: what do the polls say?</title>
+   <link href="http://blm.io/blog/scottish-independence-polls"/>
+   <updated>2014-08-26T00:00:00+01:00</updated>
+   <id>http://blm.io/blog/scottish_independence</id>
+   <content type="html">&lt;p&gt;Living in Edinburgh it&amp;#39;s been hard to avoid the build-up to Scotland&amp;#39;s referendum on independence. On September 18&lt;sup&gt;th&lt;/sup&gt; 2014, less than a month away as I write this, people living in Scotland will go to the polls to answer the question: Should Scotland be an independent country?&lt;/p&gt;
+
+&lt;p&gt;Over the last couple of years there&amp;#39;s been a good amount of media coverage and &amp;mdash; more interestingly, from my point of view &amp;mdash; repeat polls to gauge opinion by various newspapers and tv stations. This invites an obvious question: how has the mood in Scotland varied over time with respect to a yes/no vote? Can we detect any biases among those publishing polls.&lt;/p&gt;
+
+&lt;h2&gt;The data&lt;/h2&gt;
+
+&lt;p&gt;Anthony Wells (&lt;a href=&quot;https://twitter.com/anthonyjwells&quot;&gt;&lt;a href=&#39;https://github.com/anthonyjwells&#39; class=&#39;user-mention&#39;&gt;@anthonyjwells&lt;/a&gt;&lt;/a&gt;) of YouGov has put together &lt;a href=&quot;http://ukpollingreport.co.uk/scottish-independence-referendum&quot;&gt;a table&lt;/a&gt; of survey results dating back to January 2012. Without too much hassle we can build a messy &lt;code&gt;data.frame&lt;/code&gt; from this in R via the &lt;code&gt;XML&lt;/code&gt; package:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;polls &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; readHTMLTable&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://ukpollingreport.co.uk/scottish-independence-referendum&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; skip.rows&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+colnames&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;polls&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;pollster&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;yes&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;no&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                     &lt;span class=&quot;s&quot;&gt;&amp;quot;non-voting&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;dontknow&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;yessplit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+polls
+&lt;span class=&quot;c1&quot;&gt;#                                   pollster     date yes no ...&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 1                     Survation/Daily Mail 07/08/14  37 50 ...&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 2                           YouGov/Sun (3) 07/08/14  35 55 ...&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 3                                 TNS-BMRB 07/08/14  32 45 ...  &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 4                       Ipsos MORI/STV (1) 03/08/14  40 54 ...&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 5                 Survation/Mail on Sunday 01/08/14  40 46 ...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Polls over time&lt;/h2&gt;
+
+&lt;p&gt;After a bit of data &lt;a href=&quot;http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html&quot;&gt;&amp;quot;janitor work&amp;quot;&lt;/a&gt;, we can visualise the poll trends over time. Given sampling error and other sources of noise (though I think these sample sizes tend to be decent), a loess model can pick out the long-term terms.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/blog/img/indyref_trends.png&quot; target=&quot;_blank&quot;&gt;
+&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/indyref_trends_thumb.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Pollster biases&lt;/h2&gt;
+
+&lt;p&gt;If we accept the above models as a reasonable estimate of the expected poll response at a given time, we can analyse the residuals of actual poll results and look for systematic biases. In theory, with a respectable sample size (all have ~1000) and a reasonably well-stratified sampling method, we might expect polls results to be roughly normally distributed around the expected polls result &amp;mdash; regardless of who comissioned or performed the poll.&lt;/p&gt;
+
+&lt;p&gt;Here are the distributions per poll publisher or commisioner, note that these are only for those who commisioned more than 1 poll in this dataset, and only those that my regex has been able to pick out.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/blog/img/indyref_YesBiasNewspapers.png&quot; target=&quot;_blank&quot;&gt;
+&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/indyref_YesBiasNewspapers_thumb.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The sample sizes here are generally too small to claim they are polling significantly above or below expectation, save for The Sunday Times (significantly more pro-Independence than expected, p = 7 &amp;times; 10&lt;sup&gt;-4&lt;/sup&gt;) and &lt;a href=&quot;http://www.tns-bmrb.co.uk/home&quot;&gt;TNS BMRB&lt;/a&gt;, a &amp;quot;think tank&amp;quot; with offices in London and Edinburgh who seem to both perform and publish their own polls (p &amp;lt; 1 &amp;times; 10&lt;sup&gt;-3&lt;/sup&gt;).&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# dplyr example (featuring messy subset abuse)&lt;/span&gt;
+group_by&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;subset&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;polls&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; response &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Yes&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;
+         newspaper &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; ordering&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;ordering&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;count &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;newspaper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt;
+         newspaper&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+  summarise&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;p&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;wilcox.test&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;residual&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; mu&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;p.value&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+Source&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; local data frame &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;14&lt;/span&gt; x &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#              newspaper            p&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 1             TNS BMRB 0.0009765625&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 2             Ashcroft 0.5000000000&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 3   Scotland on Sunday 0.2500000000&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 4       Mail on Sunday 0.6250000000&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 5                  Sun 0.1250000000&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 6                Times 0.9101562500&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 7                  STV 0.8750000000&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 8           Daily Mail 0.5000000000&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 9         Daily Record 0.0625000000&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 10  Scotsman on Sunday 0.1250000000&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 11        Sunday Times 0.0007324219&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 12 Wings Over Scotland 0.5000000000&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 13         YesScotland 0.5000000000&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 14                 SNP 0.5000000000&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/blog/img/indyref_YesBiasPollsters.png&quot; target=&quot;_blank&quot;&gt;
+&lt;img class=&quot;imgright&quot; src=&quot;/blog/img/indyref_YesBiasPollsters_tiny.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Caveats here are that different polls have used different question sets, methods etc. so this isn&amp;#39;t evidence for anything underhanded &lt;em&gt;per se&lt;/em&gt;. We can look at the same thing per pollster, i.e. it seems reasonable to expect that while newspapers and the SNP might have reasons to publish polls in their favour, people conducting the polls should generally be more or less indifferently.&lt;/p&gt;
+
+&lt;p&gt;The results again are hampered by a small number of datapoints per pollster, but  the pollster &lt;a href=&quot;https://www.panelbase.net/index.aspx&quot;&gt;Panelbase&lt;/a&gt; emerges as one providing significantly yes-skewed poll results (p &amp;lt; 6 &amp;times; 10&lt;sup&gt;-6&lt;/sup&gt;). Interestingly they may be the only pollster here to have a &lt;a href=&quot;https://www.panelbase.net/rewards.aspx&quot;&gt;rewards system&lt;/a&gt; inplace. The only other significantly non-zero biased results come again from TNS BMRB, who published most of their own polls in the above graph.&lt;/p&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;What do the polls say? Well, the majority of Scots have been against independence for the last couple of years (and much longer before this), however the trends have been more variable in recent months and the outcome of the referendum is expected to be close.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/blog/img/indyref_yesPercent.png&quot; target=&quot;_blank&quot;&gt;
+&lt;img class=&quot;imgleft&quot; src=&quot;/blog/img/indyref_yesPercent_tiny.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Since we have a (poorly fitting) linear model here we can &amp;mdash; I must stress this is tongue-in-cheek &amp;mdash; extrapolate to referendum day and get a prediction of the referendum result:&lt;/p&gt;
+
+&lt;p style=&quot;font-size: larger; text-align:center&quot;&gt;42.9% Yes&lt;/p&gt;
+
+&lt;p style=&quot;font-size: smaller; text-align:center;&quot;&gt;(99% confidence interval: 40.9 &lt; &lt;i&gt;x&lt;/i&gt; &lt; 45.0)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p style=&quot;text-align:right; font-size: .85rem;&quot;&gt;R code to reproduce this analysis is available on
+&lt;a href=&quot;https://github.com/blmoore/blogR&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Are more expensive motorcycle helmets safer?</title>

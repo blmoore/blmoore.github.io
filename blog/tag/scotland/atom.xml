@@ -3,7 +3,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
    
-    <title>blm.io - Category: politics</title>
+   	<title>blm.io - Tag: scotland</title>
    
    <link>http://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
@@ -106,66 +106,6 @@ Source<span class="o">:</span> local data frame <span class="p">[</span><span cl
 
 <p style="text-align:right; font-size: .85rem;">R code to reproduce this analysis is available on
 <a href="https://github.com/blmoore/blogR" target="_blank">Github</a>.</p>
-
-		]]></description>
-	  </item>
-    
-	  <item>
-        <title>Guardian data blog — UK general election analysis in R</title>
-        <link>http://blm.io/blog/uk-elections</link>
-		<author>benjaminlmoore</author>
-		<pubDate>2014-03-18T00:00:00+00:00</pubDate>
-		<guid>http://blm.io/blog/uk-elections</guid>
-		<description><![CDATA[
-		   <p>The Guardian newspaper has for a few years been running a <a title="guardian data blog" href="http://www.theguardian.com/data" target="_blank">data blog</a> and has built up a massive repository of (often) well-curated datasets on a huge number of topics. They even have an <a title="list of data sets made available by the guardian" href="http://www.theguardian.com/news/datablog/interactive/2013/jan/14/all-our-datasets-index" target="_blank">indexed list</a> of all data sets they've put together or reused in their articles.</p>
-
-<p>It's a great repository of interesting data for exploratory analysis, and there's a low barrier to entry in terms of getting the data into a useful form. Here's an example using UK election polling data collected over the last thirty years.</p>
-
-<h2>ICM polling data</h2>
-
-<p>The Guardian and <a title="ICM research" href="http://www.icmresearch.com/" target="_blank">ICM research</a> have conducted monthly polls on voting intentions since 1984, usually with a sample size of between 1,000 and 1,500 people. It's not made obvious how these polls are conducted (cold-calling?) but for what it's worth ICM is a member of the <a title="British Polling Council Wikipedia page" href="http://www.britishpollingcouncil.org/" target="_blank">British Polling Council</a>, and so hopefully tries to monitor and correct for things like the "<a title="shy tory factor" href="https://en.wikipedia.org/wiki/Shy_Tory_Factor" target="_blank">Shy Tory Factor</a>"—the observation that Conservative voters supposedly have (or had prior to '92)  a greater tendency to conceal their voting intentions than Labour supporters.</p>
-
-<h2>Preprocessing</h2>
-
-<p>The data is made available from The Guardian as a <code>.csv</code> file via Google spreadsheets <a title="data" href="https://docs.google.com/spreadsheet/ccc?key=0AonYZs4MzlZbcGhOdG0zTG1EWkVPOEY3OXRmOEIwZmc#gid=0" target="_blank">here</a> and requires minimal cleanup, cut the source information from the end of the file and you can open it up in R.</p>
-<div class="highlight"><pre><code class="language-r" data-lang="r">sop <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&quot;StateOfTheParties.csv&quot;</span><span class="p">,</span> stringsAsFactors<span class="o">=</span><span class="k-Variable">F</span><span class="p">)</span>
-<span class="c1">## Data cleanup</span>
-sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">&lt;-</span> apply<span class="p">(</span>sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">],</span> <span class="m">2</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> as.numeric<span class="p">(</span>gsub<span class="p">(</span><span class="s">&quot;%&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> x<span class="p">)))</span>
-sop<span class="p">[,</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> as.Date<span class="p">(</span>sop<span class="p">[,</span><span class="m">1</span><span class="p">],</span> format<span class="o">=</span><span class="s">&quot;%d-%m-%Y&quot;</span><span class="p">)</span>
-colnames<span class="p">(</span>sop<span class="p">)[</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">&quot;Date&quot;</span>
-<span class="c1"># correct for some rounding errors leading to 101/99 %</span>
-sop<span class="o">$</span>rsum <span class="o">&lt;-</span> apply<span class="p">(</span>sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">],</span> <span class="m">1</span><span class="p">,</span> sum<span class="p">)</span>
-table<span class="p">(</span>sop<span class="o">$</span>rsum<span class="p">)</span>
-sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">&lt;-</span> sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">/</span> sop<span class="o">$</span>rsum
-</code></pre></div>
-<p>Then after <code>melt</code>ing the data.frame down (full code at the end of the post), you can get a quick overview with <code>ggplot2</code>.</p>
-
-<p><a href="http://benjaminlmoore.files.wordpress.com/2014/03/area_plot.png"><img class="imgfull" alt="UK general election overview 1984-2014" src="/blog/img/area_plot.png" width="503" height="344"/></a></p>
-
-<h2>Election breakdown</h2>
-
-<p>The area plot is a nice overview but not that useful quantitatively. Given that the dataset includes general election results as well as opinion polling, it's straightforward to split the above plot by this important factor. I also found it useful to convert absolute dates to be relative to the election they precede. R has an object class, <code>difftime</code>, which makes this easy to accomplish and calling <code>as.numeric()</code> on a difftime object converts it to raw number of days (handily accounting for things like leap years).</p>
-
-<p>These processing steps lead to a clearer graph with more obvious stories, such as the gradual and monotonic decline of support for Labour during the Blair years. </p>
-
-<p><a href="http://benjaminlmoore.files.wordpress.com/2014/03/splitbyelection_2.png"><img src="/blog/img/splitbyelection_2.png" alt="UK general election data split by election period" width="500" height="382" class="imgfull" /></a></p>
-
-<p><strong>NB</strong> Facet headers show the election year and result of the election with which the (preceding) points are plotted relative to.</p>
-
-<h2>Next election's result</h2>
-
-<p>I originally wanted to look at this data to get a feel for how things are looking before next year's (2015) general election, maybe even running some predictive models (obviously I'm no <a href="http://fivethirtyeight.com/" title="fivethirtyeight" target="_blank">fivethirtyeight.com</a>). </p>
-
-<p>However, graphing the trends of public support for the two main UK parties hints it's unlikely to be a fruitful endeavour at this point, and with the above graphs showing an ominous increasing support for "other" parties (not accidentally coloured <a href="https://www.ukip.org/" title="ukip" target="_blank">purple</a>), it looks like with about 400 days to go the 2015 general election is still all to play for.</p>
-
-<p><a href="http://benjaminlmoore.files.wordpress.com/2014/03/lab_con.png"><img src="/blog/img/lab_con.png" alt="lab_con" width="500" height="607" class="imgfull" /></a></p>
-
-<hr />
-
-<p style="text-align:right; font-size:.85rem;">Reproduce and improve this analysis with help from
-<a href="https://gist.github.com/blmoore/9631779" target="_blank">this gist</a>.<br \>
-This post was originally published on my
-<a href="http://benjaminlmoore.wordpress.com/2014/03/18/guardian-data-blog-uk-elections/" target="_blank">Wordpress blog</a>.</p>
 
 		]]></description>
 	  </item>
