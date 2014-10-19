@@ -25,7 +25,7 @@ d3.json("js/datarea.json", function(error, json) {
 "y": "Monthly growth",
 "type": "bubble",
 "col": "Grade",
-"groups": [ "sector", "Grade" ],
+"groups": [ "Sector", "Grade" ],
 "id": "chart34fdeddb85"
 };
 
