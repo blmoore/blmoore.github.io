@@ -40,13 +40,6 @@ d3.json("js/datarea.json", function(error, json) {
   var svg = dimple.newSvg("#" + opts.id, width, height);
 
   var myChart = new dimple.chart(svg, data);
-  if (opts.bounds) {
-    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
-  }
-  //dimple allows use of custom CSS with noFormats
-  if(opts.noFormats) { myChart.noFormats = opts.noFormats; }
-  //for markimekko and addAxis also have third parameter measure
-  //so need to evaluate if measure provided
 
   //function to build axes
   function buildAxis(position,layer){
@@ -206,4 +199,10 @@ d3.json("js/datarea.json", function(error, json) {
     myChart.setStoryboard(opts.storyboard);
   };
   myChart.draw();
+  // add a title
+  svg.append("text")
+   .attr("x", c._xPixels() + c._widthPixels() / 2)
+   .attr("y", c._yPixels() - 20)
+   .style("text-anchor", "middle")
+   .text("Investment grading of positive growth sectors")
 });
