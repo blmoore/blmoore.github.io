@@ -156,14 +156,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 				<p>
 					We can zoom in on just the city itself, where most of the action is. It's perhaps possible to see an
-					accumulation of brightness throughout the time series, indicating price rises — but we're getting ahead of ourselves.
+					accumulation of brightness throughout the time series, suggesting price rises, but we'll investigate this quantatively in the next section.
 				</p>
 				<p>
 					<!-- to delete: http://gfycat.com/delete/BeautifulColossalIberianchiffchaff -->
 					<img class="gfyitem" data-id="RecentDearestGelding" />
 
 				</p>
-
 			</div>
 		</section>
 
@@ -263,7 +262,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<p>
 		Another consideration is variability, not captured in the ARIMA models <code>drift</code> parameter. Here we can borrow from quantitative finance, and calculate the <a href="http://www.tradingmarkets.com/glossary/historical_volatility"
 		target="_blank">historical volatility</a> of house prices within a sector.
+		<div id = 'chart34fdeddb85' class = 'rChart dimple'></div>
 	</p>
+	
 	<p>
 		I pre-computed these two metrics for all sectors in the dataset, then used their empirical cumulative distribution functions to get a reverse quantile for each sector. That is, given a single sector's growth forecast, return its rank among all sectors, scaled from [0, 1]. Combining growth with volatility (currently equally weighted) can give a simple "investment grade"	heuristic &mdash; an output metric that can easily be extended and re-weighted based on future updated data.
 	</p>
@@ -280,7 +281,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 	<p>
 		These five include parts of the South London suburbs of Upper Tooting and Morden, Walthamstow, as well as Brockley, whose <a href="https://en.wikipedia.org/wiki/Brockley_railway_station" target="_blank">train station</a> within SE4 1 became part of the London Overground network in 2010.
-<div id = 'chart34fdeddb85' class = 'rChart dimple'></div>
 </p>
 
 	<p>
