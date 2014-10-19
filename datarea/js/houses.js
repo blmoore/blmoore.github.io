@@ -1,5 +1,5 @@
 
-d3.json("javascripts/json/datarea.json", function(error, json) {
+d3.json("js/datarea.json", function(error, json) {
   if (error) return console.warn(error);
   data = json;
 
