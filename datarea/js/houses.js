@@ -185,7 +185,7 @@ d3.json("js/datarea.json", function(error, json) {
   if (opts.layers.length > 0) {
     opts.layers.forEach(function(layer){
       buildSeries(layer, true);
-    })
+    });
   }
   //unsure if this is best but if legend is provided (not empty) then evaluate
   if(d3.keys(opts.legend).length > 0) {
@@ -201,8 +201,8 @@ d3.json("js/datarea.json", function(error, json) {
   myChart.draw();
   // add a title
   svg.append("text")
-   .attr("x", c._xPixels() + c._widthPixels() / 2)
-   .attr("y", c._yPixels() - 20)
+   .attr("x", myChart._xPixels() + myChart._widthPixels() / 2)
+   .attr("y", myChart._yPixels() - 20)
    .style("text-anchor", "middle")
-   .text("Investment grading of positive growth sectors")
+   .text("Investment grading of positive growth sectors");
 });
