@@ -1,0 +1,477 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>datarea | SummerDataChallenge entry by blm</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.scrolly.min.js"></script>
+	<script src="js/jquery.scrollzer.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/skel-layers.min.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/Chart.min.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<!-- dimple.js scatter -->
+	<script src='//d3js.org/d3.v3.min.js' type='text/javascript'></script>
+  <script src='//dimplejs.org/dist/dimple.v2.1.0.min.js' type='text/javascript'></script>
+  <script src="javascripts/houses.js" type="text/javascript"></script>
+
+	<!-- favicon -->
+	<link rel="icon"
+	type="image/png"
+	href="favicon.ico">
+	<!-- google fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Comfortaa:300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<noscript>
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-wide.css" />
+	</noscript>
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+	<!-- gfycat -->
+	<script>
+	(function(d, t) {
+		var g = d.createElement(t),
+		s = d.getElementsByTagName(t)[0];
+		g.src = 'http://assets.gfycat.com/js/gfyajax-0.517d.js';
+		s.parentNode.insertBefore(g, s);
+	}(document, 'script'));
+	</script>
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+		// create a map in the "map" div, set the view to a given place and zoom
+		var map = L.map('map').setView([51.45678, -0.1953], 13);
+
+		// add an OpenStreetMap tile layer
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+		// add a marker in the given location, attach some popup content to it and open the popup
+		L.marker([51.45678, -0.1953]).addTo(map)
+		.bindPopup('SW18&nbsp;4HU')
+		.openPopup();
+	});
+	</script>
+</head>
+<body>
+
+	<!-- Header -->
+	<div id="header" class="skel-layers-fixed">
+
+		<div class="top">
+			<!-- Logo -->
+			<div id="logo">
+				<span class="image avatar48"><img src="images/avatar.png" alt="" /></span>
+				<h1 id="title">Ben Moore</h1>
+				<p><a href="https://twitter.com/benjaminlmoore" target="_blank">@benjaminlmoore</a></p>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+			<ul>
+				<!-- <li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-arrow-up">Top</span></a></li> -->
+				<li><a href="#data" id="data-link" class="skel-layers-ignoreHref"><span class="icon fa-database">Data</span></a></li>
+				<li><a href="#insights" id="insights-link" class="skel-layers-ignoreHref"><span class="icon fa-bar-chart">Insights</span></a></li>
+				<li><a href="#product" id="product-link" class="skel-layers-ignoreHref"><span class="icon fa-cubes">Product</span></a></li>
+			</ul>
+		</nav>
+
+	</div>
+
+	<div class="bottom">
+
+		<!-- Social Icons -->
+		<ul class="icons">
+			<li><a href="http://blm.io" class="icon fa-home"><span class="label">blm.io</span></a></li>
+			<li><a href="https://twitter.com/benjaminlmoore" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="https://uk.linkedin.com/in/blmoore/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+			<li><a href="https://github.com/blmoore" class="icon fa-github"><span class="label">Github</span></a></li>
+			<li><a href="mailto:root@blm.io" class="icon fa-envelope"><span class="label">Email</span></a></li>
+		</ul>
+
+	</div>
+
+</div>
+
+<!-- Main -->
+<div id="main">
+
+	<!-- Intro -->
+	<section id="top" class="one dark cover">
+		<div class="container">
+
+			<header>
+				<img src="images/logo3_hires.png" />
+				<h2 style="font-size: 4rem" class="alt">dat<span style="font-weight:700">area</span></h2>
+				<!-- semi-phonetics -->
+				<span style="font-style: italic">(day&middot;'tair-eya)</span>
+				<!-- alt: Real data on your real estate -->
+				<h2 style="font-size: 2.6rem">Democratising real estate investment</h2>
+				<p style="font-size: .85rem"><a href="http://summerdatachallenge.com/" target="_blank">#SummerDataChallenge</a> entry by
+					<a href="https://twitter.com/benjaminlmoore" target="_blank">@benjaminlmoore</a>, University of Edinburgh, UK</p>
+					<br /><br /><br />
+				</header>
+
+				<footer>
+					<!-- <a href="#portfolio" class="button scrolly">Magna Aliquam</a> -->
+
+				</footer>
+
+			</div>
+		</section>
+
+		<!-- Portfolio -->
+		<section id="data" class="two">
+			<div class="container">
+
+				<!--	<header>
+				<h2>Data</h2>
+			</header> -->
+
+			<p>
+				The starting dataset for this work was the locations and prices of house sales in and around the City of London dating from January 2009 up until May 2014, a total of almost 1.4 million datapoints.
+				<!-- <blockquote> -->
+			</p>
+
+			<p>
+				To start, I visualised the data. Here's a time series of all the sales in the dataset, showing their 100 km
+				radius around the City of London. The brightness of each dot is proportional to the price of the house sale.</p>
+				<p>
+					<!-- Private URL to delete this Gfycat: http://gfycat.com/delete/UnluckySparklingGiraffe -->
+					<img class="gfyitem" data-id="HealthyThunderousBream" />
+				</p>
+
+				<p>
+					We can zoom in on just the city itself, where most of the action is. It's perhaps possible to see an
+					accumulation of brightness throughout the time series, indicating price rises — but we're getting ahead of ourselves.
+				</p>
+				<p>
+					<!-- to delete: http://gfycat.com/delete/BeautifulColossalIberianchiffchaff -->
+					<img class="gfyitem" data-id="RecentDearestGelding" />
+
+				</p>
+
+			</div>
+		</section>
+
+		<!-- Insights / results section -->
+		<section id="insights" class="three">
+			<div class="container">
+
+				<p>
+					Consider a case study: for whatever reason, we're interested in a
+					property located in the London postcode <a href="https://www.google.co.uk/maps/place/Wandsworth,+Wandsworth+Southside+%28W%29/@51.456726,-0.194721,13z/data=!4m2!3m1!1s0x48760f66a15fee9b:0x2f01bd0744eb6eea" target="_blank">SW18 4HU</a>, in Wandsworth, London
+					&mdash; just south of the river.
+				</p>
+
+				<!-- Static backup -->
+				<!--
+				<div style="width: 40%; margin: 0% 5%; float: right;">
+				<img style="max-width:100%; max-height:auto;" src="images/sw18_4hu.png" atl="Sunny Wandsworth"/>
+			</div> -->
+
+			<!-- leaflet.js insert -->
+			<div style="height: 10rem; width: 100%" id="map"></div>
+
+			<p style="margin: 5%;">
+				For some initial analysis, we can
+				visualise the distributions of past house sale prices within this tiny postcode area over the five years covered by the dataset,
+				and compare this with those of the encompassing zones by: <span title="The first letter or two of the postcode: AA" class="tooltip">area</span>,
+				<span class="tooltip" title="The first letter(s) and number(2): AA12">district</span> and
+				<span class="tooltip" title="Postcode minus letters suffix: AA12 3">sector</span>:
+			</p>
+
+			<!--
+			<div style="width: 90%; margin: 2% auto;" >
+			<canvas id="myChart" width="200" height="100"></canvas>
+			<script src="js/plots.js"></script>
+		</div>
+	-->
+
+	<div style="width: 95%; margin: 5% auto;">
+		<a href="images/pc2_full.png">
+			<img style="max-width:100%; max-height:auto;" src="images/pc2_full.png" />
+		</a>
+	</div>
+
+	<p>
+		This gives the "fractal context" for house prices of a given postcode:  &#9450; shows
+		that the <strong>SW</strong> area is the 4<sup>th</sup> most expensive area in London, but &#9312;
+		visualises the disparity within this locale. Zooming in to SW18 for &#9313;, we see that SW18 4 is the
+		lowest priced district in SW18, with the narrowest range of sale prices and a noticeable absence of
+		top-end sales. Finally at the local level, &#9314; identifies the full postcode area as around
+		the median for the sector.
+		</p>
+		<p>
+			This combination of plots gives a data-dense description of a property location up and down the postcode hierarchy.
+	</p>
+
+
+	<p>
+		<div style="width: 40%; margin: 1%; float:left;">
+			<a href="images/sw18_full.png">
+				<img style="max-width:100%; max-height:auto;" src="images/sw18_thumb.png" />
+			</a>
+		</div>
+		As well as the spatial data, we have temporal information that can be used to assess
+		house price variation over approximately 5 years covered in the dataset (2009&ndash;14).
+		Continuing with the case study above, we can visualise broad price trends across
+		area divisions first by using <a href="https://en.wikipedia.org/wiki/Local_regression" target="_blank">loess regression</a>.
+	</p>
+
+	<p>
+		This visualisation gives an overview of an area's price history: is it recently gentrified or within an
+		area in relative stagnation? In this instance we can see the small area SW18 4HU has been tracking below its district (SW18) and
+		far below the SW area, but roughly in line with the SW18 4 sector, as hinted at above.
+	</p>
+
+	<p>
+		 Of particular interest to the real estate speculator is forecasting future price trends. Here I'm auto-selecting the most appropriate <a href="https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average"
+		target="_blank">autoregressive integrated moving average (ARIMA) model</a>, determined by <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion" target="_blank">Akaike information criterion</a> model selection, and optionally allowing for non-stationary timeseries. Each model is fit independently to a sector's monthly median house price time series &mdash; for example, here's the model and forecast for our example SW18 4 sector:
+	</p>
+
+	<div style="width: 75%; margin: 5% auto;">
+		<img style="max-width:100%; max-height:auto;" src="images/sw184_forecast_thumb.png" />
+	</div>
+
+	<p>
+		How do these projections compare to other sectors in the dataset? Here's a quick comparison with a random selection:
+	</p>
+
+	<div style="width: 90%; margin: 5% auto;">
+		<a href="images/grid_forecasts_full.png">
+			<img style="max-width:100%; max-height:auto;" src="images/grid_forecasts_thumb.png" />
+		</a>
+	</div>
+
+	<p>
+		The forecast for SW18 4 looks gooks good relative to this handful of other sectors, but we can go further and quantify this by calculating growth forecasts for each sector in the dataset (~2600), and seeing how it ranks relative to all other regions.
+	</p>
+	<p>
+		Another consideration is variability, not captured in the ARIMA models <code>drift</code> parameter. Here we can borrow from quantitative finance, and calculate the <a href="http://www.tradingmarkets.com/glossary/historical_volatility"
+		target="_blank">historical volatility</a> of house prices within a sector.
+	</p>
+	<p>
+		I pre-computed these two metrics for all sectors in the dataset, then used their empirical cumulative distribution functions to get a reverse quantile for each sector. That is, given a single sector's growth forecast, return its rank among all sectors, scaled from [0, 1]. Combining growth with volatility (currently equally weighted) can give a simple "investment grade"	heuristic &mdash; an output metric that can easily be extended and re-weighted based on future updated data.
+	</p>
+
+	<p>
+		Here are the top 5 AAA rated postcode sectors, clearly showing their empirical low volatility and theoretical high growth forecasts:
+	</p>
+
+	<div style="width: 90%; margin: 5% auto;">
+		<a href="images/t5_full.png">
+			<img style="max-width:100%; max-height:auto;" src="images/t5_thumb.png" />
+		</a>
+	</div>
+
+	<p>
+		These five include parts of the South London suburbs of Upper Tooting and Morden, Walthamstow, as well as Brockley, whose <a href="https://en.wikipedia.org/wiki/Brockley_railway_station" target="_blank">train station</a> within SE4 1 became part of the London Overground network in 2010.
+	</p>
+<div id = 'chart34fdeddb85' class = 'rChart dimple'></div>
+	<p>
+		What of our SW18 4HU example? It too gets the highest "AAA" investment grade, and is in the 90<sup>th</sup> percentile for investment score relative to all postcode sectors &mdash; overall it appears to be a ripe area for property investment and you should snap up that property you were interested in.
+	</p>
+
+</div>
+</section>
+
+<!-- Product / business plan -->
+<section id="product" class="four">
+	<div class="container">
+
+		<!--	<header>
+		<h2>Product</h2>
+	</header> -->
+
+	<div style="margin 5% auto;">
+		<img src="images/logo3_hires.png" />
+		<h2 class="alt">dat<span style="font-weight: 700;">area</span></h2>
+	</div>
+
+	<p>
+		Democratising real estate investment
+	</p>
+
+	<p>
+		<span style="font-family: 'Comfortaa';">dat<span style="font-weight:700;">area</span></span> is a free, cross-platform app for
+		mobiles, tablets and the web which is capable of performing deep-dive analyses of property
+		areas, exploring temporospatial price histories and modelling future growth potential.
+	</p>
+
+	<img src="images/mockup/mockup.png" />
+
+	<h3>Value generation</h3>
+
+	<p>
+		<span style="font-family: 'Comfortaa';">dat<span style="font-weight:700;">area</span></span> generates significant value for
+		property investors. Even the initial set of analyses &mdash; such as fractal context, price
+		trends and investment grading &mdash; provide insight into property markets which are currently
+		unavailable in any publicly-usable form.</p>
+
+		<p>
+			It's easy to see how these interactive reports provide actionable
+			information: where can you make the best property investment for a given outlay? Is this area enjoying exponential growth or is it riding the sigmoid to stagnation? Can you catch an
+			undervalued sector surrounded by high-growth postcodes?
+		</p>
+
+		<p>
+			Following validation of the business through
+			usage of our free mobile and web app, additional
+			data scientists would be brought on board to expand our available analyses, to be offered
+			under a subscription model. At this point we could move beyond publicly available datasets
+			to private sales information, potentially in collaboration with online property sales and letting
+			agents.
+		</p>
+
+		<h3> Customer segments </h3>
+		<br />
+		<div class="row">
+			<div class="4u">
+				<article class="item">
+					<a href="#" class="image fit">
+						<img style="padding: 10%" src="images/ext_logos/segro.png" alt="" />
+						<img style="padding:10%" src="images/ext_logos/reita.png" alt="" />
+					</a>
+					<header>
+						<h3>Real Estate Investment Trusts and advisors</h3>
+					</header>
+				</article>
+				<article class="item">
+					<a href="#" class="image fit">
+						<img style="padding: 2%;" src="images/ext_logos/rightmove.gif" />
+						<img style="padding: 10%;" src="images/ext_logos/zoopla.png" />
+					</a>
+					<header>
+						<h3>Letting and sales sites</h3>
+					</header>
+				</article>
+			</div>
+			<div class="4u">
+				<article class="item">
+					<header>
+						<h3>Personal home buyers</h3>
+					</header>
+				</article>
+				<article class="item">
+					<a href="#" class="image fit">
+						<img style="padding: 10%" src="images/ext_logos/housenetwork.png" alt="" />
+						<img style="padding: 10%" src="images/ext_logos/emoov.png" alt="" />
+					</a>
+					<header>
+						<h3>Online estate agents</h3>
+					</header>
+				</article>
+				<article class="item">
+					<header>
+						<h3>Housing authorities</h3>
+					</header>
+				</article>
+				<article class="item">
+					<a href="#" class="image fit">
+						<img style="padding: 10%" src="images/ext_logos/homebuyers.jpg" alt="" />
+						<!--<img style="padding: 10%" src="https://www.nationalhomebuyers.co.uk/wp-content/themes/nhb/img/logo-heading.png" alt="" /> -->
+					</a>
+					<header>
+						<h3>Home buyer companies</h3>
+					</header>
+				</article>
+			</div>
+			<div class="4u">
+				<article class="item">
+					<a href="#" class="image fit">
+						<img style="padding: 15%" src="images/ext_logos/nla.png" alt="" /></a>
+						<header>
+							<h3>Landlords</h3>
+						</header>
+					</article>
+					<article class="item">
+						<header>
+							<h3>Property insurers</h3>
+						</header>
+					</article>
+
+
+					<article class="item">
+						<a href="#" class="image fit">
+							<img style="padding: 15%" src="images/ext_logos/gov.png" alt="" /></a>
+							<header>
+								<h3>First-time buyer schemes</h3>
+							</header>
+						</article>
+					</div>
+				</div>
+
+				<hr />
+				<br />
+
+				<h3>Future strategy</h3>
+				<p>
+					Having built a proven system of valuable insight, <span style="font-family: 'Comfortaa';">dat<span style="font-weight:700;">area</span></span> could: (a) integrate our analyses with market-leading online sales and letting agents, providing signidicant property sales insights to the consumer market; (b)
+					form the basis of a novel data-driven real estate investment consultancy, working with high net-worth individuals and REITs
+					offering quantitative analysis to fuel investment decisions.
+				</p>
+				<hr />
+				<br />
+				<div style="width:85%; margin: 0 auto;">
+					<h3>Code and materials</h3>
+					<p style="font-size:1rem;">
+						Statistical analysis performed in the <code>R</code> programming language, with occasional use of the
+						<a href="https://developers.google.com/maps/" target="_blank">Google maps API</a>. Vector graphics editing
+						performed with
+						<a href="http://www.inkscape.org/en/" target="_blank">inkscape</a> and gif to webm compression via
+						<a href="http://www.gfycat.com/" target="_blank">gfycat</a>. One polygon map was writted under a CC-BY-SA license, the
+						KML file is available <a href="https://en.wikipedia.org/w/index.php?title=Template:Attached_KML/SW_postcode_area" target="_blank">here</a>.
+						<br />
+						Scripts to reproduce all the analyses shown here are on github: <a href="http://github.com/blmoore/summerdatachallenge"><i class="fa fa-github"></i> blmoore</a>
+					</p>
+				</div>
+
+				<div style="width:75%; margin: 0 auto;">
+					<h5>Disclaimer</h5>
+					<p style="font-size:.9rem;">
+						The contents of this document are intended to provide information to investors, but are not investment advice. Independent investment advice should be sought where appropriate.
+					</p>
+				</div>
+
+				<h4>Questions?</h4>
+
+				<div class="row">
+					<div class="12u">
+						<a href="mailto:root@blm.io?subject=Tell%20me%20more%20about%20datarea">
+							<input type="submit" value="Email me" />
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>by Ben Moore (<a href="http://blm.io" target="_blank">blm.io</a>) 2014</li>
+			<li>Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/legalcode" target="_blank">CC-BY-SA 4.0</a></li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+
+</body>
+</html>
