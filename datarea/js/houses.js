@@ -1,4 +1,3 @@
-
 d3.json("js/datarea.json", function(error, json) {
   if (error) return console.warn(error);
   data = json;
@@ -10,7 +9,7 @@ d3.json("js/datarea.json", function(error, json) {
 "xAxis": {
  "type": "addMeasureAxis",
 "showPercent": false,
-"overrideMin":      2
+"overrideMin":      0
 },
 "yAxis": {
  "type": "addMeasureAxis",
@@ -25,7 +24,7 @@ d3.json("js/datarea.json", function(error, json) {
 "y": "Monthly growth",
 "type": "bubble",
 "col": "Grade",
-"groups": [ "Sector", "Grade" ],
+"groups": [ "sector", "Grade" ],
 "id": "chart34fdeddb85"
 };
 

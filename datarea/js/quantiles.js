@@ -187,5 +187,9 @@ d3.json("js/datarea_slim.json", function(error, data) {
   }
 
   myChart.draw();
-
+svg.append("text")
+ .attr("x", myChart._xPixels() + myChart._widthPixels() / 2)
+ .attr("y", myChart._yPixels() - 20)
+ .style("text-anchor", "middle")
+ .text("Quantile-transformed investment grades");
 });
