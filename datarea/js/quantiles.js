@@ -15,7 +15,7 @@ d3.json("js/datarea_slim.json", function(error, data) {
 },
 "zAxis": [],
 "colorAxis": [],
-"defaultColors": [],
+"defaultColors": ["#08306b", "#08519c", "#2171b5", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#deebf7"],
 "layers": [],
 "legend": [],
 "x": "vq",
@@ -103,9 +103,11 @@ d3.json("js/datarea_slim.json", function(error, data) {
 
     var x = buildAxis("x", layer);
     x.hidden = hidden;
+    x.title = "Volatility quantile";
 
     var y = buildAxis("y", layer);
     y.hidden = hidden;
+    y.title="Growth quantile";
 
     //z for bubbles
     var z = null;
