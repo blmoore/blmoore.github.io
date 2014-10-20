@@ -22,7 +22,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<!-- dimple.js scatter -->
 	<script src='//d3js.org/d3.v3.min.js' type='text/javascript'></script>
   <script src='//dimplejs.org/dist/dimple.v2.1.0.min.js' type='text/javascript'></script>
+	<!-- custom charts -->
   <script src="js/houses.js" type="text/javascript"></script>
+	<script src="js/quantiles.js" type="text/javascript"></script>
 
 	<!-- favicon -->
 	<link rel="icon"
@@ -264,9 +266,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		target="_blank">historical volatility</a> of house prices within a sector.
 		<div id = 'chart34fdeddb85' class = 'rChart dimple'></div>
 	</p>
-	
+
 	<p>
 		I pre-computed these two metrics for all sectors in the dataset, then used their empirical cumulative distribution functions to get a reverse quantile for each sector. That is, given a single sector's growth forecast, return its rank among all sectors, scaled from [0, 1]. Combining growth with volatility (currently equally weighted) can give a simple "investment grade"	heuristic &mdash; an output metric that can easily be extended and re-weighted based on future updated data.
+		<div id = 'chart2dd2fdc6142' class = 'rChart dimple'></div>
 	</p>
 
 	<p>
