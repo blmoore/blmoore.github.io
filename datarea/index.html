@@ -18,7 +18,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<script src="js/skel-layers.min.js"></script>
 	<script src="js/init.js"></script>
 	<script src="js/Chart.min.js"></script>
+	<!-- maps -->
 	<script defer src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
 	<!-- dimple.js scatter -->
 	<script src='//d3js.org/d3.v3.min.js' type='text/javascript'></script>
   <script defer src='//dimplejs.org/dist/dimple.v2.1.0.min.js' type='text/javascript'></script>
@@ -67,6 +69,62 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		.openPopup();
 	});
 	</script>
+
+	<script type="text/javascript">
+		function initialize() {
+			google.maps.visualRefresh = true;
+			var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') > -1) ||
+				(navigator.userAgent.match(/(iPod|iPhone|iPad|BlackBerry|Windows Phone|iemobile)/));
+			if (isMobile) {
+				var viewport = document.querySelector("meta[name=viewport]");
+				viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
+			}
+			var mapDiv = document.getElementById('googft-mapCanvas');
+			mapDiv.style.width = isMobile ? '100%' : '500px';
+			mapDiv.style.height = isMobile ? '100%' : '300px';
+			var map = new google.maps.Map(mapDiv, {
+				center: new google.maps.LatLng(51.51631082118282, -0.1464204952392265),
+				zoom: 10,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			});
+			map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
+			map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
+
+			layer = new google.maps.FusionTablesLayer({
+				map: map,
+				heatmap: { enabled: false },
+				query: {
+					select: "col4",
+					from: "1vl7nL4nGdiS73temHUrJ-ztafFZrIUszfkoFIoz3",
+					where: ""
+				},
+				options: {
+					styleId: 2,
+					templateId: 2
+				}
+			});
+
+			if (isMobile) {
+				var legend = document.getElementById('googft-legend');
+				var legendOpenButton = document.getElementById('googft-legend-open');
+				var legendCloseButton = document.getElementById('googft-legend-close');
+				legend.style.display = 'none';
+				legendOpenButton.style.display = 'block';
+				legendCloseButton.style.display = 'block';
+				legendOpenButton.onclick = function() {
+					legend.style.display = 'block';
+					legendOpenButton.style.display = 'none';
+				}
+				legendCloseButton.onclick = function() {
+					legend.style.display = 'none';
+					legendOpenButton.style.display = 'block';
+				}
+			}
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+
 </head>
 <body>
 
@@ -144,12 +202,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			</header> -->
 
 			<p>
-				The starting dataset for this work was the locations and prices of house sales in and around the City of London dating from January 2009 up until May 2014, a total of almost 1.4 million datapoints.
-				<!-- <blockquote> -->
-			</p>
-
-			<p>
-				To start, I visualised the data. Here's a time series of all the sales in the dataset, showing their 100 km
+				The starting dataset for this work was the locations and prices of house sales in and around the City of London dating from January 2009 up until May 2014, a total of almost 1.4 million datapoints. Here's an overview visualisation of all the sales in the dataset, showing their 100 km
 				radius around the City of London. The brightness of each dot is proportional to the price of the house sale.</p>
 				<p>
 					<!-- Private URL to delete this Gfycat: http://gfycat.com/delete/UnluckySparklingGiraffe -->
@@ -157,16 +210,19 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				</p>
 
 				<p>
-					We can zoom in on just the city itself, where most of the action is. It's perhaps possible to see an
-					accumulation of brightness throughout the time series, suggesting price rises, but we'll investigate this quantatively in the next section.
+					For summary statistics it can be helpful to aggregate house sales into postcode sectors (of the form AB1) &mdash; each covered by this dataset is drawn here, coloured by median property sale price over the five year dataset. Tooltips summarise the number of listings recorded per region.
 				</p>
 				<p>
 					<!-- to delete: http://gfycat.com/delete/BeautifulColossalIberianchiffchaff -->
 				<!--	<img class="gfyitem" data-id="RecentDearestGelding" /> -->
 
 				<iframe width="700" height="500" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col4+from+1vl7nL4nGdiS73temHUrJ-ztafFZrIUszfkoFIoz3&amp;viz=MAP&amp;h=false&amp;lat=51.51631082118282&amp;lng=-0.1464204952392265&amp;t=1&amp;z=10&amp;l=col4&amp;y=2&amp;tmplt=2&amp;hml=GEOCODABLE"></iframe>
+			</p>
+<p>
+These overview visualisations introduce the starting point for this work. In the following section I'll show how detailed analysis of this dataset can lead to genuine insights which in turn generate socioeconomic value.
+</p>
 
-				</p>
+
 			</div>
 		</section>
 
@@ -174,20 +230,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		<section id="insights" class="three">
 			<div class="container">
 
+<!-- leaflet.js insert -->
+<div style="height: 11rem; float: right; width: 40%; margin-left:1rem; margin-top:0; " id="map"></div>
 				<p>
 					Consider a case study: for whatever reason, we're interested in a
 					property located in the London postcode <a href="https://www.google.co.uk/maps/place/Wandsworth,+Wandsworth+Southside+%28W%29/@51.456726,-0.194721,13z/data=!4m2!3m1!1s0x48760f66a15fee9b:0x2f01bd0744eb6eea" target="_blank">SW18 4HU</a>, in Wandsworth, London
 					&mdash; just south of the river.
 				</p>
-
-				<!-- Static backup -->
-				<!--
-				<div style="width: 40%; margin: 0% 5%; float: right;">
-				<img style="max-width:100%; max-height:auto;" src="images/sw18_4hu.png" atl="Sunny Wandsworth"/>
-			</div> -->
-
-			<!-- leaflet.js insert -->
-			<div style="height: 10rem; width: 100%" id="map"></div>
 
 			<p style="margin: 5%;">
 				For some initial analysis, we can
