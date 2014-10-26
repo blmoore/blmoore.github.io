@@ -17,7 +17,7 @@ d3.json("js/datarea.json", function(error, json) {
 },
 "zAxis": [],
 "colorAxis": [],
-"defaultColors": ["#9ecae1", "#deebf7", "#c6dbef", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b"],
+"defaultColors": ["#6baed6", "#deebf7",  "#c6dbef","#9ecae1",   "#4292c6", "#2171b5", "#08519c", "#08306b"],
 "layers": [],
 "legend": [],
 "x": "Historical volatility",
@@ -161,21 +161,6 @@ d3.json("js/datarea.json", function(error, json) {
     }
 
     myChart.series.push(s);
-
-    /*placeholder fix domain of primary scale for new series data
-    //not working right now but something like this
-    //for now just use overrideMin and overrideMax from rCharts
-    for( var i = 0; i<2; i++) {
-      if (!myChart.axes[i].overrideMin) {
-        myChart.series[0]._axisBounds(i==0?"x":"y").min = myChart.series[0]._axisBounds(i==0?"x":"y").min < s._axisBounds(i==0?"x":"y").min ? myChart.series[0]._axisBounds(i==0?"x":"y").min : s._axisBounds(i==0?"x":"y").min;
-      }
-      if (!myChart.axes[i].overrideMax) {
-        myChart.series[0]._axisBounds(i==0?"x":"y")._max = myChart.series[0]._axisBounds(i==0?"x":"y").max > s._axisBounds(i==0?"x":"y").max ? myChart.series[0]._axisBounds(i==0?"x":"y").max : s._axisBounds(i==0?"x":"y").max;
-      }
-      myChart.axes[i]._update();
-    }
-    */
-
 
     return s;
   };
