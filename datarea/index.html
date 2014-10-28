@@ -12,8 +12,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<meta name="keywords" content="" />
 	<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
-	<script defer src="js/jquery.scrolly.min.js"></script>
-	<script defer src="js/jquery.scrollzer.min.js"></script>
+	<script src="js/jquery.scrolly.min.js"></script>
+	<script src="js/jquery.scrollzer.min.js"></script>
 	<script src="js/skel.min.js"></script>
 	<script src="js/skel-layers.min.js"></script>
 	<script src="js/init.js"></script>
@@ -46,7 +46,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 
 	<!-- gfycat -->
-	<script defer type="text/javascript">
+	<script>
 	(function(d, t) {
 		var g = d.createElement(t),
 		s = d.getElementsByTagName(t)[0];
@@ -55,7 +55,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	}(document, 'script'));
 	</script>
 
-	<script defer type="text/javascript">
+	<!-- leaflet map -->
+	<script type="text/javascript">
 	$(document).ready(function() {
 		// create a map in the "map" div, set the view to a given place and zoom
 		var map = L.map('map').setView([51.45678, -0.1953], 13);
@@ -72,7 +73,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	});
 	</script>
 
-	<script defer type="text/javascript">
+	<!-- google map -->
+	<script type="text/javascript">
 		function initialize() {
 			google.maps.visualRefresh = true;
 			var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') > -1) ||
@@ -235,7 +237,7 @@ These overview visualisations introduce the starting point for this work. In the
 			<div class="container">
 
 <!-- leaflet.js insert -->
-<div style="height: 11rem; float: right; width: 40%; margin-left:1rem; margin-top:0; " id="map"></div>
+<div style="height: 11rem; float: right; width: 40%; margin-left:1rem; margin-top:0;" id="map"></div>
 				<p>
 					Consider a case study: for whatever reason, we're interested in a
 					property located in the London postcode <a href="https://www.google.co.uk/maps/place/Wandsworth,+Wandsworth+Southside+%28W%29/@51.456726,-0.194721,13z/data=!4m2!3m1!1s0x48760f66a15fee9b:0x2f01bd0744eb6eea" target="_blank">SW18 4HU</a>, in Wandsworth, London
