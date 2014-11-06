@@ -20903,13 +20903,13 @@
       zAxis = [],
       colorAxis = [],
       legend = [];
-      var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
+      var svg = dimple.newSvg("#" + opts.id, 580, 580);
 
       //data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
       var myChart = new dimple.chart(svg, data);
-      if (opts.bounds) {
-        myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
-      }
+      //myChart.setBounds(50, 5, 450, 450);
+      //either or
+      myChart.setMargins(40, 10, 10, 40);
       //dimple allows use of custom CSS with noFormats
       if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
       //for markimekko and addAxis also have third parameter measure
@@ -20984,8 +20984,11 @@
           l[d] = legend[d];
         });
       }
-      //quick way to get this going but need to make this cleaner
-      if(opts.storyboard) {
-        myChart.setStoryboard(opts.storyboard);
-      };
+
       myChart.draw();
+      x.title.selectAll("text").attr("transform", "rotate(-45)");
+
+      x.shapes.selectAll("text").attr("transform",
+    function (d) {
+      return d3.select(this).attr("transform") + " translate(0, 20) rotate(-45)";
+    });
