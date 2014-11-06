@@ -63,7 +63,7 @@ h1 {
 <!-- Center image on slide -->
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
 <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
-<script src='http://dimplejs.org/dist/dimple.v2.1.0.min.js' type='text/javascript'></script>
+<!-- <script src='http://dimplejs.org/dist/dimple.v2.1.0.min.js' type='text/javascript'></script> -->
 
 <script type='text/javascript'>
 $(function() {
@@ -293,10 +293,12 @@ audience <- rt$movies$ratings$audience_score
 
 ---
 
-## Results v2
-
+<!--
 <div id='chart12666f920d7f' class='rChart dimple'></div>
 <script src="js/films.js"></script>
+-->
+
+<iframe width='100%' height='100%' src='http://blm.io/movie_embed.html' frameborder='0' scrolling="no"></iframe>
 
 ---
 

@@ -20903,7 +20903,7 @@
       zAxis = [],
       colorAxis = [],
       legend = [];
-      var svg = dimple.newSvg("#" + opts.id, 580, 580);
+      var svg = dimple.newSvg("#" + opts.id, "500px", "500px");
 
       //data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
       var myChart = new dimple.chart(svg, data);
@@ -20986,9 +20986,3 @@
       }
 
       myChart.draw();
-      x.title.selectAll("text").attr("transform", "rotate(-45)");
-
-      x.shapes.selectAll("text").attr("transform",
-    function (d) {
-      return d3.select(this).attr("transform") + " translate(0, 20) rotate(-45)";
-    });
