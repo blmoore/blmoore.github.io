@@ -1,8 +1,8 @@
 
       var opts = {
         "dom": "chart12666f920d7f",
-        "width":    700,
-        "height":    700,
+        "width":    500,
+        "height":    500,
         "x": "Critics score (%)",
         "y": "Audience liked it (%)",
         "type": "bubble",
@@ -20989,4 +20989,3 @@
         myChart.setStoryboard(opts.storyboard);
       };
       myChart.draw();
-
