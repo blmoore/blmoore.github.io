@@ -9,26 +9,26 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css"
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
   <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
 
-
+  
   <!-- Grab CDN jQuery, fall back to local if offline -->
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
-  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script>
-  <script data-main="libraries/frameworks/io2012/js/slides"
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
     src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
   </script>
-
-
+  
+  
 
 </head>
 <body style="opacity: 0">
   <slides class="layout-widescreen">
-
+    
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
@@ -51,7 +51,7 @@
   </hgroup>
   <article></article>
 </slide>
-
+    
 
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
@@ -64,8 +64,8 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 700px;
-    height: 700px !important;
+    width: 500px;
+    height: 500px !important;
 }
 
 img {
@@ -207,14 +207,14 @@ $(function() {
   <article data-timings="">
     <pre><code class="r">searchplos(
   # Query: publication date in 2012
-  q  = &#39;publication_date:[2012-01-01T00:00:00Z TO 2012-12-31T23:59:59Z]&#39;,
+  q  = &#39;publication_date:[2012-01-01T00:00:00Z TO 2012-12-31T23:59:59Z]&#39;, 
 
   # Fields to return: id (doi) and author list
-  fl = &quot;id,author&quot;,
+  fl = &quot;id,author&quot;, 
 
   # Filter: only actual articles in journal PLOS ONE
   fq = list(&quot;doc_type:full&quot;,
-            &quot;cross_published_journal_key:PLoSONE&quot;),
+            &quot;cross_published_journal_key:PLoSONE&quot;), 
 
   # 500 results (max 1000 per query)
   start=0, limit=500, sleep=6)
@@ -229,7 +229,7 @@ $(function() {
     <h2>Results</h2>
   </hgroup>
   <article data-timings="">
-
+    
 <div style='float:left;width:35%;'>
   <p><br /></p>
 
@@ -273,7 +273,7 @@ $(function() {
     <h2>High impact == high inflation ?</h2>
   </hgroup>
   <article data-timings="">
-
+    
 <div style='float:left;width:65%;'>
   <p><img src="figure/plos4.png" alt="corr with IF"></p>
 
@@ -395,7 +395,7 @@ audience &lt;- rt$movies$ratings$audience_score
     <h2>&quot;Walled gardens&quot;</h2>
   </hgroup>
   <article data-timings="">
-
+    
 <div style='float:left;width:35%;'>
   <p><br /></p>
 
@@ -481,129 +481,129 @@ Supervisors: Colin Semple and Stuart Aitken</div>
   <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
     <ul>
       <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=1 title=''>
          1
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=2 title=''>
          2
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=3 title=''>
          3
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=4 title='Staring point'>
          4
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=5 title='Getting some data'>
          5
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=6 title='Code'>
          6
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=7 title='Results'>
          7
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=8 title='270 authors...'>
          8
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=9 title='Evidence for author inflation'>
          9
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=10 title='High impact == high inflation ?'>
          10
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=11 title=''>
          11
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=12 title='Starting point'>
          12
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=13 title=''>
          13
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=14 title=''>
          14
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=15 title='Hacky solution'>
          15
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=16 title='&quot;Walled gardens&quot;'>
          16
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=17 title='Results v1'>
          17
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=18 title='Results v2'>
          18
       </a>
     </li>
     <li>
-      <a href="#" target="_self" rel='tooltip'
+      <a href="#" target="_self" rel='tooltip' 
         data-slide=19 title=''>
          19
       </a>
     </li>
   </ul>
   </div>  <!--[if IE]>
-    <script
-      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
     </script>
     <script>CFInstall.check({mode: 'overlay'});</script>
   <![endif]-->
 </body>
   <!-- Load Javascripts for Widgets -->
-
+  
   <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -622,5 +622,5 @@ Supervisors: Colin Semple and Stuart Aitken</div>
   <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <!-- DONE LOADING HIGHLIGHTER JS FILES -->
-
+   
   </html>

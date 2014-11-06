@@ -18,8 +18,8 @@ logo        : logo.png
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 700px;
-    height: 700px !important;
+    width: 500px;
+    height: 500px !important;
 }
 
 img {
@@ -295,7 +295,7 @@ audience <- rt$movies$ratings$audience_score
 ## Results v2
 
 <div id='chart12666f920d7f' class='rChart dimple'></div>
-<script src="/Users/benmoore/Presentations/Evogen_Nov12_2014/js/films.js"></script>
+<script src="js/films.js"></script>
 
 ---
 
