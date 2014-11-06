@@ -61,9 +61,10 @@ h1 {
 </style>
 
 <!-- Center image on slide -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
 <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
 <script src='http://dimplejs.org/dist/dimple.v2.1.0.min.js' type='text/javascript'></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+
 <script type='text/javascript'>
 $(function() {
     $("p:has(img)").addClass('centered');
