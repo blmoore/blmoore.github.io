@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R for the web through pop data analysis</title>
+  <meta charset="utf-8">
+  <meta name="description" content="R for the web through pop data analysis">
+  <meta name="author" content="Ben Moore">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <!-- <aside class="gdbar">
+  <img src="assets/img/logo.png">
+</aside> -->
+<div style="float:right; width=35%; margin-top:3%">
+  <img src="assets/img/logo.png" />
+  <br /><br /><br />
+</div>
+<hgroup class="auto-fadein" style="width:75%;">
+  <p style="font-size: 2.5em; color:#ffa775; margin-top:15%; margin-bottom: 5%; font-family: 'Varela Round', 'Helvetica', Sans-serif">blogR<br />
+    <p style="font-size: 1.5em; margin-top:5%">Pop data analysis and R for the web</p></p>
+    <p><b>Ben Moore</b> (<a href="https://twitter.com/benjaminlmoore" target="_blank">@benjaminlmoore</a>)<br/>
+      Edinburgh Psychology R-users, November 13<sup>th</sup> 2014
+      <p style="text-align:right; font-size:.9rem;">
+        Slides online at: <a href="http://blm.io/talks/blogr">blm.io/talks/blogr</a>
+      </p>
+    </p>
+  </hgroup>
+  <article></article>
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <!-- Limit image width and height -->
+
+<style type='text/css'>
+
+.rChart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 700px !important;
+}
+
+img {
+    max-height: 540px;
+    max-width: 964px;
+}
+body {
+  /* margin-top: 40px; */
+}
+ol.linenums {
+  margin-left: 0px;
+}
+#features p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #777777;
+}
+#solo p {
+  text-align:center;
+  font-size:xx-large;
+  /* font-weight:bolder; */
+  margin-top:25%;
+  color:#777777;
+}
+
+.title-slide {
+  background-color: #FEFEFE;
+}
+
+h1 {
+  color: #DDDDDD;
+}
+
+
+#bigwriting {
+  font-size:x-large;
+}
+
+</style>
+
+<!-- Center image on slide -->
+
+<script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+
+<script src='http://dimplejs.org/dist/dimple.v1.1.1.min.js' type='text/javascript'></script>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+
+<script type='text/javascript'>
+$(function() {
+    $("p:has(img)").addClass('centered');
+});
+</script>
+
+<h2>I&#39;m going to talk about...</h2>
+
+<p><br /></p>
+
+<p>A couple of examples of R analyses I&#39;ve done for fun (see old site <a href="http://benjaminlmoore.wordpress.com">benjaminlmoore.wordpress.com</a>, or new <a href="http://blm.io/blog">blm.io/blog</a>). </p>
+
+<p><br /></p>
+
+<p>Along the way:</p>
+
+<ul>
+<li><p>Hacking R into web frameworks with rCharts and slidify</p></li>
+<li><p>Tips for would be &quot;data scientists&quot; / data bloggers</p></li>
+<li><p>Getting people to actually read your stuff</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="solo" style="background:;">
+  <article data-timings="">
+    <p>Example 1: Author inflation</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:black;">
+  <article data-timings="">
+    <p><img src="figure/ac.se.png" alt="academia.stackexchange"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Staring point</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<ul>
+<li>Good question</li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+<li>No real answers, speculation</li>
+</ul>
+
+<p><br /></p>
+
+<ul class = "build incremental">
+<li>Easy to test!!</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Getting some data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<p><img src="figure/ropensci.png" alt="ropensci"></p>
+
+<div style="width: 50%; margin-left: auto; margin-right: auto; margin-top: 10%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/PLOS_logo_2012.svg/500px-PLOS_logo_2012.svg.png" />
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Code</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">searchplos(
+  # Query: publication date in 2012
+  q  = &#39;publication_date:[2012-01-01T00:00:00Z TO 2012-12-31T23:59:59Z]&#39;, 
+
+  # Fields to return: id (doi) and author list
+  fl = &quot;id,author&quot;, 
+
+  # Filter: only actual articles in journal PLOS ONE
+  fq = list(&quot;doc_type:full&quot;,
+            &quot;cross_published_journal_key:PLoSONE&quot;), 
+
+  # 500 results (max 1000 per query)
+  start=0, limit=500, sleep=6)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Results</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:35%;'>
+  <p><br /></p>
+
+<p><img src="figure/plos1.png" alt="author beanplots"></p>
+
+</div>
+<div style='float:right;width:65%;'>
+  <p><br /></p>
+
+<p><img src="figure/plos2.png" alt="author ecdf"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:black;">
+  <hgroup>
+    <h2>270 authors...</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/270.png" alt="270 authors"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Evidence for author inflation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/plos3.png" alt="lm"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>High impact == high inflation ?</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:65%;'>
+  <p><img src="figure/plos4.png" alt="corr with IF"></p>
+
+</div>
+<div style='float:right;width:35%;'>
+  <p><b>NB</b> NS correlation ◕︵◕</p>
+
+<p><u>TODO</u></p>
+
+<ul class = "build incremental">
+<li><p>expand to entire NLM Medline / Pubmed records (&gt;22 mill)</p></li>
+<li><p>Try to get at &quot;good inflation vs. bad inflation&quot;</p>
+
+<ul>
+<li>Relative growth of acknowledgements? (PMC)</li>
+</ul></li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="solo" style="background:;">
+  <article data-timings="">
+    <p>Example 2: Overrated movies</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Starting point</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<ul>
+<li><p>Everyone relates to concept of &quot;over/underrated&quot; — but it&#39;s inherently subjective</p></li>
+<li><p>Maybe a way to quantify this (with, e.g. films) could be:</p></li>
+</ul>
+
+<p><br /></p>
+
+<ul class = "build incremental">
+<li><p><b>Critic ratings</b> — subjective ratings</p></li>
+<li><p><b>Audience ratings</b> — &quot;objective truth&quot;</p>
+
+<ul>
+<li>(Wrong way round? Up to you... ) <br /><br /></li>
+</ul></li>
+<li><p>So given this definition of &quot;overrated&quot;: <br /><p style="font-size: 1.3em; text-align: center;"><b>Q:</b> What are the most (over|under)rated films?</p></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <article data-timings="">
+    <p><img src="figure/rtlogo.png" alt="rt"></p>
+
+<p>They have a REST API! </p>
+
+<pre><code class="r">library(&quot;RCurl&quot;)
+library(&quot;jsonlite&quot;)
+
+api.key &lt;- &quot;somelongAPIkey&quot;
+rt &lt;- getURI(paste0(&quot;http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=&quot;, api.key, &quot;&amp;limit=50&quot;))
+
+rt &lt;- fromJSON(rt)
+
+title &lt;- rt$movies$title
+critics &lt;- rt$movies$ratings$critics_score
+audience &lt;- rt$movies$ratings$audience_score
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <article data-timings="">
+    <p style="font-color: #ffa775; font-size: 1.4em; text-align: center;">This is easy, why hasn't someone done it before...</p>
+
+<p><br /></p>
+
+<p><img src="figure/apiforum.png" alt="forum"></p>
+
+<p><br /></p>
+
+<div style="text-align: center;"><h2>!!!</h2></div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Hacky solution</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<ol class = "build incremental">
+<li><p>Get largest starting list of films possible (Top rentals: <b>50</b>)</p></li>
+<li><p>For each, retrieve &quot;similar films&quot; (max: <b>5</b>!)</p></li>
+<li><p>Rinse, recurse</p></li>
+<li><p>Enjoy the expontential growth...</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>&quot;Walled gardens&quot;</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:35%;'>
+  <p><br /></p>
+
+<p><br /></p>
+
+<p><img src="figure/hits.png" alt="hits"></p>
+
+</div>
+<div style='float:right;width:65%;'>
+  <p><br /></p>
+
+<p><img src="figure/hp.png" alt="hp"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Results v1</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/films1.png" alt="results1"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Results v2</h2>
+  </hgroup>
+  <article data-timings="">
+    <div id='chart12666f920d7f' class='rChart dimple'></div>
+
+<script src="/Users/benmoore/Presentations/Evogen_Nov12_2014/js/films.js"></script>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <article data-timings="">
+    <p style="text-align:center; font-size:xx-large; margin-top:20%">
+Thanks for your attention
+</p>
+
+<p><br /></p>
+
+<p style="font-size:smaller; text-align:center">
+Supervisors: Colin Semple and Stuart Aitken</div>
+</p>
+
+<div style="float:left; margin-top:18%">
+<p style="font-size:small">References:</p>
+<p style="font-size:x-small">
+  Belton et al. (2012) Hi-C: a comprehensive technique to capture the conformation of genomes. <strong>Methods</strong>, 58, 268-76.
+<br />
+  Boyle et al. (2014) Comparative analysis of regulatory information and circuits across distant species. <strong>Nature</strong>, 512, 435-6.
+<br />
+  Dixon et al. (2012) Topological domains in mammalian genomes identified by analysis of chromatin interactions. <strong>Nature</strong>, 485, 376-80.
+<br />
+  Imakaev et al. (2012) Iterative correction of Hi-C data reveals hallmarks of chromosome organization. <strong>Nature methods</strong>, 9, 999-1003.
+<br />
+  Kalhor et al. (2011) Genome architectures revealed by tethered chromosome conformation capture and population-based modeling. <strong>Nature biotechnology</strong>, 30, 90-8.
+<br />
+  Lieberman Aiden et al. (2009) Comprehensive Mapping of Long-Range Interactions Reveals Folding Principles of the Human Genome. <strong>Science</strong>, 326, 289-93.
+<br />
+  Yaffe and Tanay (2011) Probabilistic modeling of Hi-C contact maps eliminates systematic biases to characterize global chromosomal architecture. <strong>Nature genetics</strong>, 43, 1059-65.
+
+</p>
+</div>
+
+<div style="float:left; margin-top:1%"> <p style="font-size:small">HTML5 presentation written in <code>RMarkdown</code> using <code>library("slidify")</code>.</p></div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title=''>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title=''>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Staring point'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Getting some data'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Code'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Results'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='270 authors...'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Evidence for author inflation'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='High impact == high inflation ?'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title=''>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Starting point'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title=''>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title=''>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Hacky solution'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='&quot;Walled gardens&quot;'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Results v1'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Results v2'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title=''>
+         19
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
