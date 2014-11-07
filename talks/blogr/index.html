@@ -40,7 +40,7 @@
   <br /><br /><br />
 </div>
 <hgroup class="auto-fadein" style="width:75%;">
-  <p style="font-size: 2.5em; color:#ffa775; margin-top:15%; margin-bottom: 5%; font-family: 'Varela Round', 'Helvetica', Sans-serif">blogR<br />
+  <p style="font-size: 3.5em; color:#FD9544; margin-top:15%; margin-bottom: 5%; font-family: 'Varela Round', 'Helvetica', Sans-serif; text-shadow: 1px 1px #fff, 1px 2px #ccc;">blogR<br />
     <p style="font-size: 1.5em; margin-top:5%">Pop data analysis and R for the web</p></p>
     <p><b>Ben Moore</b> (<a href="https://twitter.com/benjaminlmoore" target="_blank">@benjaminlmoore</a>)<br/>
       Edinburgh Psychology R-users, November 13<sup>th</sup> 2014
@@ -95,11 +95,6 @@ ol.linenums {
   background-color: #FEFEFE;
 }
 
-h1 {
-  color: #DDDDDD;
-}
-
-
 #bigwriting {
   font-size:x-large;
 }
@@ -124,14 +119,19 @@ $(function() {
 
 <p><br /></p>
 
-<p>A couple of examples of R analyses I&#39;ve done for fun (see old site <a href="http://benjaminlmoore.wordpress.com">benjaminlmoore.wordpress.com</a>, or new <a href="http://blm.io/blog">blm.io/blog</a>). </p>
+<p>A couple of examples of R analyses I&#39;ve done for fun:</p>
+
+<ol>
+<li><p>Author inflation</p></li>
+<li><p>Overrated films</p></li>
+</ol>
 
 <p><br /></p>
 
-<p>Along the way:</p>
+<p>And along the way:</p>
 
 <ul>
-<li><p>Hacking R into web frameworks with rCharts and slidify</p></li>
+<li><p>Fitting R into web frameworks with rCharts and slidify</p></li>
 <li><p>Tips for would be &quot;data scientists&quot; / data bloggers</p></li>
 <li><p>Getting people to actually read your stuff</p></li>
 </ul>
@@ -150,7 +150,9 @@ $(function() {
 
 <slide class="" id="slide-3" style="background:black;">
   <article data-timings="">
-    <p><img src="figure/ac.se.png" alt="academia.stackexchange"></p>
+    <div style="height: 100%; width: 100%; margin: 0 auto;">
+<img style="height: inherit;" src="figure/ac.se.png" />
+</div>
 
   </article>
   <!-- Presenter Notes -->
@@ -158,22 +160,15 @@ $(function() {
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Staring point</h2>
+    <h2>Starting point</h2>
   </hgroup>
   <article data-timings="">
     <p><br /></p>
 
 <ul>
-<li>Good question</li>
+<li><p>Good question</p></li>
+<li><p>No real answers, speculation</p></li>
 </ul>
-
-<p><br /></p>
-
-<ul>
-<li>No real answers, speculation</li>
-</ul>
-
-<p><br /></p>
 
 <ul class = "build incremental">
 <li>Easy to test!!</li>
@@ -279,7 +274,7 @@ $(function() {
 
 </div>
 <div style='float:right;width:35%;'>
-  <p><b>NB</b> NS correlation ◕︵◕</p>
+  <p><br /></p>
 
 <p><u>TODO</u></p>
 
@@ -321,7 +316,7 @@ $(function() {
 
 <ul class = "build incremental">
 <li><p><b>Critic ratings</b> — subjective ratings</p></li>
-<li><p><b>Audience ratings</b> — &quot;objective truth&quot;</p>
+<li><p><b>Audience ratings</b> — &quot;objective truth&quot; (crowd-sourced, many wrongs principle)</p>
 
 <ul>
 <li>(Wrong way round? Up to you... ) <br /><br /></li>
@@ -439,6 +434,116 @@ audience &lt;- rt$movies$ratings$audience_score
 </slide>
 
 <slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>R background</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <p><br /></p>
+
+<h3>"Hadley"-verse</h3>
+
+<ul>
+<li><p>Robust, powerful libraries with strong theoretical underpinnings:</p>
+
+<ul>
+<li><code>ggplot2</code> :: Grammar of graphics (Leland Wilkinson)</li>
+<li><code>dplyr</code> :: Grammar of tidying data</li>
+</ul></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><br /></p>
+
+<h3>"Ramnath"-verse</h3>
+
+<ul class = "build incremental">
+<li><p>Neat hacks that get R talking to various javascript libraries:</p>
+
+<ul>
+<li><code>rCharts</code> :: js plots from lattice-like syntax</li>
+<li><code>slidify</code> :: HTML/JS/CSS presentations from RMarkdown</li>
+</ul></li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Interactive charts</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <p>How we will be doing it:
+<br /></p>
+
+<p style="text-align: center;">
+R
+<br /><br />
+&#x25BC;
+<br /><br />
+ggvis (Rstudio)
+<br /><br />
+&#x25BC;
+<br /><br />
+Vega
+<br /><br />
+&#x25BC;
+<br /><br />
+D3.js
+</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>But currently:
+<br /></p>
+
+<p style="text-align: center;">
+R
+<br /><br />
+&#x25BC;
+<br /><br />
+<b>rCharts</b>
+<br /><br />
+&#x25BC;
+<br /><br />
+[ dimple.js, highcharts, NVD3, ... ]
+<br /><br />
+&#x25BC;
+<br /><br />
+D3.js
+</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>D3.js</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Handles data mapping (often JSON) + acts like jQuery for SVGs.</p>
+
+<p>Very powerful but low-level — basic graphs use the same few elements so 
+no need to reinvent wheel for these.</p>
+
+<div id="collision" style="width: 100%; height: 50%; display: block;"></div>
+
+<script src="js/collision.js"></script>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
   <article data-timings="">
     <p style="text-align:center; font-size:xx-large; margin-top:20%">
 Thanks for your attention
@@ -446,27 +551,14 @@ Thanks for your attention
 
 <p><br /></p>
 
-<p style="font-size:smaller; text-align:center">
-Supervisors: Colin Semple and Stuart Aitken</div>
+<div style="width: 60%; height: auto; margin: 5% auto;">
+<p>
+People who've helped me out or I've stolen code from:
 </p>
-
-<div style="float:left; margin-top:18%">
-<p style="font-size:small">References:</p>
-<p style="font-size:x-small">
-  Belton et al. (2012) Hi-C: a comprehensive technique to capture the conformation of genomes. <strong>Methods</strong>, 58, 268-76.
-<br />
-  Boyle et al. (2014) Comparative analysis of regulatory information and circuits across distant species. <strong>Nature</strong>, 512, 435-6.
-<br />
-  Dixon et al. (2012) Topological domains in mammalian genomes identified by analysis of chromatin interactions. <strong>Nature</strong>, 485, 376-80.
-<br />
-  Imakaev et al. (2012) Iterative correction of Hi-C data reveals hallmarks of chromosome organization. <strong>Nature methods</strong>, 9, 999-1003.
-<br />
-  Kalhor et al. (2011) Genome architectures revealed by tethered chromosome conformation capture and population-based modeling. <strong>Nature biotechnology</strong>, 30, 90-8.
-<br />
-  Lieberman Aiden et al. (2009) Comprehensive Mapping of Long-Range Interactions Reveals Folding Principles of the Human Genome. <strong>Science</strong>, 326, 289-93.
-<br />
-  Yaffe and Tanay (2011) Probabilistic modeling of Hi-C contact maps eliminates systematic biases to characterize global chromosomal architecture. <strong>Nature genetics</strong>, 43, 1059-65.
-
+<p style="font-size:.8em; text-align:center">
+<b>@ramnath_vaidya</b> (rCharts, slidify), @hadley_wickham (dplyr, ggplot2, devtools), 
+@kwbroman, @timelyportfolio, <b>StackOverflow</b>,
+@mbostock (d3.js), @jkiernander (dimple.js)
 </p>
 </div>
 
@@ -500,7 +592,7 @@ Supervisors: Colin Semple and Stuart Aitken</div>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Staring point'>
+        data-slide=4 title='Starting point'>
          4
       </a>
     </li>
@@ -590,8 +682,26 @@ Supervisors: Colin Semple and Stuart Aitken</div>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title=''>
+        data-slide=19 title='R background'>
          19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Interactive charts'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='D3.js'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title=''>
+         22
       </a>
     </li>
   </ul>

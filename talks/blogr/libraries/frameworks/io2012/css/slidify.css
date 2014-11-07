@@ -35,6 +35,8 @@
 /* Styles for Title Slide */
 .title-slide hgroup > h1{
   font-family: 'Oswald', sans-serif;
+  padding: .1rem 1rem;
+  text-shadow: 1px 1px #fff, 1px 2px #ccc;
 }
 
 .title-slide hgroup > h2{
@@ -60,7 +62,7 @@ slide:not(.segue) h2{
   line-height: 1.2em;
 /*  color: #193441;*/
 /*  color: #02574D;*/
-  color: #ffa775;
+  color: #FD9544;
 }
 
 /* Reduce Space between Title and Body */
@@ -330,7 +332,7 @@ slide.segue h2{
 slide:not(.segue)  h2{
  font-family: "Open Sans Condensed";
  font-weight: 700;
- color: #ffa775;
+ color: #FD9544;
 }
 article p {
   font-family: "Open Sans"

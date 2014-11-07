@@ -49,11 +49,6 @@ ol.linenums {
   background-color: #FEFEFE;
 }
 
-h1 {
-  color: #DDDDDD;
-}
-
-
 #bigwriting {
   font-size:x-large;
 }
@@ -75,13 +70,17 @@ $(function() {
 
 <br />
 
-A couple of examples of R analyses I've done for fun (see old site <a href="http://benjaminlmoore.wordpress.com">benjaminlmoore.wordpress.com</a>, or new <a href="http://blm.io/blog">blm.io/blog</a>). 
+A couple of examples of R analyses I've done for fun:
+
+  1. Author inflation
+
+  2. Overrated films
 
 <br />
 
-Along the way:
+And along the way:
 
-* Hacking R into web frameworks with rCharts and slidify
+* Fitting R into web frameworks with rCharts and slidify
 
 * Tips for would be "data scientists" / data bloggers
 
@@ -93,24 +92,25 @@ Example 1: Author inflation
 
 --- bg:black
 
-![academia.stackexchange](figure/ac.se.png)
+<div style="height: 100%; width: 100%; margin: 0 auto;">
+<img style="height: inherit;" src="figure/ac.se.png" />
+</div>
 
 ---
 
-## Staring point
+## Starting point
 
 <br />
 
 * Good question
 
-<br />
-
 * No real answers, speculation
-
-<br />
 
 > * Easy to test!!
 
+*** pnotes
+
+Testing presenter notes
 
 --- 
 
@@ -186,7 +186,7 @@ searchplos(
 
 *** =right
 
-<b>NB</b> NS correlation ◕︵◕
+<br />
 
 <u>TODO</u>
 
@@ -214,7 +214,7 @@ Example 2: Overrated movies
 
 > * <b>Critic ratings</b> — subjective ratings
 
-> * <b>Audience ratings</b> — "objective truth"
+> * <b>Audience ratings</b> — "objective truth" (crowd-sourced, many wrongs principle)
 
 >   * (Wrong way round? Up to you... ) <br /><br />
 
@@ -301,34 +301,105 @@ audience <- rt$movies$ratings$audience_score
 
 <iframe width='100%' height='100%' src='http://blm.io/movie_embed.html' frameborder='0' scrolling="no"></iframe>
 
+--- &colscust
+
+## R background
+
+*** =left
+
+<br />
+
+<h3>"Hadley"-verse</h3>
+
+* Robust, powerful libraries with strong theoretical underpinnings:
+
+  * <code>ggplot2</code> :: Grammar of graphics (Leland Wilkinson)
+
+  * <code>dplyr</code> :: Grammar of tidying data
+
+*** =right
+
+<br />
+
+<h3>"Ramnath"-verse</h3>
+
+> * Neat hacks that get R talking to various javascript libraries:
+
+>   * <code>rCharts</code> :: js plots from lattice-like syntax
+
+>   * <code>slidify</code> :: HTML/JS/CSS presentations from RMarkdown
+
+
+--- &colscust
+
+## Interactive charts
+
+*** =left
+
+How we will be doing it:
+<br />
+<p style="text-align: center;">
+R
+<br /><br />
+&#x25BC;
+<br /><br />
+ggvis (Rstudio)
+<br /><br />
+&#x25BC;
+<br /><br />
+Vega
+<br /><br />
+&#x25BC;
+<br /><br />
+D3.js
+</p>
+
+*** =right
+
+But currently:
+<br />
+<p style="text-align: center;">
+R
+<br /><br />
+&#x25BC;
+<br /><br />
+<b>rCharts</b>
+<br /><br />
+&#x25BC;
+<br /><br />
+[ dimple.js, highcharts, NVD3, ... ]
+<br /><br />
+&#x25BC;
+<br /><br />
+D3.js
+</p>
+
+---
+
+## D3.js
+
+Handles data mapping (often JSON) + acts like jQuery for SVGs.
+
+Very powerful but low-level — basic graphs use the same few elements so 
+no need to reinvent wheel for these.
+
+<div id="collision" style="width: 100%; height: 50%; display: block;"></div>
+<script src="js/collision.js"></script>
+
 ---
 
 <p style="text-align:center; font-size:xx-large; margin-top:20%">
 Thanks for your attention
 </p>
 <br />
-<p style="font-size:smaller; text-align:center">
-Supervisors: Colin Semple and Stuart Aitken</div>
+<div style="width: 60%; height: auto; margin: 5% auto;">
+<p>
+People who've helped me out or I've stolen code from:
 </p>
-
-
-<div style="float:left; margin-top:18%">
-<p style="font-size:small">References:</p>
-<p style="font-size:x-small">
-  Belton et al. (2012) Hi-C: a comprehensive technique to capture the conformation of genomes. <strong>Methods</strong>, 58, 268-76.
-<br />
-  Boyle et al. (2014) Comparative analysis of regulatory information and circuits across distant species. <strong>Nature</strong>, 512, 435-6.
-<br />
-  Dixon et al. (2012) Topological domains in mammalian genomes identified by analysis of chromatin interactions. <strong>Nature</strong>, 485, 376-80.
-<br />
-  Imakaev et al. (2012) Iterative correction of Hi-C data reveals hallmarks of chromosome organization. <strong>Nature methods</strong>, 9, 999-1003.
-<br />
-  Kalhor et al. (2011) Genome architectures revealed by tethered chromosome conformation capture and population-based modeling. <strong>Nature biotechnology</strong>, 30, 90-8.
-<br />
-  Lieberman Aiden et al. (2009) Comprehensive Mapping of Long-Range Interactions Reveals Folding Principles of the Human Genome. <strong>Science</strong>, 326, 289-93.
-<br />
-  Yaffe and Tanay (2011) Probabilistic modeling of Hi-C contact maps eliminates systematic biases to characterize global chromosomal architecture. <strong>Nature genetics</strong>, 43, 1059-65.
-
+<p style="font-size:.8em; text-align:center">
+<b>@ramnath_vaidya</b> (rCharts, slidify), @hadley_wickham (dplyr, ggplot2, devtools), 
+@kwbroman, @timelyportfolio, <b>StackOverflow</b>,
+@mbostock (d3.js), @jkiernander (dimple.js)
 </p>
 </div>
 
