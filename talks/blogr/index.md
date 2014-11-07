@@ -92,25 +92,32 @@ Example 1: Author inflation
 
 --- bg:black
 
-<div style="height: 100%; width: 100%; margin: 0 auto;">
+<article class="flexbox vcenter">
 <img style="height: inherit;" src="figure/ac.se.png" />
-</div>
+</article>
 
 ---
 
 ## Starting point
 
-<br />
+<ul class="build fade">
 
-* Good question
+<li> Good question </li>
 
-* No real answers, speculation
+<li> No real answers, speculation </li>
 
-> * Easy to test!!
+<li> Easy to test!!</li>
 
-*** pnotes
+</ul>
 
-Testing presenter notes
+<aside class="note">
+<section>
+<ul>
+<li>See this amazing link: <a href="http://www.google.com">link</a>.</li>
+</ul>
+<p><b>Remember to say this tag line!</b></p>
+</section>
+</aside>
 
 --- 
 
@@ -120,10 +127,14 @@ Testing presenter notes
 
 ![ropensci](figure/ropensci.png)
 
-<div style="width: 50%; margin-left: auto; margin-right: auto; margin-top: 10%">
+<div style="width: 50%; margin-left: auto; margin-right: auto; margin-top: 10%" class="fragment">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/PLOS_logo_2012.svg/500px-PLOS_logo_2012.svg.png" />
 </div>
 
+*** pnotes
+
+Here I used a package built by ROpenSci — fell I should plug them as they're doing great work,
+hackathons, reproducibility, workshops etc.
 
 ---
 
@@ -146,6 +157,17 @@ searchplos(
   start=0, limit=500, sleep=6)
 ```
 
+<aside class="note">
+<section>
+<ul>
+<li>Point I wanted to make #1</li>
+<li>Point I wanted to make #2</li>
+<li>Point I wanted to make #3</li>
+<li>Example <a href="#">link</a> in notes.</li>
+</ul>
+<p><b>Remember to say this tag line!</b></p>
+</section>
+</aside>
 
 --- &rightcol
 
@@ -232,7 +254,8 @@ library("RCurl")
 library("jsonlite")
 
 api.key <- "somelongAPIkey"
-rt <- getURI(paste0("http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=", api.key, "&limit=50"))
+rt <- getURI(paste0("http://api.rottentomatoes.com/api/public/v1.0/",
+                    "lists/dvds/top_rentals.json?apikey=", api.key, "&limit=50"))
 
 rt <- fromJSON(rt)
 
@@ -320,14 +343,17 @@ audience <- rt$movies$ratings$audience_score
 
 <br />
 
-<h3>"Ramnath"-verse</h3>
+<ul style="list-style-type: none !important; list-style: none !important;" class="build">
 
-> * Neat hacks that get R talking to various javascript libraries:
+<li style="list-style: none !important;"><h3>"Ramnath"-verse</h3></li>
 
->   * <code>rCharts</code> :: js plots from lattice-like syntax
+<li style="list-style: none !important;">Neat hacks that get R talking to various javascript libraries:</li>
 
->   * <code>slidify</code> :: HTML/JS/CSS presentations from RMarkdown
+<li style="list-style: none !important;">&nbsp;&nbsp;<code>rCharts</code> :: js plots from lattice-like syntax</li>
 
+<li style="list-style: none !important;">&nbsp;&nbsp;<code>slidify</code> :: HTML/JS/CSS presentations from RMarkdown</li>
+
+</ul>
 
 --- &colscust
 

@@ -150,9 +150,9 @@ $(function() {
 
 <slide class="" id="slide-3" style="background:black;">
   <article data-timings="">
-    <div style="height: 100%; width: 100%; margin: 0 auto;">
+    <p><article class="flexbox vcenter">
 <img style="height: inherit;" src="figure/ac.se.png" />
-</div>
+</article></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -163,16 +163,27 @@ $(function() {
     <h2>Starting point</h2>
   </hgroup>
   <article data-timings="">
-    <p><br /></p>
+    <ul class="build fade">
+
+<li> Good question </li>
+
+<li> No real answers, speculation </li>
+
+<li> Easy to test!!</li>
+
+</ul>
+
+<p><aside class="note">
+<section></p>
 
 <ul>
-<li><p>Good question</p></li>
-<li><p>No real answers, speculation</p></li>
+<li>See this amazing link: <a href="http://www.google.com">link</a>.</li>
 </ul>
 
-<ul class = "build incremental">
-<li>Easy to test!!</li>
-</ul>
+<p><b>Remember to say this tag line!</b></p>
+
+<p></section>
+</aside></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -187,7 +198,7 @@ $(function() {
 
 <p><img src="figure/ropensci.png" alt="ropensci"></p>
 
-<div style="width: 50%; margin-left: auto; margin-right: auto; margin-top: 10%">
+<div style="width: 50%; margin-left: auto; margin-right: auto; margin-top: 10%" class="fragment">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/PLOS_logo_2012.svg/500px-PLOS_logo_2012.svg.png" />
 </div>
 
@@ -214,6 +225,21 @@ $(function() {
   # 500 results (max 1000 per query)
   start=0, limit=500, sleep=6)
 </code></pre>
+
+<p><aside class="note">
+<section></p>
+
+<ul>
+<li>Point I wanted to make #1</li>
+<li>Point I wanted to make #2</li>
+<li>Point I wanted to make #3</li>
+<li>Example <a href="#">link</a> in notes.</li>
+</ul>
+
+<p><b>Remember to say this tag line!</b></p>
+
+<p></section>
+</aside></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -338,7 +364,8 @@ $(function() {
 library(&quot;jsonlite&quot;)
 
 api.key &lt;- &quot;somelongAPIkey&quot;
-rt &lt;- getURI(paste0(&quot;http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=&quot;, api.key, &quot;&amp;limit=50&quot;))
+rt &lt;- getURI(paste0(&quot;http://api.rottentomatoes.com/api/public/v1.0/&quot;,
+                    &quot;lists/dvds/top_rentals.json?apikey=&quot;, api.key, &quot;&amp;limit=50&quot;))
 
 rt &lt;- fromJSON(rt)
 
@@ -457,15 +484,16 @@ audience &lt;- rt$movies$ratings$audience_score
 <div style='float:right;width:48%;'>
   <p><br /></p>
 
-<h3>"Ramnath"-verse</h3>
+<ul style="list-style-type: none !important; list-style: none !important;" class="build">
 
-<ul class = "build incremental">
-<li><p>Neat hacks that get R talking to various javascript libraries:</p>
+<li style="list-style: none !important;"><h3>"Ramnath"-verse</h3></li>
 
-<ul>
-<li><code>rCharts</code> :: js plots from lattice-like syntax</li>
-<li><code>slidify</code> :: HTML/JS/CSS presentations from RMarkdown</li>
-</ul></li>
+<li style="list-style: none !important;">Neat hacks that get R talking to various javascript libraries:</li>
+
+<li style="list-style: none !important;">&nbsp;&nbsp;<code>rCharts</code> :: js plots from lattice-like syntax</li>
+
+<li style="list-style: none !important;">&nbsp;&nbsp;<code>slidify</code> :: HTML/JS/CSS presentations from RMarkdown</li>
+
 </ul>
 
 </div>
