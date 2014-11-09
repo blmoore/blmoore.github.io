@@ -78,13 +78,11 @@ A couple of examples of R analyses I've done for fun:
 
 <br />
 
-And along the way:
+But also:
 
-* Fitting R into web frameworks with rCharts and slidify
+* Creating interactive plots from R with rCharts
 
-* Tips for would be "data scientists" / data bloggers
-
-* Getting people to actually read your stuff
+* HTML5/CSS3/JS presentations from RMarkdown with Slidify
 
 --- #solo 
 
