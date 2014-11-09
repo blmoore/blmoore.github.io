@@ -417,6 +417,10 @@ Hubbard novel adaptation (most expensive box office losses) (screenwriter apolog
 </section>
 </aside>
 
+--- #solo bg:black
+
+![rCharts](figure/rcharts.png)
+
 --- &colscust
 
 ## R background
@@ -601,6 +605,9 @@ d$publish()
 
 &cross; Sooner or later will need to edit the js source
 
+--- #solo bg:black
+
+![rCharts](figure/slidify.png)
 
 ---
 
@@ -641,10 +648,12 @@ Why use these over PowerPoint / LaTeX Beamer?
 * Bullet1
 
   * sub-bullet
-  
-> 1. This appears
 
 ![an image](figure/slidify.png)
+
+> 1. This appears
+
+
 ```
 
 *** =right
@@ -658,10 +667,11 @@ Why use these over PowerPoint / LaTeX Beamer?
 * Bullet1
 
   * sub-bullet
-  
-> 1. This appears
 
 ![an image](figure/slidify.png)
+
+> 1. This appears
+
 
 ---
 
