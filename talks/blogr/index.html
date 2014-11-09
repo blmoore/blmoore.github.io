@@ -154,6 +154,16 @@ $(function() {
 <img style="height: inherit;" src="figure/ac.se.png" />
 </article></p>
 
+<p><aside class="note"></p>
+
+<p>
+Found this question on academia stackexchange, lots of votes and discussion.
+Talks about the idea of a "golden age" of scientific publishing, where single
+authors dominated. Nice image.
+</p>
+
+<p></aside></p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -165,7 +175,7 @@ $(function() {
   <article data-timings="">
     <ul class="build fade">
 
-<li> Good question </li>
+<li> Interesting question </li>
 
 <li> No real answers, speculation </li>
 
@@ -173,17 +183,16 @@ $(function() {
 
 </ul>
 
-<p><aside class="note">
-<section></p>
+<p><aside class="note"></p>
 
-<ul>
-<li>See this amazing link: <a href="http://www.google.com">link</a>.</li>
-</ul>
+<p>
+So this was a good starting point for some analysis. Interesting question,
+one that I'd actually be interested in answering. The other answers were just
+speculation or anecdotal. OWith a couple of very specific examples. Best of all::
+very easy to test!
+</p>
 
-<p><b>Remember to say this tag line!</b></p>
-
-<p></section>
-</aside></p>
+<p></aside></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -201,6 +210,18 @@ $(function() {
 <div style="width: 50%; margin-left: auto; margin-right: auto; margin-top: 10%" class="fragment">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/PLOS_logo_2012.svg/500px-PLOS_logo_2012.svg.png" />
 </div>
+
+<p><aside class="note">
+<section></p>
+
+<p>
+ROpenSci community of package builders looking to open up science.
+Provide lots of handy APIs, in this case the one I was used is for PLOS
+journals. (rplos)
+</p>
+
+<p></section>
+</aside></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -226,20 +247,9 @@ $(function() {
   start=0, limit=500, sleep=6)
 </code></pre>
 
-<p><aside class="note">
-<section></p>
+<p><aside class="note"></p>
 
-<ul>
-<li>Point I wanted to make #1</li>
-<li>Point I wanted to make #2</li>
-<li>Point I wanted to make #3</li>
-<li>Example <a href="#">link</a> in notes.</li>
-</ul>
-
-<p><b>Remember to say this tag line!</b></p>
-
-<p></section>
-</aside></p>
+<p></aside></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -247,22 +257,34 @@ $(function() {
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>Results</h2>
+    <h2>Author count distributions</h2>
   </hgroup>
   <article data-timings="">
-    
-<div style='float:left;width:35%;'>
-  <p><br /></p>
+    <p><br /></p>
 
 <p><img src="figure/plos1.png" alt="author beanplots"></p>
 
-</div>
-<div style='float:right;width:65%;'>
-  <p><br /></p>
+<p><aside class="note">
+<section></p>
 
-<p><img src="figure/plos2.png" alt="author ecdf"></p>
+<p>
+Bean plots showing author densities over entire PLOS collection.
+With overlaid boxplots showing summary stats for comparison.
+</p>
 
-</div>
+<p>
+This is an old plot: Should really be ordered by (e.g.) median, 
+never order alphabetically.
+</p>
+
+<p>
+We can see plos comp biol appears to have the lowest number of authors
+while Genetics potentially has the most. Also one extreme outlier:
+</p>
+
+<p></section>
+</aside></p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -274,6 +296,20 @@ $(function() {
   <article data-timings="">
     <p><img src="figure/270.png" alt="270 authors"></p>
 
+<p><aside class="note">
+<section></p>
+
+<p>
+Was this BRCA1 paper with 270 authors.
+</p>
+
+<p>
+Nothing on the 3,000 author ATLAS paper but still quite a few.
+</p>
+
+<p></section>
+</aside></p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -284,6 +320,20 @@ $(function() {
   </hgroup>
   <article data-timings="">
     <p><img src="figure/plos3.png" alt="lm"></p>
+
+<p><aside class="note">
+<section></p>
+
+<p>
+Back to the original question: are author lists getting longer?
+
+<b>Yes</b>, even in this short timescale of 7 years you can see 
+good evidence for author inflation, with journals like PLOS Genetics
+adding around half an extra author per year, on averge.
+</p>
+
+<p></section>
+</aside></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -313,6 +363,29 @@ $(function() {
 </ul></li>
 </ul>
 
+<p><aside class="note">
+<section></p>
+
+<p>
+Also interesting to try an "understand" these results a little,
+so here I'm comparing the extimate of author inflation with the
+journals "Impact Factor", and there seems to be an OK correlation
+(can't claim statistical significance with these 6 points).
+</p>
+
+<p>
+I would like to return to this at some point with the whole of pubmed,
+22 million records dating from 1809 so maybe we can see this single author period
+transitioning to larger collaborations of today.
+</p>
+
+<p>
+Good to get at Good V Bad, maybe via acknolwedgments?
+</p>
+
+<p></section>
+</aside></p>
+
 </div>
   </article>
   <!-- Presenter Notes -->
@@ -321,6 +394,14 @@ $(function() {
 <slide class="" id="solo" style="background:;">
   <article data-timings="">
     <p>Example 2: Overrated movies</p>
+
+<p><aside class="note"></p>
+
+<p>
+Second example totally different: <b>pop culture</b>
+</p>
+
+<p></aside></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -350,6 +431,22 @@ $(function() {
 <li><p>So given this definition of &quot;overrated&quot;: <br /><p style="font-size: 1.3em; text-align: center;"><b>Q:</b> What are the most (over|under)rated films?</p></p></li>
 </ul>
 
+<p><aside class="note">
+<section></p>
+
+<p>
+Critics are the people doing the overrating and underratings
+</p>
+
+<p>
+Some people said obviously other way round, critics are right and
+together get their ratings about right, it's the audience that's off — 
+both fine, just mentally swap the words. Important thing is to state it up front.
+</p>
+
+<p></section>
+</aside></p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -373,6 +470,17 @@ title &lt;- rt$movies$title
 critics &lt;- rt$movies$ratings$critics_score
 audience &lt;- rt$movies$ratings$audience_score
 </code></pre>
+
+<p><aside class="note"></p>
+
+<p>
+REST: representational state transfer: uniform output, e.g. JSON
+Stateless requests, same req, same output
+
+Architectural style, not protocol like SOAP
+</p>
+
+<p></aside></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -447,7 +555,7 @@ audience &lt;- rt$movies$ratings$audience_score
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-18" style="background:;">
+<slide class="" id="slide-18" style="background:black;">
   <article data-timings="">
     <!--
 <div id='chart12666f920d7f' class='rChart dimple'></div>
@@ -455,6 +563,20 @@ audience &lt;- rt$movies$ratings$audience_score
 -->
 
 <iframe width='100%' height='100%' src='http://blm.io/movie_embed.html' frameborder='0' scrolling="no"></iframe>
+
+<p><aside class="note">
+<section style="font-size: .8em"></p>
+
+<p>
+GOOD: Kurosawa films, Yojimbo, Seven Samurai, Godfather, Goodfellas
+</p>
+
+<p>BAD: Age of the dragons:: Moby dick reimagined in fantasy setting; Guardian:: "<b>there's not a whale in sight but this movie blows</b>"; Battlefield Earth:: John travolta stars in L Ron 
+Hubbard novel adaptation (most expensive box office losses) (screenwriter apologised to the New York post: <b>The only time I saw the movie was at the premiere, which was one too many times</b>
+</p>
+
+<p></section>
+</aside></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -469,14 +591,13 @@ audience &lt;- rt$movies$ratings$audience_score
 <div style='float:left;width:48%;'>
   <p><br /></p>
 
-<h3>"Hadley"-verse</h3>
-
 <ul>
+<li><h3>"Hadley"-verse</h3></li>
 <li><p>Robust, powerful libraries with strong theoretical underpinnings:</p>
 
 <ul>
 <li><code>ggplot2</code> :: Grammar of graphics (Leland Wilkinson)</li>
-<li><code>dplyr</code> :: Grammar of tidying data</li>
+<li><code>dplyr</code> :: Grammar of data manipulation</li>
 </ul></li>
 </ul>
 
@@ -484,16 +605,14 @@ audience &lt;- rt$movies$ratings$audience_score
 <div style='float:right;width:48%;'>
   <p><br /></p>
 
-<ul style="list-style-type: none !important; list-style: none !important;" class="build">
+<ul class = "build incremental">
+<li><h3>"Ramnath"-verse</h3></li>
+<li><p>Neat hacks that get R talking to various javascript libraries:</p>
 
-<li style="list-style: none !important;"><h3>"Ramnath"-verse</h3></li>
-
-<li style="list-style: none !important;">Neat hacks that get R talking to various javascript libraries:</li>
-
-<li style="list-style: none !important;">&nbsp;&nbsp;<code>rCharts</code> :: js plots from lattice-like syntax</li>
-
-<li style="list-style: none !important;">&nbsp;&nbsp;<code>slidify</code> :: HTML/JS/CSS presentations from RMarkdown</li>
-
+<ul>
+<li><code>rCharts</code> :: js plots from lattice-like syntax</li>
+<li><code>slidify</code> :: HTML/JS/CSS presentations from RMarkdown</li>
+</ul></li>
 </ul>
 
 </div>
@@ -572,6 +691,203 @@ no need to reinvent wheel for these.</p>
 </slide>
 
 <slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Loads of js plotting libraries</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<p>dimple, NVD3, polycharts, highcharts, ...</p>
+
+<p><br /></p>
+
+<p><img src="figure/rcharts.png" alt="rCharts"></p>
+
+<p><br /></p>
+
+<ul class = "build incremental">
+<li>Uniform (lattice-style) plotting interface for each of these (and more!)
+straight from R</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:white;">
+  <hgroup>
+    <h2>Example: static</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:40%;'>
+  <p><br /></p>
+
+<pre><code class="r" style="font-size:.7em;"># load data
+d <- read.csv2("Twitter50.txt", sep="\t")
+
+library("ggplot2")
+
+# plot with ggplot
+ggplot(d, aes(x=Citations, y=Followers)) + 
+  geom_point() + theme_bw() + 
+  coord_trans(x="log10", y="log10") +
+  scale_x_log10(limits=c(10, 1e6)) +
+  scale_y_log10(limits=c(1e4, 1e7))
+
+# save to file from device
+ggsave(filename="sciTwitter.svg", 
+       width=5, height=5)
+</code></pre>
+
+<p><br /></p>
+
+<p style="font-size:.75em">(Data from @<a href="http://biomickwatson.wordpress.com/2014/09/17/data-from-the-top-50-science-stars-of-twitter/" target="_blank">biomickwatson</a>)</p>
+
+</div>
+<div style='float:right;width:60%;'>
+  <p><br /></p>
+
+<p><img src="figure/sciTwitter.svg" alt="science stars"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:white;">
+  <hgroup>
+    <h2>Example: interactive</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:40%;'>
+  <p><br /></p>
+
+<pre><code class="r" style="font-size:.7em;"># load data
+d <- read.csv2("Twitter50.txt", sep="\t")
+
+library("rCharts")
+
+# dplot (dimple.js)
+i <- dPlot(Followers ~ Citations, 
+           data=d, type="bubble",
+      groups="Name", height=480, width=520)
+      
+# axis tweaks
+i$yAxis(type = "addLogAxis", overrideMin=1e4)
+i$xAxis(type = "addLogAxis", overrideMin=10)
+
+# publish as gist
+d$publish()
+</code></pre>
+
+</div>
+<div style='float:right;width:60%;'>
+  <iframe width='100%' height="550" src='http://blm.io/stars_embed.html' frameborder='0' scrolling="no"></iframe>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>rCharts</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<p>&check; Quick, easy intro to intractive plots for the web</p>
+
+<p>&check; Range of libraries to choose from</p>
+
+<p>&check; Still evolving, new libraries added</p>
+
+<p>&cross; Probably will need to refer to js lib docs for customisation</p>
+
+<p>&cross; Sooner or later will need to edit the js source</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>Slidify</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>rCharts for presentations: RMarkdown -&gt; HTML5/CSS/js slide deck</p>
+
+<p>Again lots of output frameworks to choose from: reveal.js, io2012, ...</p>
+
+<p><br /></p>
+
+<p>Why use these over PowerPoint / LaTeX Beamer?</p>
+
+<ul class = "build incremental">
+<li><p>Reproducible R documents via knitr</p></li>
+<li><p>Embed web apps, iframes, SVGs </p></li>
+<li><p>CSS3 transitions and jQuery animations</p></li>
+<li><p>Participants can follow along with just a browser (+ mobiles, tablets)</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Slidify</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <h3>To write a slide</h3>
+
+<p><br /></p>
+
+<pre><code>---
+
+## Title 
+
+* Bullet1
+
+  * sub-bullet
+
+&gt; 1. This appears
+
+![an image](figure/slidify.png)
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <h3>Gives</h3>
+
+<p><br /></p>
+
+<h2>Title</h2>
+
+<ul>
+<li><p>Bullet1</p>
+
+<ul>
+<li>sub-bullet</li>
+</ul></li>
+</ul>
+
+<ol class = "build incremental">
+<li>This appears</li>
+</ol>
+
+<p><img src="figure/slidify.png" alt="an image"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-28" style="background:;">
   <article data-timings="">
     <p style="text-align:center; font-size:xx-large; margin-top:20%">
 Thanks for your attention
@@ -638,7 +954,7 @@ People who've helped me out or I've stolen code from:
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Results'>
+        data-slide=7 title='Author count distributions'>
          7
       </a>
     </li>
@@ -728,8 +1044,44 @@ People who've helped me out or I've stolen code from:
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title=''>
+        data-slide=22 title='Loads of js plotting libraries'>
          22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Example: static'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Example: interactive'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='rCharts'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Slidify'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Slidify'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title=''>
+         28
       </a>
     </li>
   </ul>

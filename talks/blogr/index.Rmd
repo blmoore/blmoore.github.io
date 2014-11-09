@@ -96,13 +96,21 @@ Example 1: Author inflation
 <img style="height: inherit;" src="figure/ac.se.png" />
 </article>
 
+<aside class="note">
+<p>
+Found this question on academia stackexchange, lots of votes and discussion.
+Talks about the idea of a "golden age" of scientific publishing, where single
+authors dominated. Nice image.
+</p>
+</aside>
+
 ---
 
 ## Starting point
 
 <ul class="build fade">
 
-<li> Good question </li>
+<li> Interesting question </li>
 
 <li> No real answers, speculation </li>
 
@@ -111,12 +119,12 @@ Example 1: Author inflation
 </ul>
 
 <aside class="note">
-<section>
-<ul>
-<li>See this amazing link: <a href="http://www.google.com">link</a>.</li>
-</ul>
-<p><b>Remember to say this tag line!</b></p>
-</section>
+<p>
+So this was a good starting point for some analysis. Interesting question,
+one that I'd actually be interested in answering. The other answers were just
+speculation or anecdotal. OWith a couple of very specific examples. Best of all::
+very easy to test!
+</p>
 </aside>
 
 --- 
@@ -131,10 +139,15 @@ Example 1: Author inflation
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/PLOS_logo_2012.svg/500px-PLOS_logo_2012.svg.png" />
 </div>
 
-*** pnotes
-
-Here I used a package built by ROpenSci — fell I should plug them as they're doing great work,
-hackathons, reproducibility, workshops etc.
+<aside class="note">
+<section>
+<p>
+ROpenSci community of package builders looking to open up science.
+Provide lots of handy APIs, in this case the one I was used is for PLOS
+journals. (rplos)
+</p>
+</section>
+</aside>
 
 ---
 
@@ -159,32 +172,33 @@ searchplos(
 ```
 
 <aside class="note">
-<section>
-<ul>
-<li>Point I wanted to make #1</li>
-<li>Point I wanted to make #2</li>
-<li>Point I wanted to make #3</li>
-<li>Example <a href="#">link</a> in notes.</li>
-</ul>
-<p><b>Remember to say this tag line!</b></p>
-</section>
+
 </aside>
 
---- &rightcol
+---
 
-## Results
-
-*** =left
+## Author count distributions
 
 <br />
 
 ![author beanplots](figure/plos1.png)
 
-*** =right
-
-<br />
-
-![author ecdf](figure/plos2.png)
+<aside class="note">
+<section>
+<p>
+Bean plots showing author densities over entire PLOS collection.
+With overlaid boxplots showing summary stats for comparison.
+</p>
+<p>
+This is an old plot: Should really be ordered by (e.g.) median, 
+never order alphabetically.
+</p>
+<p>
+We can see plos comp biol appears to have the lowest number of authors
+while Genetics potentially has the most. Also one extreme outlier:
+</p>
+</section>
+</aside>
 
 --- bg:black
 
@@ -192,11 +206,34 @@ searchplos(
 
 ![270 authors](figure/270.png)
 
+<aside class="note">
+<section>
+<p>
+Was this BRCA1 paper with 270 authors.
+</p>
+<p>
+Nothing on the 3,000 author ATLAS paper but still quite a few.
+</p>
+</section>
+</aside>
+
 ---
 
 ## Evidence for author inflation
 
 ![lm](figure/plos3.png)
+
+<aside class="note">
+<section>
+<p>
+Back to the original question: are author lists getting longer?
+
+<b>Yes</b>, even in this short timescale of 7 years you can see 
+good evidence for author inflation, with journals like PLOS Genetics
+adding around half an extra author per year, on averge.
+</p>
+</section>
+</aside>
 
 --- &leftcol
 
@@ -218,9 +255,34 @@ searchplos(
 
 >   * Relative growth of acknowledgements? (PMC)
 
+<aside class="note">
+<section>
+<p>
+Also interesting to try an "understand" these results a little,
+so here I'm comparing the extimate of author inflation with the
+journals "Impact Factor", and there seems to be an OK correlation
+(can't claim statistical significance with these 6 points).
+</p>
+<p>
+I would like to return to this at some point with the whole of pubmed,
+22 million records dating from 1809 so maybe we can see this single author period
+transitioning to larger collaborations of today.
+</p>
+<p>
+Good to get at Good V Bad, maybe via acknolwedgments?
+</p>
+</section>
+</aside>
+
 --- #solo 
 
 Example 2: Overrated movies
+
+<aside class="note">
+<p>
+Second example totally different: <b>pop culture</b>
+</p>
+</aside>
 
 ---
 
@@ -242,6 +304,18 @@ Example 2: Overrated movies
 
 > * So given this definition of "overrated": <br /><p style="font-size: 1.3em; text-align: center;"><b>Q:</b> What are the most (over|under)rated films?</p>
 
+<aside class="note">
+<section>
+<p>
+Critics are the people doing the overrating and underratings
+</p>
+<p>
+Some people said obviously other way round, critics are right and
+together get their ratings about right, it's the audience that's off — 
+both fine, just mentally swap the words. Important thing is to state it up front.
+</p>
+</section>
+</aside>
 
 --- 
 
@@ -264,6 +338,15 @@ title <- rt$movies$title
 critics <- rt$movies$ratings$critics_score
 audience <- rt$movies$ratings$audience_score
 ```
+
+<aside class="note">
+<p>
+REST: representational state transfer: uniform output, e.g. JSON
+Stateless requests, same req, same output
+
+Architectural style, not protocol like SOAP
+</p>
+</aside>
 
 --- 
 
@@ -315,7 +398,7 @@ audience <- rt$movies$ratings$audience_score
 
 ![results1](figure/films1.png)
 
----
+--- bg:black
 
 <!--
 <div id='chart12666f920d7f' class='rChart dimple'></div>
@@ -323,6 +406,17 @@ audience <- rt$movies$ratings$audience_score
 -->
 
 <iframe width='100%' height='100%' src='http://blm.io/movie_embed.html' frameborder='0' scrolling="no"></iframe>
+
+<aside class="note">
+<section style="font-size: .8em">
+<p>
+GOOD: Kurosawa films, Yojimbo, Seven Samurai, Godfather, Goodfellas
+</p>
+<p>BAD: Age of the dragons:: Moby dick reimagined in fantasy setting; Guardian:: "<b>there's not a whale in sight but this movie blows</b>"; Battlefield Earth:: John travolta stars in L Ron 
+Hubbard novel adaptation (most expensive box office losses) (screenwriter apologised to the New York post: <b>The only time I saw the movie was at the premiere, which was one too many times</b>
+</p>
+</section>
+</aside>
 
 --- &colscust
 
@@ -332,29 +426,26 @@ audience <- rt$movies$ratings$audience_score
 
 <br />
 
-<h3>"Hadley"-verse</h3>
+* <h3>"Hadley"-verse</h3>
 
 * Robust, powerful libraries with strong theoretical underpinnings:
 
   * <code>ggplot2</code> :: Grammar of graphics (Leland Wilkinson)
 
-  * <code>dplyr</code> :: Grammar of tidying data
+  * <code>dplyr</code> :: Grammar of data manipulation
 
 *** =right
 
 <br />
 
-<ul style="list-style-type: none !important; list-style: none !important;" class="build">
+> * <h3>"Ramnath"-verse</h3>
 
-<li style="list-style: none !important;"><h3>"Ramnath"-verse</h3></li>
+> * Neat hacks that get R talking to various javascript libraries:
 
-<li style="list-style: none !important;">Neat hacks that get R talking to various javascript libraries:</li>
+>   * <code>rCharts</code> :: js plots from lattice-like syntax
 
-<li style="list-style: none !important;">&nbsp;&nbsp;<code>rCharts</code> :: js plots from lattice-like syntax</li>
+>   * <code>slidify</code> :: HTML/JS/CSS presentations from RMarkdown
 
-<li style="list-style: none !important;">&nbsp;&nbsp;<code>slidify</code> :: HTML/JS/CSS presentations from RMarkdown</li>
-
-</ul>
 
 --- &colscust
 
@@ -411,6 +502,167 @@ no need to reinvent wheel for these.
 
 <div id="collision" style="width: 100%; height: 50%; display: block;"></div>
 <script src="js/collision.js"></script>
+
+---
+
+## Loads of js plotting libraries
+
+<br />
+
+dimple, NVD3, polycharts, highcharts, ...
+
+<br />
+
+![rCharts](figure/rcharts.png)
+
+<br />
+
+> * Uniform (lattice-style) plotting interface for each of these (and more!)
+straight from R
+
+--- &rightcol2 bg:white
+
+## Example: static
+
+*** =left
+
+<br />
+
+<pre><code class="r" style="font-size:.7em;"># load data
+d <- read.csv2("Twitter50.txt", sep="\t")
+
+library("ggplot2")
+
+# plot with ggplot
+ggplot(d, aes(x=Citations, y=Followers)) + 
+  geom_point() + theme_bw() + 
+  coord_trans(x="log10", y="log10") +
+  scale_x_log10(limits=c(10, 1e6)) +
+  scale_y_log10(limits=c(1e4, 1e7))
+
+# save to file from device
+ggsave(filename="sciTwitter.svg", 
+       width=5, height=5)
+</code></pre>
+
+<br />
+
+<p style="font-size:.75em">(Data from @<a href="http://biomickwatson.wordpress.com/2014/09/17/data-from-the-top-50-science-stars-of-twitter/" target="_blank">biomickwatson</a>)</p>
+
+*** =right
+
+<br />
+
+![science stars](figure/sciTwitter.svg)
+
+
+--- &rightcol2 bg:white
+
+## Example: interactive
+
+*** =left
+
+<br />
+
+<pre><code class="r" style="font-size:.7em;"># load data
+d <- read.csv2("Twitter50.txt", sep="\t")
+
+library("rCharts")
+
+# dplot (dimple.js)
+i <- dPlot(Followers ~ Citations, 
+           data=d, type="bubble",
+      groups="Name", height=480, width=520)
+      
+# axis tweaks
+i$yAxis(type = "addLogAxis", overrideMin=1e4)
+i$xAxis(type = "addLogAxis", overrideMin=10)
+
+# publish as gist
+d$publish()
+</code></pre>
+
+*** =right
+
+<iframe width='100%' height="550" src='http://blm.io/stars_embed.html' frameborder='0' scrolling="no"></iframe>
+
+---
+
+## rCharts
+
+<br />
+
+&check; Quick, easy intro to intractive plots for the web
+
+&check; Range of libraries to choose from
+
+&check; Still evolving, new libraries added
+
+&cross; Probably will need to refer to js lib docs for customisation
+
+&cross; Sooner or later will need to edit the js source
+
+
+---
+
+## Slidify
+
+rCharts for presentations: RMarkdown -> HTML5/CSS/js slide deck
+
+Again lots of output frameworks to choose from: reveal.js, io2012, ...
+
+<br />
+
+Why use these over PowerPoint / LaTeX Beamer?
+
+> * Reproducible R documents via knitr
+
+> * Embed web apps, iframes, SVGs 
+
+> * CSS3 transitions and jQuery animations
+
+> * Participants can follow along with just a browser (+ mobiles, tablets)
+
+
+--- &colscust
+
+## Slidify
+
+*** =left
+
+### To write a slide
+
+<br />
+
+```
+---
+
+## Title 
+
+* Bullet1
+
+  * sub-bullet
+  
+> 1. This appears
+
+![an image](figure/slidify.png)
+```
+
+*** =right
+
+### Gives
+
+<br />
+
+## Title 
+
+* Bullet1
+
+  * sub-bullet
+  
+> 1. This appears
+
+![an image](figure/slidify.png)
 
 ---
 
