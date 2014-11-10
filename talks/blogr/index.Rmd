@@ -72,9 +72,9 @@ $(function() {
 
 A couple of examples of R analyses I've done for fun:
 
-  1. Author inflation
+&nbsp;&nbsp;1. Author inflation
 
-  2. Overrated films
+&nbsp;&nbsp;2. Overrated films
 
 <br />
 
@@ -396,6 +396,24 @@ Architectural style, not protocol like SOAP
 
 ![results1](figure/films1.png)
 
+---
+
+## Most underrated
+
+<table border="1" style="font-size:.6em"><tbody><tr><th><br></th> <th>Title</th> <th>Critics</th> <th>Audience</th> <th>Difference</th> </tr><tr><td align="right">1</td><td><a href="http://www.rottentomatoes.com/m/facing_the_giants/" target="_blank">Facing the Giants</a></td><td align="right">13</td><td align="right">86</td><td align="right">-73</td></tr><tr><td align="right">2</td><td><a href="http://www.rottentomatoes.com/m/boondock_saints/" target="_blank">The Boondock Saints</a></td><td align="right">20</td><td align="right">92</td><td align="right">-72</td></tr><tr><td align="right">3</td><td><a href="http://www.rottentomatoes.com/m/diary_of_a_mad_black_woman/" target="_blank">Diary of a Mad Black Woman</a></td><td align="right">16</td><td align="right">87</td><td align="right">-71</td></tr><tr><td align="right">4</td><td><a href="http://www.rottentomatoes.com/m/grandmas_boy/" target="_blank">Grandma's Boy</a></td><td align="right">18</td><td align="right">86</td><td align="right">-68</td></tr><tr><td align="right">=5</td><td><a href="http://www.rottentomatoes.com/m/step_up/" target="_blank">Step Up</a></td><td align="right">19</td><td align="right">83</td><td align="right">-64</td></tr><tr><td align="right">=5</td><td><a href="http://www.rottentomatoes.com/m/now_and_then/" target="_blank">Now and Then</a></td><td align="right">19</td><td align="right">83</td><td align="right">-64</td></tr><tr><td align="right">7</td><td><a href="http://www.rottentomatoes.com/m/life_of_david_gale/" target="_blank">The Life of David Gale</a></td><td align="right">19</td><td align="right">82</td><td align="right">-63</td></tr><tr><td align="right">=8</td><td><a href="http://www.rottentomatoes.com/m/because_i_said_so/" target="_blank">Because I Said So</a></td><td align="right">5</td><td align="right">66</td><td align="right">-61</td></tr><tr><td align="right">=8</td><td><a href="http://www.rottentomatoes.com/m/1104841-sweet_november/" target="_blank">Sweet November</a></td><td align="right">16</td><td align="right">77</td><td align="right">-61</td></tr><tr><td align="right">=10</td><td><a href="http://www.rottentomatoes.com/m/empire_records/" target="_blank">Empire Records</a></td><td align="right">24</td><td align="right">84</td><td align="right">-60</td></tr><tr><td align="right">=10</td><td><a href="http://www.rottentomatoes.com/m/beaches/" target="_blank">Beaches</a></td><td align="right">29</td><td align="right">89</td><td align="right">-60</td></tr><tr><td align="right">=12</td><td><a href="http://www.rottentomatoes.com/m/night_at_the_roxbury/" target="_blank">A Night at the Roxbury</a></td><td align="right">11</td><td align="right">70</td><td align="right">-59</td></tr><tr><td align="right">=12</td><td><a href="http://www.rottentomatoes.com/m/covenant/" target="_blank">The Covenant</a></td><td align="right">3</td><td align="right">62</td><td align="right">-59</td></tr></tbody></table>
+
+---
+
+## Most overrated
+
+<table border="1"><tbody><tr><th><br></th> <th>Title</th> <th>Critics</th> <th>Audience</th> <th>Difference</th> </tr><tr><td align="right">1</td><td><a href="http://www.rottentomatoes.com/m/spy_kids/" target="_blank">Spy Kids</a></td><td align="right">93</td><td align="right">45</td><td align="right">48</td></tr><tr><td align="right">2</td><td><a href="http://www.rottentomatoes.com/m/3-backyards/" target="_blank">3 Backyards</a></td><td align="right">76</td><td align="right">31</td><td align="right">45</td></tr><tr><td align="right">3</td><td><a href="http://www.rottentomatoes.com/m/dinner_with_friends/" target="_blank">Dinner with Friends</a></td><td align="right">88</td><td align="right">45</td><td align="right">43</td></tr><tr><td align="right">=4</td><td><a href="http://www.rottentomatoes.com/m/stuart_little_2/" target="_blank">Stuart Little 2</a></td><td align="right">81</td><td align="right">40</td><td align="right">41</td></tr><tr><td align="right">=4</td><td><a href="http://www.rottentomatoes.com/m/10009419-mommas_man/" target="_blank">Momma's Man</a></td><td align="right">91</td><td align="right">50</td><td align="right">41</td></tr><tr><td align="right">=4</td><td><a href="http://www.rottentomatoes.com/m/cleopatra_jones/" target="_blank">Cleopatra Jones</a></td><td align="right">89</td><td align="right">48</td><td align="right">41</td></tr><tr><td align="right">7</td><td><a href="http://www.rottentomatoes.com/m/about_a_boy/" target="_blank">About a Boy</a></td><td align="right">93</td><td align="right">54</td><td align="right">39</td></tr><tr><td align="right">=8</td><td><a href="http://www.rottentomatoes.com/m/essential_killing/" target="_blank">Essential Killing</a></td><td align="right">85</td><td align="right">47</td><td align="right">38</td></tr><tr><td align="right">=8</td><td><a href="http://www.rottentomatoes.com/m/last_exorcism/" target="_blank">The Last Exorcism</a></td><td align="right">72</td><td align="right">34</td><td align="right">38</td></tr><tr><td align="right">10</td><td><a href="http://www.rottentomatoes.com/m/1208173-splice/" target="_blank">Splice</a></td><td align="right">74</td><td align="right">37</td><td align="right">37</td></tr><tr><td align="right">=11</td><td><a href="http://www.rottentomatoes.com/m/spy_kids_2_island_of_lost_dreams/" target="_blank">Spy Kids 2: The Island of Lost Dreams</a></td><td align="right">74</td><td align="right">38</td><td align="right">36</td></tr><tr><td align="right">=11</td><td><a href="http://www.rottentomatoes.com/m/bruiser/" target="_blank">Bruiser</a></td><td align="right">67</td><td align="right">31</td><td align="right">36</td></tr><tr><td align="right">13</td><td><a href="http://www.rottentomatoes.com/m/edtv/" target="_blank">EdTV</a></td><td align="right">64</td><td align="right">29</td><td align="right">35</td></tr></tbody></table>
+
+--- bg:white
+
+## Did suprisingly well
+
+![author beanplots](figure/logos.png)
+
 --- bg:black
 
 <!--
@@ -416,7 +434,7 @@ Hubbard novel adaptation (most expensive box office losses) (screenwriter apolog
 </section>
 </aside>
 
---- #solo bg:black
+--- #solo bg:#ededed
 
 ![rCharts](figure/rcharts.png)
 
@@ -604,7 +622,7 @@ d$publish()
 
 &cross; Sooner or later will need to edit the js source
 
---- #solo bg:black
+--- #solo bg:#ededed
 
 ![rCharts](figure/slidify.png)
 
@@ -635,14 +653,12 @@ Why use these over PowerPoint / LaTeX Beamer?
 
 *** =left
 
-### To write a slide
-
-<br />
+### Syntax ::
 
 ```
 ---
 
-## Title 
+## Title (h2)
 
 * Bullet1
 
@@ -650,18 +666,15 @@ Why use these over PowerPoint / LaTeX Beamer?
 
 ![an image](figure/slidify.png)
 
-> 1. This appears
-
+'r round(rnorm(5), 2)'
 
 ```
 
 *** =right
 
-### Gives
+### Gives ::
 
-<br />
-
-## Title 
+## Title (h2)
 
 * Bullet1
 
@@ -669,27 +682,50 @@ Why use these over PowerPoint / LaTeX Beamer?
 
 ![an image](figure/slidify.png)
 
-> 1. This appears
-
+<pre>
+`r round(rnorm(5), 2)`
+</pre>
 
 ---
 
-<p style="text-align:center; font-size:xx-large; margin-top:20%">
-Thanks for your attention
+## Summary
+
+<br />
+
+> 1. R is a powerful tool to answer everyday questions; chances are the data is out there... 
+Might turn into an interesting blog post, article or paper!
+
+> 2. Simple interactive charts are easy to make (see rCharts) and can add value, might be 
+tempted towards D3.js for custom visualisations
+
+> 3. Web presentation frameworks are a decent alternative to PowerPoint / Beamer (and easy to write in Markdown, per slidify)
+
+
+--- bg:#ededed
+
+<div style="display: block; width: 40%; text-align:right; padding: 0 5%; margin-top:5%">
+<p style="font-size: .8em;">
+<code>&nbsp;Github::</code> <a href="http://github.com/blmoore">@blmoore</a><br />
+<code>Twitter::</code> <a href="http://twitter.com/benjaminlmoore">@benjaminlmoore</a><br />
+<code>&nbsp;&nbsp;Email::</code> <a href="mailto:root@blm.io">root@blm.io</a><br />
+<code>&nbsp;Slides::</code> <a href="http://blm.io/talks/blogr/">blm.io/talks/blogr</a><br />
+</p>
+</div>
+<p style="text-align:center; font-size:xx-large; margin-top:10%">
+Thanks for listening
 </p>
 <br />
 <div style="width: 60%; height: auto; margin: 5% auto;">
 <p>
 People who've helped me out or I've stolen code from:
 </p>
-<p style="font-size:.8em; text-align:center">
+<p style="font-size:.7em; text-align:center">
 <b>@ramnath_vaidya</b> (rCharts, slidify), @hadley_wickham (dplyr, ggplot2, devtools), 
 @kwbroman, @timelyportfolio, <b>StackOverflow</b>,
 @mbostock (d3.js), @jkiernander (dimple.js)
 </p>
 </div>
 
-<div style="float:left; margin-top:1%"> <p style="font-size:small">HTML5 presentation written in <code>RMarkdown</code> using <code>library("slidify")</code>.</p></div>
 
 ```{r eval=F, echo=F}
 library("slidify")
