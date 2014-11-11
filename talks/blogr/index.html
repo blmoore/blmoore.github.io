@@ -13,7 +13,8 @@
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
   <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/font-awesome.min.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
 
   
   <!-- Grab CDN jQuery, fall back to local if offline -->
@@ -100,6 +101,8 @@ ol.linenums {
 }
 
 </style>
+
+<p><link href="assets/css/font-awesome.min.css" rel="stylesheet"></p>
 
 <!-- Center image on slide -->
 
@@ -934,7 +937,7 @@ i$yAxis(type = "addLogAxis", overrideMin=1e4)
 i$xAxis(type = "addLogAxis", overrideMin=10)
 
 # publish as gist
-d$publish()
+i$publish()
 </code></pre>
 
 </div>
@@ -989,7 +992,7 @@ d$publish()
 <p>Why use these over PowerPoint / LaTeX Beamer?</p>
 
 <ul class = "build incremental">
-<li><p>Reproducible R documents via knitr</p></li>
+<li><p>Reproducible R documents</p></li>
 <li><p>Embed web apps, iframes, SVGs </p></li>
 <li><p>CSS3 transitions and jQuery animations</p></li>
 <li><p>Participants can follow along with just a browser (+ mobiles, tablets)</p></li>
@@ -1070,27 +1073,31 @@ tempted towards D3.js for custom visualisations</p></li>
   <article data-timings="">
     <div style="display: block; width: 40%; text-align:right; padding: 0 5%; margin-top:5%">
 <p style="font-size: .8em;">
-<code>&nbsp;Github::</code> <a href="http://github.com/blmoore">@blmoore</a><br />
-<code>Twitter::</code> <a href="http://twitter.com/benjaminlmoore">@benjaminlmoore</a><br />
-<code>&nbsp;&nbsp;Email::</code> <a href="mailto:root@blm.io">root@blm.io</a><br />
-<code>&nbsp;Slides::</code> <a href="http://blm.io/talks/blogr/">blm.io/talks/blogr</a><br />
+<i class="fa fa-github"></i>&nbsp;<a href="http://github.com/blmoore">blmoore</a><br />
+<i class="fa fa-twitter"></i>&nbsp;<a href="http://twitter.com/benjaminlmoore">benjaminlmoore</a><br />
+<i class="fa fa-envelope"></i>&nbsp;<a href="mailto:root@blm.io">root@blm.io</a><br />
 </p>
 </div>
 
-<p style="text-align:center; font-size:xx-large; margin-top:10%">
+<p style="text-align:center; font-size:xx-large; margin-top:9%">
 Thanks for listening
 </p>
 
 <p><br /></p>
 
 <div style="width: 60%; height: auto; margin: 5% auto;">
-<p>
+<p style="text-align:center;">
 People who've helped me out or I've stolen code from:
 </p>
 <p style="font-size:.7em; text-align:center">
 <b>@ramnath_vaidya</b> (rCharts, slidify), @hadley_wickham (dplyr, ggplot2, devtools), 
 @kwbroman, @timelyportfolio, <b>StackOverflow</b>,
 @mbostock (d3.js), @jkiernander (dimple.js)
+</p>
+<p style="font-size:.5em; text-align:center">
+<br /><br />
+These slides at <a href="http://blm.io/talks/blogr/">blm.io/talks/blogr</a>; more examples: 
+<a href="http://blm.io/blog/" target="_blank">blm.io/blog</a>
 </p>
 </div>
 
