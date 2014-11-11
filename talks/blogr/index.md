@@ -84,6 +84,17 @@ But also:
 
 * HTML5/CSS3/JS presentations from RMarkdown with Slidify
 
+<aside class="note">
+<section>
+<p>
+First is somewhat academia related, then a pop culture one.
+
+These also lead in to talking about two great R packages that
+are helping bring R to the web.
+</p>
+</section>
+</aside>
+
 --- #solo 
 
 Example 1: Author inflation
@@ -95,11 +106,13 @@ Example 1: Author inflation
 </article>
 
 <aside class="note">
+<section>
 <p>
 Found this question on academia stackexchange, lots of votes and discussion.
 Talks about the idea of a "golden age" of scientific publishing, where single
 authors dominated. Nice image.
 </p>
+</section>
 </aside>
 
 ---
@@ -117,12 +130,15 @@ authors dominated. Nice image.
 </ul>
 
 <aside class="note">
+<section>
 <p>
-So this was a good starting point for some analysis. Interesting question,
-one that I'd actually be interested in answering. The other answers were just
-speculation or anecdotal. OWith a couple of very specific examples. Best of all::
-very easy to test!
+Good starting point for some analysis. Interesting question,
+one that I'd actually be interested in answering.  (*) The other answers were just
+speculation or anecdotal (With a couple of very specific examples, like
+a specific field of taxonomy). (*) Best of all:: very easy to test! Lots of ways to 
+get citation data, and counting authors should be easy.
 </p>
+</section>
 </aside>
 
 --- 
@@ -142,7 +158,7 @@ very easy to test!
 <p>
 ROpenSci community of package builders looking to open up science.
 Provide lots of handy APIs, in this case the one I was used is for PLOS
-journals. (rplos)
+journals. (rplos) No particular reason other than nice API and R package.
 </p>
 </section>
 </aside>
@@ -169,7 +185,16 @@ searchplos(
 ```
 
 <aside class="note">
+<section>
+<p>
+Example query, intuitive way to request records.
 
+Package handles API rate limits (sleep)
+
+
+Downside: unwieldy date time specification...
+</p>
+</section>
 </aside>
 
 ---
@@ -227,7 +252,12 @@ Back to the original question: are author lists getting longer?
 
 <b>Yes</b>, even in this short timescale of 7 years you can see 
 good evidence for author inflation, with journals like PLOS Genetics
-adding around half an extra author per year, on averge.
+adding around <b>half an extra author per year</b>, on averge. Seemed 
+surprisingly high to me.
+</p>
+<p>
+Bootstrapped confidence limits on mean, varying sample sizes (e.g.
+PLOS ONE 30k articles, pathogens maybe 3k)
 </p>
 </section>
 </aside>
@@ -252,6 +282,8 @@ adding around half an extra author per year, on averge.
 
 >   * Relative growth of acknowledgements? (PMC)
 
+>   * Inflation decrease when "author contributions" brought in?
+
 <aside class="note">
 <section>
 <p>
@@ -266,7 +298,9 @@ I would like to return to this at some point with the whole of pubmed,
 transitioning to larger collaborations of today.
 </p>
 <p>
-Good to get at Good V Bad, maybe via acknolwedgments?
+Good to get at Good V Bad, maybe via acknolwedgments? Did author inflation
+decrease when journals introduced policies where you have to explicitly state
+who did what?
 </p>
 </section>
 </aside>
@@ -276,9 +310,11 @@ Good to get at Good V Bad, maybe via acknolwedgments?
 Example 2: Overrated movies
 
 <aside class="note">
+<section>
 <p>
 Second example totally different: <b>pop culture</b>
 </p>
+</section>
 </aside>
 
 ---
@@ -337,12 +373,14 @@ audience <- rt$movies$ratings$audience_score
 ```
 
 <aside class="note">
+<section>
 <p>
 REST: representational state transfer: uniform output, e.g. JSON
 Stateless requests, same req, same output
 
 Architectural style, not protocol like SOAP
 </p>
+</section>
 </aside>
 
 --- 
@@ -367,9 +405,7 @@ Architectural style, not protocol like SOAP
 
 > 2. For each, retrieve "similar films" (max: <b>5</b>!)
 
-> 3. Rinse, recurse
-
-> 4. Enjoy the expontential growth...
+> 3. Unique-ify and recurse, growing film list exponentially...
 
 --- &rightcol
 
@@ -401,11 +437,44 @@ Architectural style, not protocol like SOAP
 
 <table border="1" style="font-size:.6em"><tbody><tr><th><br></th> <th>Title</th> <th>Critics</th> <th>Audience</th> <th>Difference</th> </tr><tr><td align="right">1</td><td><a href="http://www.rottentomatoes.com/m/facing_the_giants/" target="_blank">Facing the Giants</a></td><td align="right">13</td><td align="right">86</td><td align="right">-73</td></tr><tr><td align="right">2</td><td><a href="http://www.rottentomatoes.com/m/boondock_saints/" target="_blank">The Boondock Saints</a></td><td align="right">20</td><td align="right">92</td><td align="right">-72</td></tr><tr><td align="right">3</td><td><a href="http://www.rottentomatoes.com/m/diary_of_a_mad_black_woman/" target="_blank">Diary of a Mad Black Woman</a></td><td align="right">16</td><td align="right">87</td><td align="right">-71</td></tr><tr><td align="right">4</td><td><a href="http://www.rottentomatoes.com/m/grandmas_boy/" target="_blank">Grandma's Boy</a></td><td align="right">18</td><td align="right">86</td><td align="right">-68</td></tr><tr><td align="right">=5</td><td><a href="http://www.rottentomatoes.com/m/step_up/" target="_blank">Step Up</a></td><td align="right">19</td><td align="right">83</td><td align="right">-64</td></tr><tr><td align="right">=5</td><td><a href="http://www.rottentomatoes.com/m/now_and_then/" target="_blank">Now and Then</a></td><td align="right">19</td><td align="right">83</td><td align="right">-64</td></tr><tr><td align="right">7</td><td><a href="http://www.rottentomatoes.com/m/life_of_david_gale/" target="_blank">The Life of David Gale</a></td><td align="right">19</td><td align="right">82</td><td align="right">-63</td></tr><tr><td align="right">=8</td><td><a href="http://www.rottentomatoes.com/m/because_i_said_so/" target="_blank">Because I Said So</a></td><td align="right">5</td><td align="right">66</td><td align="right">-61</td></tr><tr><td align="right">=8</td><td><a href="http://www.rottentomatoes.com/m/1104841-sweet_november/" target="_blank">Sweet November</a></td><td align="right">16</td><td align="right">77</td><td align="right">-61</td></tr><tr><td align="right">=10</td><td><a href="http://www.rottentomatoes.com/m/empire_records/" target="_blank">Empire Records</a></td><td align="right">24</td><td align="right">84</td><td align="right">-60</td></tr><tr><td align="right">=10</td><td><a href="http://www.rottentomatoes.com/m/beaches/" target="_blank">Beaches</a></td><td align="right">29</td><td align="right">89</td><td align="right">-60</td></tr><tr><td align="right">=12</td><td><a href="http://www.rottentomatoes.com/m/night_at_the_roxbury/" target="_blank">A Night at the Roxbury</a></td><td align="right">11</td><td align="right">70</td><td align="right">-59</td></tr><tr><td align="right">=12</td><td><a href="http://www.rottentomatoes.com/m/covenant/" target="_blank">The Covenant</a></td><td align="right">3</td><td align="right">62</td><td align="right">-59</td></tr></tbody></table>
 
+<aside class="note">
+<section>
+<p>
+Facing the Giants:: evangelical christian film + american football. Self-selection bias of 
+online reviewers. This holds across some of these other resuts, Tyler Perry has a loyal but
+niche slapstick audience --- others would probably stay away.
+</p>
+<p>
+Cult classics films: Empire Records
+Boondock saints:: controversial combination of gore and religion, probably plays well with Tarantino
+generation (disproportionately represented online?). Juvenile, style-over-substance but developed cult following.
+</p>
+</section>
+</aside>
+
 ---
 
 ## Most overrated
 
 <table border="1"><tbody><tr><th><br></th> <th>Title</th> <th>Critics</th> <th>Audience</th> <th>Difference</th> </tr><tr><td align="right">1</td><td><a href="http://www.rottentomatoes.com/m/spy_kids/" target="_blank">Spy Kids</a></td><td align="right">93</td><td align="right">45</td><td align="right">48</td></tr><tr><td align="right">2</td><td><a href="http://www.rottentomatoes.com/m/3-backyards/" target="_blank">3 Backyards</a></td><td align="right">76</td><td align="right">31</td><td align="right">45</td></tr><tr><td align="right">3</td><td><a href="http://www.rottentomatoes.com/m/dinner_with_friends/" target="_blank">Dinner with Friends</a></td><td align="right">88</td><td align="right">45</td><td align="right">43</td></tr><tr><td align="right">=4</td><td><a href="http://www.rottentomatoes.com/m/stuart_little_2/" target="_blank">Stuart Little 2</a></td><td align="right">81</td><td align="right">40</td><td align="right">41</td></tr><tr><td align="right">=4</td><td><a href="http://www.rottentomatoes.com/m/10009419-mommas_man/" target="_blank">Momma's Man</a></td><td align="right">91</td><td align="right">50</td><td align="right">41</td></tr><tr><td align="right">=4</td><td><a href="http://www.rottentomatoes.com/m/cleopatra_jones/" target="_blank">Cleopatra Jones</a></td><td align="right">89</td><td align="right">48</td><td align="right">41</td></tr><tr><td align="right">7</td><td><a href="http://www.rottentomatoes.com/m/about_a_boy/" target="_blank">About a Boy</a></td><td align="right">93</td><td align="right">54</td><td align="right">39</td></tr><tr><td align="right">=8</td><td><a href="http://www.rottentomatoes.com/m/essential_killing/" target="_blank">Essential Killing</a></td><td align="right">85</td><td align="right">47</td><td align="right">38</td></tr><tr><td align="right">=8</td><td><a href="http://www.rottentomatoes.com/m/last_exorcism/" target="_blank">The Last Exorcism</a></td><td align="right">72</td><td align="right">34</td><td align="right">38</td></tr><tr><td align="right">10</td><td><a href="http://www.rottentomatoes.com/m/1208173-splice/" target="_blank">Splice</a></td><td align="right">74</td><td align="right">37</td><td align="right">37</td></tr><tr><td align="right">=11</td><td><a href="http://www.rottentomatoes.com/m/spy_kids_2_island_of_lost_dreams/" target="_blank">Spy Kids 2: The Island of Lost Dreams</a></td><td align="right">74</td><td align="right">38</td><td align="right">36</td></tr><tr><td align="right">=11</td><td><a href="http://www.rottentomatoes.com/m/bruiser/" target="_blank">Bruiser</a></td><td align="right">67</td><td align="right">31</td><td align="right">36</td></tr><tr><td align="right">13</td><td><a href="http://www.rottentomatoes.com/m/edtv/" target="_blank">EdTV</a></td><td align="right">64</td><td align="right">29</td><td align="right">35</td></tr></tbody></table>
+
+<aside class="note">
+<section>
+<p>
+Weirdly spy kids + sequel. Kids film, target audience depleted in online reviews. Maybe
+critics are fairer than disrguntled parents.
+</p>
+<p>
+Overrated <b>artsy, indie</b> films:: 3 backyards (won an award at sundance); Dinner with friends
+(adaptation of Pullitzer prize winning play); Momma's man (sundance); Essential kiling (loads of
+film festival awards, polish)
+</p>
+<p>
+Might notice a lot of these are quite obscure, should have filtered by (e.g.) number of reviews
+but wasn't trivial to get at.
+</p>
+</section>
+</aside>
 
 --- bg:white
 
@@ -413,17 +482,26 @@ Architectural style, not protocol like SOAP
 
 ![author beanplots](figure/logos.png)
 
+<aside class="note">
+<section>
+<p>
+Much to my surprise this got picked up by various sites which all
+kind of feed off each other, but 538 was cool and AV club sent 
+a lot of US traffic.
+</p>
+</section>
+</aside>
+
 --- bg:black
 
-<!--
-<div id='chart12666f920d7f' class='rChart dimple'></div>
-<script src="js/films.js"></script>
--->
 
 <iframe width='100%' height='100%' src='http://blm.io/movie_embed.html' frameborder='0' scrolling="no"></iframe>
 
 <aside class="note">
 <section style="font-size: .8em">
+<p>
+During publicity, wanted to put together an interactive version to explore the other points.
+</p>
 <p>
 GOOD: Kurosawa films, Yojimbo, Seven Samurai, Godfather, Goodfellas
 </p>
@@ -436,6 +514,14 @@ Hubbard novel adaptation (most expensive box office losses) (screenwriter apolog
 --- #solo bg:#ededed
 
 ![rCharts](figure/rcharts.png)
+
+<aside class="note">
+<section>
+<p>
+Leads nicely into talking about rCharts.
+</p>
+</section>
+</aside>
 
 --- &colscust
 
@@ -465,6 +551,17 @@ Hubbard novel adaptation (most expensive box office losses) (screenwriter apolog
 
 >   * <code>slidify</code> :: HTML/JS/CSS presentations from RMarkdown
 
+<aside class="note">
+<section>
+<p>
+All familiar with the "hadley-verse" of R packages, even if you're
+not used to the name. Well-put together, robust, really powerful.
+
+Ramnath Veyd-ya-natan (assistant prof at McGill, operations management).
+Focus on integrating R with javascript and web ecosystem.
+</p>
+</section>
+</aside>
 
 --- &colscust
 
