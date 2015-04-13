@@ -27,7 +27,7 @@
 
 <p>Anthony Wells (@<a href="https://twitter.com/anthonyjwells">anthonyjwells</a>) of YouGov has put together <a href="http://ukpollingreport.co.uk/scottish-independence-referendum">a table</a> of survey results dating back to January 2012. Without too much hassle we can build a messy <code>data.frame</code> from this in R via the <code>XML</code> package:</p>
 <div class="highlight"><pre><code class="language-r" data-lang="r">polls <span class="o">&lt;-</span> readHTMLTable<span class="p">(</span><span class="s">&quot;http://ukpollingreport.co.uk/scottish-independence-referendum&quot;</span><span class="p">,</span> skip.rows<span class="o">=</span><span class="m">1</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span>
-colnames<span class="p">(</span>polls<span class="p">)</span> <span class="o">&lt;-</span> c<span class="p">(</span><span class="s">&quot;pollster&quot;</span><span class="p">,</span> <span class="s">&quot;date&quot;</span><span class="p">,</span> <span class="s">&quot;yes&quot;</span><span class="p">,</span> <span class="s">&quot;no&quot;</span><span class="p">,</span>
+<span class="kp">colnames</span><span class="p">(</span>polls<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;pollster&quot;</span><span class="p">,</span> <span class="s">&quot;date&quot;</span><span class="p">,</span> <span class="s">&quot;yes&quot;</span><span class="p">,</span> <span class="s">&quot;no&quot;</span><span class="p">,</span>
                      <span class="s">&quot;non-voting&quot;</span><span class="p">,</span> <span class="s">&quot;dontknow&quot;</span><span class="p">,</span> <span class="s">&quot;yessplit&quot;</span><span class="p">)</span>
 polls
 <span class="c1">#                                   pollster     date yes no ...</span>
@@ -57,12 +57,12 @@ polls
 
 <p>The sample sizes here are generally too small to claim they are polling significantly above or below expectation, save for The Sunday Times (significantly more pro-Independence than expected, p = 7 &times; 10<sup>-4</sup>) and <a href="http://www.tns-bmrb.co.uk/home">TNS BMRB</a>, a &quot;think tank&quot; with offices in London and Edinburgh who seem to both perform and publish their own polls (p &lt; 1 &times; 10<sup>-3</sup>).</p>
 <div class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># dplyr example (featuring messy subset abuse)</span>
-group_by<span class="p">(</span>subset<span class="p">(</span>polls<span class="p">,</span> response <span class="o">==</span> <span class="s">&quot;Yes&quot;</span> <span class="o">&amp;</span>
+group_by<span class="p">(</span><span class="kp">subset</span><span class="p">(</span>polls<span class="p">,</span> response <span class="o">==</span> <span class="s">&quot;Yes&quot;</span> <span class="o">&amp;</span>
          newspaper <span class="o">%in%</span> ordering<span class="p">[</span>ordering<span class="o">$</span>count <span class="o">&gt;</span> <span class="m">1</span><span class="p">,</span><span class="s">&quot;newspaper&quot;</span><span class="p">]),</span>
          newspaper<span class="p">)</span> <span class="o">%&gt;%</span>
   summarise<span class="p">(</span>p<span class="o">=</span>wilcox.test<span class="p">(</span>residual<span class="p">,</span> mu<span class="o">=</span><span class="m">0</span><span class="p">)</span><span class="o">$</span>p.value<span class="p">)</span>
 
-Source<span class="o">:</span> local data frame <span class="p">[</span><span class="m">14</span> x <span class="m">2</span><span class="p">]</span>
+Source<span class="o">:</span> local <span class="kt">data frame</span> <span class="p">[</span><span class="m">14</span> x <span class="m">2</span><span class="p">]</span>
 
 <span class="c1">#              newspaper            p</span>
 <span class="c1"># 1             TNS BMRB 0.0009765625</span>
@@ -514,15 +514,15 @@ or actresses you might be interested in (like, say, Jean-Claude Van Damme whom
 <h2>Top 100 twitter accounts by followers</h2>
 
 <p>A top 100 list is made available by <a title="Twitter Counter" href="http://twittercounter.com/pages/100" target="_blank">Twitter Counter</a>. It's not clear that they have made this list available through their API, but thanks to the markup, a quick hack is to scrape the usernames using <a title="RCurl" href="http://www.omegahat.org/RCurl/" target="_blank">RCurl</a> and some <a title="Regex" href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">regex</a>:</p>
-<div class="highlight"><pre><code class="language-r" data-lang="r">require<span class="p">(</span><span class="s">&quot;RCurl&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="kn">require</span><span class="p">(</span><span class="s">&quot;RCurl&quot;</span><span class="p">)</span>
 top.100 <span class="o">&lt;-</span> getURL<span class="p">(</span><span class="s">&quot;http://twittercounter.com/pages/100&quot;</span><span class="p">)</span>
 <span class="c1"># split into lines</span>
-top.100 <span class="o">&lt;-</span> unlist<span class="p">(</span>strsplit<span class="p">(</span>top.100<span class="p">,</span> <span class="s">&quot;\n&quot;</span><span class="p">))</span>
+top.100 <span class="o">&lt;-</span> <span class="kp">unlist</span><span class="p">(</span><span class="kp">strsplit</span><span class="p">(</span>top.100<span class="p">,</span> <span class="s">&quot;\n&quot;</span><span class="p">))</span>
 <span class="c1"># Get only those lines with an @</span>
-top.100 <span class="o">&lt;-</span> top.100<span class="p">[</span>sapply<span class="p">(</span>top.100<span class="p">,</span> grepl<span class="p">,</span> pattern<span class="o">=</span><span class="s">&quot;@&quot;</span><span class="p">)]</span>
+top.100 <span class="o">&lt;-</span> top.100<span class="p">[</span><span class="kp">sapply</span><span class="p">(</span>top.100<span class="p">,</span> <span class="kp">grepl</span><span class="p">,</span> pattern<span class="o">=</span><span class="s">&quot;@&quot;</span><span class="p">)]</span>
 <span class="c1"># Grep out anchored usernames: &lt;a ...&amp;gt;&lt;a href=&#39;https://github.com/username&#39; class=&#39;user-mention&#39;&gt;@username&lt;/a&gt;&lt;/a&gt;;</span>
-top.100 <span class="o">&lt;-</span> gsub<span class="p">(</span><span class="s">&quot;.*&gt;@(.+)&lt;.*&quot;</span><span class="p">,</span> <span class="s">&quot;\\1&quot;</span><span class="p">,</span> top.100<span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">101</span><span class="p">]</span>
-head<span class="p">(</span>top.100<span class="p">)</span>
+top.100 <span class="o">&lt;-</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&quot;.*&gt;@(.+)&lt;.*&quot;</span><span class="p">,</span> <span class="s">&quot;\\1&quot;</span><span class="p">,</span> top.100<span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">101</span><span class="p">]</span>
+<span class="kp">head</span><span class="p">(</span>top.100<span class="p">)</span>
 <span class="c1"># [1] &quot;katyperry&quot;  &quot;justinbieber&quot;  &quot;BarackObama&quot;  ...</span>
 </code></pre></div>
 <h2>R package twitteR</h2>
@@ -545,7 +545,7 @@ username<span class="o">$</span>getFollowers<span class="p">(</span>n<span class
 
 <p>Here I used a relatively new R package, <a title="gender package" href="https://github.com/ropensci/gender" target="_blank">rOpenSci's gender</a> (kudos for resisting gendR and the like). This uses U.S. social security data to probabilistically link first names with genders, e.g.:</p>
 <div class="highlight"><pre><code class="language-r" data-lang="r">devtools<span class="o">::</span>install_github<span class="p">(</span><span class="s">&quot;ropensci/gender&quot;</span><span class="p">)</span>
-require<span class="p">(</span><span class="s">&quot;gender&quot;</span><span class="p">)</span>
+<span class="kn">require</span><span class="p">(</span><span class="s">&quot;gender&quot;</span><span class="p">)</span>
 gender<span class="p">(</span><span class="s">&quot;ben&quot;</span><span class="p">)</span>
 <span class="c1">#   name proportion_male proportion_female gender</span>
 <span class="c1"># 1  ben          0.9962            0.0038   male</span>
@@ -724,7 +724,7 @@ This post was originally published on my <a href="http://benjaminlmoore.wordpres
   <span class="c1"># Fields to return: id (doi) and author list</span>
   fl <span class="o">=</span> <span class="s">&quot;id,author&quot;</span><span class="p">,</span>
   <span class="c1"># Filter: only actual articles in journal PLOS ONE</span>
-  fq <span class="o">=</span> list<span class="p">(</span><span class="s">&quot;doc_type:full&quot;</span><span class="p">,</span>
+  fq <span class="o">=</span> <span class="kt">list</span><span class="p">(</span><span class="s">&quot;doc_type:full&quot;</span><span class="p">,</span>
             <span class="s">&quot;cross_published_journal_key:PLoSONE&quot;</span><span class="p">),</span>
   <span class="c1"># 500 results (max 1000 per query)</span>
   start<span class="o">=</span><span class="m">0</span><span class="p">,</span> limit<span class="o">=</span><span class="m">500</span><span class="p">,</span> sleep<span class="o">=</span><span class="m">6</span><span class="p">)</span>
@@ -798,14 +798,14 @@ This post was originally published on my
 <h2>Preprocessing</h2>
 
 <p>The data is made available from The Guardian as a <code>.csv</code> file via Google spreadsheets <a title="data" href="https://docs.google.com/spreadsheet/ccc?key=0AonYZs4MzlZbcGhOdG0zTG1EWkVPOEY3OXRmOEIwZmc#gid=0" target="_blank">here</a> and requires minimal cleanup, cut the source information from the end of the file and you can open it up in R.</p>
-<div class="highlight"><pre><code class="language-r" data-lang="r">sop <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&quot;StateOfTheParties.csv&quot;</span><span class="p">,</span> stringsAsFactors<span class="o">=</span><span class="k-Variable">F</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-r" data-lang="r">sop <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&quot;StateOfTheParties.csv&quot;</span><span class="p">,</span> stringsAsFactors<span class="o">=</span><span class="bp">F</span><span class="p">)</span>
 <span class="c1">## Data cleanup</span>
-sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">&lt;-</span> apply<span class="p">(</span>sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">],</span> <span class="m">2</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> as.numeric<span class="p">(</span>gsub<span class="p">(</span><span class="s">&quot;%&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> x<span class="p">)))</span>
-sop<span class="p">[,</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> as.Date<span class="p">(</span>sop<span class="p">[,</span><span class="m">1</span><span class="p">],</span> format<span class="o">=</span><span class="s">&quot;%d-%m-%Y&quot;</span><span class="p">)</span>
-colnames<span class="p">(</span>sop<span class="p">)[</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">&quot;Date&quot;</span>
+sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="kp">apply</span><span class="p">(</span>sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">],</span> <span class="m">2</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kp">as.numeric</span><span class="p">(</span><span class="kp">gsub</span><span class="p">(</span><span class="s">&quot;%&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> x<span class="p">)))</span>
+sop<span class="p">[,</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="kp">as.Date</span><span class="p">(</span>sop<span class="p">[,</span><span class="m">1</span><span class="p">],</span> format<span class="o">=</span><span class="s">&quot;%d-%m-%Y&quot;</span><span class="p">)</span>
+<span class="kp">colnames</span><span class="p">(</span>sop<span class="p">)[</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">&quot;Date&quot;</span>
 <span class="c1"># correct for some rounding errors leading to 101/99 %</span>
-sop<span class="o">$</span>rsum <span class="o">&lt;-</span> apply<span class="p">(</span>sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">],</span> <span class="m">1</span><span class="p">,</span> sum<span class="p">)</span>
-table<span class="p">(</span>sop<span class="o">$</span>rsum<span class="p">)</span>
+sop<span class="o">$</span>rsum <span class="o">&lt;-</span> <span class="kp">apply</span><span class="p">(</span>sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">],</span> <span class="m">1</span><span class="p">,</span> <span class="kp">sum</span><span class="p">)</span>
+<span class="kp">table</span><span class="p">(</span>sop<span class="o">$</span>rsum<span class="p">)</span>
 sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">&lt;-</span> sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]</span> <span class="o">/</span> sop<span class="o">$</span>rsum
 </code></pre></div>
 <p>Then after <code>melt</code>ing the data.frame down (full code at the end of the post), you can get a quick overview with <code>ggplot2</code>.</p>
@@ -911,15 +911,15 @@ This post was originally published on my
 <div class="highlight"><pre><code class="language-r" data-lang="r"><span class="o">&lt;!--</span> Limit image width and height <span class="o">--&gt;</span>
 <span class="o">&lt;</span>style type<span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="o">&gt;</span>
 img <span class="p">{</span>
-  max<span class="o">-</span>height<span class="o">:</span> <span class="m">560</span>px<span class="p">;</span>
-  max<span class="o">-</span>width<span class="o">:</span> <span class="m">964</span>px<span class="p">;</span>
+  <span class="kp">max</span><span class="o">-</span>height<span class="o">:</span> <span class="m">560</span>px<span class="p">;</span>
+  <span class="kp">max</span><span class="o">-</span>width<span class="o">:</span> <span class="m">964</span>px<span class="p">;</span>
 <span class="p">}</span>
 <span class="o">&lt;/</span>style<span class="o">&gt;&lt;/</span>p<span class="o">&gt;</span>
 <span class="o">&lt;</span>p<span class="o">&gt;&lt;!--</span> Center image on slide <span class="o">--&gt;</span>
 <span class="o">&lt;</span>script type<span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> src<span class="o">=</span><span class="s">&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js&quot;</span><span class="o">&gt;&lt;/</span>script<span class="o">&gt;</span>
 <span class="o">&lt;</span>script type<span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
 <span class="o">$</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="o">$</span><span class="p">(</span><span class="s">&quot;p:has(img)&quot;</span><span class="p">)</span>.addClass<span class="p">(</span><span class="s">&#39;centered&#39;</span><span class="p">);</span>
+  <span class="o">$</span><span class="p">(</span><span class="s">&quot;p:has(img)&quot;</span><span class="p">)</span><span class="m">.</span>addClass<span class="p">(</span><span class="s">&#39;centered&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 <span class="o">&lt;/</span>script<span class="o">&gt;</span>
 </code></pre></div>

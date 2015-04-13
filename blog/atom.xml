@@ -4,13 +4,94 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2014-09-01T11:00:29+01:00</updated>
+ <updated>2015-04-13T14:51:19+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
    <email>root@blm.io</email>
  </author>
 
+ 
+ <entry>
+   <title>Building an academic CV in markdown</title>
+   <link href="http://blm.io/blog/markdown-academic-cv"/>
+   <updated>2015-04-13T00:00:00+01:00</updated>
+   <id>http://blm.io/blog/markdown-academic-cv</id>
+   <content type="html">&lt;p&gt;I&amp;#39;m creeping towards the tail-end of my PhD so it&amp;#39;s probably time to dust off my CV and tidy it up. In the past I&amp;#39;ve written this document a few different ways, from LaTeX to a custom &lt;a href=&quot;https://inkscape.org/en/&quot;&gt;Inkscape&lt;/a&gt; document, but I&amp;#39;ve decided to move with the times and try something new: a markdown CV that compiles to both an HTML web version and well-formatted PDF.&lt;/p&gt;
+
+&lt;h2&gt;markdown-cv&lt;/h2&gt;
+
+&lt;p&gt;Googling &amp;quot;markdown CV&amp;quot; gave a few different options: one using &lt;a href=&quot;http://mszep.github.io/pandoc_resume/&quot;&gt;pandoc&lt;/a&gt; with slightly dated-looking themes; another &lt;a href=&quot;http://there4development.com/blog/2012/12/31/markdown-resume-builder/&quot;&gt;command-line PHP script&lt;/a&gt;, whose results are a bit prettier, but after trying these I came across &lt;code&gt;markdown-cv&lt;/code&gt; from github user &lt;a href=&quot;https://github.com/elipapa/markdown-cv&quot;&gt;elipapa&lt;/a&gt; which seemed to be simple to use and came with a nice design &amp;mdash; also it&amp;#39;s built with &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;jekyll&lt;/a&gt;, which I already &lt;a href=&quot;http://blm.io/blog/wordpress-to-jekyll/&quot;&gt;use to power blm.io&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Eliseo Papa wrote up a &lt;a href=&quot;http://www.eliseopapa.org/workflow/2012/09/20/why-i-switched-to-markdown-for-my-cv/&quot;&gt;blog post&lt;/a&gt; on how and why he put &lt;code&gt;markdown-cv&lt;/code&gt; together, and their CV &lt;a href=&quot;https://github.com/elipapa/elipapa.github.io/blob/master/downloads/cv.pdf&quot;&gt;looks great&lt;/a&gt; so that was enough to convince me to give it a shot.&lt;/p&gt;
+
+&lt;h3&gt;HTML version&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;markdown-cv&lt;/code&gt; uses CSS media queries to select different stylesheets for screen and print. This means in practice you can optimise your CV design for each medium pretty easily &amp;mdash; I went with a kind of colourful web version and more toned-down print version.&lt;/p&gt;
+
+&lt;p&gt;I didn&amp;#39;t make any big changes to &lt;a href=&quot;https://github.com/elipapa/markdown-cv&quot;&gt;elipapa&amp;#39;s markdown-cv&lt;/a&gt;, just played with the colours, fonts, and tweaked the layout and added &lt;a href=&quot;http://fortawesome.github.io/Font-Awesome/&quot;&gt;font-awesome icons&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s a screenshot of the current HTML version of my CV:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/blog/img/html-mdcv.png&quot; target=&quot;_blank&quot;&gt;
+&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/html-mdcv.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I like the whitespace and clear separation of headings, dates and details. The underlying CSS layout has some technical issues &amp;mdash; the relative positions can get messed up on resize &amp;mdash; but it still looks good on mobile devices and at a range of display resolutions.&lt;/p&gt;
+
+&lt;h3&gt;PDF version&lt;/h3&gt;
+
+&lt;p&gt;&lt;img class=&quot;imgright&quot; src=&quot;/blog/img/printcv-ul.png&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There were a few difficulties converting the web version to print. The general approach for CVs in markdown seems to be to run &lt;a href=&quot;http://wkhtmltopdf.org/&quot;&gt;wkhtmltopdf&lt;/a&gt;, however this uses WebKit for rendering (as the name suggests) which it turns out has issues with some modern CSS features when printing.&lt;/p&gt;
+
+&lt;p&gt;One issue was with CSS3 multiple &lt;code&gt;columns&lt;/code&gt; layout, with &lt;code&gt;wkhtmltopdf&lt;/code&gt; these were rendered in a single column while the web version renders correctly in 3-columns, across modern browsers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/webcv-ul.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It turns out support was &lt;a href=&quot;https://www.webkit.org/blog/88/css3-multi-column-support/#comment-16854&quot;&gt;dropped&lt;/a&gt; for printing columns specified in this way due to issues with page breaks, and apparently this still hasn&amp;#39;t been resolved. To get around this, I convert to PDF through Firefox with its &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Mozilla/Gecko&quot;&gt;Gecko engine&lt;/a&gt; and all is well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/printcv-ulfixed.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Page breaks can still be iffy though, web renderers are no LaTeX, so if it doesn&amp;#39;t break cleanly over pages you can add these in manually using CSS. For example, say you want to add a page break before your publications section:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;cv.md&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;## Publications
+
+You _et al._ (2014) Some great paper...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;cv-print.css&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#publications&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;before&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;always&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There&amp;#39;s another issue I can&amp;#39;t debug relating to web links in the PDF version (currently some work, some don&amp;#39;t), but in theory the PDF is for print so maybe it doesn&amp;#39;t matter.&lt;/p&gt;
+
+&lt;h3&gt;Result&lt;/h3&gt;
+
+&lt;p&gt;Here&amp;#39;s what I have so far (click through to see the full versions) &amp;mdash; the code is &lt;a href=&quot;https://github.com/blmoore/md-cv&quot;&gt;on github&lt;/a&gt; if you want to adapt it for your own use! All credit goes to the &lt;a href=&quot;https://github.com/elipapa/markdown-cv&quot;&gt;original author&lt;/a&gt; of markdown-cv.&lt;/p&gt;
+
+&lt;div style=&quot;float:right; width:49%;&quot;&gt;
+  &lt;p style=&quot;text-align:center; color:#888; font-weight: bold;&quot;&gt;PDF&lt;/p&gt;
+  &lt;a href=&quot;https://github.com/blmoore/md-cv/blob/master/blm_cv.pdf&quot; target=&quot;_blank&quot;&gt;
+    &lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/printcv.png&quot; /&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;float:right; width:49%;&quot;&gt;
+  &lt;p style=&quot;text-align:center; color:#888; font-weight: bold;&quot;&gt;HTML&lt;/p&gt;
+  &lt;a href=&quot;http://blm.io/cv/&quot; target=&quot;_blank&quot;&gt;
+    &lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/webcv.png&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br clear=&quot;all&quot; /&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Scottish independence: what do the polls say?</title>
@@ -25,7 +106,7 @@
 
 &lt;p&gt;Anthony Wells (@&lt;a href=&quot;https://twitter.com/anthonyjwells&quot;&gt;anthonyjwells&lt;/a&gt;) of YouGov has put together &lt;a href=&quot;http://ukpollingreport.co.uk/scottish-independence-referendum&quot;&gt;a table&lt;/a&gt; of survey results dating back to January 2012. Without too much hassle we can build a messy &lt;code&gt;data.frame&lt;/code&gt; from this in R via the &lt;code&gt;XML&lt;/code&gt; package:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;polls &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; readHTMLTable&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://ukpollingreport.co.uk/scottish-independence-referendum&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; skip.rows&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
-colnames&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;polls&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;pollster&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;yes&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;no&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;kp&quot;&gt;colnames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;polls&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;pollster&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;yes&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;no&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
                      &lt;span class=&quot;s&quot;&gt;&amp;quot;non-voting&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;dontknow&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;yessplit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 polls
 &lt;span class=&quot;c1&quot;&gt;#                                   pollster     date yes no ...&lt;/span&gt;
@@ -55,12 +136,12 @@ polls
 
 &lt;p&gt;The sample sizes here are generally too small to claim they are polling significantly above or below expectation, save for The Sunday Times (significantly more pro-Independence than expected, p = 7 &amp;times; 10&lt;sup&gt;-4&lt;/sup&gt;) and &lt;a href=&quot;http://www.tns-bmrb.co.uk/home&quot;&gt;TNS BMRB&lt;/a&gt;, a &amp;quot;think tank&amp;quot; with offices in London and Edinburgh who seem to both perform and publish their own polls (p &amp;lt; 1 &amp;times; 10&lt;sup&gt;-3&lt;/sup&gt;).&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# dplyr example (featuring messy subset abuse)&lt;/span&gt;
-group_by&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;subset&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;polls&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; response &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Yes&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;
+group_by&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;subset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;polls&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; response &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Yes&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;
          newspaper &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; ordering&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;ordering&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;count &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;newspaper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt;
          newspaper&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
   summarise&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;p&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;wilcox.test&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;residual&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; mu&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;p.value&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-Source&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; local data frame &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;14&lt;/span&gt; x &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+Source&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; local &lt;span class=&quot;kt&quot;&gt;data frame&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;14&lt;/span&gt; x &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;#              newspaper            p&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# 1             TNS BMRB 0.0009765625&lt;/span&gt;
@@ -546,15 +627,15 @@ or actresses you might be interested in (like, say, Jean-Claude Van Damme whom
 &lt;h2&gt;Top 100 twitter accounts by followers&lt;/h2&gt;
 
 &lt;p&gt;A top 100 list is made available by &lt;a title=&quot;Twitter Counter&quot; href=&quot;http://twittercounter.com/pages/100&quot; target=&quot;_blank&quot;&gt;Twitter Counter&lt;/a&gt;. It&#39;s not clear that they have made this list available through their API, but thanks to the markup, a quick hack is to scrape the usernames using &lt;a title=&quot;RCurl&quot; href=&quot;http://www.omegahat.org/RCurl/&quot; target=&quot;_blank&quot;&gt;RCurl&lt;/a&gt; and some &lt;a title=&quot;Regex&quot; href=&quot;https://en.wikipedia.org/wiki/Regular_expression&quot; target=&quot;_blank&quot;&gt;regex&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;RCurl&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;kn&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;RCurl&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 top.100 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getURL&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://twittercounter.com/pages/100&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# split into lines&lt;/span&gt;
-top.100 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; unlist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;top.100&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+top.100 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;unlist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;strsplit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;top.100&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# Get only those lines with an @&lt;/span&gt;
-top.100 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; top.100&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;sapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;top.100&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; grepl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+top.100 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; top.100&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;sapply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;top.100&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;grepl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# Grep out anchored usernames: &amp;lt;a ...&amp;amp;gt;&amp;lt;a href=&amp;#39;https://github.com/username&amp;#39; class=&amp;#39;user-mention&amp;#39;&amp;gt;@username&amp;lt;/a&amp;gt;&amp;lt;/a&amp;gt;;&lt;/span&gt;
-top.100 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;.*&amp;gt;@(.+)&amp;lt;.*&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;\\1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; top.100&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-head&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;top.100&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+top.100 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;.*&amp;gt;@(.+)&amp;lt;.*&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;\\1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; top.100&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;kp&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;top.100&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# [1] &amp;quot;katyperry&amp;quot;  &amp;quot;justinbieber&amp;quot;  &amp;quot;BarackObama&amp;quot;  ...&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;R package twitteR&lt;/h2&gt;
@@ -577,7 +658,7 @@ username&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;getFollowers&lt;span class
 
 &lt;p&gt;Here I used a relatively new R package, &lt;a title=&quot;gender package&quot; href=&quot;https://github.com/ropensci/gender&quot; target=&quot;_blank&quot;&gt;rOpenSci&#39;s gender&lt;/a&gt; (kudos for resisting gendR and the like). This uses U.S. social security data to probabilistically link first names with genders, e.g.:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;devtools&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;install_github&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ropensci/gender&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;gender&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;gender&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 gender&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ben&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#   name proportion_male proportion_female gender&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# 1  ben          0.9962            0.0038   male&lt;/span&gt;
@@ -750,7 +831,7 @@ This post was originally published on my &lt;a href=&quot;http://benjaminlmoore.
   &lt;span class=&quot;c1&quot;&gt;# Fields to return: id (doi) and author list&lt;/span&gt;
   fl &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;id,author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;# Filter: only actual articles in journal PLOS ONE&lt;/span&gt;
-  fq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;doc_type:full&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  fq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;doc_type:full&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
             &lt;span class=&quot;s&quot;&gt;&amp;quot;cross_published_journal_key:PLoSONE&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;# 500 results (max 1000 per query)&lt;/span&gt;
   start&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sleep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -821,14 +902,14 @@ This post was originally published on my
 &lt;h2&gt;Preprocessing&lt;/h2&gt;
 
 &lt;p&gt;The data is made available from The Guardian as a &lt;code&gt;.csv&lt;/code&gt; file via Google spreadsheets &lt;a title=&quot;data&quot; href=&quot;https://docs.google.com/spreadsheet/ccc?key=0AonYZs4MzlZbcGhOdG0zTG1EWkVPOEY3OXRmOEIwZmc#gid=0&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; and requires minimal cleanup, cut the source information from the end of the file and you can open it up in R.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;sop &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;StateOfTheParties.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stringsAsFactors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;sop &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;StateOfTheParties.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stringsAsFactors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;## Data cleanup&lt;/span&gt;
-sop&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; apply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sop&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-sop&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; as.Date&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sop&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d-%m-%Y&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-colnames&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sop&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Date&amp;quot;&lt;/span&gt;
+sop&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sop&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;as.numeric&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+sop&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;as.Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sop&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d-%m-%Y&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kp&quot;&gt;colnames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sop&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Date&amp;quot;&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# correct for some rounding errors leading to 101/99 %&lt;/span&gt;
-sop&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;rsum &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; apply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sop&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-table&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sop&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;rsum&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+sop&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;rsum &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sop&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kp&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sop&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;rsum&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 sop&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sop&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; sop&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;rsum
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Then after &lt;code&gt;melt&lt;/code&gt;ing the data.frame down (full code at the end of the post), you can get a quick overview with &lt;code&gt;ggplot2&lt;/code&gt;.&lt;/p&gt;
@@ -887,7 +968,7 @@ This post was originally published on my
 
 &lt;p&gt;It looks like there&#39;s a decent &lt;a href=&quot;https://github.com/cscheid/rgithub&quot; title=&quot;R bindings&quot; target=&quot;_blank&quot;&gt;set of R bindings&lt;/a&gt; for the Github API, but it&#39;s not clear how they work with code search, so I opted for the messier option of calling curl through &lt;code&gt;system()&lt;/code&gt;. To build the command to search the API per user:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;getCMD &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-  cmd &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste0&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;curl -H &amp;#39;Accept: application/vnd.github.v3.text-match+json Authorization: token &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  cmd &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;paste0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;curl -H &amp;#39;Accept: application/vnd.github.v3.text-match+json Authorization: token &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     oauth&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;#39;     &amp;#39;https://api.github.com/search/code?q=set.seed+in:file+language:R+user:&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     user&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;amp;page=1&amp;amp;amp;per_page=500&amp;#39; | grep &amp;#39;fragment&amp;#39; -&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cmd&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -897,16 +978,16 @@ This post was originally published on my
 
 &lt;p&gt;You can then run the command and pull out the returned string matches for the query, in this case I searched for &quot;set.seed&quot; and then used Haldey Wickham&#39;s &lt;code&gt;stringr&lt;/code&gt; &lt;a href=&quot;http://cran.r-project.org/web/packages/stringr/index.html&quot; title=&quot;stringr&quot; target=&quot;_blank&quot;&gt;R package&lt;/a&gt; to regexp out the number (if any) passed to the function.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;getPRNGseeds &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-  print&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  api.result &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;getCMD&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; intern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;is.null&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;attr&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;api.result&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;status&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    seeds &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; cbind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  api.result &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;getCMD&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; intern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;is.null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;api.result&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;status&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    seeds &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;cbind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
         str_match&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;api.result&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;set\\.seed\\((\\d+)\\)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    Sys.sleep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kp&quot;&gt;Sys.sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;seeds&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; failed&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cbind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;kp&quot;&gt;cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; failed&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;cbind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1007,15 +1088,15 @@ This post was originally published on my
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;!--&lt;/span&gt; Limit image width and height &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;style type&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 img &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  max&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;height&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;560&lt;/span&gt;px&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  max&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;width&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;964&lt;/span&gt;px&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;height&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;560&lt;/span&gt;px&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;width&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;964&lt;/span&gt;px&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;style&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;p&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;!--&lt;/span&gt; Center image on slide &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;script type&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; src&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;script&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;script type&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;p:has(img)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;.addClass&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;centered&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;p:has(img)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;.&lt;/span&gt;addClass&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;centered&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;

@@ -233,15 +233,15 @@ or actresses you might be interested in (like, say, Jean-Claude Van Damme whom
 <h2>Top 100 twitter accounts by followers</h2>
 
 <p>A top 100 list is made available by <a title="Twitter Counter" href="http://twittercounter.com/pages/100" target="_blank">Twitter Counter</a>. It's not clear that they have made this list available through their API, but thanks to the markup, a quick hack is to scrape the usernames using <a title="RCurl" href="http://www.omegahat.org/RCurl/" target="_blank">RCurl</a> and some <a title="Regex" href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">regex</a>:</p>
-<div class="highlight"><pre><code class="language-r" data-lang="r">require<span class="p">(</span><span class="s">&quot;RCurl&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="kn">require</span><span class="p">(</span><span class="s">&quot;RCurl&quot;</span><span class="p">)</span>
 top.100 <span class="o">&lt;-</span> getURL<span class="p">(</span><span class="s">&quot;http://twittercounter.com/pages/100&quot;</span><span class="p">)</span>
 <span class="c1"># split into lines</span>
-top.100 <span class="o">&lt;-</span> unlist<span class="p">(</span>strsplit<span class="p">(</span>top.100<span class="p">,</span> <span class="s">&quot;\n&quot;</span><span class="p">))</span>
+top.100 <span class="o">&lt;-</span> <span class="kp">unlist</span><span class="p">(</span><span class="kp">strsplit</span><span class="p">(</span>top.100<span class="p">,</span> <span class="s">&quot;\n&quot;</span><span class="p">))</span>
 <span class="c1"># Get only those lines with an @</span>
-top.100 <span class="o">&lt;-</span> top.100<span class="p">[</span>sapply<span class="p">(</span>top.100<span class="p">,</span> grepl<span class="p">,</span> pattern<span class="o">=</span><span class="s">&quot;@&quot;</span><span class="p">)]</span>
+top.100 <span class="o">&lt;-</span> top.100<span class="p">[</span><span class="kp">sapply</span><span class="p">(</span>top.100<span class="p">,</span> <span class="kp">grepl</span><span class="p">,</span> pattern<span class="o">=</span><span class="s">&quot;@&quot;</span><span class="p">)]</span>
 <span class="c1"># Grep out anchored usernames: &lt;a ...&amp;gt;&lt;a href=&#39;https://github.com/username&#39; class=&#39;user-mention&#39;&gt;@username&lt;/a&gt;&lt;/a&gt;;</span>
-top.100 <span class="o">&lt;-</span> gsub<span class="p">(</span><span class="s">&quot;.*&gt;@(.+)&lt;.*&quot;</span><span class="p">,</span> <span class="s">&quot;\\1&quot;</span><span class="p">,</span> top.100<span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">101</span><span class="p">]</span>
-head<span class="p">(</span>top.100<span class="p">)</span>
+top.100 <span class="o">&lt;-</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&quot;.*&gt;@(.+)&lt;.*&quot;</span><span class="p">,</span> <span class="s">&quot;\\1&quot;</span><span class="p">,</span> top.100<span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">101</span><span class="p">]</span>
+<span class="kp">head</span><span class="p">(</span>top.100<span class="p">)</span>
 <span class="c1"># [1] &quot;katyperry&quot;  &quot;justinbieber&quot;  &quot;BarackObama&quot;  ...</span>
 </code></pre></div>
 <h2>R package twitteR</h2>
@@ -264,7 +264,7 @@ username<span class="o">$</span>getFollowers<span class="p">(</span>n<span class
 
 <p>Here I used a relatively new R package, <a title="gender package" href="https://github.com/ropensci/gender" target="_blank">rOpenSci's gender</a> (kudos for resisting gendR and the like). This uses U.S. social security data to probabilistically link first names with genders, e.g.:</p>
 <div class="highlight"><pre><code class="language-r" data-lang="r">devtools<span class="o">::</span>install_github<span class="p">(</span><span class="s">&quot;ropensci/gender&quot;</span><span class="p">)</span>
-require<span class="p">(</span><span class="s">&quot;gender&quot;</span><span class="p">)</span>
+<span class="kn">require</span><span class="p">(</span><span class="s">&quot;gender&quot;</span><span class="p">)</span>
 gender<span class="p">(</span><span class="s">&quot;ben&quot;</span><span class="p">)</span>
 <span class="c1">#   name proportion_male proportion_female gender</span>
 <span class="c1"># 1  ben          0.9962            0.0038   male</span>

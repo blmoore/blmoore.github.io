@@ -83,15 +83,15 @@
 <div class="highlight"><pre><code class="language-r" data-lang="r"><span class="o">&lt;!--</span> Limit image width and height <span class="o">--&gt;</span>
 <span class="o">&lt;</span>style type<span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="o">&gt;</span>
 img <span class="p">{</span>
-  max<span class="o">-</span>height<span class="o">:</span> <span class="m">560</span>px<span class="p">;</span>
-  max<span class="o">-</span>width<span class="o">:</span> <span class="m">964</span>px<span class="p">;</span>
+  <span class="kp">max</span><span class="o">-</span>height<span class="o">:</span> <span class="m">560</span>px<span class="p">;</span>
+  <span class="kp">max</span><span class="o">-</span>width<span class="o">:</span> <span class="m">964</span>px<span class="p">;</span>
 <span class="p">}</span>
 <span class="o">&lt;/</span>style<span class="o">&gt;&lt;/</span>p<span class="o">&gt;</span>
 <span class="o">&lt;</span>p<span class="o">&gt;&lt;!--</span> Center image on slide <span class="o">--&gt;</span>
 <span class="o">&lt;</span>script type<span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> src<span class="o">=</span><span class="s">&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js&quot;</span><span class="o">&gt;&lt;/</span>script<span class="o">&gt;</span>
 <span class="o">&lt;</span>script type<span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
 <span class="o">$</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="o">$</span><span class="p">(</span><span class="s">&quot;p:has(img)&quot;</span><span class="p">)</span>.addClass<span class="p">(</span><span class="s">&#39;centered&#39;</span><span class="p">);</span>
+  <span class="o">$</span><span class="p">(</span><span class="s">&quot;p:has(img)&quot;</span><span class="p">)</span><span class="m">.</span>addClass<span class="p">(</span><span class="s">&#39;centered&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 <span class="o">&lt;/</span>script<span class="o">&gt;</span>
 </code></pre></div>

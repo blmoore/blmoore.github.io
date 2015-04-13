@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>blm.io - Tag: cv</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Building an academic CV in markdown</title>
+        <link>http://blm.io/blog/markdown-academic-cv</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2015-04-13T00:00:00+01:00</pubDate>
+		<guid>http://blm.io/blog/markdown-academic-cv</guid>
+		<description><![CDATA[
+		   <p>I&#39;m creeping towards the tail-end of my PhD so it&#39;s probably time to dust off my CV and tidy it up. In the past I&#39;ve written this document a few different ways, from LaTeX to a custom <a href="https://inkscape.org/en/">Inkscape</a> document, but I&#39;ve decided to move with the times and try something new: a markdown CV that compiles to both an HTML web version and well-formatted PDF.</p>
+
+<h2>markdown-cv</h2>
+
+<p>Googling &quot;markdown CV&quot; gave a few different options: one using <a href="http://mszep.github.io/pandoc_resume/">pandoc</a> with slightly dated-looking themes; another <a href="http://there4development.com/blog/2012/12/31/markdown-resume-builder/">command-line PHP script</a>, whose results are a bit prettier, but after trying these I came across <code>markdown-cv</code> from github user <a href="https://github.com/elipapa/markdown-cv">elipapa</a> which seemed to be simple to use and came with a nice design &mdash; also it&#39;s built with <a href="http://jekyllrb.com/">jekyll</a>, which I already <a href="http://blm.io/blog/wordpress-to-jekyll/">use to power blm.io</a>.</p>
+
+<p>Eliseo Papa wrote up a <a href="http://www.eliseopapa.org/workflow/2012/09/20/why-i-switched-to-markdown-for-my-cv/">blog post</a> on how and why he put <code>markdown-cv</code> together, and their CV <a href="https://github.com/elipapa/elipapa.github.io/blob/master/downloads/cv.pdf">looks great</a> so that was enough to convince me to give it a shot.</p>
+
+<h3>HTML version</h3>
+
+<p><code>markdown-cv</code> uses CSS media queries to select different stylesheets for screen and print. This means in practice you can optimise your CV design for each medium pretty easily &mdash; I went with a kind of colourful web version and more toned-down print version.</p>
+
+<p>I didn&#39;t make any big changes to <a href="https://github.com/elipapa/markdown-cv">elipapa&#39;s markdown-cv</a>, just played with the colours, fonts, and tweaked the layout and added <a href="http://fortawesome.github.io/Font-Awesome/">font-awesome icons</a>.</p>
+
+<p>Here&#39;s a screenshot of the current HTML version of my CV:</p>
+
+<p><a href="/blog/img/html-mdcv.png" target="_blank">
+<img class="imgfull" src="/blog/img/html-mdcv.png" />
+</a></p>
+
+<p>I like the whitespace and clear separation of headings, dates and details. The underlying CSS layout has some technical issues &mdash; the relative positions can get messed up on resize &mdash; but it still looks good on mobile devices and at a range of display resolutions.</p>
+
+<h3>PDF version</h3>
+
+<p><img class="imgright" src="/blog/img/printcv-ul.png" width="40%" /></p>
+
+<p>There were a few difficulties converting the web version to print. The general approach for CVs in markdown seems to be to run <a href="http://wkhtmltopdf.org/">wkhtmltopdf</a>, however this uses WebKit for rendering (as the name suggests) which it turns out has issues with some modern CSS features when printing.</p>
+
+<p>One issue was with CSS3 multiple <code>columns</code> layout, with <code>wkhtmltopdf</code> these were rendered in a single column while the web version renders correctly in 3-columns, across modern browsers.</p>
+
+<p><img class="imgfull" src="/blog/img/webcv-ul.png" /></p>
+
+<p>It turns out support was <a href="https://www.webkit.org/blog/88/css3-multi-column-support/#comment-16854">dropped</a> for printing columns specified in this way due to issues with page breaks, and apparently this still hasn&#39;t been resolved. To get around this, I convert to PDF through Firefox with its <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko">Gecko engine</a> and all is well.</p>
+
+<p><img class="imgfull" src="/blog/img/printcv-ulfixed.png" /></p>
+
+<p>Page breaks can still be iffy though, web renderers are no LaTeX, so if it doesn&#39;t break cleanly over pages you can add these in manually using CSS. For example, say you want to add a page break before your publications section:</p>
+
+<blockquote>
+<p><code>cv.md</code></p>
+</blockquote>
+<div class="highlight"><pre><code class="language-text" data-lang="text">## Publications
+
+You _et al._ (2014) Some great paper...
+</code></pre></div>
+<blockquote>
+<p><code>cv-print.css</code></p>
+</blockquote>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#publications</span> <span class="p">{</span>
+    <span class="k">page</span><span class="o">-</span><span class="n">break</span><span class="o">-</span><span class="n">before</span><span class="o">:</span> <span class="k">always</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>There&#39;s another issue I can&#39;t debug relating to web links in the PDF version (currently some work, some don&#39;t), but in theory the PDF is for print so maybe it doesn&#39;t matter.</p>
+
+<h3>Result</h3>
+
+<p>Here&#39;s what I have so far (click through to see the full versions) &mdash; the code is <a href="https://github.com/blmoore/md-cv">on github</a> if you want to adapt it for your own use! All credit goes to the <a href="https://github.com/elipapa/markdown-cv">original author</a> of markdown-cv.</p>
+
+<div style="float:right; width:49%;">
+  <p style="text-align:center; color:#888; font-weight: bold;">PDF</p>
+  <a href="https://github.com/blmoore/md-cv/blob/master/blm_cv.pdf" target="_blank">
+    <img class="imgfull" src="/blog/img/printcv.png" />
+  </a>
+</div>
+
+<div style="float:right; width:49%;">
+  <p style="text-align:center; color:#888; font-weight: bold;">HTML</p>
+  <a href="http://blm.io/cv/" target="_blank">
+    <img class="imgfull" src="/blog/img/webcv.png" />
+    </a>
+</div>
+
+<p><br clear="all" /></p>
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

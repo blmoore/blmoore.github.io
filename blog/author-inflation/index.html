@@ -114,7 +114,7 @@
   <span class="c1"># Fields to return: id (doi) and author list</span>
   fl <span class="o">=</span> <span class="s">&quot;id,author&quot;</span><span class="p">,</span>
   <span class="c1"># Filter: only actual articles in journal PLOS ONE</span>
-  fq <span class="o">=</span> list<span class="p">(</span><span class="s">&quot;doc_type:full&quot;</span><span class="p">,</span>
+  fq <span class="o">=</span> <span class="kt">list</span><span class="p">(</span><span class="s">&quot;doc_type:full&quot;</span><span class="p">,</span>
             <span class="s">&quot;cross_published_journal_key:PLoSONE&quot;</span><span class="p">),</span>
   <span class="c1"># 500 results (max 1000 per query)</span>
   start<span class="o">=</span><span class="m">0</span><span class="p">,</span> limit<span class="o">=</span><span class="m">500</span><span class="p">,</span> sleep<span class="o">=</span><span class="m">6</span><span class="p">)</span>
@@ -280,7 +280,7 @@ var disqus_shortname = 'blmioblog'; // required: replace example with your forum
   <p>
     <!--
     <a href="https://creativecommons.org/licenses/by/4.0/"
-    target="_blank">CC-BY 4.0</a> 2014.
+    target="_blank">CC-BY 4.0</a> 2015.
   -->
   </p>
   </div>

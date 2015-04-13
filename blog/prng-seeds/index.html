@@ -111,7 +111,7 @@
 
 <p>It looks like there's a decent <a href="https://github.com/cscheid/rgithub" title="R bindings" target="_blank">set of R bindings</a> for the Github API, but it's not clear how they work with code search, so I opted for the messier option of calling curl through <code>system()</code>. To build the command to search the API per user:</p>
 <div class="highlight"><pre><code class="language-r" data-lang="r">getCMD <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>user<span class="p">){</span>
-  cmd <span class="o">&lt;-</span> paste0<span class="p">(</span><span class="s">&quot;curl -H &#39;Accept: application/vnd.github.v3.text-match+json Authorization: token &quot;</span><span class="p">,</span>
+  cmd <span class="o">&lt;-</span> <span class="kp">paste0</span><span class="p">(</span><span class="s">&quot;curl -H &#39;Accept: application/vnd.github.v3.text-match+json Authorization: token &quot;</span><span class="p">,</span>
     oauth<span class="p">,</span> <span class="s">&quot;&#39;     &#39;https://api.github.com/search/code?q=set.seed+in:file+language:R+user:&quot;</span><span class="p">,</span>
     user<span class="p">,</span><span class="s">&quot;&amp;amp;page=1&amp;amp;per_page=500&#39; | grep &#39;fragment&#39; -&quot;</span><span class="p">)</span>
   <span class="kr">return</span><span class="p">(</span>cmd<span class="p">)</span>
@@ -121,16 +121,16 @@
 
 <p>You can then run the command and pull out the returned string matches for the query, in this case I searched for "set.seed" and then used Haldey Wickham's <code>stringr</code> <a href="http://cran.r-project.org/web/packages/stringr/index.html" title="stringr" target="_blank">R package</a> to regexp out the number (if any) passed to the function.</p>
 <div class="highlight"><pre><code class="language-r" data-lang="r">getPRNGseeds <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>user<span class="p">){</span>
-  print<span class="p">(</span>user<span class="p">)</span>
-  api.result <span class="o">&lt;-</span> system<span class="p">(</span>getCMD<span class="p">(</span>user<span class="p">),</span> intern<span class="o">=</span><span class="k-Variable">T</span><span class="p">)</span>
-  <span class="kr">if</span><span class="p">(</span>is.null<span class="p">(</span>attr<span class="p">(</span>api.result<span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">)))</span> <span class="p">{</span>
-    seeds <span class="o">&lt;-</span> cbind<span class="p">(</span>user<span class="p">,</span>
+  <span class="kp">print</span><span class="p">(</span>user<span class="p">)</span>
+  api.result <span class="o">&lt;-</span> <span class="kp">system</span><span class="p">(</span>getCMD<span class="p">(</span>user<span class="p">),</span> intern<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+  <span class="kr">if</span><span class="p">(</span><span class="kp">is.null</span><span class="p">(</span><span class="kp">attr</span><span class="p">(</span>api.result<span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">)))</span> <span class="p">{</span>
+    seeds <span class="o">&lt;-</span> <span class="kp">cbind</span><span class="p">(</span>user<span class="p">,</span>
         str_match<span class="p">(</span>api.result<span class="p">,</span> <span class="s">&quot;set\\.seed\\((\\d+)\\)&quot;</span><span class="p">)[,</span><span class="m">2</span><span class="p">])</span>
-    Sys.sleep<span class="p">(</span><span class="m">10</span><span class="p">)</span>
+    <span class="kp">Sys.sleep</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
     <span class="kr">return</span><span class="p">(</span>seeds<span class="p">)</span>
   <span class="p">}</span> <span class="kr">else</span> <span class="p">{</span>
-    cat<span class="p">(</span>user<span class="p">,</span> <span class="s">&quot; failed&quot;</span><span class="p">)</span>
-    <span class="kr">return</span><span class="p">(</span>cbind<span class="p">(</span>user<span class="p">,</span> <span class="kc">NA</span><span class="p">))</span>
+    <span class="kp">cat</span><span class="p">(</span>user<span class="p">,</span> <span class="s">&quot; failed&quot;</span><span class="p">)</span>
+    <span class="kr">return</span><span class="p">(</span><span class="kp">cbind</span><span class="p">(</span>user<span class="p">,</span> <span class="kc">NA</span><span class="p">))</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -269,7 +269,7 @@ var disqus_shortname = 'blmioblog'; // required: replace example with your forum
   <p>
     <!--
     <a href="https://creativecommons.org/licenses/by/4.0/"
-    target="_blank">CC-BY 4.0</a> 2014.
+    target="_blank">CC-BY 4.0</a> 2015.
   -->
   </p>
   </div>
