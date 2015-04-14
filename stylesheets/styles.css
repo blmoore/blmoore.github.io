@@ -868,7 +868,9 @@ nav.mob {
   nav {
     display: none;
   }
+
   nav.mob {
+    margin-top: 10px !important;
     display: block;
   }
 
