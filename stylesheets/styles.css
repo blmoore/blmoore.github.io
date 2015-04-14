@@ -832,6 +832,10 @@ section #intro {
   color: #aaaaaa;
 }
 
+nav.mob {
+  display: none;
+}
+
 @media print, screen and (max-width: 720px) {
   #title .credits {
     display: block;
@@ -847,6 +851,10 @@ section #intro {
     float: none;
     display: block;
   }
+
+  nav.mob {
+    display: none;
+  }
 }
 @media print, screen and (max-width: 480px) {
   #header {
@@ -859,6 +867,9 @@ section #intro {
 
   nav {
     display: none;
+  }
+  nav.mob {
+    display: block;
   }
 
   div.social{
