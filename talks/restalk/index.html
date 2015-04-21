@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The ENCODE-ing of higher order chromatin organisation</title>
+  <meta charset="utf-8">
+  <meta name="description" content="The ENCODE-ing of higher order chromatin organisation">
+  <meta name="author" content="Ben Moore">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <!-- <aside class="gdbar">
+    <img src="assets/img/igmm_only.png">
+  </aside> -->
+  <div style="float:right; width=25%; margin-top:3%">
+    <img src="assets/img/igmm_only.png" />
+    <br /><br /><br />
+  </div>
+  <hgroup class="auto-fadein">
+    <!--- former color 606060 -->
+    <h1 style="large; color:#7473a9; margin-top:5%; font-family: 'Varela Round', 'Helvetica', Sans-serif">The ENCODE-ing of higher <br />order chromatin organisation</h1>
+    <h2></h2>
+    <p><b>Ben Moore</b> (<a href="https://twitter.com/benjaminlmoore" target="_blank">@benjaminlmoore</a>)<br/>
+    Research talk, April 22<sup>nd</sup> 2015
+    </p>
+    <p style="text-align:right; font-size:.9rem;">
+      Slides online at: <a href="http://blm.io/talks/restalk">blm.io/talks/restalk</a>
+    </p>
+  </hgroup>
+  <article></article>
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <!-- Limit image width and height -->
+
+<style type='text/css'>
+img {
+    max-height: 540px;
+    max-width: 964px;
+}
+body {
+  /* margin-top: 40px; */
+  line-height: 200%;
+  background-color: #FFFFFF;
+}
+ol.linenums {
+  margin-left: 0px;
+}
+#features p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #777777;
+}
+#solo p {
+  text-align:center;
+  font-size:xx-large;
+  /* font-weight:bolder; */
+  margin-top:25%;
+  color:#777777;
+}
+
+.title-slide {
+  background-color: #FEFEFE;
+}
+
+h1 {
+  color: #DDDDDD;
+}
+
+.hicslide {
+  background-image: url(figure/bghic3.png);
+}
+
+#bigwriting {
+  font-size:x-large;
+}
+
+</style>
+
+<!-- Center image on slide -->
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+
+<script type='text/javascript'>
+$(function() {
+    $("p:has(img)").addClass('centered');
+});
+</script>
+
+<!--
+
+## Overview
+
+<br />
+
+* Introduce higher order chromatin organisation and the <b>Hi-C</b> technique
+
+* Describe our work integrating Hi-C with new <b>ENCODE</b> datasets
+
+* Highlight some of the <b>results</b> from the first two years of my PhD
+-->
+
+<h2>Introduction</h2>
+
+<p><img src="img/unravellingchromatin.png" alt="chromatin">
+<br />
+Risca and Greenleaf (2015)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="solo" style="background:;">
+  <article data-timings="">
+    <p>What&#39;s higher order chromatin structure?</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Looks something like this:</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/fracglob.png" alt="fractal globule">
+<br />
+Lieberman Aiden et al. (2009)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>As a section:</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/hos.gif" alt="higher order chromatin">
+<br />
+Steensel and Dekker (2010)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Hi-C</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/hic2.png" alt="hi-c technique">
+<br />
+Belton et al. (2012)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="hicslide" id="slide-6" style="background:;">
+  <article data-timings="">
+    <h2 style="color:white">The results</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Statistical corrections</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/biases.png" alt="Yaffe biases"></p>
+
+<p style="text-align: left; font-size: .8rem">
+Figure from Yaffe and Tanay (2011)
+</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="solo" style="background:;">
+  <article data-timings="">
+    <p>Insights from Hi-C data</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Multi-megabase chromosome compartments</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<p><img src="figure/leebeig.png" alt="leeb"></p>
+
+<p style="text-align: left; font-size: .8rem">
+Left figure from Lieberman-Aiden <em>et al.</em> (2009)
+</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Sub-megabase topological domains</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <p><img src="figure/tads.png" alt="tads"></p>
+
+<p style="text-align: left; font-size: .8rem">
+Figure from Dixon <em>et al.</em> (2012)
+</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style="margin-top:20%; float:right; width:100%">
+<p style="text-align:center;">
+Higher resolution structures called 
+<br />
+"Topological associating domains"
+<br />
+<p style="font-size:xx-large; text-align:center"><b>TADs</b></p>
+</p>
+<br />
+<p style="text-align:left; margin-left:10%">
+
+~800 kb in size (compartments ~5 Mb)
+
+<br /><br />
+
+Identified using directional contact bias
+
+<br /><br />
+
+Highlighted regions as TAD boundaries
+
+</p>
+</div>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>TAD boundary enrichments</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/dixon_bounds.png" alt="dixon_tad bounds"></p>
+
+<p style="text-align: left; font-size: .8rem">
+Figure from Dixon <em>et al.</em> (2012)
+</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="solo" style="background:;">
+  <article data-timings="">
+    <p>Our results</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Plan</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<ol>
+<li><p>Get raw Hi-C reads (three pulications for different human cell lines)</p></li>
+<li><p>Uniformly process interaction matrices and normalise with ICE (Imakaev et al., 2012)</p></li>
+<li><p>Call compartments, TADs, boundaries — compare these across cell types</p></li>
+<li><p>Investigate relationship with ENCODE ChIP-seq data: uniformly-processed signal (fold-change relative to input, from Boyle et al., 2014)</p></li>
+</ol>
+
+<p><br /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h3>Higher order structure highly conserved genome-wide</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/wiggle.png" alt="conserved chromatin structure"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:#DFDFDF;">
+  <hgroup>
+    <h3>...and at multiple levels of higher-order chromatin structure.</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<p><img src="figure/chrom.svg" alt="conserved chromatin structure"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h3>But interesting biology in variable regions</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/flipped.png" alt="flipped regions"></p>
+
+<!-- ![variable regions](figure/variableregions.svg) -->
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h3>Overall, flipped regions are enriched for tissue-specific enhancers</h3>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <div style="margin: 20% 4%">
+
+<p>
+<code>ChromHMM</code> + <code>SegWay</code> consensus chromatin state predictions from ENCODE
+</p>
+<p>
+Split into <b>cell-type specific</b> and <b>shared</b> (overlapping annotation in &ge; 2 cell types)
+</p>
+<br />
+<p>
+Enrichment for cell-type specific enhancers in <u>flipped open</u> regions in the two lineage-committed cell lines
+</p>
+</div>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><br /></p>
+
+<p><img src="figure/f4b.svg" alt="enhancers"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h3>Boundary enrichments at different scales</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/bt6.svg" alt="top6"></p>
+
+<p><br /></p>
+
+<p style="text-align: center;">
+Boundary profiles have previously been looked at for a handful of features, <br />
+we can do this with lots more...
+</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <article data-timings="">
+    <p><img src="figure/all_tads.png" alt="all TAD features"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h3>CTCF and YY1 consistently mark both TAD and compartment boundaries</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/bubble.png" alt="all boundary p-vals"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <article data-timings="">
+    <p style="text-align:center; font-size:x-large; margin-top:15%; color:#777777">
+Can compartments be predicted from ENCODE ChIP-seq data? 
+</p>
+
+<p style="text-align:left; margin-left: 20%; margin-top: 10%;">And if so:<br /> 
+
+&nbsp;&nbsp;&bullet; What are the most informative variables <br />
+
+&nbsp;&nbsp;&bullet; Do rules differ between cell types <br />
+
+&nbsp;&nbsp;&bullet;  Can we call compartments when Hi-C data isn't available <br />
+
+</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <article data-timings="">
+    <p><br /></p>
+
+<p><img src="figure/rfp.png" alt="res"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h3>Comparing Random Forest with other approaches</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<p><img src="figure/reg_methods.png" alt="comparison with lm and pls"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h3>Decent modeling accuracy, a variety of informative features</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/modres.svg" alt="res"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h3>But input features suffer from multicollinearity</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/featmap.svg" alt="cluster heatmap gm12878"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h3>Allowing models to cross-apply between cell types</h3>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <p><img src="figure/xapp.svg" alt="cross-application"></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p style="margin-top:25%; margin-left:5%; margin-right:5%">
+H1 embryonic stem cells looks like an <b>outlier</b>&hellip; <br /><br />
+&nbsp;&nbsp;&hellip;generally open, more permissive genome organisation than
+the lineage-commited lines.
+</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h3>TADs or sub-compartments?</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/gm_tad_heatmap.png" alt="gm tad heatmap"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-28" style="background:#DFDFDF;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<ul>
+<li><p>Open / closed compartments well-correlated with combinatorial patterns of histone mods + DNA binding proteins, enabling <b>accurate predictive models</b></p></li>
+<li><p>Cross-application shows <b>common structural rules</b> across human cell types</p></li>
+<li><p>Still, variable importances reflect known biology (EGR1 in stem cells, H3k9me3 in K562)</p></li>
+<li><p><b>CTCF and YY1</b> may combine to create organisational boundaries at multiple scales</p></li>
+<li><p>Increased amounts of cell-type specific <b>enhancers</b> correlate with significant changes in chromatin architecture</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-29" style="background:;">
+  <article data-timings="">
+    <p style="text-align:center; font-size:xx-large;">
+Thanks for your attention</p>
+<br />
+</p>
+
+<p><img src="figure/paper_ss.png" alt="paper header"></p>
+
+<p><br /></p>
+
+<div style="float:left;">
+<p style="font-size:small">References:</p>
+<p style="font-size:x-small">
+  Belton et al. (2012) Hi-C: a comprehensive technique to capture the conformation of genomes. <strong>Methods</strong>, 58, 268-76.
+<br />
+  Boyle et al. (2014) Comparative analysis of regulatory information and circuits across distant species. <strong>Nature</strong>, 512, 435-6.
+<br />
+  Dixon et al. (2012) Topological domains in mammalian genomes identified by analysis of chromatin interactions. <strong>Nature</strong>, 485, 376-80.
+<br />
+  Imakaev et al. (2012) Iterative correction of Hi-C data reveals hallmarks of chromosome organization. <strong>Nature methods</strong>, 9, 999-1003.
+<br />
+  Kalhor et al. (2011) Genome architectures revealed by tethered chromosome conformation capture and population-based modeling. <strong>Nature biotechnology</strong>, 30, 90-8.
+<br />
+  Lieberman Aiden et al. (2009) Comprehensive Mapping of Long-Range Interactions Reveals Folding Principles of the Human Genome. <strong>Science</strong>, 326, 289-93.
+<br />
+Risca and Greenleaf (2015) Unraveling the 3D genome: genomics tools for multiscale exploration. <strong>Trends in Genetics</strong>, epub ahead of print.
+<br />
+  Yaffe and Tanay (2011) Probabilistic modeling of Hi-C contact maps eliminates systematic biases to characterize global chromosomal architecture. <strong>Nature genetics</strong>, 43, 1059-65.
+</p>
+</div>
+
+<div style="float:left; margin-top:1%"> <p style="font-size:.9rem;">Code to reproduce all analyses is available at: <code>github.com/blmoore/3dgenome</code>.</p></div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-30" style="background:;">
+  <article data-timings="">
+    <p style="text-align:center; margin-top:10%">
+<img src="figure/edinbr_ld.png" width="50%" />
+</p>
+
+<p><br /></p>
+
+<p style="text-align:center; font-size:xx-large;">
+Meeting 5pm <span style="text-decoration: underline;">today</span> at 7 George Square!
+</p>
+
+<div style="width: 60%; height: auto; margin: 5% auto;">
+</div>
+
+<div style="float:left; margin-left:0; margin-right:auto; text-align: center;">
+<p style="font-size:.8rem; margin-bottom:1rem;">Sponsored by:</p>
+<img src="figure/revlogo.png" width="188" />
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title=''>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Looks something like this:'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='As a section:'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Hi-C'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title=''>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Statistical corrections'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title=''>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Multi-megabase chromosome compartments'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Sub-megabase topological domains'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='TAD boundary enrichments'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title=''>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Plan'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Higher order structure highly conserved genome-wide'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='...and at multiple levels of higher-order chromatin structure.'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='But interesting biology in variable regions'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Overall, flipped regions are enriched for tissue-specific enhancers'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Boundary enrichments at different scales'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title=''>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='CTCF and YY1 consistently mark both TAD and compartment boundaries'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title=''>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title=''>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Comparing Random Forest with other approaches'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Decent modeling accuracy, a variety of informative features'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='But input features suffer from multicollinearity'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Allowing models to cross-apply between cell types'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='TADs or sub-compartments?'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='Summary'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title=''>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title=''>
+         30
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
