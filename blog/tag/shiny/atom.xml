@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>blm.io - Tag: shiny</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>UK general election polls in rCharts and shiny</title>
+        <link>http://blm.io/blog/uk-general-election-rcharts-shiny</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2015-04-28T00:00:00+01:00</pubDate>
+		<guid>http://blm.io/blog/uk-general-election-rcharts-shiny</guid>
+		<description><![CDATA[
+		   <p>With under two weeks to go to the 2015 UK general election, there&#39;s no better time to take stock of all the voter intention polls being published by the British media. The data has already been aggregated by <a href="http://ukpollingreport.co.uk/voting-intention-2">UKpollingreport</a>—a site I&#39;ve used before for <a href="http://blm.io/blog/scottish-independence-polls/">analysis of the Scottish independence referendum</a>—and there&#39;s not much more to be said then is already widely known: it&#39;s likely no single party will win an outright majority and we&#39;ll be left with a coalition or minority government.</p>
+
+<p>Interactive visualisations, statistical projections and swingometers have already been expertly put together all over the place (among the best I&#39;ve seen are from <a href="http://www.theguardian.com/politics/ng-interactive/2015/feb/27/guardian-poll-projection">The Guardian</a> and <a href="http://fivethirtyeight.com/interactives/uk-general-election-predictions/">FiveThirtyEight</a>)—I can&#39;t really begin to compete here, but given the data is readily available, I&#39;ve taken this as a good chance to finally learn shiny and build a simple web application.</p>
+
+<h2>Interactive javascript plot</h2>
+
+<style>
+div.highcharts-container{
+    margin: 0 auto !important;
+};
+</style>
+
+<p>First off I started with an interactive (client-side) javascript plot using the <a href="http://rcharts.io/">rCharts</a> package (specifically the <a href="http://www.highcharts.com/">Highcharts library</a>).</p>
+
+<div id='ge2015' class="rChart"></div>
+
+<script src="/blog/js/ge2015.js"></script>
+
+<p><br />
+This already comes with some neat functionality: as well as tooltips you can drag over an area to zoom in, and you can add or remove series by (de)selecting them from the legend. However any more complicated processing, especially on the raw data, would be better run server-side.</p>
+
+<h2> Shiny</h2>
+
+<p>Enter RStudio&#39;s <a href="http://shiny.rstudio.com/">shiny</a>, the much-lauded web application framework for R which I&#39;m well-overdue in trying out. Better still, RStudio&#39;s <a href="http://www.shinyapps.io/">shinyapps</a> hosting service is now out of beta and offers a limited free plan for anyone to play about with!</p>
+
+<p>To start out with I designed a plot in <code>ggplot2</code> (you can see the code <a href="https://github.com/blmoore/blogR/blob/master/R/ge2015_polls.R">on github</a>):</p>
+
+<p><a href="/blog/img/ge2015_ggplot_full.png" target="_blank">
+<img class="imgfull" src="/blog/img/ge2015_ggplot_thumb.png" />
+</a></p>
+
+<p>Then with the help of Rstudio&#39;s <a href="http://shiny.rstudio.com/tutorial/">shiny tutorials</a>, it was surprisingly straightforward to add a couple of control widgets and pass their values over to the server-side script which does the heavy lifting (code I used is <a href="https://github.com/blmoore/blogR/tree/master/shiny/ge2015">on github</a>).</p>
+
+<p><a href="http://blmr.shinyapps.io/ge2015/" target="_blank">
+<img class="imgfull" src="/blog/img/ge2015_shiny.png" />
+</a></p>
+
+<p>The <a href="https://blmr.shinyapps.io/ge2015/">end-result</a> is still rudimentary, but has shown me how simple shiny is to get started with—I&#39;m certain I&#39;ll be building something more impressive with it in future!</p>
+
+<hr />
+
+<p style="text-align:right; font-size: .85rem;">R code to reproduce these
+plots is available on
+<a href="https://github.com/blmoore/blogR" target="_blank">Github</a>.</p>
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

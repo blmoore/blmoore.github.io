@@ -4,13 +4,65 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2015-04-14T12:49:47+01:00</updated>
+ <updated>2015-04-28T23:02:05+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
    <email>root@blm.io</email>
  </author>
 
+ 
+ <entry>
+   <title>UK general election polls in rCharts and shiny</title>
+   <link href="http://blm.io/blog/uk-general-election-rcharts-shiny"/>
+   <updated>2015-04-28T00:00:00+01:00</updated>
+   <id>http://blm.io/blog/uk-general-election-rcharts-shiny</id>
+   <content type="html">&lt;p&gt;With under two weeks to go to the 2015 UK general election, there&amp;#39;s no better time to take stock of all the voter intention polls being published by the British media. The data has already been aggregated by &lt;a href=&quot;http://ukpollingreport.co.uk/voting-intention-2&quot;&gt;UKpollingreport&lt;/a&gt;—a site I&amp;#39;ve used before for &lt;a href=&quot;http://blm.io/blog/scottish-independence-polls/&quot;&gt;analysis of the Scottish independence referendum&lt;/a&gt;—and there&amp;#39;s not much more to be said then is already widely known: it&amp;#39;s likely no single party will win an outright majority and we&amp;#39;ll be left with a coalition or minority government.&lt;/p&gt;
+
+&lt;p&gt;Interactive visualisations, statistical projections and swingometers have already been expertly put together all over the place (among the best I&amp;#39;ve seen are from &lt;a href=&quot;http://www.theguardian.com/politics/ng-interactive/2015/feb/27/guardian-poll-projection&quot;&gt;The Guardian&lt;/a&gt; and &lt;a href=&quot;http://fivethirtyeight.com/interactives/uk-general-election-predictions/&quot;&gt;FiveThirtyEight&lt;/a&gt;)—I can&amp;#39;t really begin to compete here, but given the data is readily available, I&amp;#39;ve taken this as a good chance to finally learn shiny and build a simple web application.&lt;/p&gt;
+
+&lt;h2&gt;Interactive javascript plot&lt;/h2&gt;
+
+&lt;style&gt;
+div.highcharts-container{
+    margin: 0 auto !important;
+};
+&lt;/style&gt;
+
+&lt;p&gt;First off I started with an interactive (client-side) javascript plot using the &lt;a href=&quot;http://rcharts.io/&quot;&gt;rCharts&lt;/a&gt; package (specifically the &lt;a href=&quot;http://www.highcharts.com/&quot;&gt;Highcharts library&lt;/a&gt;).&lt;/p&gt;
+
+&lt;div id=&#39;ge2015&#39; class=&quot;rChart&quot;&gt;&lt;/div&gt;
+
+&lt;script src=&quot;/blog/js/ge2015.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;
+This already comes with some neat functionality: as well as tooltips you can drag over an area to zoom in, and you can add or remove series by (de)selecting them from the legend. However any more complicated processing, especially on the raw data, would be better run server-side.&lt;/p&gt;
+
+&lt;h2&gt; Shiny&lt;/h2&gt;
+
+&lt;p&gt;Enter RStudio&amp;#39;s &lt;a href=&quot;http://shiny.rstudio.com/&quot;&gt;shiny&lt;/a&gt;, the much-lauded web application framework for R which I&amp;#39;m well-overdue in trying out. Better still, RStudio&amp;#39;s &lt;a href=&quot;http://www.shinyapps.io/&quot;&gt;shinyapps&lt;/a&gt; hosting service is now out of beta and offers a limited free plan for anyone to play about with!&lt;/p&gt;
+
+&lt;p&gt;To start out with I designed a plot in &lt;code&gt;ggplot2&lt;/code&gt; (you can see the code &lt;a href=&quot;https://github.com/blmoore/blogR/blob/master/R/ge2015_polls.R&quot;&gt;on github&lt;/a&gt;):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/blog/img/ge2015_ggplot_full.png&quot; target=&quot;_blank&quot;&gt;
+&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/ge2015_ggplot_thumb.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then with the help of Rstudio&amp;#39;s &lt;a href=&quot;http://shiny.rstudio.com/tutorial/&quot;&gt;shiny tutorials&lt;/a&gt;, it was surprisingly straightforward to add a couple of control widgets and pass their values over to the server-side script which does the heavy lifting (code I used is &lt;a href=&quot;https://github.com/blmoore/blogR/tree/master/shiny/ge2015&quot;&gt;on github&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blmr.shinyapps.io/ge2015/&quot; target=&quot;_blank&quot;&gt;
+&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/ge2015_shiny.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://blmr.shinyapps.io/ge2015/&quot;&gt;end-result&lt;/a&gt; is still rudimentary, but has shown me how simple shiny is to get started with—I&amp;#39;m certain I&amp;#39;ll be building something more impressive with it in future!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p style=&quot;text-align:right; font-size: .85rem;&quot;&gt;R code to reproduce these
+plots is available on
+&lt;a href=&quot;https://github.com/blmoore/blogR&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Building an academic CV in markdown</title>
