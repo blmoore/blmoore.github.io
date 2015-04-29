@@ -116,7 +116,7 @@ div.highcharts-container{
 };
 </style>
 
-<p>First off I started with an interactive (client-side) javascript plot using the <a href="http://rcharts.io/">rCharts</a> package (specifically the <a href="http://www.highcharts.com/">Highcharts library</a>).</p>
+<p>Before getting to shiny, I started off I started by putting together an interactive (client-side) javascript plot using the <a href="http://rcharts.io/">rCharts</a> package (specifically the <a href="http://www.highcharts.com/">Highcharts library</a>).</p>
 
 <div id='ge2015' class="rChart"></div>
 
@@ -129,13 +129,15 @@ This already comes with some neat functionality: as well as tooltips you can dra
 
 <p>Enter RStudio&#39;s <a href="http://shiny.rstudio.com/">shiny</a>, the much-lauded web application framework for R which I&#39;m well-overdue in trying out. Better still, RStudio&#39;s <a href="http://www.shinyapps.io/">shinyapps</a> hosting service is now out of beta and offers a limited free plan for anyone to play about with!</p>
 
-<p>To start out with I designed a plot in <code>ggplot2</code> (you can see the code <a href="https://github.com/blmoore/blogR/blob/master/R/ge2015_polls.R">on github</a>):</p>
+<p>To start out with I redesigned the above plot in <code>ggplot2</code> (you can see the code <a href="https://github.com/blmoore/blogR/blob/master/R/ge2015_polls.R">on github</a>):</p>
 
 <p><a href="/blog/img/ge2015_ggplot_full.png" target="_blank">
 <img class="imgfull" src="/blog/img/ge2015_ggplot_thumb.png" />
 </a></p>
 
-<p>Then with the help of Rstudio&#39;s <a href="http://shiny.rstudio.com/tutorial/">shiny tutorials</a>, it was surprisingly straightforward to add a couple of control widgets and pass their values over to the server-side script which does the heavy lifting (code I used is <a href="https://github.com/blmoore/blogR/tree/master/shiny/ge2015">on github</a>).</p>
+<p>Of course, it&#39;s possible to use shiny to draw javascript plots but for this example I just wanted to replicate the same kind of functionality—while also extending the shiny version with features that would probably need to be pre-computed in a client-side plot (such as aggregating counts by week and refitting loess models per group).</p>
+
+<p>Next with the help of Rstudio&#39;s <a href="http://shiny.rstudio.com/tutorial/">shiny tutorials</a>, it was surprisingly straightforward to add a couple of control widgets and pass their values over to the server-side script which does the heavy lifting (code is again <a href="https://github.com/blmoore/blogR/tree/master/shiny/ge2015">on github</a>).</p>
 
 <p><a href="http://blmr.shinyapps.io/ge2015/" target="_blank">
 <img class="imgfull" src="/blog/img/ge2015_shiny.png" />
@@ -164,15 +166,6 @@ plots is available on
     
     <li>
       <h3>
-        <a href="/blog/motorcycle-helmet-safety-price">
-          Are more expensive motorcycle helmets safer?
-          <small>01 Jul 2014</small>
-        </a>
-      </h3>
-    </li>
-    
-    <li>
-      <h3>
         <a href="/blog/wordpress-to-jekyll">
           Transformation of wordpress into jekyll
           <small>21 Jun 2014</small>
@@ -182,9 +175,18 @@ plots is available on
     
     <li>
       <h3>
-        <a href="/blog/markdown-academic-cv">
-          Building an academic CV in markdown
-          <small>13 Apr 2015</small>
+        <a href="/blog/motorcycle-helmet-safety-price">
+          Are more expensive motorcycle helmets safer?
+          <small>01 Jul 2014</small>
+        </a>
+      </h3>
+    </li>
+    
+    <li>
+      <h3>
+        <a href="/blog/uk-elections">
+          Guardian data blog — UK general election analysis in R
+          <small>18 Mar 2014</small>
         </a>
       </h3>
     </li>

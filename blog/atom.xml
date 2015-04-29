@@ -4,7 +4,7 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2015-04-28T23:02:05+01:00</updated>
+ <updated>2015-04-29T09:40:25+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
@@ -29,7 +29,7 @@ div.highcharts-container{
 };
 &lt;/style&gt;
 
-&lt;p&gt;First off I started with an interactive (client-side) javascript plot using the &lt;a href=&quot;http://rcharts.io/&quot;&gt;rCharts&lt;/a&gt; package (specifically the &lt;a href=&quot;http://www.highcharts.com/&quot;&gt;Highcharts library&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Before getting to shiny, I started off I started by putting together an interactive (client-side) javascript plot using the &lt;a href=&quot;http://rcharts.io/&quot;&gt;rCharts&lt;/a&gt; package (specifically the &lt;a href=&quot;http://www.highcharts.com/&quot;&gt;Highcharts library&lt;/a&gt;).&lt;/p&gt;
 
 &lt;div id=&#39;ge2015&#39; class=&quot;rChart&quot;&gt;&lt;/div&gt;
 
@@ -42,13 +42,15 @@ This already comes with some neat functionality: as well as tooltips you can dra
 
 &lt;p&gt;Enter RStudio&amp;#39;s &lt;a href=&quot;http://shiny.rstudio.com/&quot;&gt;shiny&lt;/a&gt;, the much-lauded web application framework for R which I&amp;#39;m well-overdue in trying out. Better still, RStudio&amp;#39;s &lt;a href=&quot;http://www.shinyapps.io/&quot;&gt;shinyapps&lt;/a&gt; hosting service is now out of beta and offers a limited free plan for anyone to play about with!&lt;/p&gt;
 
-&lt;p&gt;To start out with I designed a plot in &lt;code&gt;ggplot2&lt;/code&gt; (you can see the code &lt;a href=&quot;https://github.com/blmoore/blogR/blob/master/R/ge2015_polls.R&quot;&gt;on github&lt;/a&gt;):&lt;/p&gt;
+&lt;p&gt;To start out with I redesigned the above plot in &lt;code&gt;ggplot2&lt;/code&gt; (you can see the code &lt;a href=&quot;https://github.com/blmoore/blogR/blob/master/R/ge2015_polls.R&quot;&gt;on github&lt;/a&gt;):&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/blog/img/ge2015_ggplot_full.png&quot; target=&quot;_blank&quot;&gt;
 &lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/ge2015_ggplot_thumb.png&quot; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Then with the help of Rstudio&amp;#39;s &lt;a href=&quot;http://shiny.rstudio.com/tutorial/&quot;&gt;shiny tutorials&lt;/a&gt;, it was surprisingly straightforward to add a couple of control widgets and pass their values over to the server-side script which does the heavy lifting (code I used is &lt;a href=&quot;https://github.com/blmoore/blogR/tree/master/shiny/ge2015&quot;&gt;on github&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Of course, it&amp;#39;s possible to use shiny to draw javascript plots but for this example I just wanted to replicate the same kind of functionality—while also extending the shiny version with features that would probably need to be pre-computed in a client-side plot (such as aggregating counts by week and refitting loess models per group).&lt;/p&gt;
+
+&lt;p&gt;Next with the help of Rstudio&amp;#39;s &lt;a href=&quot;http://shiny.rstudio.com/tutorial/&quot;&gt;shiny tutorials&lt;/a&gt;, it was surprisingly straightforward to add a couple of control widgets and pass their values over to the server-side script which does the heavy lifting (code is again &lt;a href=&quot;https://github.com/blmoore/blogR/tree/master/shiny/ge2015&quot;&gt;on github&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://blmr.shinyapps.io/ge2015/&quot; target=&quot;_blank&quot;&gt;
 &lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/ge2015_shiny.png&quot; /&gt;
