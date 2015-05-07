@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>blm.io - Tag: inkscape</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Converting PDF to EPS on OS X</title>
+        <link>http://blm.io/blog/convert-pdf-eps-osx</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2015-05-07T00:00:00+01:00</pubDate>
+		<guid>http://blm.io/blog/convert-pdf-eps-osx</guid>
+		<description><![CDATA[
+		   <p>Recently I discovered that some academic publishers will let you submit PDF figures right up until acceptance, where they then need to be in an &quot;editable&quot; format. Vector figures inside PDF containers <em>are</em> editable of course, but the author guidelines for your journal of choice may well say otherwise, instead offering a list of ancient and bewildering image formats which are deemed acceptable. It&#39;s baffling to me why a journal would prefer a <code>pptx</code> PowerPoint file containing your figure than a modern open standard like <code>SVG</code> (not a format without consistency issues, admittedly). So for this reason I needed to convert a bunch of PDF figures to EPS (encapsulated postscript) without too much manual effort.</p>
+
+<h2>Conversions</h2>
+
+<p>Google lead me to <a href="http://tex.stackexchange.com/q/20883">tex.se</a> where a <a href="http://tex.stackexchange.com/a/20884">great answer</a> (+1) lists a few different possible methods of going about this conversion. After trying a couple, it turned out the results were often imperfect and sometimes wildly different.</p>
+
+<p>As an example PDF vector image, here&#39;s the <a href="https://benjaminlmoore.wordpress.com/2015/04/09/recreating-the-vaccination-heatmaps-in-r/">measles heatmap I put together</a> recently:</p>
+
+<p><img class="imgfull" src="/blog/img/measles_hm.png" /></p>
+
+<h3>ImageMagick</h3>
+
+<p>How well does this convert with, say, <a href="http://www.imagemagick.org/">ImageMagick</a>:</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">convert measles.pdf measles_imagemagick.eps
+</code></pre></div>
+<p><img class="imgfull" src="/blog/img/measles_imagemagick.png" /></p>
+
+<p>Wow, I have no idea why that gives such a bad result, maybe it could be improved by tweaking some <a href="http://www.imagemagick.org/script/convert.php">parameters</a> but I didn&#39;t experiment with these.</p>
+
+<h3>Inkscape</h3>
+
+<p>Better results came from <a href="https://inkscape.org/en/">Inkscape</a> (though linking the commandline version is <a href="http://wiki.inkscape.org/wiki/index.php/MacOS_X#Inkscape_command_line">a pain</a> on OS X):</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">inkscape measles.pdf --export-eps<span class="o">=</span>measles_inkscape.eps
+</code></pre></div>
+<p><img class="imgfull" src="/blog/img/measles_inkscape.png" /></p>
+
+<p>This looks a bit better, though the bounding box is tightly cropped.</p>
+
+<h3>pdftops (xpdf)</h3>
+
+<p>The best out-of-the-box result with this file came from <code>pdftops</code> (part of <a href="http://www.foolabs.com/xpdf/download.html">xpdf</a>) which maintained PDF margins and converted vector elements reasonably faithfully:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">pdftops -eps measles.pdf
+</code></pre></div>
+<p><img class="imgfull" src="/blog/img/measles_pdftops.png" /></p>
+
+<h2>Script</h2>
+
+<p>To quickly try each of the above methods (and more) I&#39;ve put a rough bash script together <a href="https://github.com/blmoore/pdf2eps-osx"><code>pdf2eps</code></a> that can be cloned from <a href="https://github.com/blmoore">github</a> and run as:</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">git clone git://github.com/blmoore/pdf2eps-osx
+<span class="nb">cd </span>pdf2eps-osx
+./pdf2eps example_file.pdf
+<span class="c"># Converting: example_file.pdf</span>
+
+ls converted/
+<span class="c"># example_file_gs.eps          example_file_inkscape.eps</span>
+<span class="c"># example_file_imagemagick.eps example_file_pdftops.eps</span>
+</code></pre></div>
+<p>Maybe I&#39;ll properly develop this script in future, using getopts and testing/installing linked programs, but for now it works as a quick hack!</p>
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

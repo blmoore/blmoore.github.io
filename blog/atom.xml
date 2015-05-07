@@ -4,13 +4,69 @@
  <title>blm.io</title>
  <link href="http://blm.io/blog/atom.xml" rel="self"/>
  <link href="http://blm.io/blog/"/>
- <updated>2015-04-29T09:40:25+01:00</updated>
+ <updated>2015-05-07T21:52:51+01:00</updated>
  <id>http://blm.io</id>
  <author>
    <name>Ben Moore</name>
    <email>root@blm.io</email>
  </author>
 
+ 
+ <entry>
+   <title>Converting PDF to EPS on OS X</title>
+   <link href="http://blm.io/blog/convert-pdf-eps-osx"/>
+   <updated>2015-05-07T00:00:00+01:00</updated>
+   <id>http://blm.io/blog/converting-pdf-to-eps-on-mac-osx</id>
+   <content type="html">&lt;p&gt;Recently I discovered that some academic publishers will let you submit PDF figures right up until acceptance, where they then need to be in an &amp;quot;editable&amp;quot; format. Vector figures inside PDF containers &lt;em&gt;are&lt;/em&gt; editable of course, but the author guidelines for your journal of choice may well say otherwise, instead offering a list of ancient and bewildering image formats which are deemed acceptable. It&amp;#39;s baffling to me why a journal would prefer a &lt;code&gt;pptx&lt;/code&gt; PowerPoint file containing your figure than a modern open standard like &lt;code&gt;SVG&lt;/code&gt; (not a format without consistency issues, admittedly). So for this reason I needed to convert a bunch of PDF figures to EPS (encapsulated postscript) without too much manual effort.&lt;/p&gt;
+
+&lt;h2&gt;Conversions&lt;/h2&gt;
+
+&lt;p&gt;Google lead me to &lt;a href=&quot;http://tex.stackexchange.com/q/20883&quot;&gt;tex.se&lt;/a&gt; where a &lt;a href=&quot;http://tex.stackexchange.com/a/20884&quot;&gt;great answer&lt;/a&gt; (+1) lists a few different possible methods of going about this conversion. After trying a couple, it turned out the results were often imperfect and sometimes wildly different.&lt;/p&gt;
+
+&lt;p&gt;As an example PDF vector image, here&amp;#39;s the &lt;a href=&quot;https://benjaminlmoore.wordpress.com/2015/04/09/recreating-the-vaccination-heatmaps-in-r/&quot;&gt;measles heatmap I put together&lt;/a&gt; recently:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/measles_hm.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;ImageMagick&lt;/h3&gt;
+
+&lt;p&gt;How well does this convert with, say, &lt;a href=&quot;http://www.imagemagick.org/&quot;&gt;ImageMagick&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;convert measles.pdf measles_imagemagick.eps
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/measles_imagemagick.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Wow, I have no idea why that gives such a bad result, maybe it could be improved by tweaking some &lt;a href=&quot;http://www.imagemagick.org/script/convert.php&quot;&gt;parameters&lt;/a&gt; but I didn&amp;#39;t experiment with these.&lt;/p&gt;
+
+&lt;h3&gt;Inkscape&lt;/h3&gt;
+
+&lt;p&gt;Better results came from &lt;a href=&quot;https://inkscape.org/en/&quot;&gt;Inkscape&lt;/a&gt; (though linking the commandline version is &lt;a href=&quot;http://wiki.inkscape.org/wiki/index.php/MacOS_X#Inkscape_command_line&quot;&gt;a pain&lt;/a&gt; on OS X):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;inkscape measles.pdf --export-eps&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;measles_inkscape.eps
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/measles_inkscape.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This looks a bit better, though the bounding box is tightly cropped.&lt;/p&gt;
+
+&lt;h3&gt;pdftops (xpdf)&lt;/h3&gt;
+
+&lt;p&gt;The best out-of-the-box result with this file came from &lt;code&gt;pdftops&lt;/code&gt; (part of &lt;a href=&quot;http://www.foolabs.com/xpdf/download.html&quot;&gt;xpdf&lt;/a&gt;) which maintained PDF margins and converted vector elements reasonably faithfully:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pdftops -eps measles.pdf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/measles_pdftops.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Script&lt;/h2&gt;
+
+&lt;p&gt;To quickly try each of the above methods (and more) I&amp;#39;ve put a rough bash script together &lt;a href=&quot;https://github.com/blmoore/pdf2eps-osx&quot;&gt;&lt;code&gt;pdf2eps&lt;/code&gt;&lt;/a&gt; that can be cloned from &lt;a href=&quot;https://github.com/blmoore&quot;&gt;github&lt;/a&gt; and run as:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;git clone git://github.com/blmoore/pdf2eps-osx
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;pdf2eps-osx
+./pdf2eps example_file.pdf
+&lt;span class=&quot;c&quot;&gt;# Converting: example_file.pdf&lt;/span&gt;
+
+ls converted/
+&lt;span class=&quot;c&quot;&gt;# example_file_gs.eps          example_file_inkscape.eps&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# example_file_imagemagick.eps example_file_pdftops.eps&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Maybe I&amp;#39;ll properly develop this script in future, using getopts and testing/installing linked programs, but for now it works as a quick hack!&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>UK general election polls in rCharts and shiny</title>
