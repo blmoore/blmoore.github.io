@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive charts in R</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Interactive charts in R">
+  <meta name="author" content="Ben Moore">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/font-awesome.min.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <!-- <aside class="gdbar">
+  <img src="assets/img/logo.png">
+</aside> -->
+<div style="float:right; width=35%; margin-top:3%">
+  <img src="assets/img/logo.png" />
+  <br /><br /><br />
+</div>
+<br clear="all" />
+<hgroup class="auto-fadein" style="width:75%; top:25%;">
+  <p style="font-size: 2.5em; color:#FD9544; margin-bottom: 5%; font-family: 'Varela Round', 'Helvetica', Sans-serif; text-shadow: 1px 1px #fff, 1px 2px #ccc;">Interactive charts in R<br />
+</p>
+
+    <p style="text-align: left;"><b>Ben Moore</b> (<a
+  href="https://twitter.com/benjaminlmoore"
+target="_blank">@benjaminlmoore</a>)<br/><br />
+
+  <img src="assets/img/edinbr_logo.png" width="21%"/><br />
+May meeting 2015
+      <p style="text-align:right; font-size:.9rem;">
+        Slides online at: <a href="http://blm.io/talks/edinbr_may">blm.io/talks/edinbr_may</a>
+      </p>
+    </p>
+  </hgroup>
+  <article>
+  </article>
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <!-- Limit image width and height -->
+
+<style type='text/css'>
+
+.rChart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 500px !important;
+}
+
+img {
+    max-height: 540px;
+    max-width: 964px;
+}
+body {
+  /* margin-top: 40px; */
+}
+ol.linenums {
+  margin-left: 0px;
+}
+#features p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #777777;
+}
+
+#solo p {
+  text-align:center;
+  font-size:xx-large;
+  /* font-weight:bolder; */
+  margin-top:25%;
+  color:#777777;
+}
+
+.title-slide {
+  background-color: #FEFEFE;
+}
+
+#bigwriting {
+  font-size:x-large;
+}
+
+</style>
+
+<p><link href="assets/css/font-awesome.min.css" rel="stylesheet"></p>
+
+<!-- Center image on slide -->
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+
+<script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+
+<!-- <script src='http://dimplejs.org/dist/dimple.v2.1.0.min.js' type='text/javascript'></script> -->
+
+<script type='text/javascript'>
+$(function() {
+    $("p:has(img)").addClass('centered');
+});
+</script>
+
+<h2>But first</h2>
+
+<p><br /></p>
+
+<p><img src="http://www.earl-conference.com/_London/Images/Buttons/Up%20images/_08.jpg" alt="EARL"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Talk overview</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<ol>
+<li><p>Why interactive?</p></li>
+<li><p>How javascript plots work</p></li>
+<li><p>How to generate them in R</p></li>
+<li><p>Glueing R and js via <code>htmlwidgets</code></p></li>
+<li><p>Beyond just plots with <a href="http://blockspring.com">blockspring.com</a></p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="fill nobackground" id="slide-3" style="background:white;">
+  <article data-timings="">
+    <div style="float:left"> <h2>Why interactive: labels</h2></div>
+
+<iframe width='100%' height='80%' src='http://blm.io/movie_embed.html' frameborder='0' scrolling="no"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Why interactive: zoom, show/hide</h2>
+  </hgroup>
+  <article data-timings="">
+    <!-- UK election polling example -->
+
+<div id='ge2015' class="rChart"></div>
+
+<script src="js/ge2015.js"></script>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:white;">
+  <hgroup>
+    <h2>Why interactive: subplots</h2>
+  </hgroup>
+  <article data-timings="">
+    <!-- kwbroman correlation hm + scatter -->
+
+<iframe width='100%' height='100%' src='http://blm.io/rqtlcharts.html' frameborder='0' scrolling="no"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Why interactive: networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <!-- networkD3 example -->
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="solo" style="background:black;">
+  <article data-timings="">
+    <p>Ok I&#39;m convinced, how do these work?</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="solo" style="background:#ededed;">
+  <article data-timings="">
+    <p><img src="figure/rcharts.png" alt="rCharts"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>R background</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <p><br /></p>
+
+<ul>
+<li><h3>"Hadley"-verse</h3></li>
+<li><p>Robust, powerful libraries with strong theoretical underpinnings:</p>
+
+<ul>
+<li><code>ggplot2</code> :: Grammar of graphics (Leland Wilkinson)</li>
+<li><code>dplyr</code> :: Grammar of data manipulation</li>
+</ul></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><br /></p>
+
+<ul class = "build incremental">
+<li><h3>"Ramnath"-verse</h3></li>
+<li><p>Neat hacks that get R talking to various javascript libraries:</p>
+
+<ul>
+<li><code>rCharts</code> :: js plots from lattice-like syntax</li>
+<li><code>slidify</code> :: HTML/JS/CSS presentations from RMarkdown</li>
+</ul></li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Interactive charts</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <p>How we will be doing it (?):
+<br /></p>
+
+<p style="text-align: center;">
+R
+<br /><br />
+&#x25BC;
+<br /><br />
+ggvis (Rstudio)
+<br /><br />
+&#x25BC;
+<br /><br />
+Vega
+<br /><br />
+&#x25BC;
+<br /><br />
+D3.js
+</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>But currently:
+<br /></p>
+
+<p style="text-align: center;">
+R
+<br /><br />
+&#x25BC;
+<br /><br />
+<b>rCharts</b> OR packages build with<b>htmlwidgets</b>
+<br /><br />
+&#x25BC;
+<br /><br />
+[ dimple.js, highcharts, NVD3, ... ]
+<br /><br />
+&#x25BC;
+<br /><br />
+D3.js
+</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>D3.js</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Handles data mapping (often JSON) + acts like jQuery for SVGs.</p>
+
+<p>Very powerful but low-level — basic graphs use the same few elements so 
+no need to reinvent wheel for these.</p>
+
+<div id="collision" style="width: 100%; height: 50%; display: block;"></div>
+
+<script src="js/collision.js"></script>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Loads of js plotting libraries</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<p>dimple, NVD3, polycharts, highcharts, ...</p>
+
+<p><br /></p>
+
+<p><img src="figure/rcharts.png" alt="rCharts"></p>
+
+<p><br /></p>
+
+<ul class = "build incremental">
+<li>Uniform (lattice-style) plotting interface for each of these (and more!)
+straight from R</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:white;">
+  <hgroup>
+    <h2>Example: static</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:40%;'>
+  <p><br /></p>
+
+<pre><code class="r" style="font-size:.7em;"># load data
+d <- read.csv2("Twitter50.txt", sep="\t")
+
+library("ggplot2")
+
+# plot with ggplot
+ggplot(d, aes(x=Citations, y=Followers)) + 
+  geom_point() + theme_bw() + 
+  coord_trans(x="log10", y="log10") +
+  scale_x_log10(limits=c(10, 1e6)) +
+  scale_y_log10(limits=c(1e4, 1e7))
+
+# save to file from device
+ggsave(filename="sciTwitter.svg", 
+       width=5, height=5)
+</code></pre>
+
+<p><br /></p>
+
+<p style="font-size:.75em">(Data from @<a href="http://biomickwatson.wordpress.com/2014/09/17/data-from-the-top-50-science-stars-of-twitter/" target="_blank">biomickwatson</a>)</p>
+
+</div>
+<div style='float:right;width:60%;'>
+  <p><br /></p>
+
+<p><img src="figure/sciTwitter.svg" alt="science stars"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:white;">
+  <hgroup>
+    <h2>Example: interactive</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:40%;'>
+  <p><br /></p>
+
+<pre><code class="r" style="font-size:.7em;"># load data
+d <- read.csv2("Twitter50.txt", sep="\t")
+
+library("rCharts")
+
+# dplot (dimple.js)
+i <- dPlot(Followers ~ Citations, 
+           data=d, type="bubble",
+      groups="Name", height=480, width=520)
+      
+# axis tweaks
+i$yAxis(type = "addLogAxis", overrideMin=1e4)
+i$xAxis(type = "addLogAxis", overrideMin=10)
+
+# publish as gist
+i$publish()
+</code></pre>
+
+</div>
+<div style='float:right;width:60%;'>
+  <iframe width='100%' height="550" src='http://blm.io/stars_embed.html' frameborder='0' scrolling="no"></iframe>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>rCharts</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
+
+<p>&check; Quick, easy intro to intractive plots for the web</p>
+
+<p>&check; Range of libraries to choose from</p>
+
+<p>&check; Still evolving, new libraries added</p>
+
+<p>&cross; Probably will need to refer to js lib docs for customisation</p>
+
+<p>&cross; Sooner or later will need to edit the js source</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>htmlwidgets</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:white;">
+  <article data-timings="">
+    <!-- webGL example -->
+
+<iframe width='100%' height='100%' src='http://blm.io/threejs.html' frameborder='0' scrolling="no"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>blockspring</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>New York Times API via blockspring</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style="font-size: x-small !important;">
+  <a href="http://www.nytimes.com/travel/guides/europe/britain/scotland/edinburgh/overview.html">
+    <h3>Edinburgh</h3>
+  </a>
+  <p>Articles, photos and video about Edinburgh from The New York Times, including hotel, restaurant and attraction information with reader reviews and advice on where to stay, where to eat and what to do.</p>
+</html><html>
+  <a href="http://www.nytimes.com/2015/04/29/business/dealbook/head-of-rbs-spinoff-williams-glyn-to-step-down.html">
+    <h3>Head of R.B.S. Spinoff, Williams &amp;amp; Glyn, to Step Down</h3>
+  </a>
+  <p>John Maltby will serve as an adviser to a consortium of investors who participated in a 2013 bond offering to help finance the spinoff.</p>
+</html><html>
+  <a href="http://artsbeat.blogs.nytimes.com/2015/03/18/edinburgh-international-festival-under-new-director-sets-lineup/">
+    <h3>Edinburgh International Festival, Under New Director, Sets Lineup</h3>
+  </a>
+  <p>The Edinburgh International Festival in August will be the first under the direction of Fergus Linehan.</p>
+</html><html>
+  <a href="http://topics.nytimes.com/top/reference/timestopics/people/p/duke_of_edinburgh_philip/index.html">
+    <h3>Philip, Duke of Edinburgh</h3>
+  </a>
+  <p>News about Duke of Edinburgh Philip, including commentary and archival articles published in The New York Times.</p>
+</html><html>
+  <a href="http://tmagazine.blogs.nytimes.com/2015/04/10/pringle-of-scotland-bicentennial-michael-clark-company-collaboration/">
+    <h3>A Dance Takes Shape From Pringle of Scotland&amp;#8217;s Archives</h3>
+  </a>
+  <p>The fashion house shares a video, choreographed by Michael Clark Company in celebration of the label’s 200th birthday.</p>
+</div>
+  
+
+<hr>
+
+<h2>Summary</h2>
+
+<p><br /></p>
+
+<ol class = "build incremental">
+<li><p>R is a powerful tool to answer everyday questions; chances are the data is out there... 
+Might turn into an interesting blog post, article or paper!</p></li>
+<li><p>Simple interactive charts are easy to make (see rCharts) and can add value, might be 
+tempted towards D3.js for custom visualisations</p></li>
+<li><p>Web presentation frameworks are a decent alternative to PowerPoint / Beamer (and easy to write in Markdown, per slidify)</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:#ededed;">
+  <article data-timings="">
+    <div style="display: block; width: 40%; text-align:right; padding: 0 5%; margin-top:5%">
+<p style="font-size: .8em;">
+<i class="fa fa-github"></i>&nbsp;<a href="http://github.com/blmoore">blmoore</a><br />
+<i class="fa fa-twitter"></i>&nbsp;<a href="http://twitter.com/benjaminlmoore">benjaminlmoore</a><br />
+<i class="fa fa-envelope"></i>&nbsp;<a href="mailto:ben@blm.io">ben@blm.io</a><br />
+</p>
+</div>
+
+<p style="text-align:center; font-size:xx-large; margin-top:9%">
+Thanks for listening
+</p>
+
+<p><br /></p>
+
+<div style="width: 60%; height: auto; margin: 5% auto;">
+<p style="text-align:center;">
+People who've helped me out or I've stolen code from:
+</p>
+<p style="font-size:.7em; text-align:center">
+<b>@ramnath_vaidya</b> (rCharts, slidify), @hadley_wickham (dplyr, ggplot2, devtools), 
+@kwbroman, @timelyportfolio, <b>StackOverflow</b>,
+@mbostock (d3.js), @jkiernander (dimple.js)
+</p>
+<p style="font-size:.5em; text-align:center">
+<br /><br />
+These slides at <a href="http://blm.io/talks/edinbr_may/">blm.io/talks/edinbr_may/</a>; more examples: 
+<a href="http://blm.io/blog/" target="_blank">blm.io/blog</a>
+</p>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Talk overview'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title=''>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Why interactive: zoom, show/hide'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Why interactive: subplots'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Why interactive: networks'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title=''>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title=''>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title=''>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='R background'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Interactive charts'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='D3.js'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Loads of js plotting libraries'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Example: static'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Example: interactive'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='rCharts'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='htmlwidgets'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title=''>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='blockspring'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='New York Times API via blockspring'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title=''>
+         21
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
