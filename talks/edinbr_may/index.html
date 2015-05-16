@@ -108,6 +108,23 @@ ol.linenums {
   font-size:x-large;
 }
 
+.source {
+  float:right; 
+  display: block; 
+  /* width: 40%; */
+  position: absolute; 
+  bottom: 6%; 
+  right: 10%;
+}
+
+p.sm {
+  font-size: 14px !important;
+}
+
+h2.sm {
+  font-size: 18px !important;
+  letter-spacing: 3px !important;
+}
 </style>
 
 <p><link href="assets/css/font-awesome.min.css" rel="stylesheet"></p>
@@ -150,9 +167,9 @@ $(function() {
 <ol>
 <li><p>Why interactive?</p></li>
 <li><p>How javascript plots work</p></li>
-<li><p>How to generate them in R</p></li>
+<li><p>An easy way to interactive plots in R</p></li>
 <li><p>Glueing R and js via <code>htmlwidgets</code></p></li>
-<li><p>Beyond just plots with <a href="http://blockspring.com">blockspring.com</a></p></li>
+<li><p>Beyond just plots with <code>blockspring</code></p></li>
 </ol>
 
   </article>
@@ -168,7 +185,7 @@ $(function() {
 <iframe width='80%' height='80%' src='http://blm.io/movie_embed.html' frameborder='0' scrolling="no"></iframe>
 </div>
 
-<div style="float:right; display: block; width: 30%; position: absolute; bottom: 6%; right: 10%;">
+<div class="source" style="width: 30%;">
 <p style="font-size:small;">
 Source: <a href="http://blm.io/blog/overrated-underrated-films/" target="_blank">
 What are the most overrated films?
@@ -190,6 +207,13 @@ What are the most overrated films?
 
 <script src="js/ge2015.js"></script>
 
+<div class="source" style="width: 40%;">
+<p style="font-size:small;">
+Source: <a href="http://blm.io/blog/uk-general-election-rcharts-shiny/" target="_blank">
+UK general election polls in rCharts and shiny
+</a> on <a href="http://blm.io/blog/" target="_blank">blm.io</a>.
+</p></div>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -203,16 +227,30 @@ What are the most overrated films?
 
 <iframe width='100%' height='100%' src='http://blm.io/rqtlcharts.html' frameborder='0' scrolling="no"></iframe>
 
+<div class="source" style="width: 30%;">
+<p style="font-size:small;">
+Source: <a href="http://kbroman.org/qtlcharts/" target="_blank">r/QTLcharts example</a> 
+by <a href="https://twitter.com/kwbroman" target="_blank">@kwbroman</a>.
+</p></div>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-6" style="background:;">
+<slide class="" id="slide-6" style="background:white;">
   <hgroup>
     <h2>Why interactive: networks</h2>
   </hgroup>
   <article data-timings="">
     <!-- networkD3 example -->
+
+<iframe width='100%' height='100%' src='http://blm.io/nd3.html' frameborder='0' scrolling="no"></iframe>
+
+<div class="source" style="width: 35%;">
+<p style="font-size:small;">
+Source: <a href="http://www.htmlwidgets.org/showcase_networkD3.html" target="_blank">htmlwidgets example</a> 
+by Christopher Gandrud.
+</p></div>
 
   </article>
   <!-- Presenter Notes -->
@@ -220,15 +258,8 @@ What are the most overrated films?
 
 <slide class="" id="solo" style="background:black;">
   <article data-timings="">
-    <p>Ok I&#39;m convinced, how do these work?</p>
+    <p>Ok I&#39;m convinced, how can I make these?</p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-8" style="background:;">
-  <article data-timings="">
-    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -241,7 +272,7 @@ What are the most overrated films?
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-10" style="background:;">
+<slide class="" id="slide-9" style="background:;">
   <hgroup>
     <h2>R background</h2>
   </hgroup>
@@ -279,7 +310,7 @@ What are the most overrated films?
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-10" style="background:;">
   <hgroup>
     <h2>Interactive charts</h2>
   </hgroup>
@@ -315,7 +346,7 @@ R
 <br /><br />
 &#x25BC;
 <br /><br />
-<b>rCharts</b> OR packages build with<b>htmlwidgets</b>
+<b>rCharts</b> <br />(And new: packages build with <b>htmlwidgets</b>)
 <br /><br />
 &#x25BC;
 <br /><br />
@@ -331,12 +362,12 @@ D3.js
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-12" style="background:;">
+<slide class="" id="slide-11" style="background:;">
   <hgroup>
     <h2>D3.js</h2>
   </hgroup>
   <article data-timings="">
-    <p>Handles data mapping (often JSON) + acts like jQuery for SVGs.</p>
+    <p>Handles data mapping (often JSON) + acts like jQuery for SVG elements.</p>
 
 <p>Very powerful but low-level — basic graphs use the same few elements so 
 no need to reinvent wheel for these.</p>
@@ -349,7 +380,7 @@ no need to reinvent wheel for these.</p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-13" style="background:;">
+<slide class="" id="slide-12" style="background:;">
   <hgroup>
     <h2>Loads of js plotting libraries</h2>
   </hgroup>
@@ -373,7 +404,7 @@ straight from R</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-14" style="background:white;">
+<slide class="" id="slide-13" style="background:white;">
   <hgroup>
     <h2>Example: static</h2>
   </hgroup>
@@ -390,6 +421,7 @@ library("ggplot2")
 # plot with ggplot
 ggplot(d, aes(x=Citations, y=Followers)) + 
   geom_point() + theme_bw() + 
+  # axis tweaks
   coord_trans(x="log10", y="log10") +
   scale_x_log10(limits=c(10, 1e6)) +
   scale_y_log10(limits=c(1e4, 1e7))
@@ -414,7 +446,7 @@ ggsave(filename="sciTwitter.svg",
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-15" style="background:white;">
+<slide class="" id="slide-14" style="background:white;">
   <hgroup>
     <h2>Example: interactive</h2>
   </hgroup>
@@ -450,7 +482,7 @@ i$publish()
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-16" style="background:;">
+<slide class="" id="slide-15" style="background:;">
   <hgroup>
     <h2>rCharts</h2>
   </hgroup>
@@ -467,26 +499,51 @@ i$publish()
 
 <p>&cross; Sooner or later will need to edit the js source</p>
 
+<p><br /></p>
+
+<p style="text-size: larger">...more recently people are using <code>htmlwidgets</code> which helps address some of these issues.</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-17" style="background:;">
+<slide class="" id="slide-16" style="background:;">
   <hgroup>
     <h2>htmlwidgets</h2>
   </hgroup>
   <article data-timings="">
-    
+    <ul>
+<li><p>Framework for glueing together R and external web libraries (e.g. plotting libraries)</p></li>
+<li><p>Not an actual package you&#39;re likely to use but underlies new waves of R packages tied to specific javascript libraries</p>
+
+<ul>
+<li>Examples: <a href="https://github.com/timelyportfolio/rcdimple">rcdimple</a>, <a href="https://rstudio.github.io/leaflet/">leaflet</a>, <a href="http://rstudio.github.io/DT/">datatables</a>, <a href="http://rstudio.github.io/dygraphs">dygraphs</a></li>
+</ul></li>
+<li><p>It enforces consistency allowing packages to be used in R / RStudio, in RMarkdown documents and in Shiny web applications!</p></li>
+<li><p>Kent Russell <a href="http://twitter.com/timelyportfolio" target="_blank">@timelyportfolio</a>
+is currently building one widget per week (!) on his site: <a href="http://buildingwidgets.com" target="_blank">buildingwidgets.com</a>.</p></li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="fill" id="slide-18" style="background:;">
+<slide class="fill" id="slide-17" style="background:;">
   <hgroup>
     <h2>leaflet.js</h2>
   </hgroup>
   <article data-timings="">
     <iframe width='100%' height='100%' src='http://blm.io/edinburgh_collisions.html' frameborder='0' scrolling="no"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="solo" style="background:black;">
+  <article data-timings="">
+    <p style="color: white">
+<a href="http://blmr.shinyapps.io/blackspot" target="_blank">Blackspot: Shiny leaflet.js example</a>
+</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -505,66 +562,89 @@ i$publish()
 
 <slide class="" id="slide-20" style="background:;">
   <hgroup>
-    <h2>blockspring</h2>
+    <h2>If we can link R to online plotting libraries...</h2>
   </hgroup>
   <article data-timings="">
-    
+    <p class='..we'>can link anything!</p>
+
+<p><img src="figure/blockspring.png" alt="blockspring"></p>
+
+<p>Makes available a huge community-built library of functions with bindings in variety of languages (including R).
+Essentially huge API wrapper for: weather services, news, social media, plotting libraries...</p>
+
+<pre><code class="r">library(&#39;blockspring&#39;)
+
+nyt_ed &lt;- blockspringRunParsed(&quot;nyt-article-search&quot;, 
+                               list( &quot;query&quot; = &quot;Edinburgh&quot;, 
+                                     &quot;nyt_article_key&quot; = private_key ))$params
+</code></pre>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-21" style="background:;">
   <hgroup>
-    <h2>New York Times API via blockspring</h2>
+    <h2>&quot;Edinburgh&quot; NYT search results</h2>
   </hgroup>
   <article data-timings="">
-    <div style="font-size: x-small !important;">
+    <div style="border-radius: 5px; border: 2px solid #fd9544; padding: 5px">
   <a href="http://www.nytimes.com/travel/guides/europe/britain/scotland/edinburgh/overview.html">
-    <h3>Edinburgh</h3>
+    <h2 class="sm">Edinburgh</h2>
   </a>
-  <p>Articles, photos and video about Edinburgh from The New York Times, including hotel, restaurant and attraction information with reader reviews and advice on where to stay, where to eat and what to do.</p>
-</html><html>
+  <p class="sm">Articles, photos and video about Edinburgh from The New York Times, including hotel, restaurant and attraction information with reader reviews and advice on where to stay, where to eat and what to do.</p>
   <a href="http://www.nytimes.com/2015/04/29/business/dealbook/head-of-rbs-spinoff-williams-glyn-to-step-down.html">
-    <h3>Head of R.B.S. Spinoff, Williams &amp;amp; Glyn, to Step Down</h3>
+    <h2 class="sm">Head of R.B.S. Spinoff, Williams & Glyn, to Step Down</h2>
   </a>
-  <p>John Maltby will serve as an adviser to a consortium of investors who participated in a 2013 bond offering to help finance the spinoff.</p>
-</html><html>
+  <p class="sm">John Maltby will serve as an adviser to a consortium of investors who participated in a 2013 bond offering to help finance the spinoff.</p>
   <a href="http://artsbeat.blogs.nytimes.com/2015/03/18/edinburgh-international-festival-under-new-director-sets-lineup/">
-    <h3>Edinburgh International Festival, Under New Director, Sets Lineup</h3>
+    <h2 class="sm">Edinburgh International Festival, Under New Director, Sets Lineup</h2>
   </a>
-  <p>The Edinburgh International Festival in August will be the first under the direction of Fergus Linehan.</p>
-</html><html>
+  <p class="sm">The Edinburgh International Festival in August will be the first under the direction of Fergus Linehan.</p>
   <a href="http://topics.nytimes.com/top/reference/timestopics/people/p/duke_of_edinburgh_philip/index.html">
-    <h3>Philip, Duke of Edinburgh</h3>
+    <h2 class="sm">Philip, Duke of Edinburgh</h2>
   </a>
-  <p>News about Duke of Edinburgh Philip, including commentary and archival articles published in The New York Times.</p>
-</html><html>
+  <p class="sm">News about Duke of Edinburgh Philip, including commentary and archival articles published in The New York Times.</p>
   <a href="http://tmagazine.blogs.nytimes.com/2015/04/10/pringle-of-scotland-bicentennial-michael-clark-company-collaboration/">
-    <h3>A Dance Takes Shape From Pringle of Scotland&amp;#8217;s Archives</h3>
+    <h2 class="sm">A Dance Takes Shape From Pringle of Scotland's Archives</h2>
   </a>
-  <p>The fashion house shares a video, choreographed by Michael Clark Company in celebration of the label’s 200th birthday.</p>
+  <p class="sm">The fashion house shares a video, choreographed by Michael Clark Company in celebration of the label’s 200th birthday.</p>
+  <a href="http://query.nytimes.com/gst/abstract.html?res=9E00E0DD113EE33ABC4B51DFB2668382629EDE">
+    <h2 class="sm">Sacheverell Sitwell's Bright Pageant of Edinburgh</h2>
+  </a>
+  <p class="sm">THE history of Edinburgh is violent, tragic, romantic,  picturesque and everything by extremes. It was here that Malcolm Canmore brought his English bride, Margaret, after the murder of Duncan and the death of Macbeth in the eleventh century.</p>
+  <a href="http://www.nytimes.com/2015/03/11/business/dealbook/verisk-analytics-agrees-to-buy-scottish-energy-research-firm-wood-mackenzie.html">
+    <h2 class="sm">Verisk Analytics Agrees to Buy Scottish Energy Research Firm</h2>
+  </a>
+  <p class="sm">The Jersey City-based company said it would pay about $2.8 billion for Wood Mackenzie of Edinburgh.</p>
+  <a href="http://iht-retrospective.blogs.nytimes.com/2015/03/04/1890-forth-bridge-is-completed/">
+    <h2 class="sm">1890: Forth Bridge Is Completed</h2>
+  </a>
+  <p class="sm">Highlights from the International Herald Tribune archives: Forth Bridge finished construction in 1890.</p>
 </div>
-  
 
-<hr>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<h2>Summary</h2>
-
-<p><br /></p>
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br /></p>
 
 <ol class = "build incremental">
-<li><p>R is a powerful tool to answer everyday questions; chances are the data is out there... 
-Might turn into an interesting blog post, article or paper!</p></li>
-<li><p>Simple interactive charts are easy to make (see rCharts) and can add value, might be 
-tempted towards D3.js for custom visualisations</p></li>
-<li><p>Web presentation frameworks are a decent alternative to PowerPoint / Beamer (and easy to write in Markdown, per slidify)</p></li>
+<li><p>Interactive charts can be a powerful way of presenting and exploring data</p></li>
+<li><p>Charts with interactivity are <em>not</em> difficult to make, and definitely not only the domain of web developers</p></li>
+<li><p>2015 is &quot;<a href="https://twitter.com/timelyportfolio/status/549977187307507712">the year of the htmwidget</a>&quot; — expect ever-improving R solutions to interactive plotting in the near future...</p></li>
 </ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-22" style="background:#ededed;">
+<slide class="" id="slide-23" style="background:#ededed;">
   <article data-timings="">
     <div style="display: block; width: 40%; text-align:right; padding: 0 5%; margin-top:5%">
 <p style="font-size: .8em;">
@@ -585,9 +665,11 @@ Thanks for listening
 People who've helped me out or I've stolen code from:
 </p>
 <p style="font-size:.7em; text-align:center">
-<b>@ramnath_vaidya</b> (rCharts, slidify), @hadley_wickham (dplyr, ggplot2, devtools), 
-@kwbroman, @timelyportfolio, <b>StackOverflow</b>,
-@mbostock (d3.js), @jkiernander (dimple.js)
+@ramnath_vaidya (rCharts, slidify, htmlwidgets), 
+@timelyportfolio (htmlwidgets), @kwbroman (r/qtlcharts), 
+@hadley_wickham (dplyr, ggplot2, devtools), 
+@jcheng (leaflet, shiny examples), 
+StackOverflow, @mbostock (d3.js)
 </p>
 <p style="font-size:.5em; text-align:center">
 <br /><br />
@@ -654,61 +736,61 @@ These slides at <a href="http://blm.io/talks/edinbr_may/">blm.io/talks/edinbr_ma
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title=''>
+        data-slide=9 title='R background'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='R background'>
+        data-slide=10 title='Interactive charts'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Interactive charts'>
+        data-slide=11 title='D3.js'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='D3.js'>
+        data-slide=12 title='Loads of js plotting libraries'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Loads of js plotting libraries'>
+        data-slide=13 title='Example: static'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Example: static'>
+        data-slide=14 title='Example: interactive'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Example: interactive'>
+        data-slide=15 title='rCharts'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='rCharts'>
+        data-slide=16 title='htmlwidgets'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='htmlwidgets'>
+        data-slide=17 title='leaflet.js'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='leaflet.js'>
+        data-slide=18 title=''>
          18
       </a>
     </li>
@@ -720,20 +802,26 @@ These slides at <a href="http://blm.io/talks/edinbr_may/">blm.io/talks/edinbr_ma
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='blockspring'>
+        data-slide=20 title='If we can link R to online plotting libraries...'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='New York Times API via blockspring'>
+        data-slide=21 title='&quot;Edinburgh&quot; NYT search results'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title=''>
+        data-slide=22 title='Summary'>
          22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title=''>
+         23
       </a>
     </li>
   </ul>
