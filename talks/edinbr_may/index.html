@@ -129,6 +129,8 @@ h2.sm {
 
 <p><link href="assets/css/font-awesome.min.css" rel="stylesheet"></p>
 
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
 <!-- Center image on slide -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -530,10 +532,35 @@ is currently building one widget per week (!) on his site: <a href="http://build
 
 <slide class="fill" id="slide-17" style="background:;">
   <hgroup>
-    <h2>leaflet.js</h2>
+    <h2>leaflet.js via leaflet R package</h2>
   </hgroup>
   <article data-timings="">
     <iframe width='100%' height='100%' src='http://blm.io/edinburgh_collisions.html' frameborder='0' scrolling="no"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Leaflet example code snippet</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre class="prettyprint" data-lang="r">
+library("magrittr")
+library("leaflet")
+
+<b>leaflet(data=accidents) %>% </b>
+  addTiles(urlTemplate="http://openmapsurfer.uni-hd.de/tiles/roadsg/x={x}&y={y}&z={z}") %>%
+  addTiles('http://{s}.tile.openstreetmap.se/hydda/roads_and_labels/{z}/{x}/{y}.png', 
+    attribution='&copy; OpenStreetMap') %>%
+  <b>setView(lng=-3.19, lat=55.95, zoom=13) %>%
+  addCircleMarkers(~long, ~lat, radius=~(no_vehicle+.8)**1.5, fillOpacity=.15,
+    color=NA, popup=strs, weight=2)</b> %>%
+  addControl(html=label_html, position="bottomright") 
+</pre>
+
+<p>Works in RStudio viewer, external web browser and (with some tweaks) in a shiny app...</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -549,9 +576,9 @@ is currently building one widget per week (!) on his site: <a href="http://build
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-19" style="background:white;">
+<slide class="" id="slide-20" style="background:white;">
   <hgroup>
-    <h2>three.js (WebGL)</h2>
+    <h2>WebGL via three.js: 2013 flights from Edinburgh Airport</h2>
   </hgroup>
   <article data-timings="">
     <iframe width='100%' height='100%' src='http://blm.io/threejs.html' frameborder='0' scrolling="no"></iframe>
@@ -560,12 +587,12 @@ is currently building one widget per week (!) on his site: <a href="http://build
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-20" style="background:;">
+<slide class="" id="slide-21" style="background:;">
   <hgroup>
     <h2>If we can link R to online plotting libraries...</h2>
   </hgroup>
   <article data-timings="">
-    <p class='..we'>can link anything!</p>
+    <p>&nbsp;...we can link anything!</p>
 
 <p><img src="figure/blockspring.png" alt="blockspring"></p>
 
@@ -583,7 +610,7 @@ nyt_ed &lt;- blockspringRunParsed(&quot;nyt-article-search&quot;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-21" style="background:;">
+<slide class="" id="slide-22" style="background:;">
   <hgroup>
     <h2>&quot;Edinburgh&quot; NYT search results</h2>
   </hgroup>
@@ -627,7 +654,7 @@ nyt_ed &lt;- blockspringRunParsed(&quot;nyt-article-search&quot;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-22" style="background:;">
+<slide class="" id="slide-23" style="background:;">
   <hgroup>
     <h2>Summary</h2>
   </hgroup>
@@ -644,7 +671,7 @@ nyt_ed &lt;- blockspringRunParsed(&quot;nyt-article-search&quot;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-23" style="background:#ededed;">
+<slide class="" id="slide-24" style="background:#ededed;">
   <article data-timings="">
     <div style="display: block; width: 40%; text-align:right; padding: 0 5%; margin-top:5%">
 <p style="font-size: .8em;">
@@ -784,44 +811,50 @@ These slides at <a href="http://blm.io/talks/edinbr_may/">blm.io/talks/edinbr_ma
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='leaflet.js'>
+        data-slide=17 title='leaflet.js via leaflet R package'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title=''>
+        data-slide=18 title='Leaflet example code snippet'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='three.js (WebGL)'>
+        data-slide=19 title=''>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='If we can link R to online plotting libraries...'>
+        data-slide=20 title='WebGL via three.js: 2013 flights from Edinburgh Airport'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='&quot;Edinburgh&quot; NYT search results'>
+        data-slide=21 title='If we can link R to online plotting libraries...'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Summary'>
+        data-slide=22 title='&quot;Edinburgh&quot; NYT search results'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title=''>
+        data-slide=23 title='Summary'>
          23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title=''>
+         24
       </a>
     </li>
   </ul>
