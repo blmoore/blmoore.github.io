@@ -60,7 +60,7 @@ This already comes with some neat functionality: as well as tooltips you can dra
 
 <p>The <a href="https://blmr.shinyapps.io/ge2015/">end-result</a> is still rudimentary, but has shown me how simple shiny is to get started with—I&#39;m certain I&#39;ll be building something more impressive with it in future!</p>
 
-<hr />
+<p><hr /></p>
 
 <p style="text-align:right; font-size: .85rem;">R code to reproduce these
 plots is available on
@@ -368,11 +368,10 @@ gender<span class="p">(</span><span class="s">&quot;ben&quot;</span><span class=
 
 <p>If you have other ideas of what to do with demographics data, or have noticed additional caveats of this study, please let me know in the comments!</p>
 
-<hr />
-
+<p><hr />
 <p style="text-align:right;">Full code to reproduce this analysis is <a title="Code to reproduce" href="https://github.com/blmoore/blogR/blob/master/R/twitter_followersGender.R" target="_blank">available on Github</a>.<br />
 This post was originally published on my
-<a href="http://benjaminlmoore.wordpress.com/2014/05/25/celebrity-twitter-followers-by-gender/" target="_blank">Wordpress blog</a>.</p>
+<a href="http://benjaminlmoore.wordpress.com/2014/05/25/celebrity-twitter-followers-by-gender/" target="_blank">Wordpress blog</a>.</p></p>
 
 		]]></description>
 	  </item>
@@ -462,10 +461,9 @@ This post was originally published on my
 <li>The Rotten Tomatoes API provides an IMDB id for cross-referencing, maybe that's a path to getting more data and building a better film list.</li>
 </ul>
 
-<hr />
-
+<p><hr />
 <p style="text-align:right; font-size: .85rem;">Full code to reproduce analysis is available in <a href="https://gist.github.com/blmoore/dc3bfa9a3ad0857ac796" target="_blank">gist</a> form. <br />
-This post was originally published on my <a href="http://benjaminlmoore.wordpress.com/2014/05/05/what-are-the-most-overrated-films/" target="_blank">Wordpress blog</a>.</p>
+This post was originally published on my <a href="http://benjaminlmoore.wordpress.com/2014/05/05/what-are-the-most-overrated-films/" target="_blank">Wordpress blog</a>.</p></p>
 
 		]]></description>
 	  </item>
@@ -606,12 +604,11 @@ sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><spa
 
 <p><a href="http://benjaminlmoore.files.wordpress.com/2014/03/lab_con.png"><img src="/blog/img/lab_con.png" alt="lab_con" width="500" height="607" class="imgfull" /></a></p>
 
-<hr />
-
+<p><hr />
 <p style="text-align:right; font-size:.85rem;">Reproduce and improve this analysis with help from
 <a href="https://gist.github.com/blmoore/9631779" target="_blank">this gist</a>.<br \>
 This post was originally published on my
-<a href="http://benjaminlmoore.wordpress.com/2014/03/18/guardian-data-blog-uk-elections/" target="_blank">Wordpress blog</a>.</p>
+<a href="http://benjaminlmoore.wordpress.com/2014/03/18/guardian-data-blog-uk-elections/" target="_blank">Wordpress blog</a>.</p></p>
 
 		]]></description>
 	  </item>
@@ -686,11 +683,10 @@ This post was originally published on my
 
 <p>Hopefully as the roll-out of the v3 Github API progresses the current search restriction will be lifted, still this was a fun glimpse at other programmer's conventions!</p>
 
-<hr />
-
+<p><hr />
 <p style="text-align:right; font-size: .85rem;">Full code to reproduce in this <a href="https://gist.github.com/blmoore/9400832">gist</a>.<br />
 This post was originally published on my
-<a href="http://benjaminlmoore.wordpress.com/2014/03/06/most-common-rng-seeds-r-github/" target="_blank">Wordpress blog</a>.</p>
+<a href="http://benjaminlmoore.wordpress.com/2014/03/06/most-common-rng-seeds-r-github/" target="_blank">Wordpress blog</a>.</p></p>
 
 		]]></description>
 	  </item>
@@ -843,11 +839,10 @@ img <span class="p">{</span>
 
 <p>Next up, the other <em>much</em> less attractive figures on that page ([<a href="https://en.wikipedia.org/wiki/File:U.S._Total_Deficits_vs._National_Debt_Increases_2001-2010.png" target="_blank">1</a>], [<a href="https://en.wikipedia.org/wiki/File:PPACA_Premium_Chart.jpg" target="_blank">2</a>]).</p>
 
-<hr />
-
+<p><hr />
 <p style="text-align:right; font-size: .85rem;">Code available in a <a href="https://gist.github.com/blmoore/8794075" target="_blank">gist</a>.<br />
 Originally published on my
-<a href="http://benjaminlmoore.wordpress.com/2014/02/03/meticulously-recreating-bitmap-plots-in-r/" target="_blank">Wordpress blog</a>.</p>
+<a href="http://benjaminlmoore.wordpress.com/2014/02/03/meticulously-recreating-bitmap-plots-in-r/" target="_blank">Wordpress blog</a>.</p></p>
 
 		]]></description>
 	  </item>
@@ -877,7 +872,7 @@ Originally published on my
 
 <p>Another possibility is that this data is telling us what we already know: the unique visitors with the highest total page views must be the article writers and the <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiGnome" target="_blank">Wikignomes</a> that built the place — and they've been in precipitous decline for nearly <a href="https://en.wikipedia.org/wiki/File:Wikipedia_editor_numbers.svg" target="_blank">6 years now</a>. I'm speculating of course, but maybe that's starting to show through on the page views site-wide, emphasising how much work a small group of people have been putting in, and the dent they're leaving in Wikipedia as they leave.</p>
 
-<hr />
+<p><hr /></p>
 
 <p style="text-align: right; font-size: .85rem;">Full R code to reproduce the graphs shown in this post is in a <a href="https://gist.github.com/blmoore/8343067" target="_blank">gist</a>. <br />
 This post was originally published on my

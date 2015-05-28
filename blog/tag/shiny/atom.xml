@@ -60,7 +60,7 @@ This already comes with some neat functionality: as well as tooltips you can dra
 
 <p>The <a href="https://blmr.shinyapps.io/ge2015/">end-result</a> is still rudimentary, but has shown me how simple shiny is to get started with—I&#39;m certain I&#39;ll be building something more impressive with it in future!</p>
 
-<hr />
+<p><hr /></p>
 
 <p style="text-align:right; font-size: .85rem;">R code to reproduce these
 plots is available on

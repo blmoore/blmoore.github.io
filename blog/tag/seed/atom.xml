@@ -82,11 +82,10 @@
 
 <p>Hopefully as the roll-out of the v3 Github API progresses the current search restriction will be lifted, still this was a fun glimpse at other programmer's conventions!</p>
 
-<hr />
-
+<p><hr />
 <p style="text-align:right; font-size: .85rem;">Full code to reproduce in this <a href="https://gist.github.com/blmoore/9400832">gist</a>.<br />
 This post was originally published on my
-<a href="http://benjaminlmoore.wordpress.com/2014/03/06/most-common-rng-seeds-r-github/" target="_blank">Wordpress blog</a>.</p>
+<a href="http://benjaminlmoore.wordpress.com/2014/03/06/most-common-rng-seeds-r-github/" target="_blank">Wordpress blog</a>.</p></p>
 
 		]]></description>
 	  </item>

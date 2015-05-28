@@ -97,10 +97,9 @@
 <li>The Rotten Tomatoes API provides an IMDB id for cross-referencing, maybe that's a path to getting more data and building a better film list.</li>
 </ul>
 
-<hr />
-
+<p><hr />
 <p style="text-align:right; font-size: .85rem;">Full code to reproduce analysis is available in <a href="https://gist.github.com/blmoore/dc3bfa9a3ad0857ac796" target="_blank">gist</a> form. <br />
-This post was originally published on my <a href="http://benjaminlmoore.wordpress.com/2014/05/05/what-are-the-most-overrated-films/" target="_blank">Wordpress blog</a>.</p>
+This post was originally published on my <a href="http://benjaminlmoore.wordpress.com/2014/05/05/what-are-the-most-overrated-films/" target="_blank">Wordpress blog</a>.</p></p>
 
 		]]></description>
 	  </item>

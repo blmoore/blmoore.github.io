@@ -37,7 +37,7 @@
 
 <p>Another possibility is that this data is telling us what we already know: the unique visitors with the highest total page views must be the article writers and the <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiGnome" target="_blank">Wikignomes</a> that built the place — and they've been in precipitous decline for nearly <a href="https://en.wikipedia.org/wiki/File:Wikipedia_editor_numbers.svg" target="_blank">6 years now</a>. I'm speculating of course, but maybe that's starting to show through on the page views site-wide, emphasising how much work a small group of people have been putting in, and the dent they're leaving in Wikipedia as they leave.</p>
 
-<hr />
+<p><hr /></p>
 
 <p style="text-align: right; font-size: .85rem;">Full R code to reproduce the graphs shown in this post is in a <a href="https://gist.github.com/blmoore/8343067" target="_blank">gist</a>. <br />
 This post was originally published on my

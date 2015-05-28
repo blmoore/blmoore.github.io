@@ -60,7 +60,7 @@ This already comes with some neat functionality: as well as tooltips you can dra
 
 <p>The <a href="https://blmr.shinyapps.io/ge2015/">end-result</a> is still rudimentary, but has shown me how simple shiny is to get started with—I&#39;m certain I&#39;ll be building something more impressive with it in future!</p>
 
-<hr />
+<p><hr /></p>
 
 <p style="text-align:right; font-size: .85rem;">R code to reproduce these
 plots is available on
@@ -159,7 +159,7 @@ Source<span class="o">:</span> local <span class="kt">data frame</span> <span cl
 
 <p style="font-size: smaller; text-align:center;">(99% confidence interval: 40.9 < <i>x</i> < 45.0)</p>
 
-<hr />
+<p><hr /></p>
 
 <p style="text-align:right; font-size: .85rem;">R code to reproduce this analysis is available on
 <a href="https://github.com/blmoore/blogR" target="_blank">Github</a>.</p>
@@ -341,7 +341,7 @@ plus with that Shoei symbol above your visor no-one will take you for a
 Bell advertising slogan seems a bit hollow now, as the crafty consumer can protect their
 priceless head with a 5-star rated helmet for as little as 60 GBP (100 USD).</p>
 
-<hr />
+<p><hr /></p>
 
 <p style="text-align:right; font-size: .85rem;">Full code to reproduce these
 plots and analysis will be available on
@@ -649,11 +649,10 @@ gender<span class="p">(</span><span class="s">&quot;ben&quot;</span><span class=
 
 <p>If you have other ideas of what to do with demographics data, or have noticed additional caveats of this study, please let me know in the comments!</p>
 
-<hr />
-
+<p><hr />
 <p style="text-align:right;">Full code to reproduce this analysis is <a title="Code to reproduce" href="https://github.com/blmoore/blogR/blob/master/R/twitter_followersGender.R" target="_blank">available on Github</a>.<br />
 This post was originally published on my
-<a href="http://benjaminlmoore.wordpress.com/2014/05/25/celebrity-twitter-followers-by-gender/" target="_blank">Wordpress blog</a>.</p>
+<a href="http://benjaminlmoore.wordpress.com/2014/05/25/celebrity-twitter-followers-by-gender/" target="_blank">Wordpress blog</a>.</p></p>
 
 		]]></description>
 	  </item>
@@ -743,10 +742,9 @@ This post was originally published on my
 <li>The Rotten Tomatoes API provides an IMDB id for cross-referencing, maybe that's a path to getting more data and building a better film list.</li>
 </ul>
 
-<hr />
-
+<p><hr />
 <p style="text-align:right; font-size: .85rem;">Full code to reproduce analysis is available in <a href="https://gist.github.com/blmoore/dc3bfa9a3ad0857ac796" target="_blank">gist</a> form. <br />
-This post was originally published on my <a href="http://benjaminlmoore.wordpress.com/2014/05/05/what-are-the-most-overrated-films/" target="_blank">Wordpress blog</a>.</p>
+This post was originally published on my <a href="http://benjaminlmoore.wordpress.com/2014/05/05/what-are-the-most-overrated-films/" target="_blank">Wordpress blog</a>.</p></p>
 
 		]]></description>
 	  </item>
@@ -887,12 +885,11 @@ sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><spa
 
 <p><a href="http://benjaminlmoore.files.wordpress.com/2014/03/lab_con.png"><img src="/blog/img/lab_con.png" alt="lab_con" width="500" height="607" class="imgfull" /></a></p>
 
-<hr />
-
+<p><hr />
 <p style="text-align:right; font-size:.85rem;">Reproduce and improve this analysis with help from
 <a href="https://gist.github.com/blmoore/9631779" target="_blank">this gist</a>.<br \>
 This post was originally published on my
-<a href="http://benjaminlmoore.wordpress.com/2014/03/18/guardian-data-blog-uk-elections/" target="_blank">Wordpress blog</a>.</p>
+<a href="http://benjaminlmoore.wordpress.com/2014/03/18/guardian-data-blog-uk-elections/" target="_blank">Wordpress blog</a>.</p></p>
 
 		]]></description>
 	  </item>
@@ -939,11 +936,10 @@ This post was originally published on my
 
 <p>Next up, the other <em>much</em> less attractive figures on that page ([<a href="https://en.wikipedia.org/wiki/File:U.S._Total_Deficits_vs._National_Debt_Increases_2001-2010.png" target="_blank">1</a>], [<a href="https://en.wikipedia.org/wiki/File:PPACA_Premium_Chart.jpg" target="_blank">2</a>]).</p>
 
-<hr />
-
+<p><hr />
 <p style="text-align:right; font-size: .85rem;">Code available in a <a href="https://gist.github.com/blmoore/8794075" target="_blank">gist</a>.<br />
 Originally published on my
-<a href="http://benjaminlmoore.wordpress.com/2014/02/03/meticulously-recreating-bitmap-plots-in-r/" target="_blank">Wordpress blog</a>.</p>
+<a href="http://benjaminlmoore.wordpress.com/2014/02/03/meticulously-recreating-bitmap-plots-in-r/" target="_blank">Wordpress blog</a>.</p></p>
 
 		]]></description>
 	  </item>

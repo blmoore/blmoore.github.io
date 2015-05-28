@@ -691,3 +691,7 @@ figure {
   display:inline;
   margin-bottom: 1rem;
 }
+
+div.footnotes {
+  font-size: smaller;
+}

@@ -60,7 +60,7 @@ This already comes with some neat functionality: as well as tooltips you can dra
 
 <p>The <a href="https://blmr.shinyapps.io/ge2015/">end-result</a> is still rudimentary, but has shown me how simple shiny is to get started with—I&#39;m certain I&#39;ll be building something more impressive with it in future!</p>
 
-<hr />
+<p><hr /></p>
 
 <p style="text-align:right; font-size: .85rem;">R code to reproduce these
 plots is available on
@@ -159,7 +159,7 @@ Source<span class="o">:</span> local <span class="kt">data frame</span> <span cl
 
 <p style="font-size: smaller; text-align:center;">(99% confidence interval: 40.9 < <i>x</i> < 45.0)</p>
 
-<hr />
+<p><hr /></p>
 
 <p style="text-align:right; font-size: .85rem;">R code to reproduce this analysis is available on
 <a href="https://github.com/blmoore/blogR" target="_blank">Github</a>.</p>
@@ -217,12 +217,11 @@ sop<span class="p">[,</span><span class="m">2</span><span class="o">:</span><spa
 
 <p><a href="http://benjaminlmoore.files.wordpress.com/2014/03/lab_con.png"><img src="/blog/img/lab_con.png" alt="lab_con" width="500" height="607" class="imgfull" /></a></p>
 
-<hr />
-
+<p><hr />
 <p style="text-align:right; font-size:.85rem;">Reproduce and improve this analysis with help from
 <a href="https://gist.github.com/blmoore/9631779" target="_blank">this gist</a>.<br \>
 This post was originally published on my
-<a href="http://benjaminlmoore.wordpress.com/2014/03/18/guardian-data-blog-uk-elections/" target="_blank">Wordpress blog</a>.</p>
+<a href="http://benjaminlmoore.wordpress.com/2014/03/18/guardian-data-blog-uk-elections/" target="_blank">Wordpress blog</a>.</p></p>
 
 		]]></description>
 	  </item>
