@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>blm.io - Tag: hi-c</title>
+   
+   <link>http://blm.io</link>
+   <description>Data blog from benjaminlmoore.</description>
+   <language>en-us</language>
+   <managingEditor>B.L. Moore</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Unravelling 3D genome organisation</title>
+        <link>http://blm.io/blog/3d-genome-organisation</link>
+		<author>benjaminlmoore</author>
+		<pubDate>2015-05-28T00:00:00+01:00</pubDate>
+		<guid>http://blm.io/blog/3d-genome-organisation</guid>
+		<description><![CDATA[
+		   <p>The first paper of my PhD is finally out! Its full title is &quot;<a href="http://genomebiology.com/2015/16/1/110">Integrative modeling reveals the principles of multi-scale chromatin boundary formation in human nuclear organization</a>&quot; but in talks and posters I&#39;ve been referring to the project as &quot;Unravelling higher order chromatin organisation&quot; (geddit?) or even &quot;the ENCODE-ing of ...&quot; (referencing <a href="https://www.encodeproject.org/">ENCODE</a>, of course).</p>
+
+<p>This project was done entirely with open data, I&#39;ve made my code <a href="https://github.com/blmoore/3dgenome">open source</a> and in the interests of open science I thought I&#39;d write up a blog summary of the paper.</p>
+
+<h2> Data</h2>
+
+<p>The project came out of the observation (made a couple of years ago now) that Hi-C datasets were available for each of the tier 1 ENCODE human cell lines: meaning we had access to an unprecedented amount of matched chromatin data.</p>
+
+<div style="margin: 0 auto 10px auto; width: 91%">
+<img src="/blog/img/lieberman2009.png" width="30%" />
+<img src="/blog/img/kalhor2011.png" width="30%" />
+<img src="/blog/img/dixon2012.png" width="30%" />
+</div>
+
+<p>Though now better sources are available, when we started there were three human Hi-C papers we gathered data from : the original Hi-C paper (<a href="dx.doi.org/10.1126/science.1181369">Leiberman Aiden <em>et al.</em>, 2009</a>); an improved method, TCC, with also ran Hi-C for comparison (<a href="http://dx.doi.org/10.1038/nbt.2057">Kalhor <em>et al.</em>, 2011</a>); and a much more-deeply sequenced dataset that first reported TADs (<a href="dx.doi.org/10.1038/nature11082">Dixon <em>et al.</em>, 2012</a>). These papers produced genome-wide Hi-C data for human cell types K562, Gm12878 and H1 hESC respectively, and as mentioned, these are the <a href="http://www.genome.gov/26524238">ENCODE tier 1 cell lines</a>.</p>
+
+<p><img class="imgfull" src="/blog/img/encode_celllines.png" /></p>
+
+<p>These Hi-C datasets were produced by different labs, using slightly different protocols and with varying levels of sequencing. With this in mind, directly comparing contacts is going to be tricky, even after thorough normalisation. In our analysis, we relied mostly on abstracted measures of chromatin conformation: compartment eigenvectors, TAD calls or within cell-line contacts only.</p>
+
+<h2>Analysis</h2>
+
+<p>Broadly we were interested in how chromatin features are related to genome conformation. The main questions we try to address in the manuscript boil down to:</p>
+
+<ol>
+<li><p>To what extent does higher order chromatin structure &mdash; by which I mostly mean megabase-sized topological domains and multi-megabase chromosome compartments &mdash; vary between cell types, and is there interesting biology where they&#39;re discordant?</p></li>
+<li><p>How do chromatin features (like histone modifications, transcription factors) connect to what&#39;s going on at the level of higher-order chromatin structure? What can we learn the rules underlying this relationship?</p></li>
+<li><p>How do the boundary regions demarcating higher-order domains vary between cell types?</p></li>
+</ol>
+
+<h3> 1. Genome organisation pretty similar across human cell types</h3>
+
+<p>After re-processing each Hi-C data uniformly from raw sequencing reads (and applying <a href="http://dx.doi.org/10.1038/nmeth.2148">iterative correction</a>), it wasn&#39;t a huge suprise to find a broad agreement of higher-order chromatin structure between human cell types.<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup></p>
+
+<p>Along the left-hand side of figure 1 I&#39;m plotting the principal component eigenvector derived from Hi-C contact maps (reflecting A/B compartment profile, following <a href="dx.doi.org/10.1126/science.1181369">Leiberman Aiden <em>et al.</em>, 2009</a>). You can see cell type profiles track one another along the chromosome, the genome-wide Pearson correlation of these values a 1 Mb resolution was around 0.80.</p>
+
+<p><a href="/blog/img/f1_full.png" target="_blank"><img class="imgfull" src="/blog/img/f1_thumb.png" /></a></p>
+
+<p>Similarly at the level of TADs &mdash; shaded rectangles in the zoomed region &mdash; there&#39;s a decent agreement between cell types. Despite the sub-optimal TAD-calling algorithm (the published <a href="dx.doi.org/10.1038/nature11082">Dixon <em>et al.</em>, 2012</a>) and a sparse contact map given the resolution (particularly in K562), there was still around a third of boundaries in one cell type that could be very precisely mapped to boundaries in the other two.</p>
+
+<h3>2. Chromatin features predict aspects of genome architecture</h3>
+
+<p>In short we built <a href="http://blm.io/talks/bsa/figure/rfp.png">Random Forest regression models</a> to predict the continuous compartment profile (the blue line in the above figure), and it achieved high accuracy. This wasn&#39;t wholly surprising: strong correlations between individual input variables and compartment profile has already been reported (even in the original <a href="dx.doi.org/10.1126/science.1181369">Leiberman Aiden paper</a>), so the interest really comes from dissecting and cross-applying these models, rather than from their raw metrics.</p>
+
+<p><a href="/blog/img/f2_full.png" target="_blank"><img class="imgfull" src="/blog/img/f2_thumb.png" /></a></p>
+
+<p>We found that models learned in one cell-type had almost as much predictive power in another cell type, suggested common rules governing higher order structure. However, we&#39;ve already seen that much of this structure is the same between cell types, so are these fixed regions inflating our accuracy measures?</p>
+
+<p><a href="/blog/img/f4_full.png" target="_blank"><img class="imgfull" src="/blog/img/f4_thumb.png" /></a></p>
+
+<p>It turns out that yes, if you split your input dataset by how variable these regions are between cell types, it turns out those most variable regions are more difficult to predict (<strong>A</strong>, <em>above</em>).</p>
+
+<p>This raises another question: are these variable regions in some way more noisy or is there something interesting going on? The right panel (<strong>B</strong>, <em>above</em>) tries to address this by doing some functional analysis. The results were that &quot;flipped&quot; open regions (e.g. a megabase active in Gm12878, but a closed, repressive compartment in the other two human cell types) showed an enrichment for predicted enhancer chromatin states,<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup> potentially highlighting areas of cell-type specific gene activation. We followed this up by picking out some examples (<strong>A</strong>, <em>below</em>) and returning to Hi-C contacts to look for changes in long-range interactions.</p>
+
+<p><a href="/blog/img/f5ex_full.png" target="_blank"><img class="imgfull" src="/blog/img/f5ex_thumb.png" /></a></p>
+
+<h3>3. Domain boundaries enriched for lots of things</h3>
+
+<p>The last part of the paper I want to mention was an analysis of domain boundary enrichments. TAD boundaries were brought to the fore by <a href="dx.doi.org/10.1038/nature11082">Dixon <em>et al.</em> (2012)</a>, but there&#39;s been debate about how important or interesting these spacers are. Are boundaries <em>responsible</em> for domains (i.e. binding of insulators and other factors blocks heterochromatin expansion) or are boundaries just &quot;what&#39;s left&quot; when an active domain is adjacent to, say, a repressive lamina-associated domain?</p>
+
+<p>While we couldn&#39;t resolve that debate in this paper, we were still interested in comparing TAD boundaries across cell types, as well as looking at compartment boundaries too. We also statistically tested the enrichment of each feature, rather than just showing the &quot;average-o-gram&quot; profiles.</p>
+
+<p><a href="/blog/img/f6_full.png" target="_blank"><img class="imgfull" src="/blog/img/f6_thumb.png" /></a></p>
+
+<p>The results recap some of the known TAD enrichments (CTCF, Pol2) but also find an overlapping range of peaked features at compartment boundaries, and at a broader scale.</p>
+
+<h2>Summary</h2>
+
+<p>Overall we found higher order chromatin structure is well-conserved between human cell types and well-described by locus-level chromatin features, but divergent regions contain cell-type-specific biology that could be cause or consequence of these differences. Our difficulties predicting these more flexible regions could be due to missing input features from our datasets or, more likely in my view, local activation and repression mechanisms not captured by a genome-wide model.</p>
+
+<h3>Links</h3>
+
+<p>I&#39;ve given a very brief overview of a lot of work, please do check out <a href="http://genomebiology.com/2015/16/1/110">the paper</a> if interested. It comes with the obligatory <a href="http://genomebiology.com/content/pdf/s13059-015-0661-x.pdf">lengthy supplementary materials</a> full of more good stuff.
+<a href="http://figshare.com/articles/Unravelling_higher_order_chromatin_structure/866781" target="_blank"><img class="imgright" width="30%" src="/blog/img/poster2.png" /></a></p>
+
+<ul>
+<li><p>Code to reproduce all analyses shown in the paper and supplementary is avaiable on github: <a href="https://github.com/blmoore/3dgenome">github.com/blmoore/3dgenome</a></p></li>
+<li><p>Posters related to this project have been shared on <a href="http://figshare.com/articles/Unravelling_higher_order_chromatin_organisation/1379863">figshare</a>.</p></li>
+<li><p>Slides are available for <a href="http://blm.io/talks/bsa/">a talk I gave</a> at a local research group meet-up.</p></li>
+</ul>
+
+<p><br clear="all" /></p>
+
+<div class="footnotes">
+<hr>
+<ol>
+
+<li id="fn1">
+<p>Of course these are probabilistic frequencies derived from cell populations rather than the individual cell comparisons achievable with <a href="dx.doi.org/10.1038/nature12593">single cell Hi-C</a>&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
+</li>
+
+<li id="fn2">
+<p>Predicted by <code>ChromHMM</code> and <code>SegWay</code> <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3553955/">consensus annotations</a>&nbsp;<a href="#fnref2" rev="footnote">&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>
