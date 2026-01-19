@@ -5,7 +5,7 @@
    
    	<title>blm.io - Tag: presentations</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,10 +14,10 @@
     
 	  <item>
         <title>Slidify: Modern, simple presentations written in R Markdown</title>
-        <link>http://blm.io/blog/slidify</link>
+        <link>https://blm.io/blog/slidify</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-02-24T00:00:00+00:00</pubDate>
-		<guid>http://blm.io/blog/slidify</guid>
+		<guid>https://blm.io/blog/slidify</guid>
 		<description><![CDATA[
 		   <p>As a LaTeX fan I'm used to using Beamer for presentations, but the built-in <a href="http://www.hartwork.org/beamer-theme-matrix/" target="_blank">themes</a> are definitely starting to show their age --- and writing a custom <code>.sty</code> file looks like a nightmare --- so for a while I've been looking at trying out an HTML5 framework.</p>
 

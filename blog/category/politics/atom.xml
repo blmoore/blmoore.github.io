@@ -5,7 +5,7 @@
    
     <title>blm.io - Category: politics</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,12 +14,12 @@
     
 	  <item>
         <title>UK general election polls in rCharts and shiny</title>
-        <link>http://blm.io/blog/uk-general-election-rcharts-shiny</link>
+        <link>https://blm.io/blog/uk-general-election-rcharts-shiny</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2015-04-28T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/uk-general-election-rcharts-shiny</guid>
+		<guid>https://blm.io/blog/uk-general-election-rcharts-shiny</guid>
 		<description><![CDATA[
-		   <p>With under two weeks to go to the 2015 UK general election, there&#39;s no better time to take stock of all the voter intention polls being published by the British media. The data has already been aggregated by <a href="http://ukpollingreport.co.uk/voting-intention-2">UKpollingreport</a>—a site I&#39;ve used before for <a href="http://blm.io/blog/scottish-independence-polls/">analysis of the Scottish independence referendum</a>—and there&#39;s not much more to be said then is already widely known: it&#39;s likely no single party will win an outright majority and we&#39;ll be left with a coalition or minority government.</p>
+		   <p>With under two weeks to go to the 2015 UK general election, there&#39;s no better time to take stock of all the voter intention polls being published by the British media. The data has already been aggregated by <a href="http://ukpollingreport.co.uk/voting-intention-2">UKpollingreport</a>—a site I&#39;ve used before for <a href="https://blm.io/blog/scottish-independence-polls/">analysis of the Scottish independence referendum</a>—and there&#39;s not much more to be said then is already widely known: it&#39;s likely no single party will win an outright majority and we&#39;ll be left with a coalition or minority government.</p>
 
 <p>Interactive visualisations, statistical projections and swingometers have already been expertly put together all over the place (among the best I&#39;ve seen are from <a href="http://www.theguardian.com/politics/ng-interactive/2015/feb/27/guardian-poll-projection">The Guardian</a> and <a href="http://fivethirtyeight.com/interactives/uk-general-election-predictions/">FiveThirtyEight</a>)—I can&#39;t really begin to compete here, but given the data is readily available, I&#39;ve taken this as a good chance to finally learn shiny and build a simple web application.</p>
 
@@ -71,10 +71,10 @@ plots is available on
     
 	  <item>
         <title>Scottish independence: what do the polls say?</title>
-        <link>http://blm.io/blog/scottish-independence-polls</link>
+        <link>https://blm.io/blog/scottish-independence-polls</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-08-26T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/scottish-independence-polls</guid>
+		<guid>https://blm.io/blog/scottish-independence-polls</guid>
 		<description><![CDATA[
 		   <p>Living in Edinburgh it&#39;s been hard to avoid the build-up to Scotland&#39;s referendum on independence. On September 18<sup>th</sup> 2014, less than a month away as I write this, people living in Scotland will go to the polls to answer the question: Should Scotland be an independent country?</p>
 
@@ -169,10 +169,10 @@ Source<span class="o">:</span> local <span class="kt">data frame</span> <span cl
     
 	  <item>
         <title>Guardian data blog — UK general election analysis in R</title>
-        <link>http://blm.io/blog/uk-elections</link>
+        <link>https://blm.io/blog/uk-elections</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-03-18T00:00:00+00:00</pubDate>
-		<guid>http://blm.io/blog/uk-elections</guid>
+		<guid>https://blm.io/blog/uk-elections</guid>
 		<description><![CDATA[
 		   <p>The Guardian newspaper has for a few years been running a <a title="guardian data blog" href="http://www.theguardian.com/data" target="_blank">data blog</a> and has built up a massive repository of (often) well-curated datasets on a huge number of topics. They even have an <a title="list of data sets made available by the guardian" href="http://www.theguardian.com/news/datablog/interactive/2013/jan/14/all-our-datasets-index" target="_blank">indexed list</a> of all data sets they've put together or reused in their articles.</p>
 

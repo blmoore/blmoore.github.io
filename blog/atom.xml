@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>blm.io</title>
- <link href="http://blm.io/blog/atom.xml" rel="self"/>
- <link href="http://blm.io/blog/"/>
+ <link href="https://blm.io/blog/atom.xml" rel="self"/>
+ <link href="https://blm.io/blog/"/>
  <updated>2015-05-28T20:26:14+01:00</updated>
- <id>http://blm.io</id>
+ <id>https://blm.io</id>
  <author>
    <name>Ben Moore</name>
    <email>root@blm.io</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Unravelling 3D genome organisation</title>
-   <link href="http://blm.io/blog/3d-genome-organisation"/>
+   <link href="https://blm.io/blog/3d-genome-organisation"/>
    <updated>2015-05-28T00:00:00+01:00</updated>
-   <id>http://blm.io/blog/unravelling-3d-genome-organisation</id>
+   <id>https://blm.io/blog/unravelling-3d-genome-organisation</id>
    <content type="html">&lt;p&gt;The first paper of my PhD is finally out! Its full title is &amp;quot;&lt;a href=&quot;http://genomebiology.com/2015/16/1/110&quot;&gt;Integrative modeling reveals the principles of multi-scale chromatin boundary formation in human nuclear organization&lt;/a&gt;&amp;quot; but in talks and posters I&amp;#39;ve been referring to the project as &amp;quot;Unravelling higher order chromatin organisation&amp;quot; (geddit?) or even &amp;quot;the ENCODE-ing of ...&amp;quot; (referencing &lt;a href=&quot;https://www.encodeproject.org/&quot;&gt;ENCODE&lt;/a&gt;, of course).&lt;/p&gt;
 
 &lt;p&gt;This project was done entirely with open data, I&amp;#39;ve made my code &lt;a href=&quot;https://github.com/blmoore/3dgenome&quot;&gt;open source&lt;/a&gt; and in the interests of open science I thought I&amp;#39;d write up a blog summary of the paper.&lt;/p&gt;
@@ -59,7 +59,7 @@
 
 &lt;h3&gt;2. Chromatin features predict aspects of genome architecture&lt;/h3&gt;
 
-&lt;p&gt;In short we built &lt;a href=&quot;http://blm.io/talks/bsa/figure/rfp.png&quot;&gt;Random Forest regression models&lt;/a&gt; to predict the continuous compartment profile (the blue line in the above figure), and it achieved high accuracy. This wasn&amp;#39;t wholly surprising: strong correlations between individual input variables and compartment profile has already been reported (even in the original &lt;a href=&quot;dx.doi.org/10.1126/science.1181369&quot;&gt;Leiberman Aiden paper&lt;/a&gt;), so the interest really comes from dissecting and cross-applying these models, rather than from their raw metrics.&lt;/p&gt;
+&lt;p&gt;In short we built &lt;a href=&quot;https://blm.io/talks/bsa/figure/rfp.png&quot;&gt;Random Forest regression models&lt;/a&gt; to predict the continuous compartment profile (the blue line in the above figure), and it achieved high accuracy. This wasn&amp;#39;t wholly surprising: strong correlations between individual input variables and compartment profile has already been reported (even in the original &lt;a href=&quot;dx.doi.org/10.1126/science.1181369&quot;&gt;Leiberman Aiden paper&lt;/a&gt;), so the interest really comes from dissecting and cross-applying these models, rather than from their raw metrics.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/blog/img/f2_full.png&quot; target=&quot;_blank&quot;&gt;&lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/f2_thumb.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -95,7 +95,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Code to reproduce all analyses shown in the paper and supplementary is avaiable on github: &lt;a href=&quot;https://github.com/blmoore/3dgenome&quot;&gt;github.com/blmoore/3dgenome&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Posters related to this project have been shared on &lt;a href=&quot;http://figshare.com/articles/Unravelling_higher_order_chromatin_organisation/1379863&quot;&gt;figshare&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Slides are available for &lt;a href=&quot;http://blm.io/talks/bsa/&quot;&gt;a talk I gave&lt;/a&gt; at a local research group meet-up.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Slides are available for &lt;a href=&quot;https://blm.io/talks/bsa/&quot;&gt;a talk I gave&lt;/a&gt; at a local research group meet-up.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br clear=&quot;all&quot; /&gt;&lt;/p&gt;
@@ -119,9 +119,9 @@
  
  <entry>
    <title>Converting PDF to EPS on OS X</title>
-   <link href="http://blm.io/blog/convert-pdf-eps-osx"/>
+   <link href="https://blm.io/blog/convert-pdf-eps-osx"/>
    <updated>2015-05-07T00:00:00+01:00</updated>
-   <id>http://blm.io/blog/converting-pdf-to-eps-on-mac-osx</id>
+   <id>https://blm.io/blog/converting-pdf-to-eps-on-mac-osx</id>
    <content type="html">&lt;p&gt;Recently I discovered that some academic publishers will let you submit PDF figures right up until acceptance, where they then need to be in an &amp;quot;editable&amp;quot; format. Vector figures inside PDF containers &lt;em&gt;are&lt;/em&gt; editable of course, but the author guidelines for your journal of choice may well say otherwise, instead offering a list of ancient and bewildering image formats which are deemed acceptable. It&amp;#39;s baffling to me why a journal would prefer a &lt;code&gt;pptx&lt;/code&gt; PowerPoint file containing your figure than a modern open standard like &lt;code&gt;SVG&lt;/code&gt; (not a format without consistency issues, admittedly). So for this reason I needed to convert a bunch of PDF figures to EPS (encapsulated postscript) without too much manual effort.&lt;/p&gt;
 
 &lt;h2&gt;Conversions&lt;/h2&gt;
@@ -175,10 +175,10 @@ ls converted/
  
  <entry>
    <title>UK general election polls in rCharts and shiny</title>
-   <link href="http://blm.io/blog/uk-general-election-rcharts-shiny"/>
+   <link href="https://blm.io/blog/uk-general-election-rcharts-shiny"/>
    <updated>2015-04-28T00:00:00+01:00</updated>
-   <id>http://blm.io/blog/uk-general-election-rcharts-shiny</id>
-   <content type="html">&lt;p&gt;With under two weeks to go to the 2015 UK general election, there&amp;#39;s no better time to take stock of all the voter intention polls being published by the British media. The data has already been aggregated by &lt;a href=&quot;http://ukpollingreport.co.uk/voting-intention-2&quot;&gt;UKpollingreport&lt;/a&gt;—a site I&amp;#39;ve used before for &lt;a href=&quot;http://blm.io/blog/scottish-independence-polls/&quot;&gt;analysis of the Scottish independence referendum&lt;/a&gt;—and there&amp;#39;s not much more to be said then is already widely known: it&amp;#39;s likely no single party will win an outright majority and we&amp;#39;ll be left with a coalition or minority government.&lt;/p&gt;
+   <id>https://blm.io/blog/uk-general-election-rcharts-shiny</id>
+   <content type="html">&lt;p&gt;With under two weeks to go to the 2015 UK general election, there&amp;#39;s no better time to take stock of all the voter intention polls being published by the British media. The data has already been aggregated by &lt;a href=&quot;http://ukpollingreport.co.uk/voting-intention-2&quot;&gt;UKpollingreport&lt;/a&gt;—a site I&amp;#39;ve used before for &lt;a href=&quot;https://blm.io/blog/scottish-independence-polls/&quot;&gt;analysis of the Scottish independence referendum&lt;/a&gt;—and there&amp;#39;s not much more to be said then is already widely known: it&amp;#39;s likely no single party will win an outright majority and we&amp;#39;ll be left with a coalition or minority government.&lt;/p&gt;
 
 &lt;p&gt;Interactive visualisations, statistical projections and swingometers have already been expertly put together all over the place (among the best I&amp;#39;ve seen are from &lt;a href=&quot;http://www.theguardian.com/politics/ng-interactive/2015/feb/27/guardian-poll-projection&quot;&gt;The Guardian&lt;/a&gt; and &lt;a href=&quot;http://fivethirtyeight.com/interactives/uk-general-election-predictions/&quot;&gt;FiveThirtyEight&lt;/a&gt;)—I can&amp;#39;t really begin to compete here, but given the data is readily available, I&amp;#39;ve taken this as a good chance to finally learn shiny and build a simple web application.&lt;/p&gt;
 
@@ -229,14 +229,14 @@ plots is available on
  
  <entry>
    <title>Building an academic CV in markdown</title>
-   <link href="http://blm.io/blog/markdown-academic-cv"/>
+   <link href="https://blm.io/blog/markdown-academic-cv"/>
    <updated>2015-04-13T00:00:00+01:00</updated>
-   <id>http://blm.io/blog/markdown-academic-cv</id>
+   <id>https://blm.io/blog/markdown-academic-cv</id>
    <content type="html">&lt;p&gt;I&amp;#39;m creeping towards the tail-end of my PhD so it&amp;#39;s probably time to dust off my CV and tidy it up. In the past I&amp;#39;ve written this document a few different ways, from LaTeX to a custom &lt;a href=&quot;https://inkscape.org/en/&quot;&gt;Inkscape&lt;/a&gt; document, but I&amp;#39;ve decided to move with the times and try something new: a markdown CV that compiles to both an HTML web version and well-formatted PDF.&lt;/p&gt;
 
 &lt;h2&gt;markdown-cv&lt;/h2&gt;
 
-&lt;p&gt;Googling &amp;quot;markdown CV&amp;quot; gave a few different options: one using &lt;a href=&quot;http://mszep.github.io/pandoc_resume/&quot;&gt;pandoc&lt;/a&gt; with slightly dated-looking themes; another &lt;a href=&quot;http://there4development.com/blog/2012/12/31/markdown-resume-builder/&quot;&gt;command-line PHP script&lt;/a&gt;, whose results are a bit prettier, but after trying these I came across &lt;code&gt;markdown-cv&lt;/code&gt; from github user &lt;a href=&quot;https://github.com/elipapa/markdown-cv&quot;&gt;elipapa&lt;/a&gt; which seemed to be simple to use and came with a nice design &amp;mdash; also it&amp;#39;s built with &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;jekyll&lt;/a&gt;, which I already &lt;a href=&quot;http://blm.io/blog/wordpress-to-jekyll/&quot;&gt;use to power blm.io&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Googling &amp;quot;markdown CV&amp;quot; gave a few different options: one using &lt;a href=&quot;http://mszep.github.io/pandoc_resume/&quot;&gt;pandoc&lt;/a&gt; with slightly dated-looking themes; another &lt;a href=&quot;http://there4development.com/blog/2012/12/31/markdown-resume-builder/&quot;&gt;command-line PHP script&lt;/a&gt;, whose results are a bit prettier, but after trying these I came across &lt;code&gt;markdown-cv&lt;/code&gt; from github user &lt;a href=&quot;https://github.com/elipapa/markdown-cv&quot;&gt;elipapa&lt;/a&gt; which seemed to be simple to use and came with a nice design &amp;mdash; also it&amp;#39;s built with &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;jekyll&lt;/a&gt;, which I already &lt;a href=&quot;https://blm.io/blog/wordpress-to-jekyll/&quot;&gt;use to power blm.io&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Eliseo Papa wrote up a &lt;a href=&quot;http://www.eliseopapa.org/workflow/2012/09/20/why-i-switched-to-markdown-for-my-cv/&quot;&gt;blog post&lt;/a&gt; on how and why he put &lt;code&gt;markdown-cv&lt;/code&gt; together, and their CV &lt;a href=&quot;https://github.com/elipapa/elipapa.github.io/blob/master/downloads/cv.pdf&quot;&gt;looks great&lt;/a&gt; so that was enough to convince me to give it a shot.&lt;/p&gt;
 
@@ -299,7 +299,7 @@ You _et al._ (2014) Some great paper...
 
 &lt;div style=&quot;float:right; width:49%;&quot;&gt;
   &lt;p style=&quot;text-align:center; color:#888; font-weight: bold;&quot;&gt;HTML&lt;/p&gt;
-  &lt;a href=&quot;http://blm.io/cv/&quot; target=&quot;_blank&quot;&gt;
+  &lt;a href=&quot;https://blm.io/cv/&quot; target=&quot;_blank&quot;&gt;
     &lt;img class=&quot;imgfull&quot; src=&quot;/blog/img/webcv.png&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
@@ -310,9 +310,9 @@ You _et al._ (2014) Some great paper...
  
  <entry>
    <title>Scottish independence: what do the polls say?</title>
-   <link href="http://blm.io/blog/scottish-independence-polls"/>
+   <link href="https://blm.io/blog/scottish-independence-polls"/>
    <updated>2014-08-26T00:00:00+01:00</updated>
-   <id>http://blm.io/blog/scottish_independence</id>
+   <id>https://blm.io/blog/scottish_independence</id>
    <content type="html">&lt;p&gt;Living in Edinburgh it&amp;#39;s been hard to avoid the build-up to Scotland&amp;#39;s referendum on independence. On September 18&lt;sup&gt;th&lt;/sup&gt; 2014, less than a month away as I write this, people living in Scotland will go to the polls to answer the question: Should Scotland be an independent country?&lt;/p&gt;
 
 &lt;p&gt;Over the last couple of years there&amp;#39;s been a good amount of media coverage and &amp;mdash; more interestingly, from my point of view &amp;mdash; repeat polls to gauge opinion by various newspapers and tv stations. This invites an obvious question: how has the mood in Scotland varied over time with respect to a yes/no vote? And can we detect any biases among those publishing polls?&lt;/p&gt;
@@ -405,9 +405,9 @@ Source&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; local &lt;span class=&quot;
  
  <entry>
    <title>Are more expensive motorcycle helmets safer?</title>
-   <link href="http://blm.io/blog/motorcycle-helmet-safety-price"/>
+   <link href="https://blm.io/blog/motorcycle-helmet-safety-price"/>
    <updated>2014-07-01T00:00:00+01:00</updated>
-   <id>http://blm.io/blog/motorbike_helmets</id>
+   <id>https://blm.io/blog/motorbike_helmets</id>
    <content type="html">&lt;p&gt;Apparently an 80s commerical for the helmet manufacturer &lt;a href=&quot;http://www.bellhelmets.com/&quot;&gt;Bell&lt;/a&gt; bore the slogan:
 &lt;em&gt;&amp;quot;If you&amp;#39;ve got a $10 head, wear a $10 helmet&amp;quot;&lt;/em&gt;. Nowadays it&amp;#39;s a deeply-ingrained
 and widely accepted idea among bikers that it&amp;#39;s worth
@@ -585,9 +585,9 @@ plots and analysis will be available on
  
  <entry>
    <title>Transformation of wordpress into jekyll</title>
-   <link href="http://blm.io/blog/wordpress-to-jekyll"/>
+   <link href="https://blm.io/blog/wordpress-to-jekyll"/>
    <updated>2014-06-21T00:00:00+01:00</updated>
-   <id>http://blm.io/blog/blog-migration</id>
+   <id>https://blm.io/blog/blog-migration</id>
    <content type="html">&lt;p&gt;I think &lt;a href=&quot;http://wordpress.org/&quot;&gt;Wordpress&lt;/a&gt; is a great &lt;a href=&quot;https://en.wikipedia.org/wiki/Content_management_system&quot;&gt;CMS&lt;/a&gt; and I&amp;#39;m reluctant to leave it behind. While
 it doesn&amp;#39;t have much hacker kudos, in my opinion (and undoubtedly many others)
 Wordpress is a very usable and near-complete blogging
@@ -604,7 +604,7 @@ post. So with that in mind, why am I making the switch?&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;The &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github pages&lt;/a&gt; system offering free hosting
 with custom domains, all built on top of a normal git repo.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The &lt;a href=&quot;http://rcharts.io&quot;&gt;rCharts&lt;/a&gt; R package which, to me as a non-web guy,
-has acted as a great intro to various &lt;a href=&quot;http://d3js.org/&quot;&gt;D3.js&lt;/a&gt;-based plotting
+has acted as a great intro to various &lt;a href=&quot;https://d3js.org/&quot;&gt;D3.js&lt;/a&gt;-based plotting
 libraries, and piqued my interest in building custom interactive graphics.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -616,7 +616,7 @@ After researching my options, I&amp;#39;m now using &lt;a href=&quot;http://jeky
 
 &lt;p&gt;Other than this issue it&amp;#39;s been reasonably straightforward to make the switch, though I was surprised how much legwork was involved in things like organising &lt;a href=&quot;http://realjenius.com/2012/12/01/jekyll-category-tag-paging-feeds/&quot;&gt;tag-specific paginated indexes&lt;/a&gt; for navigation and custom RSS/Atom feeds. For me, this kind of stuff should come out of the box even in a barebones, for-customisation framework like Jekyll. Thankfully there&amp;#39;s bloggers around who&amp;#39;ve already figured out this stuff, as well as some of the under-documented features (like &lt;a href=&quot;http://joshualande.com/short-urls-jekyll/&quot;&gt;permalinks&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;More recently I&amp;#39;ve been told that the R package &lt;a href=&quot;http://blm.io/blog/slidify&quot;&gt;slidify&lt;/a&gt; is capable of Jekyll-like functionality, and this will soon be spun-off into its own package:&lt;/p&gt;
+&lt;p&gt;More recently I&amp;#39;ve been told that the R package &lt;a href=&quot;https://blm.io/blog/slidify&quot;&gt;slidify&lt;/a&gt; is capable of Jekyll-like functionality, and this will soon be spun-off into its own package:&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/benjaminlmoore&quot;&gt;&lt;a href=&#39;https://github.com/benjaminlmoore&#39; class=&#39;user-mention&#39;&gt;@benjaminlmoore&lt;/a&gt;&lt;/a&gt; Slidify is also capable of generating static blogs. It will become a separate package &lt;a href=&quot;http://t.co/ED09PAhGyW&quot;&gt;http://t.co/ED09PAhGyW&lt;/a&gt; &lt;a href=&quot;https://twitter.com/rmflight&quot;&gt;&lt;a href=&#39;https://github.com/rmflight&#39; class=&#39;user-mention&#39;&gt;@rmflight&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ramnath Vaidyanathan (@ramnath_vaidya) &lt;a href=&quot;https://twitter.com/ramnath_vaidya/statuses/479422134968524801&quot;&gt;June 19, 2014&lt;/a&gt;&lt;/blockquote&gt;
 
@@ -628,9 +628,9 @@ After researching my options, I&amp;#39;m now using &lt;a href=&quot;http://jeky
  
  <entry>
    <title>Hollywood action heroes</title>
-   <link href="http://blm.io/blog/action-heroes"/>
+   <link href="https://blm.io/blog/action-heroes"/>
    <updated>2014-06-07T00:00:00+01:00</updated>
-   <id>http://blm.io/blog/hollywood-action-heroes</id>
+   <id>https://blm.io/blog/hollywood-action-heroes</id>
    <content type="html">&lt;div style=&quot;float:right;width: 20%&quot;&gt;
 &lt;img src=&quot;/blog/img/arnie10.jpg&quot; width=80% style=&quot;border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;&quot;/&gt;
 &lt;figcaption&gt;
@@ -830,9 +830,9 @@ or actresses you might be interested in (like, say, Jean-Claude Van Damme whom
  
  <entry>
    <title>Celebrity twitter followers by gender</title>
-   <link href="http://blm.io/blog/twitter-genders"/>
+   <link href="https://blm.io/blog/twitter-genders"/>
    <updated>2014-05-25T00:00:00+01:00</updated>
-   <id>http://blm.io/blog/celebrity-twitter-followers-by-gender</id>
+   <id>https://blm.io/blog/celebrity-twitter-followers-by-gender</id>
    <content type="html">&lt;p&gt;The most popular accounts on twitter have millions of followers, but what are their demographics like? Twitter doesn&#39;t collect or release this kind of information, and even things like name and location are only voluntarily added to people&#39;s profiles. Unlike Google+ and Facebook, twitter has no real name policy, &lt;a href=&quot;https://gigaom.com/2011/09/16/why-twitter-doesnt-care-what-your-real-name-is/&quot; target=&quot;_blank&quot;&gt;they don&#39;t care&lt;/a&gt; what you call yourself, because they can still divine out useful information from your account activity.&lt;/p&gt;
 
 &lt;p&gt;For example, you can optionally set your location on your twitter profile. Should you choose not to, twitter can still just &lt;a title=&quot;geolocation&quot; href=&quot;https://en.wikipedia.org/wiki/Geolocation&quot; target=&quot;_blank&quot;&gt;geolocate&lt;/a&gt; your IP. If you use an anonymiser or VPN, they could use the timing of your account activity to infer a timezone. This could then be refined to a city or town using the topics you tweet about and the locations of friends and services you mention most.&lt;/p&gt;
@@ -900,9 +900,9 @@ gender&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;
 
 &lt;h2&gt;Interactive charts&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://blm.io/twitter&quot;&gt;&lt;img class=&quot;imgright&quot; src=&quot;/blog/img/screen-shot-2014-05-25-at-11-51-25.png&quot; alt=&quot;Click for an interactive version.&quot; width=&quot;150&quot; height=&quot;86&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blm.io/twitter&quot;&gt;&lt;img class=&quot;imgright&quot; src=&quot;/blog/img/screen-shot-2014-05-25-at-11-51-25.png&quot; alt=&quot;Click for an interactive version.&quot; width=&quot;150&quot; height=&quot;86&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Using the fantastic &lt;a title=&quot;rcharts&quot; href=&quot;http://rcharts.io/&quot; target=&quot;_blank&quot;&gt;rCharts&lt;/a&gt; library, I&#39;ve put together some &lt;a title=&quot;interactive charts&quot; href=&quot;http://blm.io/twitter&quot; target=&quot;_blank&quot;&gt;interactive graphics&lt;/a&gt; that let you explore the above results further. These use the &lt;a title=&quot;NVD3&quot; href=&quot;http://nvd3.org/&quot; target=&quot;_blank&quot;&gt;NVD3 graphing library&lt;/a&gt;, as opposed to my &lt;a href=&quot;http://rcharts.io/viewer/?6c9ed5eed37fe3c03fa5&quot; target=&quot;_blank&quot;&gt;previous effort&lt;/a&gt; which used &lt;a href=&quot;http://dimplejs.org/&quot; target=&quot;_blank&quot;&gt;dimple.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Using the fantastic &lt;a title=&quot;rcharts&quot; href=&quot;http://rcharts.io/&quot; target=&quot;_blank&quot;&gt;rCharts&lt;/a&gt; library, I&#39;ve put together some &lt;a title=&quot;interactive charts&quot; href=&quot;https://blm.io/twitter&quot; target=&quot;_blank&quot;&gt;interactive graphics&lt;/a&gt; that let you explore the above results further. These use the &lt;a title=&quot;NVD3&quot; href=&quot;http://nvd3.org/&quot; target=&quot;_blank&quot;&gt;NVD3 graphing library&lt;/a&gt;, as opposed to my &lt;a href=&quot;http://rcharts.io/viewer/?6c9ed5eed37fe3c03fa5&quot; target=&quot;_blank&quot;&gt;previous effort&lt;/a&gt; which used &lt;a href=&quot;https://dimplejs.org/&quot; target=&quot;_blank&quot;&gt;dimple.js&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The first of these is ordered by number of followers, and the second by gender split. The eagle-eyed among you will see that one account from the top 100 is missing from all these charts due to the JSON error I discuss above, thankfully it&#39;s a boring one (sorry &lt;a href=&quot;https://twitter.com/TwitPic&quot; target=&quot;_blank&quot;&gt;&lt;a href=&#39;https://github.com/TwitPic&#39; class=&#39;user-mention&#39;&gt;@TwitPic&lt;/a&gt;&lt;/a&gt;).&lt;/p&gt;
 
@@ -929,9 +929,9 @@ This post was originally published on my
  
  <entry>
    <title>What are the most overrated films?</title>
-   <link href="http://blm.io/blog/overrated-underrated-films"/>
+   <link href="https://blm.io/blog/overrated-underrated-films"/>
    <updated>2014-05-05T00:00:00+01:00</updated>
-   <id>http://blm.io/blog/what-are-the-most-overrated-films</id>
+   <id>https://blm.io/blog/what-are-the-most-overrated-films</id>
    <content type="html">&lt;p style=&quot;text-align:left;&quot;&gt;&quot;Overrated&quot; and &quot;underrated&quot; are slippery terms to try to quantify. An interesting way of looking at this, I thought, would be to compare the reviews of film critics with those of Joe Public, reasoning that a film which is roundly-lauded by the Hollywood press but proved disappointing for the real audience would be &quot;overrated&quot; and &lt;em&gt;vice versa&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;To get some data for this I turned to the most prominent review aggregator: &lt;a title=&quot;Rotten Tomatoes&quot; href=&quot;http://www.rottentomatoes.com/&quot; target=&quot;_blank&quot;&gt;Rotten Tomatoes&lt;/a&gt;. All this analysis was done in the R programming language, and full code to reproduce it will be attached at the end.&lt;/p&gt;
@@ -964,11 +964,11 @@ This post was originally published on my
 
 &lt;p&gt;On the whole it should be noted that critics and audience agree most of the time, as shown by the Pearson correlation coefficient between the two scores (0.71 across &amp;gt;1200 films).&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://blm.io/movies&quot;&gt;&lt;img class=&quot;imgright&quot; src=&quot;/blog/img/screen-shot-2014-05-08-at-02-11-47.png&quot; alt=&quot;&quot; width=&quot;187&quot; height=&quot;176&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blm.io/movies&quot;&gt;&lt;img class=&quot;imgright&quot; src=&quot;/blog/img/screen-shot-2014-05-08-at-02-11-47.png&quot; alt=&quot;&quot; width=&quot;187&quot; height=&quot;176&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3&gt;Update:&lt;/h3&gt;
 
-&lt;p&gt;I&#39;ve put together an interactive version of the same plot &lt;a href=&quot;http://blm.io/movies&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; using the &lt;a title=&quot;rCharts&quot; href=&quot;https://github.com/ramnathv/rCharts&quot; target=&quot;_blank&quot;&gt;rCharts&lt;/a&gt; R package. It&#39;ll show film title and review scores when you hover over a point so you know what you&#39;re looking at. Also I&#39;ve more than doubled the size of the film dataset by repeating the above method for a couple more iterations — &lt;a title=&quot;rCharts&quot; href=&quot;http://blm.io/movies&quot; target=&quot;_blank&quot;&gt;take a look&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;I&#39;ve put together an interactive version of the same plot &lt;a href=&quot;https://blm.io/movies&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; using the &lt;a title=&quot;rCharts&quot; href=&quot;https://github.com/ramnathv/rCharts&quot; target=&quot;_blank&quot;&gt;rCharts&lt;/a&gt; R package. It&#39;ll show film title and review scores when you hover over a point so you know what you&#39;re looking at. Also I&#39;ve more than doubled the size of the film dataset by repeating the above method for a couple more iterations — &lt;a title=&quot;rCharts&quot; href=&quot;https://blm.io/movies&quot; target=&quot;_blank&quot;&gt;take a look&lt;/a&gt;!&lt;/p&gt;
 
 &lt;h2&gt;Most underrated films&lt;/h2&gt;
 
@@ -1018,9 +1018,9 @@ This post was originally published on my &lt;a href=&quot;http://benjaminlmoore.
  
  <entry>
    <title>Author inflation in academic literature</title>
-   <link href="http://blm.io/blog/author-inflation"/>
+   <link href="https://blm.io/blog/author-inflation"/>
    <updated>2014-04-06T00:00:00+01:00</updated>
-   <id>http://blm.io/blog/author-inflation-in-academic-literature</id>
+   <id>https://blm.io/blog/author-inflation-in-academic-literature</id>
    <content type="html">&lt;p&gt;There seems to be a general consensus that author lists in academic articles are growing. Wikipedia &lt;a href=&quot;https://en.wikipedia.org/wiki/Academic_authorship#Growing_number_of_authors_per_paper&quot; target=&quot;_blank&quot;&gt;says so&lt;/a&gt;, and I&#39;ve also come across a &lt;a href=&quot;http://onlinelibrary.wiley.com/doi/10.1002/asi.21438/abstract&quot; target=&quot;_blank&quot;&gt;published letter&lt;/a&gt; and short &lt;a href=&quot;http://www.nature.com/nature/history/full/nature06243.html&quot; target=&quot;_blank&quot;&gt;Nature article&lt;/a&gt; which accept this is the case and discuss ways of mitigating the issue. Recently there was an interesting discussion on &lt;a href=&quot;http://academia.stackexchange.com/questions/16759/is-there-an-inflation-in-the-number-of-authors-per-paper&quot; target=&quot;_blank&quot;&gt;academia.stackexchange&lt;/a&gt; on the subject but again without much quantification. Luckily given the array of literature database APIs and language bindings available, it should be pretty easy to investigate with some statistical analysis in R.&lt;/p&gt;
 
 &lt;h2&gt;rplos&lt;/h2&gt;
@@ -1101,9 +1101,9 @@ This post was originally published on my
  
  <entry>
    <title>Guardian data blog — UK general election analysis in R</title>
-   <link href="http://blm.io/blog/uk-elections"/>
+   <link href="https://blm.io/blog/uk-elections"/>
    <updated>2014-03-18T00:00:00+00:00</updated>
-   <id>http://blm.io/blog/guardian-data-blog-uk-elections</id>
+   <id>https://blm.io/blog/guardian-data-blog-uk-elections</id>
    <content type="html">&lt;p&gt;The Guardian newspaper has for a few years been running a &lt;a title=&quot;guardian data blog&quot; href=&quot;http://www.theguardian.com/data&quot; target=&quot;_blank&quot;&gt;data blog&lt;/a&gt; and has built up a massive repository of (often) well-curated datasets on a huge number of topics. They even have an &lt;a title=&quot;list of data sets made available by the guardian&quot; href=&quot;http://www.theguardian.com/news/datablog/interactive/2013/jan/14/all-our-datasets-index&quot; target=&quot;_blank&quot;&gt;indexed list&lt;/a&gt; of all data sets they&#39;ve put together or reused in their articles.&lt;/p&gt;
 
 &lt;p&gt;It&#39;s a great repository of interesting data for exploratory analysis, and there&#39;s a low barrier to entry in terms of getting the data into a useful form. Here&#39;s an example using UK election polling data collected over the last thirty years.&lt;/p&gt;
@@ -1157,9 +1157,9 @@ This post was originally published on my
  
  <entry>
    <title>What are the most common RNG seeds used in R scripts on Github?</title>
-   <link href="http://blm.io/blog/prng-seeds"/>
+   <link href="https://blm.io/blog/prng-seeds"/>
    <updated>2014-03-06T00:00:00+00:00</updated>
-   <id>http://blm.io/blog/most-common-rng-seeds-r-github</id>
+   <id>https://blm.io/blog/most-common-rng-seeds-r-github</id>
    <content type="html">&lt;p&gt;In the R programming language, the random number generator (RNG) is seeded each session using the current time and process ID. Via the magic of the popular &lt;a href=&quot;https://en.wikipedia.org/wiki/Mersenne_twister&quot; target=&quot;_blank&quot;&gt;Mersenne Twister PRNG&lt;/a&gt;, the values stored in &lt;code&gt;.Random.seed&lt;/code&gt; are used sequentially each time &quot;randomness&quot; is invoked in a function. This means, of course, that the same function run in different R sessions can produce varying results, and in the case of modelling a system sensitive to initial conditions the observed differences could be huge. &lt;/p&gt;
 
 &lt;p&gt;For this reason it&#39;s common to manually set the PRNG seed (using &lt;code&gt;set.seed()&lt;/code&gt; in R), thereby creating the same &lt;code&gt;.Random.seed&lt;/code&gt; vector which can be drawn from in your analysis to produce reproducible results. The actual value passed to this function is irrelevant for practical purposes &amp;mdash; for whatever reason I generally user the same number across projects (42) &amp;mdash; so this made me wonder: what values do the major R developers tend to pick?&lt;/p&gt;
@@ -1232,9 +1232,9 @@ This post was originally published on my
  
  <entry>
    <title>Slidify: Modern, simple presentations written in R Markdown</title>
-   <link href="http://blm.io/blog/slidify"/>
+   <link href="https://blm.io/blog/slidify"/>
    <updated>2014-02-24T00:00:00+00:00</updated>
-   <id>http://blm.io/blog/slidify-presentations-in-r-markdown</id>
+   <id>https://blm.io/blog/slidify-presentations-in-r-markdown</id>
    <content type="html">&lt;p&gt;As a LaTeX fan I&#39;m used to using Beamer for presentations, but the built-in &lt;a href=&quot;http://www.hartwork.org/beamer-theme-matrix/&quot; target=&quot;_blank&quot;&gt;themes&lt;/a&gt; are definitely starting to show their age --- and writing a custom &lt;code&gt;.sty&lt;/code&gt; file looks like a nightmare --- so for a while I&#39;ve been looking at trying out an HTML5 framework.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://lab.hakim.se/reveal-js/&quot; target=&quot;_blank&quot;&gt;&lt;img class=&quot;imgright&quot; alt=&quot;Reveal.js is a great looking HTML presentation framework from Hakim El Hattab.&quot; src=&quot;/blog/img/screen-shot-2014-02-24-at-19-55-11.png&quot; width=&quot;150&quot; height=&quot;102&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1335,9 +1335,9 @@ img &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
  
  <entry>
    <title>Meticulously recreating bitmap plots in R</title>
-   <link href="http://blm.io/blog/bitmap-plot-to-vector"/>
+   <link href="https://blm.io/blog/bitmap-plot-to-vector"/>
    <updated>2014-02-03T00:00:00+00:00</updated>
-   <id>http://blm.io/blog/meticulously-recreating-bitmap-plots-in-r</id>
+   <id>https://blm.io/blog/meticulously-recreating-bitmap-plots-in-r</id>
    <content type="html">&lt;p&gt;There&#39;s a hard-fought drive on Wikimedia commons to convert those images that should be in vector format (i.e. graphs, diagrams) from their current bitmap form. At the time of writing, the relevant category has over &lt;a href=&quot;https://commons.wikimedia.org/wiki/Category:Images_that_should_use_vector_graphics&quot; target=&quot;_blank&quot;&gt;7000&lt;/a&gt; images in the category &quot;Images that should use vector graphics&quot;.&lt;/p&gt;
 
 &lt;p&gt;The usual way people move between the two is by tracing over the raster, and great tools like &lt;a href=&quot;http://www.inkscape.org/en/&quot; target=&quot;_blank&quot;&gt;Inkscape&lt;/a&gt; (free open-source software) can help a lot with this. But in the case of graphs I thought it&#39;d be fun to try and rebuild a carbon copy from scratch in R.&lt;/p&gt;
@@ -1382,9 +1382,9 @@ Originally published on my
  
  <entry>
    <title>Wikipedia is dead, long live the 'pedia</title>
-   <link href="http://blm.io/blog/wikipedia-is-dead"/>
+   <link href="https://blm.io/blog/wikipedia-is-dead"/>
    <updated>2014-01-09T00:00:00+00:00</updated>
-   <id>http://blm.io/blog/wikipedia-is-dead-long-live-the-pedia</id>
+   <id>https://blm.io/blog/wikipedia-is-dead-long-live-the-pedia</id>
    <content type="html">&lt;p&gt;I was a bit surprised when looking at the Wikipedia pageviews for 2013 (nicely presented &lt;a href=&quot;http://reportcard.wmflabs.org/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;). After 5 years of consistent and reasonably stable growth, over 2013 monthly pageviews actually dropped, and to the tune of 2 *billion* views  (10%) from their peak early in the year.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://benjaminlmoore.files.wordpress.com/2014/01/pviews.png&quot;&gt;&lt;img class=&quot;imgfull&quot; alt=&quot;pviews&quot; src=&quot;/blog/img/pviews.png&quot; width=&quot;500&quot; height=&quot;352&quot; /&gt;&lt;/a&gt;&lt;/p&gt;

@@ -5,7 +5,7 @@
    
    	<title>blm.io - Tag: shiny</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,12 +14,12 @@
     
 	  <item>
         <title>UK general election polls in rCharts and shiny</title>
-        <link>http://blm.io/blog/uk-general-election-rcharts-shiny</link>
+        <link>https://blm.io/blog/uk-general-election-rcharts-shiny</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2015-04-28T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/uk-general-election-rcharts-shiny</guid>
+		<guid>https://blm.io/blog/uk-general-election-rcharts-shiny</guid>
 		<description><![CDATA[
-		   <p>With under two weeks to go to the 2015 UK general election, there&#39;s no better time to take stock of all the voter intention polls being published by the British media. The data has already been aggregated by <a href="http://ukpollingreport.co.uk/voting-intention-2">UKpollingreport</a>—a site I&#39;ve used before for <a href="http://blm.io/blog/scottish-independence-polls/">analysis of the Scottish independence referendum</a>—and there&#39;s not much more to be said then is already widely known: it&#39;s likely no single party will win an outright majority and we&#39;ll be left with a coalition or minority government.</p>
+		   <p>With under two weeks to go to the 2015 UK general election, there&#39;s no better time to take stock of all the voter intention polls being published by the British media. The data has already been aggregated by <a href="http://ukpollingreport.co.uk/voting-intention-2">UKpollingreport</a>—a site I&#39;ve used before for <a href="https://blm.io/blog/scottish-independence-polls/">analysis of the Scottish independence referendum</a>—and there&#39;s not much more to be said then is already widely known: it&#39;s likely no single party will win an outright majority and we&#39;ll be left with a coalition or minority government.</p>
 
 <p>Interactive visualisations, statistical projections and swingometers have already been expertly put together all over the place (among the best I&#39;ve seen are from <a href="http://www.theguardian.com/politics/ng-interactive/2015/feb/27/guardian-poll-projection">The Guardian</a> and <a href="http://fivethirtyeight.com/interactives/uk-general-election-predictions/">FiveThirtyEight</a>)—I can&#39;t really begin to compete here, but given the data is readily available, I&#39;ve taken this as a good chance to finally learn shiny and build a simple web application.</p>
 

@@ -5,7 +5,7 @@
    
    	<title>blm.io - Tag: movies</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,10 +14,10 @@
     
 	  <item>
         <title>Hollywood action heroes</title>
-        <link>http://blm.io/blog/action-heroes</link>
+        <link>https://blm.io/blog/action-heroes</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-06-07T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/action-heroes</guid>
+		<guid>https://blm.io/blog/action-heroes</guid>
 		<description><![CDATA[
 		   <div style="float:right;width: 20%">
 <img src="/blog/img/arnie10.jpg" width=80% style="border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;"/>
@@ -219,10 +219,10 @@ or actresses you might be interested in (like, say, Jean-Claude Van Damme whom
     
 	  <item>
         <title>What are the most overrated films?</title>
-        <link>http://blm.io/blog/overrated-underrated-films</link>
+        <link>https://blm.io/blog/overrated-underrated-films</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-05-05T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/overrated-underrated-films</guid>
+		<guid>https://blm.io/blog/overrated-underrated-films</guid>
 		<description><![CDATA[
 		   <p style="text-align:left;">"Overrated" and "underrated" are slippery terms to try to quantify. An interesting way of looking at this, I thought, would be to compare the reviews of film critics with those of Joe Public, reasoning that a film which is roundly-lauded by the Hollywood press but proved disappointing for the real audience would be "overrated" and <em>vice versa</em>.</p>
 
@@ -256,11 +256,11 @@ or actresses you might be interested in (like, say, Jean-Claude Van Damme whom
 
 <p>On the whole it should be noted that critics and audience agree most of the time, as shown by the Pearson correlation coefficient between the two scores (0.71 across &gt;1200 films).</p>
 
-<p><a href="http://blm.io/movies"><img class="imgright" src="/blog/img/screen-shot-2014-05-08-at-02-11-47.png" alt="" width="187" height="176" /></a></p>
+<p><a href="https://blm.io/movies"><img class="imgright" src="/blog/img/screen-shot-2014-05-08-at-02-11-47.png" alt="" width="187" height="176" /></a></p>
 
 <h3>Update:</h3>
 
-<p>I've put together an interactive version of the same plot <a href="http://blm.io/movies" target="_blank">here</a> using the <a title="rCharts" href="https://github.com/ramnathv/rCharts" target="_blank">rCharts</a> R package. It'll show film title and review scores when you hover over a point so you know what you're looking at. Also I've more than doubled the size of the film dataset by repeating the above method for a couple more iterations — <a title="rCharts" href="http://blm.io/movies" target="_blank">take a look</a>!</p>
+<p>I've put together an interactive version of the same plot <a href="https://blm.io/movies" target="_blank">here</a> using the <a title="rCharts" href="https://github.com/ramnathv/rCharts" target="_blank">rCharts</a> R package. It'll show film title and review scores when you hover over a point so you know what you're looking at. Also I've more than doubled the size of the film dataset by repeating the above method for a couple more iterations — <a title="rCharts" href="https://blm.io/movies" target="_blank">take a look</a>!</p>
 
 <h2>Most underrated films</h2>
 

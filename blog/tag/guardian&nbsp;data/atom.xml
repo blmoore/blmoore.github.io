@@ -5,7 +5,7 @@
    
    	<title>blm.io - Tag: guardian&nbsp;data</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,10 +14,10 @@
     
 	  <item>
         <title>Guardian data blog — UK general election analysis in R</title>
-        <link>http://blm.io/blog/uk-elections</link>
+        <link>https://blm.io/blog/uk-elections</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-03-18T00:00:00+00:00</pubDate>
-		<guid>http://blm.io/blog/uk-elections</guid>
+		<guid>https://blm.io/blog/uk-elections</guid>
 		<description><![CDATA[
 		   <p>The Guardian newspaper has for a few years been running a <a title="guardian data blog" href="http://www.theguardian.com/data" target="_blank">data blog</a> and has built up a massive repository of (often) well-curated datasets on a huge number of topics. They even have an <a title="list of data sets made available by the guardian" href="http://www.theguardian.com/news/datablog/interactive/2013/jan/14/all-our-datasets-index" target="_blank">indexed list</a> of all data sets they've put together or reused in their articles.</p>
 

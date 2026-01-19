@@ -5,7 +5,7 @@
    
    	<title>blm.io - Tag: markdown</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,16 +14,16 @@
     
 	  <item>
         <title>Building an academic CV in markdown</title>
-        <link>http://blm.io/blog/markdown-academic-cv</link>
+        <link>https://blm.io/blog/markdown-academic-cv</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2015-04-13T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/markdown-academic-cv</guid>
+		<guid>https://blm.io/blog/markdown-academic-cv</guid>
 		<description><![CDATA[
 		   <p>I&#39;m creeping towards the tail-end of my PhD so it&#39;s probably time to dust off my CV and tidy it up. In the past I&#39;ve written this document a few different ways, from LaTeX to a custom <a href="https://inkscape.org/en/">Inkscape</a> document, but I&#39;ve decided to move with the times and try something new: a markdown CV that compiles to both an HTML web version and well-formatted PDF.</p>
 
 <h2>markdown-cv</h2>
 
-<p>Googling &quot;markdown CV&quot; gave a few different options: one using <a href="http://mszep.github.io/pandoc_resume/">pandoc</a> with slightly dated-looking themes; another <a href="http://there4development.com/blog/2012/12/31/markdown-resume-builder/">command-line PHP script</a>, whose results are a bit prettier, but after trying these I came across <code>markdown-cv</code> from github user <a href="https://github.com/elipapa/markdown-cv">elipapa</a> which seemed to be simple to use and came with a nice design &mdash; also it&#39;s built with <a href="http://jekyllrb.com/">jekyll</a>, which I already <a href="http://blm.io/blog/wordpress-to-jekyll/">use to power blm.io</a>.</p>
+<p>Googling &quot;markdown CV&quot; gave a few different options: one using <a href="http://mszep.github.io/pandoc_resume/">pandoc</a> with slightly dated-looking themes; another <a href="http://there4development.com/blog/2012/12/31/markdown-resume-builder/">command-line PHP script</a>, whose results are a bit prettier, but after trying these I came across <code>markdown-cv</code> from github user <a href="https://github.com/elipapa/markdown-cv">elipapa</a> which seemed to be simple to use and came with a nice design &mdash; also it&#39;s built with <a href="http://jekyllrb.com/">jekyll</a>, which I already <a href="https://blm.io/blog/wordpress-to-jekyll/">use to power blm.io</a>.</p>
 
 <p>Eliseo Papa wrote up a <a href="http://www.eliseopapa.org/workflow/2012/09/20/why-i-switched-to-markdown-for-my-cv/">blog post</a> on how and why he put <code>markdown-cv</code> together, and their CV <a href="https://github.com/elipapa/elipapa.github.io/blob/master/downloads/cv.pdf">looks great</a> so that was enough to convince me to give it a shot.</p>
 
@@ -86,7 +86,7 @@ You _et al._ (2014) Some great paper...
 
 <div style="float:right; width:49%;">
   <p style="text-align:center; color:#888; font-weight: bold;">HTML</p>
-  <a href="http://blm.io/cv/" target="_blank">
+  <a href="https://blm.io/cv/" target="_blank">
     <img class="imgfull" src="/blog/img/webcv.png" />
     </a>
 </div>
@@ -98,10 +98,10 @@ You _et al._ (2014) Some great paper...
     
 	  <item>
         <title>Slidify: Modern, simple presentations written in R Markdown</title>
-        <link>http://blm.io/blog/slidify</link>
+        <link>https://blm.io/blog/slidify</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-02-24T00:00:00+00:00</pubDate>
-		<guid>http://blm.io/blog/slidify</guid>
+		<guid>https://blm.io/blog/slidify</guid>
 		<description><![CDATA[
 		   <p>As a LaTeX fan I'm used to using Beamer for presentations, but the built-in <a href="http://www.hartwork.org/beamer-theme-matrix/" target="_blank">themes</a> are definitely starting to show their age --- and writing a custom <code>.sty</code> file looks like a nightmare --- so for a while I've been looking at trying out an HTML5 framework.</p>
 

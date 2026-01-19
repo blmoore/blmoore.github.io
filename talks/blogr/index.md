@@ -59,8 +59,8 @@ ol.linenums {
 
 <!-- Center image on slide -->
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
-<script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
-<!-- <script src='http://dimplejs.org/dist/dimple.v2.1.0.min.js' type='text/javascript'></script> -->
+<script src='https://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+<!-- <script src='https://dimplejs.org/dist/dimple.v2.1.0.min.js' type='text/javascript'></script> -->
 
 <script type='text/javascript'>
 $(function() {
@@ -497,7 +497,7 @@ a lot of US traffic.
 --- bg:black
 
 
-<iframe width='100%' height='100%' src='http://blm.io/movie_embed.html' frameborder='0' scrolling="no"></iframe>
+<iframe width='100%' height='100%' src='https://blm.io/movie_embed.html' frameborder='0' scrolling="no"></iframe>
 
 <aside class="note">
 <section style="font-size: .8em">
@@ -702,7 +702,7 @@ i$publish()
 
 *** =right
 
-<iframe width='100%' height="550" src='http://blm.io/stars_embed.html' frameborder='0' scrolling="no"></iframe>
+<iframe width='100%' height="550" src='https://blm.io/stars_embed.html' frameborder='0' scrolling="no"></iframe>
 
 ---
 
@@ -823,8 +823,8 @@ People who've helped me out or I've stolen code from:
 </p>
 <p style="font-size:.5em; text-align:center">
 <br /><br />
-These slides at <a href="http://blm.io/talks/blogr/">blm.io/talks/blogr</a>; more examples: 
-<a href="http://blm.io/blog/" target="_blank">blm.io/blog</a>
+These slides at <a href="https://blm.io/talks/blogr/">blm.io/talks/blogr</a>; more examples: 
+<a href="https://blm.io/blog/" target="_blank">blm.io/blog</a>
 </p>
 </div>
 

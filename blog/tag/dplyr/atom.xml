@@ -5,7 +5,7 @@
    
    	<title>blm.io - Tag: dplyr</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,10 +14,10 @@
     
 	  <item>
         <title>Scottish independence: what do the polls say?</title>
-        <link>http://blm.io/blog/scottish-independence-polls</link>
+        <link>https://blm.io/blog/scottish-independence-polls</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-08-26T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/scottish-independence-polls</guid>
+		<guid>https://blm.io/blog/scottish-independence-polls</guid>
 		<description><![CDATA[
 		   <p>Living in Edinburgh it&#39;s been hard to avoid the build-up to Scotland&#39;s referendum on independence. On September 18<sup>th</sup> 2014, less than a month away as I write this, people living in Scotland will go to the polls to answer the question: Should Scotland be an independent country?</p>
 
@@ -112,10 +112,10 @@ Source<span class="o">:</span> local <span class="kt">data frame</span> <span cl
     
 	  <item>
         <title>Are more expensive motorcycle helmets safer?</title>
-        <link>http://blm.io/blog/motorcycle-helmet-safety-price</link>
+        <link>https://blm.io/blog/motorcycle-helmet-safety-price</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-07-01T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/motorcycle-helmet-safety-price</guid>
+		<guid>https://blm.io/blog/motorcycle-helmet-safety-price</guid>
 		<description><![CDATA[
 		   <p>Apparently an 80s commerical for the helmet manufacturer <a href="http://www.bellhelmets.com/">Bell</a> bore the slogan:
 <em>&quot;If you&#39;ve got a $10 head, wear a $10 helmet&quot;</em>. Nowadays it&#39;s a deeply-ingrained

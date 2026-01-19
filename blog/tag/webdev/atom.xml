@@ -5,7 +5,7 @@
    
    	<title>blm.io - Tag: webdev</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,12 +14,12 @@
     
 	  <item>
         <title>UK general election polls in rCharts and shiny</title>
-        <link>http://blm.io/blog/uk-general-election-rcharts-shiny</link>
+        <link>https://blm.io/blog/uk-general-election-rcharts-shiny</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2015-04-28T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/uk-general-election-rcharts-shiny</guid>
+		<guid>https://blm.io/blog/uk-general-election-rcharts-shiny</guid>
 		<description><![CDATA[
-		   <p>With under two weeks to go to the 2015 UK general election, there&#39;s no better time to take stock of all the voter intention polls being published by the British media. The data has already been aggregated by <a href="http://ukpollingreport.co.uk/voting-intention-2">UKpollingreport</a>—a site I&#39;ve used before for <a href="http://blm.io/blog/scottish-independence-polls/">analysis of the Scottish independence referendum</a>—and there&#39;s not much more to be said then is already widely known: it&#39;s likely no single party will win an outright majority and we&#39;ll be left with a coalition or minority government.</p>
+		   <p>With under two weeks to go to the 2015 UK general election, there&#39;s no better time to take stock of all the voter intention polls being published by the British media. The data has already been aggregated by <a href="http://ukpollingreport.co.uk/voting-intention-2">UKpollingreport</a>—a site I&#39;ve used before for <a href="https://blm.io/blog/scottish-independence-polls/">analysis of the Scottish independence referendum</a>—and there&#39;s not much more to be said then is already widely known: it&#39;s likely no single party will win an outright majority and we&#39;ll be left with a coalition or minority government.</p>
 
 <p>Interactive visualisations, statistical projections and swingometers have already been expertly put together all over the place (among the best I&#39;ve seen are from <a href="http://www.theguardian.com/politics/ng-interactive/2015/feb/27/guardian-poll-projection">The Guardian</a> and <a href="http://fivethirtyeight.com/interactives/uk-general-election-predictions/">FiveThirtyEight</a>)—I can&#39;t really begin to compete here, but given the data is readily available, I&#39;ve taken this as a good chance to finally learn shiny and build a simple web application.</p>
 
@@ -71,16 +71,16 @@ plots is available on
     
 	  <item>
         <title>Building an academic CV in markdown</title>
-        <link>http://blm.io/blog/markdown-academic-cv</link>
+        <link>https://blm.io/blog/markdown-academic-cv</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2015-04-13T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/markdown-academic-cv</guid>
+		<guid>https://blm.io/blog/markdown-academic-cv</guid>
 		<description><![CDATA[
 		   <p>I&#39;m creeping towards the tail-end of my PhD so it&#39;s probably time to dust off my CV and tidy it up. In the past I&#39;ve written this document a few different ways, from LaTeX to a custom <a href="https://inkscape.org/en/">Inkscape</a> document, but I&#39;ve decided to move with the times and try something new: a markdown CV that compiles to both an HTML web version and well-formatted PDF.</p>
 
 <h2>markdown-cv</h2>
 
-<p>Googling &quot;markdown CV&quot; gave a few different options: one using <a href="http://mszep.github.io/pandoc_resume/">pandoc</a> with slightly dated-looking themes; another <a href="http://there4development.com/blog/2012/12/31/markdown-resume-builder/">command-line PHP script</a>, whose results are a bit prettier, but after trying these I came across <code>markdown-cv</code> from github user <a href="https://github.com/elipapa/markdown-cv">elipapa</a> which seemed to be simple to use and came with a nice design &mdash; also it&#39;s built with <a href="http://jekyllrb.com/">jekyll</a>, which I already <a href="http://blm.io/blog/wordpress-to-jekyll/">use to power blm.io</a>.</p>
+<p>Googling &quot;markdown CV&quot; gave a few different options: one using <a href="http://mszep.github.io/pandoc_resume/">pandoc</a> with slightly dated-looking themes; another <a href="http://there4development.com/blog/2012/12/31/markdown-resume-builder/">command-line PHP script</a>, whose results are a bit prettier, but after trying these I came across <code>markdown-cv</code> from github user <a href="https://github.com/elipapa/markdown-cv">elipapa</a> which seemed to be simple to use and came with a nice design &mdash; also it&#39;s built with <a href="http://jekyllrb.com/">jekyll</a>, which I already <a href="https://blm.io/blog/wordpress-to-jekyll/">use to power blm.io</a>.</p>
 
 <p>Eliseo Papa wrote up a <a href="http://www.eliseopapa.org/workflow/2012/09/20/why-i-switched-to-markdown-for-my-cv/">blog post</a> on how and why he put <code>markdown-cv</code> together, and their CV <a href="https://github.com/elipapa/elipapa.github.io/blob/master/downloads/cv.pdf">looks great</a> so that was enough to convince me to give it a shot.</p>
 
@@ -143,7 +143,7 @@ You _et al._ (2014) Some great paper...
 
 <div style="float:right; width:49%;">
   <p style="text-align:center; color:#888; font-weight: bold;">HTML</p>
-  <a href="http://blm.io/cv/" target="_blank">
+  <a href="https://blm.io/cv/" target="_blank">
     <img class="imgfull" src="/blog/img/webcv.png" />
     </a>
 </div>

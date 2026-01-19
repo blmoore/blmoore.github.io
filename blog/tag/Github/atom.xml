@@ -5,7 +5,7 @@
    
    	<title>blm.io - Tag: Github</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,10 +14,10 @@
     
 	  <item>
         <title>What are the most common RNG seeds used in R scripts on Github?</title>
-        <link>http://blm.io/blog/prng-seeds</link>
+        <link>https://blm.io/blog/prng-seeds</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-03-06T00:00:00+00:00</pubDate>
-		<guid>http://blm.io/blog/prng-seeds</guid>
+		<guid>https://blm.io/blog/prng-seeds</guid>
 		<description><![CDATA[
 		   <p>In the R programming language, the random number generator (RNG) is seeded each session using the current time and process ID. Via the magic of the popular <a href="https://en.wikipedia.org/wiki/Mersenne_twister" target="_blank">Mersenne Twister PRNG</a>, the values stored in <code>.Random.seed</code> are used sequentially each time "randomness" is invoked in a function. This means, of course, that the same function run in different R sessions can produce varying results, and in the case of modelling a system sensitive to initial conditions the observed differences could be huge. </p>
 

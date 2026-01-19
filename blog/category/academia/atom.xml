@@ -5,7 +5,7 @@
    
     <title>blm.io - Category: academia</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,10 +14,10 @@
     
 	  <item>
         <title>Unravelling 3D genome organisation</title>
-        <link>http://blm.io/blog/3d-genome-organisation</link>
+        <link>https://blm.io/blog/3d-genome-organisation</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2015-05-28T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/3d-genome-organisation</guid>
+		<guid>https://blm.io/blog/3d-genome-organisation</guid>
 		<description><![CDATA[
 		   <p>The first paper of my PhD is finally out! Its full title is &quot;<a href="http://genomebiology.com/2015/16/1/110">Integrative modeling reveals the principles of multi-scale chromatin boundary formation in human nuclear organization</a>&quot; but in talks and posters I&#39;ve been referring to the project as &quot;Unravelling higher order chromatin organisation&quot; (geddit?) or even &quot;the ENCODE-ing of ...&quot; (referencing <a href="https://www.encodeproject.org/">ENCODE</a>, of course).</p>
 
@@ -61,7 +61,7 @@
 
 <h3>2. Chromatin features predict aspects of genome architecture</h3>
 
-<p>In short we built <a href="http://blm.io/talks/bsa/figure/rfp.png">Random Forest regression models</a> to predict the continuous compartment profile (the blue line in the above figure), and it achieved high accuracy. This wasn&#39;t wholly surprising: strong correlations between individual input variables and compartment profile has already been reported (even in the original <a href="dx.doi.org/10.1126/science.1181369">Leiberman Aiden paper</a>), so the interest really comes from dissecting and cross-applying these models, rather than from their raw metrics.</p>
+<p>In short we built <a href="https://blm.io/talks/bsa/figure/rfp.png">Random Forest regression models</a> to predict the continuous compartment profile (the blue line in the above figure), and it achieved high accuracy. This wasn&#39;t wholly surprising: strong correlations between individual input variables and compartment profile has already been reported (even in the original <a href="dx.doi.org/10.1126/science.1181369">Leiberman Aiden paper</a>), so the interest really comes from dissecting and cross-applying these models, rather than from their raw metrics.</p>
 
 <p><a href="/blog/img/f2_full.png" target="_blank"><img class="imgfull" src="/blog/img/f2_thumb.png" /></a></p>
 
@@ -97,7 +97,7 @@
 <ul>
 <li><p>Code to reproduce all analyses shown in the paper and supplementary is avaiable on github: <a href="https://github.com/blmoore/3dgenome">github.com/blmoore/3dgenome</a></p></li>
 <li><p>Posters related to this project have been shared on <a href="http://figshare.com/articles/Unravelling_higher_order_chromatin_organisation/1379863">figshare</a>.</p></li>
-<li><p>Slides are available for <a href="http://blm.io/talks/bsa/">a talk I gave</a> at a local research group meet-up.</p></li>
+<li><p>Slides are available for <a href="https://blm.io/talks/bsa/">a talk I gave</a> at a local research group meet-up.</p></li>
 </ul>
 
 <p><br clear="all" /></p>
@@ -122,16 +122,16 @@
     
 	  <item>
         <title>Building an academic CV in markdown</title>
-        <link>http://blm.io/blog/markdown-academic-cv</link>
+        <link>https://blm.io/blog/markdown-academic-cv</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2015-04-13T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/markdown-academic-cv</guid>
+		<guid>https://blm.io/blog/markdown-academic-cv</guid>
 		<description><![CDATA[
 		   <p>I&#39;m creeping towards the tail-end of my PhD so it&#39;s probably time to dust off my CV and tidy it up. In the past I&#39;ve written this document a few different ways, from LaTeX to a custom <a href="https://inkscape.org/en/">Inkscape</a> document, but I&#39;ve decided to move with the times and try something new: a markdown CV that compiles to both an HTML web version and well-formatted PDF.</p>
 
 <h2>markdown-cv</h2>
 
-<p>Googling &quot;markdown CV&quot; gave a few different options: one using <a href="http://mszep.github.io/pandoc_resume/">pandoc</a> with slightly dated-looking themes; another <a href="http://there4development.com/blog/2012/12/31/markdown-resume-builder/">command-line PHP script</a>, whose results are a bit prettier, but after trying these I came across <code>markdown-cv</code> from github user <a href="https://github.com/elipapa/markdown-cv">elipapa</a> which seemed to be simple to use and came with a nice design &mdash; also it&#39;s built with <a href="http://jekyllrb.com/">jekyll</a>, which I already <a href="http://blm.io/blog/wordpress-to-jekyll/">use to power blm.io</a>.</p>
+<p>Googling &quot;markdown CV&quot; gave a few different options: one using <a href="http://mszep.github.io/pandoc_resume/">pandoc</a> with slightly dated-looking themes; another <a href="http://there4development.com/blog/2012/12/31/markdown-resume-builder/">command-line PHP script</a>, whose results are a bit prettier, but after trying these I came across <code>markdown-cv</code> from github user <a href="https://github.com/elipapa/markdown-cv">elipapa</a> which seemed to be simple to use and came with a nice design &mdash; also it&#39;s built with <a href="http://jekyllrb.com/">jekyll</a>, which I already <a href="https://blm.io/blog/wordpress-to-jekyll/">use to power blm.io</a>.</p>
 
 <p>Eliseo Papa wrote up a <a href="http://www.eliseopapa.org/workflow/2012/09/20/why-i-switched-to-markdown-for-my-cv/">blog post</a> on how and why he put <code>markdown-cv</code> together, and their CV <a href="https://github.com/elipapa/elipapa.github.io/blob/master/downloads/cv.pdf">looks great</a> so that was enough to convince me to give it a shot.</p>
 
@@ -194,7 +194,7 @@ You _et al._ (2014) Some great paper...
 
 <div style="float:right; width:49%;">
   <p style="text-align:center; color:#888; font-weight: bold;">HTML</p>
-  <a href="http://blm.io/cv/" target="_blank">
+  <a href="https://blm.io/cv/" target="_blank">
     <img class="imgfull" src="/blog/img/webcv.png" />
     </a>
 </div>
@@ -206,10 +206,10 @@ You _et al._ (2014) Some great paper...
     
 	  <item>
         <title>Author inflation in academic literature</title>
-        <link>http://blm.io/blog/author-inflation</link>
+        <link>https://blm.io/blog/author-inflation</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-04-06T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/author-inflation</guid>
+		<guid>https://blm.io/blog/author-inflation</guid>
 		<description><![CDATA[
 		   <p>There seems to be a general consensus that author lists in academic articles are growing. Wikipedia <a href="https://en.wikipedia.org/wiki/Academic_authorship#Growing_number_of_authors_per_paper" target="_blank">says so</a>, and I've also come across a <a href="http://onlinelibrary.wiley.com/doi/10.1002/asi.21438/abstract" target="_blank">published letter</a> and short <a href="http://www.nature.com/nature/history/full/nature06243.html" target="_blank">Nature article</a> which accept this is the case and discuss ways of mitigating the issue. Recently there was an interesting discussion on <a href="http://academia.stackexchange.com/questions/16759/is-there-an-inflation-in-the-number-of-authors-per-paper" target="_blank">academia.stackexchange</a> on the subject but again without much quantification. Luckily given the array of literature database APIs and language bindings available, it should be pretty easy to investigate with some statistical analysis in R.</p>
 

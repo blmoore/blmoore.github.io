@@ -5,7 +5,7 @@
    
    	<title>blm.io - Tag: inkscape</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,10 +14,10 @@
     
 	  <item>
         <title>Converting PDF to EPS on OS X</title>
-        <link>http://blm.io/blog/convert-pdf-eps-osx</link>
+        <link>https://blm.io/blog/convert-pdf-eps-osx</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2015-05-07T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/convert-pdf-eps-osx</guid>
+		<guid>https://blm.io/blog/convert-pdf-eps-osx</guid>
 		<description><![CDATA[
 		   <p>Recently I discovered that some academic publishers will let you submit PDF figures right up until acceptance, where they then need to be in an &quot;editable&quot; format. Vector figures inside PDF containers <em>are</em> editable of course, but the author guidelines for your journal of choice may well say otherwise, instead offering a list of ancient and bewildering image formats which are deemed acceptable. It&#39;s baffling to me why a journal would prefer a <code>pptx</code> PowerPoint file containing your figure than a modern open standard like <code>SVG</code> (not a format without consistency issues, admittedly). So for this reason I needed to convert a bunch of PDF figures to EPS (encapsulated postscript) without too much manual effort.</p>
 

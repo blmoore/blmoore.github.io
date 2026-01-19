@@ -5,7 +5,7 @@
    
    	<title>blm.io - Tag: dimplejs</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,10 +14,10 @@
     
 	  <item>
         <title>Hollywood action heroes</title>
-        <link>http://blm.io/blog/action-heroes</link>
+        <link>https://blm.io/blog/action-heroes</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-06-07T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/action-heroes</guid>
+		<guid>https://blm.io/blog/action-heroes</guid>
 		<description><![CDATA[
 		   <div style="float:right;width: 20%">
 <img src="/blog/img/arnie10.jpg" width=80% style="border:2px solid #cccccc; display:block; margin-right: auto; margin-left: auto;"/>

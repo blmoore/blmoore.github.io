@@ -5,7 +5,7 @@
    
    	<title>blm.io - Tag: jekyll</title>
    
-   <link>http://blm.io</link>
+   <link>https://blm.io</link>
    <description>Data blog from benjaminlmoore.</description>
    <language>en-us</language>
    <managingEditor>B.L. Moore</managingEditor>
@@ -14,16 +14,16 @@
     
 	  <item>
         <title>Building an academic CV in markdown</title>
-        <link>http://blm.io/blog/markdown-academic-cv</link>
+        <link>https://blm.io/blog/markdown-academic-cv</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2015-04-13T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/markdown-academic-cv</guid>
+		<guid>https://blm.io/blog/markdown-academic-cv</guid>
 		<description><![CDATA[
 		   <p>I&#39;m creeping towards the tail-end of my PhD so it&#39;s probably time to dust off my CV and tidy it up. In the past I&#39;ve written this document a few different ways, from LaTeX to a custom <a href="https://inkscape.org/en/">Inkscape</a> document, but I&#39;ve decided to move with the times and try something new: a markdown CV that compiles to both an HTML web version and well-formatted PDF.</p>
 
 <h2>markdown-cv</h2>
 
-<p>Googling &quot;markdown CV&quot; gave a few different options: one using <a href="http://mszep.github.io/pandoc_resume/">pandoc</a> with slightly dated-looking themes; another <a href="http://there4development.com/blog/2012/12/31/markdown-resume-builder/">command-line PHP script</a>, whose results are a bit prettier, but after trying these I came across <code>markdown-cv</code> from github user <a href="https://github.com/elipapa/markdown-cv">elipapa</a> which seemed to be simple to use and came with a nice design &mdash; also it&#39;s built with <a href="http://jekyllrb.com/">jekyll</a>, which I already <a href="http://blm.io/blog/wordpress-to-jekyll/">use to power blm.io</a>.</p>
+<p>Googling &quot;markdown CV&quot; gave a few different options: one using <a href="http://mszep.github.io/pandoc_resume/">pandoc</a> with slightly dated-looking themes; another <a href="http://there4development.com/blog/2012/12/31/markdown-resume-builder/">command-line PHP script</a>, whose results are a bit prettier, but after trying these I came across <code>markdown-cv</code> from github user <a href="https://github.com/elipapa/markdown-cv">elipapa</a> which seemed to be simple to use and came with a nice design &mdash; also it&#39;s built with <a href="http://jekyllrb.com/">jekyll</a>, which I already <a href="https://blm.io/blog/wordpress-to-jekyll/">use to power blm.io</a>.</p>
 
 <p>Eliseo Papa wrote up a <a href="http://www.eliseopapa.org/workflow/2012/09/20/why-i-switched-to-markdown-for-my-cv/">blog post</a> on how and why he put <code>markdown-cv</code> together, and their CV <a href="https://github.com/elipapa/elipapa.github.io/blob/master/downloads/cv.pdf">looks great</a> so that was enough to convince me to give it a shot.</p>
 
@@ -86,7 +86,7 @@ You _et al._ (2014) Some great paper...
 
 <div style="float:right; width:49%;">
   <p style="text-align:center; color:#888; font-weight: bold;">HTML</p>
-  <a href="http://blm.io/cv/" target="_blank">
+  <a href="https://blm.io/cv/" target="_blank">
     <img class="imgfull" src="/blog/img/webcv.png" />
     </a>
 </div>
@@ -98,10 +98,10 @@ You _et al._ (2014) Some great paper...
     
 	  <item>
         <title>Transformation of wordpress into jekyll</title>
-        <link>http://blm.io/blog/wordpress-to-jekyll</link>
+        <link>https://blm.io/blog/wordpress-to-jekyll</link>
 		<author>benjaminlmoore</author>
 		<pubDate>2014-06-21T00:00:00+01:00</pubDate>
-		<guid>http://blm.io/blog/wordpress-to-jekyll</guid>
+		<guid>https://blm.io/blog/wordpress-to-jekyll</guid>
 		<description><![CDATA[
 		   <p>I think <a href="http://wordpress.org/">Wordpress</a> is a great <a href="https://en.wikipedia.org/wiki/Content_management_system">CMS</a> and I&#39;m reluctant to leave it behind. While
 it doesn&#39;t have much hacker kudos, in my opinion (and undoubtedly many others)
@@ -119,7 +119,7 @@ post. So with that in mind, why am I making the switch?</p>
 <li><p>The <a href="https://pages.github.com/">Github pages</a> system offering free hosting
 with custom domains, all built on top of a normal git repo.</p></li>
 <li><p>The <a href="http://rcharts.io">rCharts</a> R package which, to me as a non-web guy,
-has acted as a great intro to various <a href="http://d3js.org/">D3.js</a>-based plotting
+has acted as a great intro to various <a href="https://d3js.org/">D3.js</a>-based plotting
 libraries, and piqued my interest in building custom interactive graphics.</p></li>
 </ol>
 
@@ -131,7 +131,7 @@ After researching my options, I&#39;m now using <a href="http://jekyllrb.com/">J
 
 <p>Other than this issue it&#39;s been reasonably straightforward to make the switch, though I was surprised how much legwork was involved in things like organising <a href="http://realjenius.com/2012/12/01/jekyll-category-tag-paging-feeds/">tag-specific paginated indexes</a> for navigation and custom RSS/Atom feeds. For me, this kind of stuff should come out of the box even in a barebones, for-customisation framework like Jekyll. Thankfully there&#39;s bloggers around who&#39;ve already figured out this stuff, as well as some of the under-documented features (like <a href="http://joshualande.com/short-urls-jekyll/">permalinks</a>).</p>
 
-<p>More recently I&#39;ve been told that the R package <a href="http://blm.io/blog/slidify">slidify</a> is capable of Jekyll-like functionality, and this will soon be spun-off into its own package:</p>
+<p>More recently I&#39;ve been told that the R package <a href="https://blm.io/blog/slidify">slidify</a> is capable of Jekyll-like functionality, and this will soon be spun-off into its own package:</p>
 
 <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p><a href="https://twitter.com/benjaminlmoore"><a href='https://github.com/benjaminlmoore' class='user-mention'>@benjaminlmoore</a></a> Slidify is also capable of generating static blogs. It will become a separate package <a href="http://t.co/ED09PAhGyW">http://t.co/ED09PAhGyW</a> <a href="https://twitter.com/rmflight"><a href='https://github.com/rmflight' class='user-mention'>@rmflight</a></a></p>&mdash; Ramnath Vaidyanathan (@ramnath_vaidya) <a href="https://twitter.com/ramnath_vaidya/statuses/479422134968524801">June 19, 2014</a></blockquote>
 
